@@ -5,7 +5,7 @@
 
 
 ##How to compile 
-
+run ./compile_and_publish.sh
 ## Users
 Some users:
 * [Ethan Pickering](https://ethan-pickering.github.io/)
