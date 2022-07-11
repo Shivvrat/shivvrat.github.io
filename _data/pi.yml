@@ -1,0 +1,23 @@
+- name: Shivvrat Arya
+  photo: Shivvrat_Arya_headshot.png
+  info: PhD Student, UT Dallas
+  email: shivvrat.arya@utdallas.edu
+  github: https://github.com/Shivvrat
+  researchgate: https://www.researchgate.net/profile/Shivvrat-Arya
+  scholar: https://scholar.google.com/citations?user=eM1co-kAAAAJ&hl=en
+  cv: cv/CV_Shivvrat_Arya.pdf
+  number_educ: 3
+#  education1: (2018- ) Senior Postdoc, Caltech (with <a href="https://colonius.caltech.edu" target="_blank">Tim Colonius</a>)
+#  education2: (2019) Visiting Researcher, MIT (with <a href="http://sandlab.mit.edu" target="_blank">Themis Sapsis</a>)
+#  education3: (2017-8) Postdoctor Researcher <br> <a href="https://xpacc.illinois.edu" target="_blank">XPACC</a> (with <a href="https://sites.usc.edu/hptcl/" target="_blank">Carlos Pantano</a>, <a href="http://acoustics.ae.illinois.edu/" target="_blank">Dan Bodony</a>, <a href="http://jbfreund.mechse.illinois.edu/" target="_blank">Jon Freund</a>)
+  education1: (2019) B.Tech Computer Science and Engineering<br>
+    University of Michigan-Dearborn
+  education2: (2019 - ) M.S. Computer Science<br> The University of Texas at Dallas
+    <br>(with certificate in <a href="https://cse.illinois.edu/" target="_blank">Computational Science & Engineering</a>)
+  education3: (2020 - ) Computer Science<br> The University of Texas at Dallas
+#  education1short: (2018- ) Senior Postdoc, Caltech
+#  education2short: (2019) Visiting Researcher, MIT
+#  education3short: (2017-8) Postdoc, XPACC
+  education1short: (2019) B.Tech. CSE, IIITV
+  education2short: (2019 - ) M.S. CS, UTD
+  education3short: (2020 - ) Ph.D. CS, UTD

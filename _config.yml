@@ -1,0 +1,99 @@
+# Site settings
+title: Shivvrat Arya
+email: shivvrat.arya@utdallas.edu
+description: Academic webpage of Shivvrat Arya
+baseurl: ""
+url: ""
+
+
+# Google analytics ID: Remove or use your own!
+#google_analytics: UA-167467135-1
+#google_analytics_4: G-02KDGRRB2T
+#google_tag_manager: GTM-TZ9Z7HZ
+
+# Footer info
+affiliation: >
+    Shivvrat Arya<br/>
+    PhD Student<br/>
+    <a href="https://cs.utdallas.edu/" target="_blank">Department of Computer Science<br/>
+    The University of Texas at Dallas
+
+location: >
+  <a href="https://cs.utdallas.edu/cmachinelearning/" target="_blank">The Center for  Machine Learning</a><br/>
+  The University of Texas at Dallas <br/>
+  800 W Campbell Rd<br/>
+  Richardson, TX 75080, ECSS 3.416
+
+contact: >
+    <a href="mailto:shivvrat.arya@utdallas.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Shivvrat via email</a> <br/>
+#    <a href="/aboutwebsite.html"><i class="fa fa-github fa-1x"></i> Use this site as a template!</a>
+
+# Pages shown in navbar
+nav_pages:
+  - name: about
+  - name: publications
+#  - name: talks
+  - name: research
+#  - name: software
+# - name: team
+# - name: teaching
+
+include:
+  - .htaccess
+  - _pages
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
+
+
+plugins: ['jekyll/scholar']
+
+scholar:
+
+  last_name: Arya
+  first_name: [Shivvrat]
+
+  style: shb
+  locale: en
+
+  source: /cv/
+  bibliography: ref.bib
+  bibliography_template: bibtemplate
+  sort_by: year, month
+  order: ascending
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
+
+  bibliography_list_attributes:
+    reversed: "reversed"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - update_boostrap.sh
+  - switch_theme.sh
+  - tags
+  - Rakefile
