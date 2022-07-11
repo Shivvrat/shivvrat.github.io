@@ -64,6 +64,8 @@ kramdown:
 
 plugins: ['jekyll/scholar']
 
+plugins_dir: [jekyll-scholar]
+
 scholar:
 
   last_name: Arya
