@@ -64,10 +64,10 @@ iframe {
 
 
 ## Research
-### Research Interests 
+#### Research Interests 
 Computer Vision, Machine learning and Artificial Intelligence.
 
-### Current Research Focus
+#### Current Research Focus
 Deep Learning, Probabilistic Graphical Models, Tractable Machine Learning
 
 <div class="jumbotron">
