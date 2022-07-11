@@ -99,5 +99,3 @@ exclude:
   - switch_theme.sh
   - tags
   - Rakefile
-
-theme: jekyll-theme-slate
