@@ -62,7 +62,13 @@ iframe {
   <!-- margin-left:5px; -->
   <!-- float: none; -->
 
+
 ## Research
+### Research Interests 
+Computer Vision, Machine learning and Artificial Intelligence.
+
+### Current Research Focus
+Deep Learning, Probabilistic Graphical Models, Tractable Machine Learning
 
 <div class="jumbotron">
 <div class="row align-items-end">
