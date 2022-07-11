@@ -98,4 +98,4 @@ exclude:
   - tags
   - Rakefile
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
