@@ -1,7 +1,9 @@
 # A website template for academics
 
-## Users
+## How to use it with github pages
+[Using Jekyll plugins on GitHub Pages](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html)
 
+## Users
 Some users:
 * [Ethan Pickering](https://ethan-pickering.github.io/)
 * [Lalit M. Pant](https://home.iitk.ac.in/~lalit/)
