@@ -15,7 +15,7 @@ url: ""
 affiliation: >
     Shivvrat Arya<br/>
     PhD Student<br/>
-    <a href="https://cs.utdallas.edu/" target="_blank">Department of Computer Science<br/>
+    <a href="https://cs.utdallas.edu/" target="_blank">Department of Computer Science</a><br/>
     The University of Texas at Dallas
 
 location: >
@@ -32,11 +32,11 @@ contact: >
 nav_pages:
   - name: about
   - name: publications
-#  - name: talks
   - name: research
+  - name: teaching
 #  - name: software
+#  - name: talks
 # - name: team
-# - name: teaching
 
 include:
   - .htaccess
