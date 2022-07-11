@@ -1,11 +1,9 @@
-# Dr. Bryngelson's website
+# Shivvrat Arya's website
 
 **Note: This webpage has been upgraded to use Jekyll plugins. If you are using Github pages you will have to build the website with the Rakefile in the project root directory! My Rakefile is adopted from ones like [this.](https://blog.sorryapp.com/blogging-with-jekyll/2014/01/31/using-jekyll-plugins-on-github-pages.html)**
 
 This is my statically-generated Jekyll/Liquid/Bootstrap-based website.
-I started with the [Allan lab](https://www.allanlab.org/) webpage and modified it into a personal academic webpage that met my requirements.
-I worked in a unique set of the features that I desired and could not find in publicly available templates elsewhere.
-Some examples are:
+Some features are:
 
 * Automatically-generated buttons for DOI/PDF/ARXIV/BIB/Abstract information
   * via jekyll scholar
@@ -14,8 +12,6 @@ Some examples are:
 * Dark color scheme via Bootswatch
 * Consistent and attractive `About me` page
 
-I encourage the use of this webpage as a template for your own academic website.
-The remainder of this document describes how to do this.
 Broadly speaking, there are three steps:
 
 * [Fork](#fork-and-build)
@@ -127,13 +123,3 @@ For this reason, I decided to build my own theme.
 
 I credit the [Allen Lab](https://www.allanlab.org/) for creating a beautiful academic research group webpage.
 Many parts of this site were adopted or copied from their laboratory webpage.
-
-## License
-
-Copyright 2020, Spencer H. Bryngelson
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
