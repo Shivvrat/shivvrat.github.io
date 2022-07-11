@@ -3,6 +3,9 @@
 ## How to use it with github pages
 [Using Jekyll plugins on GitHub Pages](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html)
 
+
+##How to compile 
+
 ## Users
 Some users:
 * [Ethan Pickering](https://ethan-pickering.github.io/)
