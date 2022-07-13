@@ -11,7 +11,8 @@ I am currently working with Dr. Vibhav Gogate and Dr. Yu Xiang on Perceptually-E
 performance of a wide range of cognitively challenging physical tasks. PTG will leverage recent advances in machine perception,
 automated reasoning, and augmented reality. We are mainly working on the task of activity recognition on Egocentric Datasets like Epic Kitchens and Multi Label Datasets like Charades, AVA, Tacos and Wetlab.  
 
-My research at the Indian Institute of Technology Indore (IITI) was focused on the use of non-iterative and advanced neural network structures to solve the problem of multi-label classification. For that, we used the non-iterative neural networks which use the method of inversion to find the desired weights. Two journal paper submissions have been made for this project. We used 15 datasets for the evaluation, which include yeast, scene, BibTeX, emotions, Enron, medical, corel5k, bookmarks, delicious, mediamill and the rcv1v2 series. The evaluation metrics used for the comparison were Hamming Loss, Ranking loss, One error, Coverage, and Average precision. We compared the proposed algorithm with the following state-of-the-art algorithms, Rank – SVM, ELMOnline, MLKN, BPMLL, and ELM.
+My research at the Indian Institute of Technology Indore (IITI) was focused on the use of non-iterative and advanced neural network structures to solve the problem of multi-label classification. Two journal paper submissions and one conference acceptance have been completed for this project. We used 15 datasets for the evaluation, which include yeast, scene, BibTeX, emotions, Enron, medical, corel5k, bookmarks, delicious, mediamill and the rcv1v2 series. 
+The evaluation metrics used for the comparison were Hamming Loss, Ranking loss, One error, Coverage, and Average precision. We compared the proposed algorithm with the following state-of-the-art algorithms, Rank – SVM, ELMOnline, MLKN, BPMLL, and ELM.
 
 
 [//]: # (<div class="container">)
