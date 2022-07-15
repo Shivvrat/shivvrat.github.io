@@ -32,7 +32,7 @@ contact: >
 nav_pages:
   - name: about
   - name: publications
-  - name: research
+  # - name: research
   - name: teaching
 #  - name: software
 #  - name: talks
