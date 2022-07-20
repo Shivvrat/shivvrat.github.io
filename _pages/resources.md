@@ -152,13 +152,13 @@ Some of these resources might be helpful during your time in academia. I have al
   - [GitHub Pages](https://pages.github.com)
 
 #### Python
-##### Faster Python
-- Jit Compilers
-  - [TorchDynamo](https://github.com/pytorch/torchdynamo#torchdynamo) is a Python-level JIT compiler designed to make unmodified PyTorch programs faster
-  - [Numba](https://numba.pydata.org) is an open source JIT compiler that translates a subset of Python and NumPy code into fast machine code.
-- [Cython](https://cython.org) is an optimising static compiler for both the Python programming language
-##### Logging
-- [loguru](https://github.com/Delgan/loguru) Python logging made (stupidly) simple
+- **Faster Python**
+  - Jit Compilers
+    - [TorchDynamo](https://github.com/pytorch/torchdynamo#torchdynamo) is a Python-level JIT compiler designed to make unmodified PyTorch programs faster
+    - [Numba](https://numba.pydata.org) is an open source JIT compiler that translates a subset of Python and NumPy code into fast machine code.
+  - [Cython](https://cython.org) is an optimising static compiler for both the Python programming language
+- **Logging**
+  - [loguru](https://github.com/Delgan/loguru) Python logging made (stupidly) simple
 
 #### Project templates
 - README
