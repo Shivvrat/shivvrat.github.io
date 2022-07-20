@@ -37,5 +37,5 @@ The evaluation metrics used for the comparison were Hamming Loss, Ranking loss, 
 ### About me
 
 I am pursuing my PhD in the Department of Computer Science at the University of Texas at Dallas. I aspire to become a researcher who exercises the skills gained through academic research, to solve problems in the discipline of Computer Science leading to the development of cutting edge technologies. I am consistently looking for arduous opportunities that would help me to test my knowledge and learn a new set of skills.
-I am pursuing a Ph.D. and a M.S. degree in <a href="https://cs.utdallas.edu/education/graduate/" target="_blank">Computer Science </a> from the The University of Texas at Dallas (2019 -  and 2020 - ), where I am working with <a href="https://personal.utdallas.edu/~vibhav.gogate/" target="_blank">Dr. Vibhav Gogate </a> and  <a href="https://yuxng.github.io/" target="_blank">Dr. Yu Xiang </a>.
-I hold B.Tech. degree in Computer Science and Engineering from Indian Institute of Information Technology Vadodara (2019)
+I am pursuing a Ph.D. and a M.S. degree in <a href="https://cs.utdallas.edu/education/graduate/" target="_blank">Computer Science </a> from the The University of Texas at Dallas, where I am working with <a href="https://personal.utdallas.edu/~vibhav.gogate/" target="_blank">Dr. Vibhav Gogate </a> and  <a href="https://yuxng.github.io/" target="_blank">Dr. Yu Xiang </a>.
+I hold B.Tech. degree in Computer Science and Engineering from Indian Institute of Information Technology Vadodara
