@@ -8,7 +8,7 @@ url: ""
 
 # Google analytics ID: Remove or use your own!
 #google_analytics: UA-167467135-1
-#google_analytics_4: G-02KDGRRB2T
+#google_analytics_4: G-9JMYG0Z6M7
 #google_tag_manager: GTM-TZ9Z7HZ
 
 # Footer info
@@ -62,8 +62,8 @@ kramdown:
   enable_coderay: false
   parse_block_html: true # default for kramdown is false. This will enable using Markdown links
 
-
-plugins: ['jekyll/scholar']
+plugins:
+  - jekyll/scholar
 
 plugins_dir: [jekyll-scholar]
 
@@ -72,7 +72,7 @@ scholar:
   last_name: Arya
   first_name: [Shivvrat]
 
-  style: shb
+  style: apa
   locale: en
 
   source: /cv/
