@@ -54,7 +54,7 @@ Some of these resources might be helpful during your time in academia. I have al
     - Noah Snavely: [A Short LaTeX Style Guide](http://bit.ly/latex-style)
 - **Citing**
   - Citation Machine [Smart Writing](https://www.citationmachine.net)
-  - 
+  
 #### Research
 
 - **General Advice**

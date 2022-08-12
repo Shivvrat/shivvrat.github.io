@@ -1,11 +1,28 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+
 # Site settings
-title: Shivvrat Arya
+locale                   : "en-US"
+title                    : "Shivvrat Arya"
+title_separator          : "-"
+name                     : &name "Shivvrat Arya"
 email: shivvrat.arya@utdallas.edu
-description: Academic webpage of Shivvrat Arya
+description              : &description "Pursuing Ph.D. in Computer Science"
+#description: Academic webpage of Shivvrat Arya
 baseurl: ""
-url: ""
+url                      : ""
+#url                      : "https://shivvrat.github.io/"
+repository               : "Shivvrat/shivvrat.github.io"
+github:
+  url: "https://shivvrat.github.io/"
 
-
+twitter:
+  username               : "ShivvratA"
 # Google analytics ID: Remove or use your own!
 #google_analytics: UA-167467135-1
 google_analytics: G-9JMYG0Z6M7
@@ -35,6 +52,7 @@ nav_pages:
   # - name: research
   - name: teaching
   - name: resources
+  - name: blog
 #  - name: software
 #  - name: talks
 # - name: team
@@ -62,8 +80,73 @@ kramdown:
   enable_coderay: false
   parse_block_html: true # default for kramdown is false. This will enable using Markdown links
 
+# Site Author
+author:
+  name             : "Shivvrat Arya"
+  avatar           : "Shivvrat_Arya_headshot.png"
+  bio              : "Ph.D. Student"
+  location         :
+  employer         :
+  pubmed           :
+  orcid            : "http://orcid.org/0000-0002-9727-2533"
+  googlescholar    : "https://scholar.google.com/citations?user=eM1co-kAAAAJ&hl=en"
+  email            : "shivvrat.arya@utdallas.edu"
+  researchgate     : "https://www.researchgate.net/profile/Shivvrat-Arya"
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "Shivvrat"
+  gitlab           :
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  lastfm           :
+  linkedin         : "shivvrat"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : #"https://stackoverflow.com/users/10912314/jayrobwilliams"
+  steam            :
+  tumblr           :
+  twitter          : "ShivvratA"
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
+
+
+
+
+
+# Defaults
+#defaults:
+#  # _posts
+#  - scope:
+#      path: ""
+#      type: posts
+#    values:
+#      layout: single
+#      author_profile: true
+#      read_time: true
+#      comments: true
+#      share: true
+#      related: true
+
+permalink: /:categories/:title/
+
 plugins:
   - jekyll/scholar
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+#  - jekyll-redirect-from
 
 plugins_dir: [jekyll-scholar]
 
@@ -93,6 +176,18 @@ scholar:
   bibliography_list_attributes:
     reversed: "reversed"
 
+color-scheme: auto
+
+last_updated: true # set to true if you want to display last updated in the footer
+
+# code highlighter theme
+highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
+
+# repo color theme
+repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -100,3 +195,25 @@ exclude:
   - switch_theme.sh
   - tags
   - Rakefile
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .Rproj.user
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
