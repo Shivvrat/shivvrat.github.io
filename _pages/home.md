@@ -7,7 +7,7 @@ permalink: /
 
 ### Welcome!
 
-I am currently working with Dr. Vibhav Gogate and Dr. Yu Xiang on Perceptually-Enabled Task Guidance (PTG) grant in which we are trying to develop Artificial Intelligence (AI) technology that guides users in the
+I am Shivvrat Arya (you can call me Shiv (pronounced as [ sh ih v ])). Currently I am working with  <a href="https://personal.utdallas.edu/~vibhav.gogate/" target="_blank">Dr. Vibhav Gogate </a> and  <a href="https://yuxng.github.io/" target="_blank">Dr. Yu Xiang </a> on Perceptually-Enabled Task Guidance (PTG) grant in which we are trying to develop Artificial Intelligence (AI) technology that guides users in the
 performance of a wide range of cognitively challenging physical tasks. PTG will leverage recent advances in machine perception,
 automated reasoning, and augmented reality. We are mainly working on the task of activity recognition on Egocentric Datasets like Epic Kitchens and Multi Label Datasets like Charades, AVA, Tacos and Wetlab.  
 
@@ -34,6 +34,7 @@ The evaluation metrics used for the comparison were Hamming Loss, Ranking loss, 
 [//]: # (</div>)
 <br/>
 
+[//]: # (TODO Add ### Research Interests)
 ### About me
 
 I am pursuing my PhD in the Department of Computer Science at the University of Texas at Dallas. I aspire to become a researcher who exercises the skills gained through academic research, to solve problems in the discipline of Computer Science leading to the development of cutting edge technologies. I am consistently looking for arduous opportunities that would help me to test my knowledge and learn a new set of skills.
