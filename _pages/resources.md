@@ -139,6 +139,8 @@ Some of these resources might be helpful during your time in academia. I have al
 - Goodnotes [Note down, shape, & share your ideas with the world's best digital paper](https://www.goodnotes.com)
 - Notability [Note-Taking - Handwritten](https://notability.com)
 - MarginNote [A brand new e-reader to better study and digest your books - Good for reading papers and taking notes](https://www.marginnote.com)
+#### Diagrams:
+- draw.io: Flowchart Maker & Online Diagram Software [Desktop](https://github.com/jgraph/drawio-desktop/releases/)
 
 ### Repositories
 #### Building Academic Webpage
