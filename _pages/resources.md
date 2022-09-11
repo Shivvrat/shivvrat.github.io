@@ -7,6 +7,7 @@ permalink: /resources/
 Some of these resources might be helpful during your time in academia. I have also added some software and github repositories I use on a daily basis. 
 (Most related to academia are taken from [Clemens Eppner's webpage](https://clemense.github.io/))  
 ### Related to Academia
+
 #### Academic Writing
 
 - **Papers**
@@ -132,15 +133,18 @@ Some of these resources might be helpful during your time in academia. I have al
 [//]: # (    - Zachary Ernst: [Leaving Academia for the Private Sector: Seven Years Later]&#40;https://medium.com/@zacernst/leaving-academia-for-the-private-sector-seven-years-later-fbb7849182f6&#41;)
 ### Software
 (Please use any recommended software or repositories at your own risk.) 
+
 #### Citation Manager
 - Zotero: [Citation Manager](https://www.zotero.org)
+
 #### Note-Taking on iPad and MacBook:
 - Obsidian: [Note-Taking -  A knowledge base that works on local Markdown files](https://obsidian.md)
 - Goodnotes [Note down, shape, & share your ideas with the world's best digital paper](https://www.goodnotes.com)
 - Notability [Note-Taking - Handwritten](https://notability.com)
 - MarginNote [A brand new e-reader to better study and digest your books - Good for reading papers and taking notes](https://www.marginnote.com)
+
 #### Diagrams:
-- draw.io: Flowchart Maker & Online Diagram Software [Desktop](https://github.com/jgraph/drawio-desktop/releases/)
+- draw.io: Flowchart Maker & Online Diagram Software [Desktop Installer](https://github.com/jgraph/drawio-desktop/releases/)
 
 ### Repositories
 #### Building Academic Webpage
