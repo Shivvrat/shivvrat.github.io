@@ -183,3 +183,8 @@ Some of these resources might be helpful during your time in academia. I have al
 - [PyTorch Examples](https://github.com/pytorch/examples)
 - [ONNX Model Zoo](https://github.com/onnx/models)
 - [Tensorflor Model Garden](https://github.com/tensorflow/models)
+
+
+### Other Resources
+- [Matt Might's webpage](https://matt.might.net/articles/)
+- [Clemens Eppner's webpage](https://clemense.github.io/)) 
