@@ -120,6 +120,8 @@ Some of these resources might be helpful during your time in academia. I have al
     -   Basecamp: [Group Chat Problems](https://basecamp.com/guides/group-chat-problems)
     -   Paul Graham: [Maker's Schedule, Manager's schedule](http://www.paulgraham.com/makersschedule.html)
 
+- **Useful Website**
+  -  Paper Digest: [Artificial Intelligence summarizes academic articles for you](https://www.paper-digest.com)
 [//]: # (- **Leaving Academia**)
 
 [//]: # (    - Marcel Haas: [Leaving the field: becoming an extronomer]&#40;http://www.marcelhaas.com/index.php/2018/03/30/leaving-the-field-becoming-an-extronomer/&#41; and [I regret quitting astrophysics]&#40;http://www.marcelhaas.com/index.php/2020/12/16/i-regret-quitting-astrophysics/&#41;)
@@ -186,5 +188,7 @@ Some of these resources might be helpful during your time in academia. I have al
 
 
 ### Other Resources
+#### Academic Web Pages
 - [Matt Might's webpage](https://matt.might.net/articles/)
 - [Clemens Eppner's webpage](https://clemense.github.io/)) 
+
