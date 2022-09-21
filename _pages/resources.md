@@ -4,8 +4,9 @@ layout: gridlay
 sitemap: false
 permalink: /resources/
 ---
-Some of these resources might be helpful during your time in academia. I have also added some software and github repositories I use on a daily basis. 
-(Most related to academia are taken from [Clemens Eppner's webpage](https://clemense.github.io/))  
+Some of these resources might be helpful during your time in academia. I have also added some software and GitHub repositories I use daily. 
+(Most related to academia are taken from [Clemens Eppner's webpage](https://clemense.github.io/))
+  
 ### Related to Academia
 
 #### Academic Writing
