@@ -54,6 +54,7 @@ nav_pages:
   - name: teaching
   - name: resources
   - name: blog
+  - name: photos
 #  - name: software
 #  - name: talks
 # - name: team
@@ -147,6 +148,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-gallery-generator
 #  - jekyll-redirect-from
 
 plugins_dir: [jekyll-scholar]
@@ -188,6 +190,25 @@ highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-them
 # repo color theme
 repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+
+# Gallery Details
+gallery:
+  dir: photos               # Path to the gallery
+  symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
+  title: "Photos"           # Title for gallery index page
+  title_prefix: "Photos: "  # Title prefix for gallery pages. Gallery title = title_prefix + gallery_name
+  sort_field: "date_time"   # How to sort galleries on the index page.
+                            # Possible values are: title, date_time, best_image
+  thumbnail_size:
+    x: 400                  # max width of thumbnails (in pixels)
+    y: 400                  # max height of thumbnails (in pixels)
+  # The following options are for individual galleries.
+  galleries:
+    ptg22:
+      best_image: ptg.jpg  # The image to show on the gallery index page. Defaults to the last image.
+      name: "DARPA PTG PI Meeting 2022" # Info fields can be used in custom templates.
+
+
 
 exclude:
   - Gemfile

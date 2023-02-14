@@ -15,3 +15,4 @@ gem "jekyll-sitemap"
 gem "jekyll-gist"
 gem "jekyll-feed"
 gem "minimal-mistakes-jekyll"
+gem 'jekyll-gallery-generator'
