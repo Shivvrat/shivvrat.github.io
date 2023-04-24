@@ -16,3 +16,4 @@ gem "jekyll-gist"
 gem "jekyll-feed"
 gem "minimal-mistakes-jekyll"
 gem 'jekyll-gallery-generator'
+gem "faraday-retry"

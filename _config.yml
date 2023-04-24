@@ -149,7 +149,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-gallery-generator
-#  - jekyll-redirect-from
 
 plugins_dir: [jekyll-scholar]
 
