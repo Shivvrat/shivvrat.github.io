@@ -1,0 +1,562 @@
+I"��<p>Some of these resources might be helpful during your time in academia. I have also added some software and GitHub repositories I use daily.
+(Most related to academia are taken from <a href="https://clemense.github.io/">Clemens Eppner's webpage</a> and <a href="http://www.cs.cmu.edu/~pliang/">Paul Liang</a>’s GitHub)</p>
+
+<h2 id="other-similar-collections">Other similar collections</h2>
+
+<p><a href="http://www.cs.cmu.edu/~jasonh/advice.html">Grad School Advice by Jason Hong</a></p>
+
+<p><a href="https://www.cs.jhu.edu/~jason/advice/">Advice for Research Students by Jason Eisner</a></p>
+
+<p><a href="https://homes.cs.washington.edu/~mernst/advice/">Advice for researchers and students by Michael Ernst</a></p>
+
+<p><a href="https://taoxie.cs.illinois.edu/advice.htm">Advice Collection by Tao Xie and Yuan Xie</a></p>
+
+<p><a href="https://jedyang.com/post/list-of-awesome-cs-phd-application-advice/">Awesome CS PhD application advice by Jed Yang</a></p>
+
+<p><a href="https://phdadvice.carrd.co/">CS PhD the greatest hits by Angela Jiang</a></p>
+
+<p><a href="https://stephentu.github.io/blog/reflections/2016/02/28/list-phd-reflections.html">List of PhD reflections by Stephen Tu</a></p>
+
+<p><a href="https://twitter.com/chaitjo/status/1444580607980281858?lang=en">Thread of PhD application resources by Chaitanya Joshi</a></p>
+
+<p><a href="https://github.com/hassony2/useful-computer-vision-phd-resources">Useful computer vision PhD resources by Yana Hasson</a></p>
+
+<p><a href="https://www.stat.cmu.edu/~aramdas/checklists.html">Checklists for Stat-ML PhD students by Aaditya Ramdas</a></p>
+
+<p><a href="https://martiansideofthemoon.github.io/2018/05/29/grad-resources.html">Grad School Resources by Kalpesh Krishna</a></p>
+
+<p><a href="https://docs.google.com/document/d/1uvAbEhbgS_M-uDMTzmOWRlYxqCkogKRXdbKYYT98ooc/edit#">AI Research Experiences by Pranav Rajpurkar</a></p>
+
+<h3 id="related-to-academia">Related to Academia</h3>
+
+<h4 id="academic-writing">Academic Writing</h4>
+
+<ul>
+  <li><strong>Papers</strong>
+    <ul>
+      <li>Alberto Rodriguez: <a href="https://youtu.be/pq4qmFYcn4E">Good Practices for Good Writing</a> (from the R:SS 2020 workshop <a href="https://sites.google.com/view/rss20-gcr">Citizens of Robotics Research</a>)</li>
+      <li>Amy Tabb: <a href="https://amytabb.com/ts/2019_05_09">Basic Submission Checklist</a></li>
+      <li>Bill Freeman: <a href="https://youtu.be/MKUCz_3Ee0A?t=248">How to Write a Good Research Paper</a> [<a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/static/slides/freeman_how_to_write_papers.pdf">Slides</a>] (from the CVPR 2018 workshop <a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/">Good Citizen of CVPR</a>)</li>
+      <li>Brett Mensh and Konrad Kording: <a href="https://journals.plos.org/ploscompbiol/article/file?type=printable&amp;id=10.1371/journal.pcbi.1005619">Ten Simple Rules for Structuring Papers</a></li>
+      <li>Cormac McCarthy: <a href="https://www.nature.com/articles/d41586-019-02918-5">Novelist Cormac McCarthy’s Tips on How to Write a Great Science Paper</a></li>
+      <li>Devi Parikh: <a href="https://medium.com/@deviparikh/planning-paper-writing-553f497e8839">Planning Paper Writing</a></li>
+      <li>George Whitesides: <a href="https://youtu.be/q3mrRH2aS98">How to Write a Paper to Communicate Your Research</a></li>
+      <li>Jitendra Malik: <a href="https://www.youtube.com/watch?v=imEtTnQKt4M">How to Write a Good Paper</a> [<a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/static/slides/malik_write_good_paper.pdf">Slides</a>] (from the CVPR 2018 workshop <a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/">Good Citizen of CVPR</a>)</li>
+      <li>Kate Saenko: <a href="https://docs.google.com/presentation/d/1PZj0Sev2yjDu9NNr96S_wwjKCgIDhGmLjW1vtQpDhlk/edit#slide=id.p">How to Write the Introduction for a Research Paper</a></li>
+      <li>Kevin P. Lee: <a href="https://web.cs.ucdavis.edu/~amenta/w10/writingman.pdf">A Guide to Writing Mathematics</a></li>
+      <li>Larry McEnerney: <a href="https://youtu.be/vtIzMaLkCaM">Leadership Lab: The Craft of Writing Effectively</a></li>
+      <li>Marcel Hofeditz: <a href="https://medium.com/@MarcelHofeditz/5-academic-writing-tips-for-non-native-speaker-57168bea3db2">5 Academic Writing Tips for Non-Native Speakers</a></li>
+      <li>Pratap Tokekar: <a href="http://tokekar.github.io/docs/Tokekar-WritingPapers-Talk.pdf">Thoughts on Writing a Good (Robotics) Paper</a></li>
+      <li>Simon Peyton Jones: <a href="https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/">How to Write a Great Research Paper</a> (<a href="https://youtu.be/VK51E3gHENc">Talk</a>)</li>
+      <li>Stefanie Tellex: <a href="https://h2r.cs.brown.edu/writing-a-technical-paper/">Writing a Technical Paper</a></li>
+      <li>Virginia Gewin: <a href="https://www.nature.com/articles/d41586-018-02404-4">How to Write a First-Class Paper</a></li>
+      <li>Zachary Lipton: <a href="http://approximatelycorrect.com/2018/01/29/heuristics-technical-scientific-writing-machine-learning-perspective/">Heuristics for Scientific Writing (a Machine Learning Perspective)</a></li>
+    </ul>
+  </li>
+  <li><strong>Abstracts</strong>
+    <ul>
+      <li>Chittaranjan Andrade: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3136027/">How to Write a Good Abstract for a Scientific Paper or Conference Presentation</a></li>
+      <li>Juliana Carvalho Ferreira and Cecilia Maria Patino: <a href="http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S1806-37132018000400260">Twelve Tips to Write an Abstract for a Conference: Advice for Young and Experienced Investigators</a></li>
+      <li>Nadine J. Kabengi: <a href="https://www.acsmeetings.org/files/meetings/tips-for-writing-abstracts-annual-mtgs.pdf">Tips for Writing an Abstract</a></li>
+      <li>Nature 435, 114-118 (2005): <a href="http://www.markowetzlab.org/skills/How-to-write-a-Nature-abstract.pdf">How to Construct a Nature Summary Paragraph</a></li>
+      <li>Philip Koopman: <a href="https://users.ece.cmu.edu/~koopman/essays/abstract.html">How to Write an Abstract</a></li>
+    </ul>
+  </li>
+  <li><strong>Reviews</strong>
+    <ul>
+      <li>Amy Tabb: <a href="https://amytabb.com/ts/2019_06_09">My Reviewing Style, or How to Review Technical Papers When You've Not Been Taught How</a></li>
+      <li>Devi Parikh, Dhruv Battra, and Stefan Lee: <a href="https://medium.com/@deviparikh/how-we-write-rebuttals-dc84742fece1">How We Write Rebuttals</a></li>
+      <li>EMNLP Committee Blog: <a href="https://2020.emnlp.org/blog/2020-05-17-write-good-reviews">Advice on Reviewing for EMNLP</a></li>
+      <li>Seth Hutchinson: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5663683">Surviving the Review Process</a></li>
+    </ul>
+  </li>
+  <li><strong>Research Statements</strong>
+    <ul>
+      <li>Carnegie Mellon University, Global Communication Center: <a href="https://www.cmu.edu/gcc/handouts-and-resources/handouts/research-statement.pdf">Writing A Research Statement</a></li>
+    </ul>
+  </li>
+  <li><strong>Research Proposals</strong>
+    <ul>
+      <li>George A. Hazelrigg: <a href="https://www.cs.rpi.edu/~trink/HazelriggWinningResearchProposal.pdf">Twelve Steps to a Winning Research Proposal</a></li>
+      <li>George A. Hazelrigg: <a href="http://poole.ncsu.edu/i/com/weblogs/research-development/Honing-Proposal-Skillls-1.pdf">Honing Your Proposal Writing Skills</a></li>
+      <li>Jeff Trinkle: <a href="https://www.cs.rpi.edu/~trink/proposal-preparation.html">Some Keys to Preparing a Competitive Proposal From My Observations</a></li>
+    </ul>
+  </li>
+  <li><strong>Posters</strong>
+    <ul>
+      <li>Amy Tabb: <a href="https://amytabb.com/ts/2019_11_23/">Poster Session Strategies</a></li>
+    </ul>
+  </li>
+  <li><strong>LaTeX</strong>
+    <ul>
+      <li>Devi Parikh: <a href="https://medium.com/@deviparikh/shortening-papers-to-fit-page-limits-97601318681d">Shortening Papers to Fit Page Limits</a></li>
+      <li>Dustin Tran: <a href="https://twitter.com/dustinvtran/status/1398129705660805121">Better LaTeX Defaults</a></li>
+      <li>Jia-Bin Huang: <a href="https://filebox.ece.vt.edu/~jbhuang/slides/Research%20101%20-%20Paper%20Writing%20with%20LaTeX.pdf">Paper Writing with LaTeX</a></li>
+      <li>Markus Püschel: <a href="https://inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf">Small Guide to Making Nice Tables</a></li>
+      <li>Noah Snavely: <a href="http://bit.ly/latex-style">A Short LaTeX Style Guide</a></li>
+    </ul>
+  </li>
+  <li><strong>Citing</strong>
+    <ul>
+      <li>Citation Machine <a href="https://www.citationmachine.net">Smart Writing</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="research">Research</h4>
+
+<ul>
+  <li>
+    <p><strong>General Advice</strong></p>
+
+    <ul>
+      <li>Academia Stack Exchange: <a href="https://academia.stackexchange.com/questions/tagged/research-process?tab=Votes">Posts Tagged With [research-process]</a></li>
+      <li>Chris Olah: <a href="https://colah.github.io/notes/taste/">Research Taste Exercises</a></li>
+      <li>Colin Chandler: <a href="https://pdfs.semanticscholar.org/2d64/e940fad5645c1479f249e9c368d4976e0f01.pdf">What Is the Meaning of Impact in Relation to Research and Why Does It Matter? A View From Inside Academia</a></li>
+      <li>Cordelia Schmid: <a href="https://youtu.be/imEtTnQKt4M?t=1305">How to Do Good Research &amp; Evaluation</a> [<a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/static/slides/schmid_good_research_and_evaluation.pdf">Slides</a>] (from the CVPR 2018 workshop <a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/">Good Citizen of CVPR</a>)</li>
+      <li>David Epstein: <a href="https://youtu.be/B6lBtiQZSho">Why Specializing Early Doesn't Always Mean Career Success</a></li>
+      <li>Danica Kragic: <a href="https://youtu.be/sSCK3oYGOo4">Building an Academic Career</a> [<a href="https://drive.google.com/file/d/1WbhSoua3aFPW920DMG3Sm3OEzK-TeOIx/view?usp=sharing">Slides</a>] (from the R:SS 2020 workshop <a href="https://sites.google.com/view/rss20-gcr">Citizens of Robotics Research</a>)</li>
+      <li>David Patterson: <a href="https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf">How to Have a Bad Career in Research/Academia</a></li>
+      <li>Donald Knuth: <a href="https://youtu.be/75Ju0eM5T2c">My Advice to Young People</a> and <a href="https://shuvomoy.github.io/blogs/posts/Knuth-on-work-habits-and-problem-solving-and-happiness/">On work habits, problem solving, and happiness</a> (by Shuvomoy Das Gupta)</li>
+      <li>Eugene Vinitsky: <a href="https://rlblogging.notion.site/Personal-Rules-of-Productive-Research-44a456bacf7c4805a9ea417b9d3ab1b3">Personal Rules of Productive Research</a></li>
+      <li>H.T. Kung: <a href="https://www.eecs.harvard.edu/htk/phdadvice/">Useful Thoughts about Research</a></li>
+      <li>Jeff Trinkle: <a href="https://www.cs.rpi.edu/~trink/research-directions.html">Identifying a Fundable Research Project</a></li>
+      <li>Jia-Bin Huang: <a href="https://twitter.com/jbhuang0604/status/1423499757591400448">How to Come Up With Research Ideas?</a></li>
+      <li>Jim Kurose: <a href="http://www-net.cs.umass.edu/kurose/talks/student_keynote_final.pdf">15 Pieces of Advice I Wish My PhD Advisor Had Given Me</a></li>
+      <li>John Schulman: <a href="http://joschu.net/blog/opinionated-guide-ml-research.html">An Opinionated Guide to ML Research</a></li>
+      <li>Mark Dredze and Hanna M. Wallach: <a href="https://people.cs.umass.edu/~wallach/how_to_be_a_successful_phd_student.pdf">How to Be a Successful PhD Student</a></li>
+      <li>Michael Nielsen: <a href="https://michaelnielsen.org/blog/principles-of-effective-research/">Principles of Effective Research</a></li>
+      <li>Mor Naaman: <a href="https://stechlab.github.io/phd-syllabus/">A Syllabus for PhD Students Working in My Group</a></li>
+      <li>Nick Feamster and Alex Gray: <a href="https://greatresearch.org/">How to Do Great Research</a></li>
+      <li>Remzi Arpaci-Dusseau: <a href="https://youtu.be/fqPSnjewkuA">Graduate School: Keys To Success</a></li>
+      <li>Richard Hamming: <a href="https://youtu.be/a1zDuOPkMSw">You and Your Research</a> [<a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html">Transcript</a>]</li>
+      <li>Rosanne Liu: <a href="https://youtu.be/0blQp0_9NwY">AI Research: The Unreasonably Narrow Path and How not to be Miserable</a></li>
+      <li>Rowan McAllister: <a href="https://rowanmcallister.github.io/post/workshops/">Workshop Organization Guide</a></li>
+      <li>Siddhartha Srinivasa: <a href="https://youtu.be/Zz3bb3OWl68">What Should I Work On?</a> (from the R:SS 2020 workshop <a href="https://sites.google.com/view/rss20-gcr">Citizens of Robotics Research</a>)</li>
+      <li>Vincent Vanhoucke: <a href="https://medium.com/s/story/so-you-want-to-be-a-research-scientist-363c075d3d4c">So You Want to Be a Research Scientist</a></li>
+      <li>Vladlen Koltun: <a href="https://youtu.be/4LEZED1YXm0?t=1420">Doing (Good) Research</a> [<a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/static/slides/koltun_doing_(good)_research.pdf">Slides</a>] (from the CVPR 2018 workshop <a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/">Good Citizen of CVPR</a>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Designing Experiments</strong></p>
+
+    <ul>
+      <li>Anca Dragan: <a href="https://youtu.be/S0SbrUKcedQ">Intro to Experiment Design</a> [<a href="https://drive.google.com/file/d/1wfwxFj2BTuiNmKBhrMEIQoAs7BxNHUkK/view?usp=sharing">Slides</a>] (from the R:SS 2020 workshop <a href="https://sites.google.com/view/rss20-gcr">Citizens of Robotics Research</a>)</li>
+      <li>Andy Cockburn, Pierre Dragicevic, Lonni Besançon, and Carl Gutwin: <a href="https://cacm.acm.org/magazines/2020/8/246369-threats-of-a-replication-crisis-in-empirical-computer-science/fulltext">Threats of a Replication Crisis in Empirical Computer Science</a> (<a href="https://youtu.be/wp9B2P4jC-I">Talk</a>)</li>
+      <li>Peter Norvig: <a href="https://norvig.com/experiment-design.html">Warning Signs in Experimental Design and Interpretation</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Making Videos</strong></p>
+
+    <ul>
+      <li>Stefanie Tellex, Eric Rosen, and George Konidaris: <a href="https://youtu.be/fRxgqS8tJhQ">Best Practices for Robot Videos</a></li>
+      <li>Travis Deyle: <a href="http://www.hizook.com/blog/2012/07/02/being-honest-robot-videos-motion-capture-speedup-rates-and-teleoperation">Being Honest in Robot Videos: Motion Capture, Speedup Rates, and Teleoperation</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Reading Papers</strong></p>
+
+    <ul>
+      <li>Alec Jacobson and Colin Raffel: <a href="https://colinraffel.com/blog/role-playing-seminar.html">Role-Playing Paper-Reading Seminars</a></li>
+      <li>Andrew Ng: <a href="https://youtu.be/733m6qBH-jI">Career Advice / Reading Research Papers</a></li>
+      <li>David Ha: <a href="https://twitter.com/hardmaru/status/1305758751798910976">How Do You Skim a Research Paper?</a></li>
+      <li>Eric Jang: <a href="https://blog.evjang.com/2021/01/understanding-ml.html">How to Understand ML Papers Quickly</a></li>
+      <li>Jason Eisner: <a href="https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html">How to Read a Technical Paper</a></li>
+      <li>Srinivasan Keshav: <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">How to Read a Paper</a></li>
+      <li>Yannic Kilcher: <a href="https://youtu.be/Uumd2zOOz60">How I Read a Paper: Facebook's DETR</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Giving Talks</strong></p>
+
+    <ul>
+      <li>Kayvon Fatahalian: <a href="https://graphics.stanford.edu/~kayvonf/misc/cleartalktips.pdf">Tips for Giving Clear Talks</a></li>
+      <li>Kristen Grauman: <a href="https://www.youtube.com/watch?v=4LEZED1YXm0">Tips for Preparing a Clear Talk</a> [<a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/static/slides/grauman_preparing_clear_talks.pdf">Slides</a>] (from the CVPR 2018 workshop <a href="https://www.cc.gatech.edu/~parikh/citizenofcvpr/">Good Citizen of CVPR</a>)</li>
+      <li>Patrick Winston: <a href="https://youtu.be/Unzc731iCUY">How To Speak</a> (from his MIT course: <a href="https://ocw.mit.edu/how_to_speak">https://ocw.mit.edu/how_to_speak</a>)</li>
+      <li>Wolfram Burgard: <a href="https://youtu.be/JQaNkmWzArU">How to Give a Presentation</a> (from the R:SS 2020 workshop <a href="https://sites.google.com/view/rss20-gcr">Citizens of Robotics Research</a>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Thinking Patterns and Unsolicited Advice</strong></p>
+
+    <ul>
+      <li>Edward B. Burger and Michael Starbird: <a href="https://www.goodreads.com/book/show/14891980-the-5-elements-of-effective-thinking">The 5 Elements of Effective Thinking</a></li>
+      <li>Gabriel Weinberg: <a href="https://medium.com/@yegg/mental-models-i-find-repeatedly-useful-936f1cc405d">Mental Models I Find Repeatedly Useful</a></li>
+      <li>George Mack: <a href="https://twitter.com/george__mack/status/1350513143387189248">15 of the most useful razors and rules I've found</a></li>
+      <li>Jesse Richardson, Andy Smith, Som Meaden, and Flip Creative: <a href="https://yourlogicalfallacyis.com/">Thou Shalt not Commit Logical Fallacies</a></li>
+      <li>Kevin Kelly: <a href="https://kk.org/thetechnium/68-bits-of-unsolicited-advice/">68 Bits of Unsolicited Advice</a>, <a href="https://kk.org/thetechnium/99-additional-bits-of-unsolicited-advice/">99 Additional Bits of Unsolicited Advice</a></li>
+      <li>Nabeel Qureshi: <a href="https://nabeelqu.co/understanding">How to Understand Things</a></li>
+      <li>Rhiannon Beaubien and Shane Parrish: <a href="https://fs.blog/mental-models/">Mental Models (~100 Models Explained)</a></li>
+      <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/List_of_cognitive_biases">List of Cognitive Biases</a></li>
+      <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/List_of_fallacies">List of Fallacies</a></li>
+      <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Five_whys">Five whys</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Communication</strong></p>
+
+    <ul>
+      <li>Basecamp: <a href="https://basecamp.com/guides/how-we-communicate">How We Communicate</a></li>
+      <li>Basecamp: <a href="https://basecamp.com/guides/group-chat-problems">Group Chat Problems</a></li>
+      <li>Paul Graham: <a href="http://www.paulgraham.com/makersschedule.html">Maker's Schedule, Manager's schedule</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Useful Website</strong></p>
+
+    <ul>
+      <li>Paper Digest: <a href="https://www.paper-digest.com">Artificial Intelligence summarizes academic articles for you</a>
+[//][//]: # (- <strong>Leaving Academia</strong>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="software">Software</h3>
+
+<p>(Please use any recommended software or repositories at your own risk.)</p>
+
+<h4 id="citation-manager">Citation Manager</h4>
+
+<ul>
+  <li>Zotero: <a href="https://www.zotero.org">Citation Manager</a></li>
+</ul>
+
+<h4 id="note-taking-on-ipad-and-macbook">Note-Taking on iPad and MacBook:</h4>
+
+<ul>
+  <li>Obsidian: <a href="https://obsidian.md">Note-Taking -  A knowledge base that works on local Markdown files</a></li>
+  <li>Goodnotes <a href="https://www.goodnotes.com">Note down, shape, &amp; share your ideas with the world's best digital paper</a></li>
+  <li>Notability <a href="https://notability.com">Note-Taking - Handwritten</a></li>
+  <li>MarginNote <a href="https://www.marginnote.com">A brand new e-reader to better study and digest your books - Good for reading papers and taking notes</a></li>
+</ul>
+
+<h4 id="diagrams">Diagrams:</h4>
+
+<ul>
+  <li>draw.io: Flowchart Maker &amp; Online Diagram Software <a href="https://github.com/jgraph/drawio-desktop/releases/">Desktop Installer</a></li>
+</ul>
+
+<h3 id="repositories">Repositories</h3>
+
+<h4 id="building-academic-webpage">Building Academic Webpage</h4>
+
+<ul>
+  <li>Templates based on Jekyll
+    <ul>
+      <li><a href="https://github.com/sbryngelson/academic-website-template">academic-website-template</a> (I am using this as a template)</li>
+      <li><a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes Jekyll theme</a></li>
+      <li><a href="https://github.com/academicpages/academicpages.github.io">academicpages.github.io</a></li>
+      <li><a href="https://github.com/gaalcaras/academic">academic</a></li>
+      <li><a href="https://github.com/alshedivat/al-folio">al-folio</a></li>
+    </ul>
+  </li>
+  <li>Hosting
+    <ul>
+      <li><a href="https://pages.github.com">GitHub Pages</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="python">Python</h4>
+
+<ul>
+  <li><strong>Faster Python</strong>
+    <ul>
+      <li>Jit Compilers
+        <ul>
+          <li><a href="https://github.com/pytorch/torchdynamo#torchdynamo">TorchDynamo</a> is a Python-level JIT compiler designed to make unmodified PyTorch programs faster</li>
+          <li><a href="https://numba.pydata.org">Numba</a> is an open source JIT compiler that translates a subset of Python and NumPy code into fast machine code.</li>
+        </ul>
+      </li>
+      <li><a href="https://cython.org">Cython</a> is an optimising static compiler for both the Python programming language</li>
+    </ul>
+  </li>
+  <li><strong>Logging</strong>
+    <ul>
+      <li><a href="https://github.com/Delgan/loguru">loguru</a> Python logging made (stupidly) simple</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="project-templates">Project templates</h4>
+
+<ul>
+  <li>README
+    <ul>
+      <li><a href="https://github.com/catiaspsilva/README-template">README Template</a></li>
+      <li><a href="https://github.com/Shivvrat/Best-README-Template">Best-README-Template</a></li>
+    </ul>
+  </li>
+  <li>Data Science Project
+    <ul>
+      <li><a href="https://github.com/Shivvrat/lightning-hydra-template">Lightning-Hydra-Template</a></li>
+      <li><a href="https://github.com/drivendata/cookiecutter-data-science">Cookiecutter Data Science</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="deep-learning">Deep Learning</h4>
+
+<ul>
+  <li><a href="https://github.com/ysh329/deep-learning-model-convertor">Deep Learning Model Convertors</a></li>
+  <li><a href="https://github.com/microsoft/computervision-recipes">computervision-recipes</a> Best Practices, code samples, and documentation for Computer Vision.</li>
+  <li><a href="https://github.com/labmlai/labml">labml</a> Monitor deep learning model training and hardware usage from mobile.</li>
+  <li><a href="https://wandb.ai/home">wandb</a></li>
+  <li><a href="https://github.com/nicolaspi/conf_generator">Conf-Generator</a></li>
+  <li><a href="https://github.com/pytorch/examples">PyTorch Examples</a></li>
+  <li><a href="https://github.com/onnx/models">ONNX Model Zoo</a></li>
+  <li><a href="https://github.com/tensorflow/models">Tensorflor Model Garden</a></li>
+</ul>
+
+<h3 id="other-resources">Other Resources</h3>
+
+<h4 id="academic-web-pages">Academic Web Pages</h4>
+
+<ul>
+  <li><a href="https://matt.might.net/articles/">Matt Might's webpage</a></li>
+  <li><a href="https://clemense.github.io/">Clemens Eppner's webpage</a>)</li>
+</ul>
+
+<h1 id="collection-of-advice-for-prospective-and-current-phd-students">Collection of advice for prospective and current PhD students</h1>
+
+<p>Credit goes out to the original authors of each link and <a href="http://www.cs.cmu.edu/~pliang/">Paul Liang</a> (pliang@cs.cmu.edu).</p>
+
+<p>Table of Contents</p>
+
+<ul>
+  <li><a href="#other-similar-collections">Other similar collections</a></li>
+  <li><a href="#advice-for-prospective-students">Advice for prospective students</a>
+    <ul>
+      <li><a href="#general-advice">General advice</a></li>
+      <li><a href="#statement-of-purpose">Statement of purpose</a></li>
+      <li><a href="#visit-days-choosing-advisor-and-school">Visit days, choosing advisor and school</a></li>
+    </ul>
+  </li>
+  <li><a href="#advice-for-current-students">Advice for current students</a>
+    <ul>
+      <li><a href="#PhD-survival-guides">PhD survival guides</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#reading">Reading</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#blogposts">Blogposts</a></li>
+      <li><a href="#reviewing">Reviewing</a></li>
+      <li><a href="#presenting">Presenting</a></li>
+      <li><a href="#advising-students">Advising students</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#fellowship-applications">Fellowship applications</a></li>
+      <li><a href="#networking">Networking</a></li>
+      <li><a href="#organizing-workshops-and-tutorials">Organizing workshops and tutorials</a></li>
+      <li><a href="#attending-academic-conferences">Attending academic conferences</a></li>
+      <li><a href="#job-search">Job search</a></li>
+    </ul>
+  </li>
+  <li><a href="#memoirs">Memoirs</a></li>
+</ul>
+
+<h2 id="advice-for-prospective-students">Advice for prospective students</h2>
+
+<h3 id="general-advice">General advice</h3>
+
+<p><a href="https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf">Applying to PhD Programs in Computer Science by Mor Harchol-Balter</a></p>
+
+<p><a href="https://cs.stanford.edu/degrees/phd/PhD/GraduateSchoolAdvice.pdf">Graduate School Advice by Stanford CS</a></p>
+
+<p><a href="https://nlp.stanford.edu//~johnhew//undergrad-researchers.html">Undergrad to PhD, or not - advice for undergrads interested in research by John Hewitt</a></p>
+
+<p><a href="https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/">HOWTO: Get into grad school for science, engineering, math and computer science by Matt Might</a></p>
+
+<p><a href="https://medium.com/@zhijing-jin/applying-for-a-phd-in-nlp-9d070a02cda0">Applying for a PhD in NLP by Zhijing Jin and ACL Year-Round Mentorship Session</a></p>
+
+<p><a href="https://blog.nelsonliu.me/2019/10/24/student-perspectives-on-applying-to-nlp-phd-programs/">Student Perspectives on Applying to NLP PhD Programs by Akari Asai, John Hewitt, Sidd Karamcheti, Kalpesh Krishna, Nelson Liu, Roma Patel, and Nicholas Tomlin</a></p>
+
+<p><a href="https://timdettmers.com/2018/11/26/phd-applications/">Machine Learning PhD Applications — Everything You Need to Know by Tim Dettmers</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=z6TkkdlRWcU&amp;ab_channel=HimabinduLakkaraju">Demystifying ML PhD Admissions to US Universities by Hima Lakkaraju</a></p>
+
+<p><a href="https://raw.githubusercontent.com/nguyenthanhvuh/phd-cs-us/main/demystify.pdf">Demystifying PhD Admissions in Computer Science in the US: a Guide for Vietnamese and International Students by ThanhVu Nguyen</a></p>
+
+<p><a href="https://people.eecs.berkeley.edu/~justine/advice.pdf">A long, rambling, mostly personal corpus of advice on applying to Computer Science grad school (for UWCSE students) by Justine Sherry</a></p>
+
+<p><a href="https://docs.google.com/document/d/1lT-bsIP0GKfh8l5sQnM2hCzzR9prt-QLx16rimUOdIM/edit">Ph.D. Applications: FAQ by Noah Smith</a></p>
+
+<p><a href="https://www.quora.com/What-does-the-admissions-committee-process-for-graduate-school-look-like-Do-you-sit-in-a-room-and-all-discuss-the-same-candidate-at-the-same-time-or-is-it-more-of-an-individual-process-with-opinions-aggregated-at-the-end">Quora answer on the admission committee process by Scott Fahlman</a></p>
+
+<p><a href="https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html">Reflecting on CS Graduate Admissions by David Anderson</a></p>
+
+<p><a href="https://biomath.usu.edu/files/Peter_J._Feibelman_A_PhD_Is_Not_Enough.pdf">A PhD is Not Enough: A Guide to Survival in Science by Peter Feibelman</a></p>
+
+<p><a href="https://conquer.cra.org/wp-content/uploads/2021/11/ThePhDinComputing_CRAEWebinar.pdf">The PhD in CS: Getting There and Being Successful by Michael Hilton, Janet Davis, and Ian Ludden</a></p>
+
+<h3 id="statement-of-purpose">Statement of purpose</h3>
+
+<p><a href="https://cs-sop.org">Database of Example PhD SOPs by the CS-SOP initiative</a></p>
+
+<p><a href="https://www.cc.gatech.edu/fce/people/jmankoff/gradschool/sops.html">Some Suggestions on writing your statement of purpose by Jennifer Mankoff</a></p>
+
+<p><a href="http://cwfletcher.net/Pages/SoP.php">Graduate School Personal Statements by Christopher Fletcher</a></p>
+
+<p><a href="https://nschneid.medium.com/inside-ph-d-admissions-what-readers-look-for-in-a-statement-of-purpose-3db4e6081f80">Inside PhD admissions: What readers look for in a Statement of Purpose by Nathan Schneider</a></p>
+
+<p><a href="https://www.cs.cmu.edu/~pavlo/blog/2015/10/how-to-write-a-bad-statement-for-a-computer-science-phd-admissions-application.html">How to Write a Bad Statement by Andy Pavlo</a></p>
+
+<p><a href="https://t.co/J71ZD2dKJ1">Tips and Tricks, How-To Guide for Grad School SoPs by Erica Weng</a></p>
+
+<p><a href="https://mitcommlab.mit.edu/eecs/commkit/graduate-school-personal-statement/">Graduate School Statement of Purpose by MIT EECS</a></p>
+
+<p><a href="https://engineering.purdue.edu/ChanGroup/write_statement.html">How to write personal statement for graduate school application by Stanley Chan</a></p>
+
+<p><a href="https://colinraffel.com/blog/writing-a-google-ai-residency-cover-letter.html">Writing a Google AI Residency Cover Letter by Katherine Lee and Ben Eysenbach</a></p>
+
+<p>Public examples: <a href="https://www.codycoleman.com/public/misc/Stanford-purpose.pdf">[Cody Coleman]</a>, <a href="http://www.cs.cmu.edu/~srallaba/pdfs/statement_PhD.pdf">[Sai Rallabandi]</a>, <a href="https://www.cs.cmu.edu/~jlacomis/assets/statement/personal-statement-cmu.pdf">[Jeremy Lacomis]</a>, <a href="https://seankross.com/notes/grad-school-essays/ShortPersonalStatement.pdf">[Sean Kross]</a>, <a href="https://graphics.stanford.edu/~zhossain/grad/sop_mit.pdf">[Zahid Hossain]</a>, <a href="https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf">[Jean Yang]</a></p>
+
+<h3 id="visit-days-choosing-advisor-and-school">Visit days, choosing advisor and school</h3>
+
+<p><a href="https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/">Questions to Ask a Prospective Ph.D. Advisor on Visit Day, With Thorough and Forthright Explanations by Andrew Kuznetsov</a></p>
+
+<p><a href="https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school/">How to Choose Your Grad School by Tim Dettmers</a></p>
+
+<p><a href="https://hst.mit.edu/sites/default/files/media/files/Barres%20BA.Neuron.80.275.2013.pdf">How to Pick a Graduate Advisor by Ben Barres</a></p>
+
+<p><a href="https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf">The Definitive ‘what do I ask/look for’ in a PhD Advisor Guide by Columbia CS</a></p>
+
+<h2 id="advice-for-current-students">Advice for current students</h2>
+
+<h3 id="phd-survival-guides">PhD survival guides</h3>
+
+<p><a href="https://www.cs.unc.edu/~azuma/hitch4.html">So long, and thanks for the PhD by Ronald T. Azuma</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=fqPSnjewkuA&amp;ab_channel=RemziArpaci-Dusseau">Graduate School: Keys To Success by Remzi Arpaci-Dusseau</a></p>
+
+<p><a href="https://matt.might.net/articles/phd-school-in-pictures/">The illustrated guide to a PhD by Matt Might</a></p>
+
+<p><a href="https://people.cs.umass.edu/~wallach/how_to_be_a_successful_phd_student.pdf">How to Be a Successful PhD Student by Mark Dredze, Hanna Wallach</a></p>
+
+<p><a href="https://www.cs.utexas.edu/users/dahlin/bookshelf/timetalk.htm">Time Management by Randy Pausch</a></p>
+
+<p><a href="https://www.cs.cmu.edu/~mblum/research/pdf/grad.html">Advice to a Beginning Graduate Student by Manuel Blum</a></p>
+
+<p><a href="https://da-data.blogspot.com/2016/09/finances-for-cs-phd-students.html">Finances for CS PhD students by David Anderson</a></p>
+
+<p><a href="https://karpathy.github.io/2016/09/07/phd/">A Survival Guide to a PhD by Andrej Karpathy</a></p>
+
+<p><a href="http://www-net.cs.umass.edu/kurose/talks/student_keynote_final.pdf">15 pieces of advice I wish my PhD advisor had given me by Jim Kurose</a></p>
+
+<p><a href="https://courses.cs.washington.edu/courses/cse590x/22wi/">The Tao of PhD: Thriving in the Allen School’s Graduate Program by University of Washington</a></p>
+
+<p><a href="https://imstat.org/2022/04/01/written-by-witten-so-long-and-thanks-for-all-the-tips/">10 tips for PhD students by Daniela Witten</a></p>
+
+<p><a href="http://eugenevinitsky.github.io/posts/expectation_setting.html">Expectation Setting by Eugene Vinitsky</a></p>
+
+<h3 id="research-1">Research</h3>
+
+<p><a href="https://greatresearch.org/">How to Do Great Research by Nick Feamster and Alex Gray</a></p>
+
+<p><a href="https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf">How to Have a Bad Career How to Have a Bad Career in Research/Academia by David Patterson</a></p>
+
+<p><a href="https://www.eecs.harvard.edu/htk/phdadvice/">Useful Thoughts about Research by H.T. Kung</a></p>
+
+<p><a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html">You and Your Research by Richard Hamming</a></p>
+
+<p><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mleone/web/how-to.html">Advice on Research and Writing by Mark Leone</a></p>
+
+<h3 id="reading">Reading</h3>
+
+<p><a href="http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf">How to Read a Paper by Srinivasan Keshav</a></p>
+
+<p><a href="https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html">How to Read a Technical Paper by Jason Eisner</a></p>
+
+<h3 id="writing">Writing</h3>
+
+<p><a href="https://billf.mit.edu/sites/default/files/documents/cvprPapers.pdf">How to write a good CVPR submission by Bill Freeman</a></p>
+
+<p><a href="http://www.mit.edu/~dimitrib/Ten_Rules.html">Ten Simple Rules for Mathematical Writing by Dimitri Bertsekas</a></p>
+
+<p><a href="http://people.csail.mit.edu/fredo/PUBLI/writing.pdf">Notes on writing by Fredo Durand</a></p>
+
+<p><a href="http://mri.beckman.illinois.edu/resources/good_paper.pdf">How to write a (hopefully good) paper by Martin Vetterli </a></p>
+
+<h3 id="blogposts">Blogposts</h3>
+
+<p><a href="https://phdlife.warwick.ac.uk/">PhDLife Blog</a> - A collection of blog posts from <a href="https://warwick.ac.uk">Warwick University</a></p>
+
+<h3 id="reviewing">Reviewing</h3>
+
+<p><a href="https://cvpr2022.thecvf.com/sites/default/files/2021-11/How%20to%20be%20a%20good%20reviewer-tutorials%20for%20cvpr2022%20reviewers.pptx.pdf">Reviewer Tutorial by CVPR 2022</a></p>
+
+<p><a href="https://sites.google.com/view/making-reviews-great-again/">How to write a good review by CVPR 2020</a></p>
+
+<p><a href="https://engineering.purdue.edu/ChanGroup/write_review.html">How to write a reviewer report by Stanley Chan</a></p>
+
+<h3 id="presenting">Presenting</h3>
+
+<p><a href="https://people.eecs.berkeley.edu/~jrs/speaking.html">Giving an Academic Talk by Jonathan Shewchuk</a></p>
+
+<p><a href="https://homes.cs.washington.edu/~mernst/advice/giving-talk.html">How to give a technical presentation by Michael Ernst</a></p>
+
+<h3 id="teaching">Teaching</h3>
+
+<p><a href="https://www.cs.jhu.edu/~jason/advice/how-to-ta.html">How to Be a Teaching Assistant by Jason Eisner</a></p>
+
+<h3 id="fellowship-applications">Fellowship applications</h3>
+
+<p><a href="https://web.uri.edu/graduate-writing-center/tips-for-the-nsf-grfp-application/">Tips for the NSF GRFP Application by Danielle Perry</a></p>
+
+<p><a href="http://www.christineliuart.com/writing/2018/8/31/advice-for-applying-to-the-nsf-grfp">NSF GRFP Advice by Christine Liu</a></p>
+
+<p><a href="https://www.alexhunterlang.com/nsf-fellowship">NSF Fellowship by Alex Lang</a></p>
+
+<p><a href="https://tsafavi.github.io/nsf-grfp.html">Tips by Tara Safavi</a></p>
+
+<p>Public examples: <a href="https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0">[Extensive NSF collection by Alex Lang]</a>, <a href="https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf">[Victoria Dean (NSF personal)]</a>, <a href="https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf">[Victoria Dean (NSF research)]</a>, <a href="https://tsafavi.github.io/assets/pdf/nsf-personal.pdf">[Tara Safavi (NSF)]</a>, <a href="http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf">[Paul Liang (Facebook)]</a>, <a href="https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf">[Devendra Chaplot (Facebook)]</a>, <a href="http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf">[Sai Rallabandi (Facebook)]</a></p>
+
+<h3 id="networking">Networking</h3>
+
+<p><a href="https://vlsicad.ucsd.edu/Research/Advice/network.html">Networking on the Network: A Guide to Professional Skills for PhD Students by Phil Agre</a></p>
+
+<h3 id="organizing-workshops-and-tutorials">Organizing workshops and tutorials</h3>
+
+<p><a href="https://medium.com/@erl.leads/hitchhikers-guide-to-organizing-an-academic-workshop-cc9a5b1c32c9">Hitchhiker’s guide to organizing an academic workshop by Ben Eysenbach and Surya Bhupatiraju</a></p>
+
+<h3 id="attending-academic-conferences">Attending academic conferences</h3>
+
+<p><a href="https://medium.com/@jennwv/nine-things-i-wish-i-had-known-the-first-time-i-came-to-nips-b939330661ed">Nine things I wish I had known the first time I came to NeurIPS by Jennifer Vaughan</a></p>
+
+<p><a href="https://medium.com/syncedreview/neurips-2018-through-the-eyes-of-first-timers-5156384900bd">NeurIPS 2018 through the eyes of first-timers by Fangyu Cai</a></p>
+
+<p><a href="https://internationalconferencealerts.com/blog/how-to-make-a-plan-to-attend-international-academic-conferences/">How To Make A Plan To Attend International Academic Conferences</a></p>
+
+<h3 id="job-search">Job search</h3>
+
+<p><a href="https://yisongyue.medium.com/checklist-of-tips-for-computer-science-faculty-applications-9fd2480649cc">Tips for Computer Science Faculty Applications</a></p>
+
+<p><a href="https://kamathematics.wordpress.com/2021/08/18/how-to-ask-for-a-letter-of-recommendation/">How to Ask for a Letter of Recommendation</a></p>
+
+<p><a href="https://csfaculty.github.io/">Interview Questions for Computer Science Faculty Jobs</a></p>
+
+<p><a href="http://lazowska.cs.washington.edu/jobs.pdf">The Ph.D. Job Hunt - Helping Students Find the Right Positions by Ed Lazowska</a></p>
+
+<p><a href="https://people.engr.tamu.edu/rabi/N%20Things.PDF">The N Things I wish I Knew Before the Job Search, by Maria Ebling, Guerney Hunt, Lily Mummert, Bill Tetzlaff, and John Davis</a></p>
+
+<p><a href="https://docs.google.com/document/u/1/d/e/2PACX-1vSeOnC_QdaJVc3OuuMfDHVlk3QotUxvghytRFaDsrdA0uovD5axQjp8kJCM4Evu1cCf9Hg_u_Stabu1/pub">The academic job search for computer scientists in 10 questions by Nicolas Papernot and Elissa Redmiles</a></p>
+
+<p><a href="https://www.stat.cmu.edu/~aramdas/checklists/aadi-jobhunt-checklist.pdf">Checklist for faculty job-hunting in Stat/ML by Aaditya Ramdas</a></p>
+
+<p><a href="https://www.cs.cmu.edu/~emigration/interview.pdf">Tips on the interview process by Jeannette Wing</a></p>
+
+<p><a href="https://homes.cs.washington.edu/~mernst/advice/academic-job.html">Getting an academic job by Michael Ernst</a></p>
+
+<p><a href="https://csguides.github.io/grad-job-guide/">Computer science graduate job and interview guide by Wes Weimer, Claire Le Goues, Zak Fry, Kevin Leach, Yu Huang, and Kevin Angstadt</a></p>
+
+<p><a href="http://matt.might.net/articles/advice-for-academic-job-hunt/">Academic job search advice by Matt Might</a></p>
+
+<h2 id="memoirs">Memoirs</h2>
+
+<p><a href="http://www.bailis.org/blog/i-loved-graduate-school/">I loved graduate school by Peter Bailis</a></p>
+
+<p><a href="https://jxyzabc.blogspot.com/2016/02/my-phd-abridged.html">What my PhD was like by Jean Yang</a></p>
+
+<p><a href="http://lambdamaphone.blogspot.com/2015/11/how-to-get-phd-in-computer-science-if.html">How to get a Ph.D. in computer science if you're me by Chris Martens</a></p>
+
+<p><a href="http://marcua.net/writing/gradschool-guide/">The N=1 guide to grad school by Adam Marcus</a></p>
+:ET

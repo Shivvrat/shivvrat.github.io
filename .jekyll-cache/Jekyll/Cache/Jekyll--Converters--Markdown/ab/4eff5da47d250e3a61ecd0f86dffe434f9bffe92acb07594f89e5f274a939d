@@ -1,0 +1,39 @@
+I"�<p>In this post we will look at how to make Academic Website using Jekyll</p>
+
+<h2 id="getting-started-in-jekyll">Getting Started in Jekyll</h2>
+
+<p>You need a Github account to host your website on github. Hence <a href="http://www.github.com/">go to Github and register for an account</a> if you have not done so already.</p>
+
+<p>While what follows is not strictly mandatory, I strongly encourage installing Jekyll locally on your computer. It would help you to play with your website contents and change some things here and there without risking your website hosted on github.</p>
+
+<ol>
+  <li><strong>Install Xcode (Mac users)</strong>.</li>
+  <li><strong>Install Jekyll</strong>. I like <a href="https://jekyllrb.com/docs/installation/macos/">this blog</a> alot.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gem install jekyll
+    
+</code></pre></div></div>
+
+<p>…<a href="http://jekyllrb.com/docs/installation/">that should be it</a>.</p>
+
+<ul>
+  <li><strong>Create a directory for your website</strong>. Call it whatever you want, but make it intuitive.</li>
+  <li>Then there are two ways to go forward. I would recommend the first one -
+    <ol>
+      <li>Go to <strong>Github</strong> and search for <strong>jekyll templates</strong>. Choose the one you like and use it as a template for your own website. (My Website is based on <a href="https://github.com/sbryngelson/academic-website-template">this</a> template) Or</li>
+      <li><strong>Have Jekyll make your basic site for you</strong> In a terminal window, change the directory to what will be your future website and enter <code class="language-plaintext highlighter-rouge">jekyll new .</code>.</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="advantages-of-github-and-jekyll">Advantages of Github and Jekyll</h2>
+
+<p>Let us look at why hosting your website on github.com and using jekyll to create it is advantageous -</p>
+<ul>
+  <li><strong>It’s free</strong>.</li>
+  <li><strong>It’s portable</strong>. Github accounts will stay the same no matter your university affiliation.</li>
+  <li><strong>It’s fast, but flexible</strong>.</li>
+</ul>
+
+:ET

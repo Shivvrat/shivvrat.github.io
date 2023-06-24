@@ -1,0 +1,397 @@
+I"'<style>
+.jumbotron{
+    padding:3%;
+    padding-bottom:10px;
+    padding-top:10px;
+    margin-top:10px;
+    margin-bottom:30px;
+}
+</style>
+
+<div class="jumbotron">
+  <h3 id="refereed-journal-articles">Refereed journal articles</h3>
+  <ol class="bibliography" reversed="reversed"></ol>
+</div>
+
+<div class="jumbotron">
+  <h3 id="refereed-conference-proceedings">Refereed conference proceedings</h3>
+  <ol class="bibliography" reversed="reversed"><li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<span id="9207436">Chauhan, V., Tiwari, A., &amp; Arya, S. (2020). Multi-Label classifier based on Kernel Random Vector Functional Link Network. <i>2020 International Joint Conference on Neural Networks (IJCNN)</i>, 1–7. https://doi.org/10.1109/IJCNN48605.2020.9207436</span></div>
+
+
+
+
+
+
+
+
+<a href="http://doi.org/10.1109/IJCNN48605.2020.9207436" target="_blank"><button class="btn btn-primary btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtex9207436()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstract9207436()">ABSTRACT</button>
+
+
+
+<div id="a9207436" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{9207436,
+  author = {Chauhan, Vikas and Tiwari, Aruna and Arya, Shivvrat},
+  booktitle = {2020 International Joint Conference on Neural Networks (IJCNN)},
+  title = {Multi-Label classifier based on Kernel Random Vector Functional Link Network},
+  year = {2020},
+  volume = {},
+  number = {},
+  pages = {1-7},
+  keywords = {},
+  doi = {10.1109/IJCNN48605.2020.9207436},
+  issn = {2161-4407},
+  month = jul
+}
+</pre>
+</div>
+
+
+<div id="b9207436" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>In this paper, a kernelized version of the random vector functional link network is proposed for multi-label classification. This classifier uses pseudo-inverse to find output weights of the network. As pseudo-inverse is non-iterative in nature, it requires less fine-tuning to train the network. Kernelization of RVFL makes it robust and stable as no need to tune the number of neuron in the enhancement layer. A threshold function is used with a kernelized random vector functional link network to make it suitable for multi-label learning problems. Experiments performed on three benchmark multi-label datasets bibtex, emotions, and scene shows that proposed classifier outperforms various the existing multi-label classifiers.</pre>
+</div>
+
+<script>
+function toggleBibtex9207436(parameter) {
+    var x= document.getElementById('a9207436');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstract9207436(parameter) {
+    var x= document.getElementById('b9207436');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li></ol>
+</div>
+
+<div class="jumbotron">
+  <h3 id="other-publications">Other publications</h3>
+  <ol class="bibliography" reversed="reversed"></ol>
+</div>
+
+<div class="jumbotron">
+  <h3 id="under-review">Under Review</h3>
+  <ol class="bibliography" reversed="reversed"><li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<span id="unpub_2">Vikas Chauhan, A. T., &amp; Arya, S. <i>Multi-label Classification based on Random
+Vector Functional Link Neural Networks</i>. Soft Computing Journal.</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="aunpub_2" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@underreview{unpub_2,
+  author = {Vikas Chauhan, Aruna Tiwari and Arya, Shivvrat},
+  title = {Multi-label Classification based on Random
+  Vector Functional Link Neural Networks},
+  organization = {Soft Computing Journal}
+}
+</pre>
+</div>
+
+
+<div id="bunpub_2" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre></pre>
+</div>
+
+<script>
+function toggleBibtexunpub_2(parameter) {
+    var x= document.getElementById('aunpub_2');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractunpub_2(parameter) {
+    var x= document.getElementById('bunpub_2');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<span id="unpub_3"><i>Explainable Activity Recognition in Videos using Deep Learning and Tractable Probabilistic Models</i>. ACM Transactions on Interactive Intelligent Systems.</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="aunpub_3" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@underreview{unpub_3,
+  author = {},
+  title = {Explainable Activity Recognition in Videos using Deep Learning and Tractable Probabilistic Models},
+  organization = {ACM Transactions on Interactive Intelligent Systems}
+}
+</pre>
+</div>
+
+
+<div id="bunpub_3" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre></pre>
+</div>
+
+<script>
+function toggleBibtexunpub_3(parameter) {
+    var x= document.getElementById('aunpub_3');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractunpub_3(parameter) {
+    var x= document.getElementById('bunpub_3');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<span id="unpub_1">Vikas Chauhan, A. T., &amp; Arya, S. <i>Multi-label Classification based on Broad
+    Learning System</i>. Neural Computing and Applications Journal.</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="aunpub_1" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@underreview{unpub_1,
+  author = {Vikas Chauhan, Aruna Tiwari and Arya, Shivvrat},
+  title = {Multi-label Classification based on Broad
+      Learning System},
+  organization = {Neural Computing and Applications Journal}
+}
+</pre>
+</div>
+
+
+<div id="bunpub_1" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre></pre>
+</div>
+
+<script>
+function toggleBibtexunpub_1(parameter) {
+    var x= document.getElementById('aunpub_1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractunpub_1(parameter) {
+    var x= document.getElementById('bunpub_1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li></ol>
+</div>
+
+<div class="jumbotron">
+  <h3 id="preprints">Preprints</h3>
+  <ol class="bibliography" reversed="reversed"><li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<span id="arya2023deep">Arya, S., Xiang, Y., &amp; Gogate, V. (2023). <i>Deep Dependency Networks for Multi-Label Classification</i>.</span></div>
+
+
+
+
+
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexarya2023deep()">BIB</button>
+
+
+
+
+
+<div id="aarya2023deep" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@unpublished{arya2023deep,
+  title = {Deep Dependency Networks for Multi-Label Classification},
+  author = {Arya, Shivvrat and Xiang, Yu and Gogate, Vibhav},
+  year = {2023},
+  eprint = {2302.00633},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.LG}
+}
+</pre>
+</div>
+
+
+<div id="barya2023deep" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre></pre>
+</div>
+
+<script>
+function toggleBibtexarya2023deep(parameter) {
+    var x= document.getElementById('aarya2023deep');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractarya2023deep(parameter) {
+    var x= document.getElementById('barya2023deep');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li></ol>
+</div>
+:ET

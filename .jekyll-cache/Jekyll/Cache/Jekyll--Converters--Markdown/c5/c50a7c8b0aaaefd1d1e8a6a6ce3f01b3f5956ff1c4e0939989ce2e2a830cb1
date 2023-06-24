@@ -1,0 +1,72 @@
+I"0<style>
+img{
+  border-radius: 10px;
+}
+iframe {
+  width: 175px;
+  display: inline;
+  vertical-align:middle;
+  <!-- margin-bottom:5px; -->
+  <!-- margin-left:5px; -->
+  <!-- border: 1px solid red; -->
+}
+.col-md-3 {
+  margin:0;
+  padding:0;
+  margin-top:10px;
+  margin-bottom:10px;
+  display:block;
+  overflow:hidden;
+  text-align:center;
+  display: table-cell;
+  height: auto;
+  float: none;
+  background:white;
+  border-radius:20px;
+  <!-- border: 1px solid black; -->
+}
+</style>
+
+<h2 id="software">Software</h2>
+
+<div class="jumbotron">
+  <div class="row align-items-end">
+    <div class="col-md-9 col-sm-12">
+      <h4><b>QBMMlib: Moment Methods for Fully-coupled Flows</b></h4>
+      <p><a href="https://github.com/sbryngelson/QBMMlib" target="_blank"><button class="btn btn-primary btn-sm">GIT: QBMMLIB</button></a>
+<a href="https://github.com/sbryngelson/PyQBMMlib" target="_blank"><button class="btn btn-primary btn-sm">GIT: PyQBMMLIB</button></a>
+<a href="/papers/bryngelson-SoftX-20.pdf" target="_blank"><button class="btn btn-danger btn-sm">PAPER</button></a></p>
+
+      <p><b>Author:</b>
+<i>S. H. Bryngelson</i></p>
+
+      <p><b>QBMMlib</b> is an <a href="https://github.com/sbryngelson/QBMMlib" target="_blank">open source Mathematica package</a> for solving populating balance equations with quadrature-based moment methods (QBMMs).
+QBMMs are used for fully-coupled disperse flow and combustion problems.
+However, formulating and closing the corresponding governing equations can be complex.
+QBMMlib makes using these methods simple and accessible:</p>
+      <ul>
+        <li>Symbolic and automatic formulation of moment transport equations for a population balance equation and dynamical system</li>
+        <li>Moment inversion trades moment sets for quadrature points
+          <ul>
+            <li>Algorithms: QMOM, HyQMOM, CQMOM, and more</li>
+          </ul>
+        </li>
+        <li>Quadratures closes the moment transport and governing flow equations</li>
+        <li>Embedded Runge–Kutta algorithms for <em>realizable</em> time integration</li>
+      </ul>
+
+      <p>The algorithm initialization and solution can span <em>just 13 lines of code</em>.
+Example notebooks demonstrate QBMMlib on bubble dynamics problems.</p>
+
+      <p><b><a href="https://github.com/sbryngelson/PyQBMMlib" target="_blank">PyQBMMlib:</a></b> With Esteban Cisneros I developed a Python version of QBMMlib that leverages JIT compiling for significantly improved performance.</p>
+
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <iframe src="https://player.vimeo.com/video/456290405?autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;quality=240p&amp;background=1" height="132px" frameborder="0" allow="autoplay"></iframe>
+    </div>
+  </div>
+</div>
+
+<p><a href="# (&lt;/div&gt;)">//</a>: # (  <img src="/images/respic/network.jpeg" width="175px " />)</p>
+
+:ET

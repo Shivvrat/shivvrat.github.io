@@ -1,0 +1,89 @@
+I"e<!-- <style> -->
+<!-- iframe { -->
+<!--   height: 100%; -->
+<!--   width: 175px !important; -->
+<!--   display: inline; -->
+<!--   vertical-align:middle; -->
+<!--   margin:0px !important; -->
+<!--   padding:0px !important; -->
+<!--   width: 175px; -->
+<!--   display: inline; -->
+<!--   vertical-align:middle; -->
+<!--   border: 1px solid red; -->
+<!-- } -->
+<!-- .col-md-3 { -->
+<!--   margin:0px !important; -->
+<!--   padding:0px !important; -->
+<!--   overflow:hidden; -->
+<!--   display: table-cell; -->
+<!--   text-align:center; -->
+<!--   background: white; -->
+<!--   width: 175px; -->
+<!--   border: 0px solid transparent; -->
+<!--   border-radius:20px; -->
+<!-- } -->
+<!-- </style> -->
+
+<style>
+img{
+  border-radius: 10px;
+}
+.col-md-3 {
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:0px;
+  display:block;
+  overflow:hidden;
+  text-align:center;
+  display: table-cell;
+  background: white;
+  border-radius: 20px;
+  height: auto;
+  <!-- border: 1px solid black; -->
+}
+iframe {
+  margin:0;
+  padding:0;
+  width: 175px;
+  display: inline;
+  vertical-align: middle;
+}
+</style>
+
+<p><!-- border: 5px solid red; -->
+  <!-- margin-bottom:5px; -->
+  <!-- margin-left:5px; -->
+  <!-- float: none; --></p>
+
+<h2 id="research">Research</h2>
+<h4 id="research-interests">Research Interests</h4>
+<p>Computer Vision, Machine learning and Artificial Intelligence.</p>
+
+<h4 id="current-research-focus">Current Research Focus</h4>
+<p>Deep Learning, Probabilistic Graphical Models, Tractable Machine Learning</p>
+
+<div class="jumbotron">
+  <div class="row align-items-end">
+    <div class="col-md-9 col-sm-12">
+      <h4>Activity Recognition</h4>
+      <p>Activity Recognition is very important in everyday life. The task of video activity recognition has been getting a lot of attention in recent years. In this task we are given a set of videos of laboratory experiments and we need to detect what activities are being done by the person in the video. The task is very difficult especially when , (1) There is no limit on the number of labels (activities and objects) for a given frame, (2) There is a correlation between neighbouring frames (since there is a list of steps that the person needs to follow to complete a given task), (3) When there are different subjects doing the tasks in different videos, and (4) Different objects have similar appearances. 
+We are trying to implement various Probabilistic Graphical Models (PGMs) to improve the performance of methods. The inputs to these PGMs are vectors of features extracted from Convolutional Neural Network like SlowFast model and InceptionV3. 
+Multiple PGMs were tried to improve the performance -</p>
+      <ol>
+        <li>Markov Network. Inference Done using
+          <ol>
+            <li>MAP inference - using ILP</li>
+            <li>Variable Elimination</li>
+            <li>Iterative Join-Graph Propagation (IJGP)</li>
+          </ol>
+        </li>
+        <li>Markov Networks with additional information (coming from NLP)</li>
+        <li>Mixture Models</li>
+        <li>Dependency Networks</li>
+        <li>Joint Learning between Dependency Networks and SlowFast</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+:ET
