@@ -3,9 +3,8 @@ title: "Publications"
 layout: gridlay
 sitemap: false
 permalink: /publications/
-years: [2016, 2017, 2018, 2019, 2020, 2021]
+years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
 ---
-
 <style>
 .jumbotron{
     padding:3%;
@@ -15,8 +14,6 @@ years: [2016, 2017, 2018, 2019, 2020, 2021]
     margin-bottom:30px;
 }
 </style>
-
-
 
 <div class="jumbotron">
 ### Refereed journal articles
