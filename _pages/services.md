@@ -2,7 +2,7 @@
 title: "Services"
 layout: gridlay
 sitemap: false
-permalink: /Services/
+permalink: /services/
 ---
 <!-- ### Organization -->
 
