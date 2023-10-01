@@ -1,1 +1,1 @@
-rake publish
+rake publish --trace

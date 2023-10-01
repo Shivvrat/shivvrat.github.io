@@ -31,6 +31,11 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
 </div>
 
 <div class="jumbotron">
+### Workshop Articles
+{% bibliography --query @workshop %}
+</div>
+
+<div class="jumbotron">
 ### Under Review
 {% bibliography --query @underreview %}
 </div>

@@ -1,4 +1,4 @@
-I"'<style>
+I"¿.<style>
 .jumbotron{
     padding:3%;
     padding-bottom:10px;
@@ -107,8 +107,151 @@ function toggleAbstract9207436(parameter) {
 </div>
 
 <div class="jumbotron">
+  <h3 id="workshop-articles">Workshop Articles</h3>
+  <ol class="bibliography" reversed="reversed"><li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<span id="peddi_2023_put">Peddi, R., Arya, S., Challa, B., Pallapothula, L., Vyas, A., Zhang, Q., Wang, J., Komaragiri, V., Ragan, E., Ruozzi, N., Xiang, Y., &amp; Gogate, V. (2023). <i>Put on Your Detective Hat: Whatâ€™s Wrong in This Video?</i></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="apeddi_2023_put" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@workshop{peddi_2023_put,
+  title = {Put on Your Detective Hat: {{What}}'s Wrong in This Video?},
+  author = {Peddi, Rohith and Arya, Shivvrat and Challa, Bhrath and Pallapothula, Likhitha and Vyas, Akshay and Zhang, Qifan and Wang, Jikai and Komaragiri, Vasundhara and Ragan, Eric and Ruozzi, Nicholas and Xiang, Yu and Gogate, Vibhav},
+  year = {2023},
+  langid = {english}
+}
+</pre>
+</div>
+
+
+<div id="bpeddi_2023_put" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre></pre>
+</div>
+
+<script>
+function toggleBibtexpeddi_2023_put(parameter) {
+    var x= document.getElementById('apeddi_2023_put');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractpeddi_2023_put(parameter) {
+    var x= document.getElementById('bpeddi_2023_put');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li></ol>
+</div>
+
+<div class="jumbotron">
   <h3 id="under-review">Under Review</h3>
   <ol class="bibliography" reversed="reversed"><li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<span id="unpub_1">Vikas Chauhan, A. T., &amp; Arya, S. <i>Multi-label Classification based on Broad
+    Learning System</i>. Neural Computing and Applications Journal.</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="aunpub_1" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@underreview{unpub_1,
+  author = {Vikas Chauhan, Aruna Tiwari and Arya, Shivvrat},
+  title = {Multi-label Classification based on Broad
+      Learning System},
+  organization = {Neural Computing and Applications Journal}
+}
+</pre>
+</div>
+
+
+<div id="bunpub_1" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre></pre>
+</div>
+
+<script>
+function toggleBibtexunpub_1(parameter) {
+    var x= document.getElementById('aunpub_1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractunpub_1(parameter) {
+    var x= document.getElementById('bunpub_1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
 .btn{
     margin-bottom:5px;
     padding-top:0px;
@@ -238,76 +381,6 @@ function toggleBibtexunpub_3(parameter) {
 }
 function toggleAbstractunpub_3(parameter) {
     var x= document.getElementById('bunpub_3');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-}
-</script>
-</li>
-<li><style>
-.btn{
-    margin-bottom:5px;
-    padding-top:0px;
-    padding-bottom:0px;
-    padding-left:15px;
-    padding-right:15px;
-    height:20px:
-}
-pre{
-    white-space: pre-wrap;  
-    white-space: -moz-pre-wrap; 
-    white-space: -pre-wrap; 
-    white-space: -o-pre-wrap; 
-    word-wrap: break-word; 
-    width:100%; overflow-x:auto;
-}
-</style>
-
-
-<div class="text-justify">
-<span id="unpub_1">Vikas Chauhan, A. T., &amp; Arya, S. <i>Multi-label Classification based on Broad
-    Learning System</i>. Neural Computing and Applications Journal.</span></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="aunpub_1" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>@underreview{unpub_1,
-  author = {Vikas Chauhan, Aruna Tiwari and Arya, Shivvrat},
-  title = {Multi-label Classification based on Broad
-      Learning System},
-  organization = {Neural Computing and Applications Journal}
-}
-</pre>
-</div>
-
-
-<div id="bunpub_1" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre></pre>
-</div>
-
-<script>
-function toggleBibtexunpub_1(parameter) {
-    var x= document.getElementById('aunpub_1');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-}
-function toggleAbstractunpub_1(parameter) {
-    var x= document.getElementById('bunpub_1');
     if (x.style.display === 'none') {
         x.style.display = 'block';
     } else {

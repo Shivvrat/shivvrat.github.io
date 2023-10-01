@@ -17,7 +17,6 @@ GEM
       rexml
     csl-styles (1.0.1.11)
       csl (~> 1.0)
-    daemons (1.4.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -120,14 +119,11 @@ GEM
       faraday (>= 0.17.3, < 3)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
     unicode-display_width (1.8.0)
     webrick (1.8.1)
 
 PLATFORMS
+  arm64-darwin-23
   x64-mingw-ucrt
 
 DEPENDENCIES
@@ -146,7 +142,6 @@ DEPENDENCIES
   minimal-mistakes-jekyll
   rack (>= 2.2.3)
   sassc (> 2.0.1)
-  thin
   webrick (~> 1.7)
 
 BUNDLED WITH
