@@ -17,7 +17,10 @@
   headline: "Attended the <a href='https://youtu.be/pEM8gcRkA7M' target='_blank'>DARPA PTG Demo Day (2022) </a> at MIT"
 
 - date: 23 May, 2023
-  headline: "Attended the <a href='https://youtu.be/pEM8gcRkA7M' target='_blank'>DARPA PTG PI Meeting (2023) </a> at Wright State University"
+  headline: "Attended the DARPA PTG PI Meeting (2023) at Wright State University"
+
+- date: 21 September, 2023
+  headline: "Explainable Activity Recognition in Videos using Deep Learning and Tractable Probabilistic Models accepted for publication at <a href='https://dl.acm.org/journal/tiis' target='_blank'>TiiS</a>  "
 
 - date: 7 November, 2023
-  headline: "Attended the <a href='https://youtu.be/pEM8gcRkA7M' target='_blank'>DARPA PTG Demo Day (2023) </a> at MIT"
+  headline: "Attended the DARPA PTG Demo Day (2023) at MIT"
