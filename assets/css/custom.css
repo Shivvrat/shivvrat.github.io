@@ -1,0 +1,18 @@
+/* Increase the maximum width and padding of the content area */
+.container-fluid {
+  max-width: 70%;
+  /* Allows the container to use the full width */
+  padding: 20px 40px;
+  /* Increase padding for more space around the content */
+}
+
+/* Adjust row and columns for more space */
+/* .row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row>[class*='col-'] {
+  padding-right: 15px;
+  padding-left: 15px;
+} */

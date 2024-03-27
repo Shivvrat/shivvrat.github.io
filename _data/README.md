@@ -1,25 +1,29 @@
 # A website template for academics
 
 ## How to use it with github pages
+
 [Using Jekyll plugins on GitHub Pages](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html)
 
+## How to compile
 
-##How to compile 
 run ./compile_and_publish.sh
+
 ## Users
+
 Some users:
+
 * [Ethan Pickering](https://ethan-pickering.github.io/)
 * [Lalit M. Pant](https://home.iitk.ac.in/~lalit/)
 * [Mohammad Afzal Shadab](https://mashadab.github.io/)
 * [Michael Berhanu](http://www.msc.univ-paris-diderot.fr/~berhanu/)
 * [Muhammad Haseeb Arshad](https://muhammadhaseeb.info//)
-*  [Spike Research Group](https://spike.doc.ic.ac.uk/)
+* [Spike Research Group](https://spike.doc.ic.ac.uk/)
 * [Computational Physics @ GT](https://comp-physics.group) (my research group webpage)
 * [Nitzan Farhi](https://nitzanfarhi.github.io/)
 * [Aditya Sundar](https://adisun94.github.io/)
 * [Cheng-Chun (Barry) Lee](https://barrylee36.github.io/)
 
-## Introduction 
+## Introduction
 
 This is a statically-generated Jekyll/Liquid/Bootstrap-based website template for academics.
 I started with the [Allan lab](https://www.allanlab.org/) webpage and modified it into a personal academic webpage that met my requirements.
@@ -46,15 +50,17 @@ Broadly speaking, there are three steps:
 ## Fork and build
 
 * Fork [this repository](https://github.com/sbryngelson/sbryngelson.github.io) by clicking the `fork` button in the top-right corner of its Github page.
-* Install [Jekyll](https://jekyllrb.com/docs/installation/)  (version less than 4.0 required) on your local computer
-    * On MacOS, you will need to upgrade your Ruby version from the depricated v2.3 that is shipped. Follow the above Jekyll instructions closely.
+* Install [Jekbrew **install **chruby ruby-install xz](https://jekyllrb.com/docs/installation/)
+* [yll](https://jekyllrb.com/docs/installation/)  (version less than 4.0 required) on your local computer
+  * On MacOS, you will need to upgrade your Ruby version from the depricated v2.3 that is shipped. Follow the above Jekyll instructions closely.
 * Run `$ bundle exec jekyll serve` in the repository root directory
 * Your site is now hosted locally at `localhost:4000`, which you can access with your web browser.
-   * It will be automatically re-built as you save changes to the files it contains.
-   Refreshing your web browser reveals these changes.
+  * It will be automatically re-built as you save changes to the files it contains.
+    Refreshing your web browser reveals these changes.
 
 Note:
-* This webpage uses Jekyll plugins like Jekyll Scholar to automatically build your bibliography. 
+
+* This webpage uses Jekyll plugins like Jekyll Scholar to automatically build your bibliography.
   If you are using Github pages then you will have to build the site with the `Rakefile` in the root directory of the source branch.
 
 ## Customization
@@ -78,6 +84,7 @@ Creating new pages can be done by using existing pages as a template.
 
 All pages require header information.
 Example header data for the 'Talks' page is below.
+
 ```
 ---
 title: "Talks"
@@ -86,6 +93,7 @@ sitemap: false
 permalink: /talks/
 ---
 ```
+
 The `layout` variable corresponds to HTML layouts in the `_layouts` directory.
 The differences between most layouts is subtle and `gridlay` can generally be used.
 The permalink must be unique for each page, and corresponds to the directory that will store the page in the compiled HTML.
@@ -141,6 +149,7 @@ This site is built with Jekyll.
 
 Other Jekyll templates are of course available.
 Some of these are viable for very simple academic pages with little tuning:
+
 * [Minimal mistakes](https://mmistakes.github.io/minimal-mistakes/)
 * [al-folio](https://github.com/alshedivat/al-folio)
 * [academicpages](https://academicpages.github.io/)

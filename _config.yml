@@ -44,13 +44,14 @@ contact: >
     <a href="mailto:shivvrat.arya@utdallas.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Shivvrat via email</a> <br/>
 #    <a href="/aboutwebsite.html"><i class="fa fa-github fa-1x"></i> Use this site as a template!</a>
 
+# Do you want to group your publications by year? {true/false}
 group_pub_by_year: true
 
 # Pages shown in navbar
 nav_pages:
   - name: about
   - name: publications
-  - name: research
+  # - name: research
   - name: teaching
   - name: resources
   - name: blog
@@ -152,9 +153,11 @@ plugins:
   # - jekyll-gallery-generator
 
 plugins_dir: [jekyll-scholar]
-
+group_pub_by_year: true
 scholar:
+# https://github.com/inukshuk/jekyll-scholar
 
+  bibliography_template: bibtemplate
   last_name: Arya
   first_name: [Shivvrat]
 
@@ -163,21 +166,21 @@ scholar:
 
   source: /cv/
   bibliography: ref.bib
-  bibliography_template: bibtemplate
+  # layout: reference.html
   sort_by: year, month
-  order: ascending
-
-  replace_strings: true
-  join_strings: true
-
+  order: descending
+  # replace_strings: true
+  # join_strings: true
+  # group_by: year
+  group_order: descending
   details_dir: bibliography
   details_layout: bibtex.html
   details_link: Details
 
   query: "@*"
 
-  bibliography_list_attributes:
-    reversed: "reversed"
+  # bibliography_list_attributes:
+  #   reversed: False
 
 color-scheme: auto
 
