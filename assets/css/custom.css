@@ -5,6 +5,10 @@
   padding: 20px 40px;
   /* Increase padding for more space around the content */
 }
+/* do not show numbering for bibliography */
+ol.bibliography {
+  list-style-type: none;
+}
 
 /* Adjust row and columns for more space */
 /* .row {

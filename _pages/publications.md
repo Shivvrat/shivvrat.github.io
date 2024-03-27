@@ -15,8 +15,19 @@ years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 }
 </style>
 
-<div class="jumbotron">
 # Publications
-{% bibliography %}
+
+<div class="jumbotron">
+
+{% bibliography --query @*[year!=0] --group_by year %}
+
 </div>
 
+
+### Under Review
+
+<div class="jumbotron">
+
+{% bibliography --query @*[year=0] %}
+
+</div>

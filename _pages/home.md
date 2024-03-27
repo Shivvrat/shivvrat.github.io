@@ -6,20 +6,19 @@ permalink: /
 ---
 ### Welcome!
 
-I am Shivvrat Arya (you can call me Shiv (pronounced as [ sh ih v ])). Currently I am working with  <a href="https://personal.utdallas.edu/~vibhav.gogate/" target="_blank">Dr. Vibhav Gogate </a> and  <a href="https://yuxng.github.io/" target="_blank">Dr. Yu Xiang </a> on DARPA Perceptually-Enabled Task Guidance (PTG) grant in which we are trying to develop Artificial Intelligence (AI) technology that guides users in the
-performance of a wide range of cognitively challenging physical tasks. PTG will leverage recent advances in machine perception,
-automated reasoning, and augmented reality. We are mainly working on the task of activity recognition on Egocentric Datasets like Epic Kitchens and Multi-Label Datasets like Charades, AVA, Tacos, and Wetlab.
+I am Shivvrat Arya, but feel free to call me Shiv (pronounced as [ sh ih v ]). I am currently engaged in a collaborative research projects under the guidance of [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/), funded by the DARPA Perceptually-Enabled Task Guidance (PTG) grant. Our goal is to develop Artificial Intelligence (AI) technology that guides users in the
+performance of a wide range of cognitively challenging physical tasks. This initiative draws upon the latest breakthroughs in machine perception, automated reasoning, and augmented reality. Our primary research focus is on activity recognition within Egocentric Datasets such as Epic Kitchens, and Multi-Label Datasets including Charades, AVA, Tacos, and Wetlab.
 
-My research at the Indian Institute of Technology Indore (IITI) focused on using non-iterative and advanced neural network structures to solve the problem of multi-label classification. Two journal paper submissions and one conference acceptance have been completed for this project. We used 15 datasets for the evaluation, which include yeast, scene, BibTeX, emotions, Enron, medical, corel5k, bookmarks, delicious, mediamill, and the rcv1v2 series.
-The evaluation metrics used for the comparison were Hamming Loss, Ranking loss, One error, Coverage, and Average precision. We compared the proposed algorithm with the following state-of-the-art algorithms, Rank – SVM, ELMOnline, MLKN, BPMLL, and ELM.
+During my tenure at the Indian Institute of Technology Indore (IITI) as a research intern, my research revolved around leveraging non-iterative and sophisticated neural network architectures for multi-label classification challenges. This work has led to two journal submissions and one conference paper acceptance. We benchmarked our approach against 15 diverse datasets, including yeast, scene, BibTeX, emotions, Enron, medical, corel5k, bookmarks, delicious, mediamill, and the rcv1v2 series, using metrics such as Hamming Loss, Ranking Loss, One Error, Coverage, and Average Precision. Our proposed algorithm was compared with state-of-the-art methods like Rank-SVM, ELMOnline, MLKN, BPMLL, and ELM.
 
 <br/>
 
 ### About me
 
-I am pursuing my Ph.D. in the Department of Computer Science at the University of Texas at Dallas. I aspire to become a researcher who exercises the skills gained through academic research to solve problems in the discipline of Computer Science, leading to the development of cutting-edge technologies. I am consistently looking for arduous opportunities that would help me to test my knowledge and learn a new set of skills.
-I am pursuing a Ph.D. and a M.S. degree in <a href="https://cs.utdallas.edu/education/graduate/" target="_blank">Computer Science </a> from the The University of Texas at Dallas, where I am working with <a href="https://personal.utdallas.edu/~vibhav.gogate/" target="_blank">Dr. Vibhav Gogate </a> and  <a href="https://yuxng.github.io/" target="_blank">Dr. Yu Xiang </a>.
-I hold B.Tech. Degree in Computer Science and Engineering from the Indian Institute of Information Technology Vadodara
+I am a Ph.D. candidate in the Department of Computer Science at The University of Texas at Dallas, where I am honing my research skills to address complex problems in Computer Science and contribute to the advancement of innovative technologies. I am always on the lookout for challenging opportunities that push the boundaries of my knowledge and allow me to acquire new skills.
+
+In addition to my Ph.D., I am also pursuing an M.S. degree in [Computer Science](https://cs.utdallas.edu/education/graduate/) at UT Dallas, working closely with [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/). I hold a B.Tech. Degree in Computer Science and Engineering from the Indian Institute of Information Technology Vadodara.
+
 
 [//]: #
 [//]: #
