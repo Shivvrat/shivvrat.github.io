@@ -4,8 +4,21 @@ layout: gridlay
 sitemap: false
 permalink: /resources/
 ---
+
+<style>
+.jumbotron{
+    padding:3%;
+    padding-bottom:10px;
+    padding-top:10px;
+    margin-top:10px;
+    margin-bottom:30px;
+}
+</style>
+
 Some of these resources might be helpful during your time in academia. I have also added some software and GitHub repositories I use daily.
 (Most related to academia are taken from [Clemens Eppner&#39;s webpage](https://clemense.github.io/) and [Paul Liang](http://www.cs.cmu.edu/~pliang/)'s GitHub)
+
+<div class="jumbotron">
 
 ## Other similar collections
 
@@ -33,8 +46,11 @@ Some of these resources might be helpful during your time in academia. I have al
 
 [AI Research Experiences by Pranav Rajpurkar](https://docs.google.com/document/d/1uvAbEhbgS_M-uDMTzmOWRlYxqCkogKRXdbKYYT98ooc/edit#)
 
+</div>
+
 ### Related to Academia
 
+<div class="jumbotron">
 #### Academic Writing
 
 - **Papers**
@@ -82,7 +98,9 @@ Some of these resources might be helpful during your time in academia. I have al
   - Noah Snavely: [A Short LaTeX Style Guide](http://bit.ly/latex-style)
 - **Citing**
   - Citation Machine [Smart Writing](https://www.citationmachine.net)
+</div>
 
+<div class="jumbotron">
 #### Research
 
 - **General Advice**
@@ -157,8 +175,11 @@ Some of these resources might be helpful during your time in academia. I have al
 
   - Paper Digest: [Artificial Intelligence summarizes academic articles for you](https://www.paper-digest.com)
     [//][//]: # (- **Leaving Academia**)
+</div>
 
 ### Software
+
+<div class="jumbotron">
 
 (Please use any recommended software or repositories at your own risk.)
 
@@ -176,7 +197,9 @@ Some of these resources might be helpful during your time in academia. I have al
 #### Diagrams:
 
 - draw.io: Flowchart Maker & Online Diagram Software [Desktop Installer](https://github.com/jgraph/drawio-desktop/releases/)
+</div>
 
+<div class="jumbotron">
 ### Repositories
 
 #### Building Academic Webpage
@@ -219,45 +242,65 @@ Some of these resources might be helpful during your time in academia. I have al
 - [PyTorch Examples](https://github.com/pytorch/examples)
 - [ONNX Model Zoo](https://github.com/onnx/models)
 - [Tensorflor Model Garden](https://github.com/tensorflow/models)
+</div>
 
 ### Other Resources
+<div class="jumbotron">
 
-#### Academic Web Pages
+### Academic Web Pages
 
 - [Matt Might&#39;s webpage](https://matt.might.net/articles/)
 - [Clemens Eppner&#39;s webpage](https://clemense.github.io/))
+</div>
 
-# Collection of advice for prospective and current PhD students
+
+<div class="jumbotron">
+
+### Collection of advice for prospective and current PhD students
 
 Credit goes out to the original authors of each link and [Paul Liang](http://www.cs.cmu.edu/~pliang/) (pliang@cs.cmu.edu).
 
 Table of Contents
 
-* [Other similar collections](#other-similar-collections)
-* [Advice for prospective students](#advice-for-prospective-students)
-  * [General advice](#general-advice)
-  * [Statement of purpose](#statement-of-purpose)
-  * [Visit days, choosing advisor and school](#visit-days-choosing-advisor-and-school)
-* [Advice for current students](#advice-for-current-students)
-  * [PhD survival guides](#PhD-survival-guides)
-  * [Research](#research)
-  * [Reading](#reading)
-  * [Writing](#writing)
-  * [Blogposts](#blogposts)
-  * [Reviewing](#reviewing)
-  * [Presenting](#presenting)
-  * [Advising students](#advising-students)
-  * [Teaching](#teaching)
-  * [Fellowship applications](#fellowship-applications)
-  * [Networking](#networking)
-  * [Organizing workshops and tutorials](#organizing-workshops-and-tutorials)
-  * [Attending academic conferences](#attending-academic-conferences)
-  * [Job search](#job-search)
-* [Memoirs](#memoirs)
+- [Other similar collections](#other-similar-collections)
+  - [Related to Academia](#related-to-academia)
+    - [Academic Writing](#academic-writing)
+    - [Research](#research)
+  - [Software](#software)
+    - [Citation Manager](#citation-manager)
+    - [Note-Taking on iPad and MacBook:](#note-taking-on-ipad-and-macbook)
+    - [Diagrams:](#diagrams)
+  - [Repositories](#repositories)
+    - [Building Academic Webpage](#building-academic-webpage)
+    - [Python](#python)
+    - [Project templates](#project-templates)
+    - [Deep Learning](#deep-learning)
+  - [Other Resources](#other-resources)
+  - [Academic Web Pages](#academic-web-pages)
+  - [Collection of advice for prospective and current PhD students](#collection-of-advice-for-prospective-and-current-phd-students)
+    - [Advice for prospective students](#advice-for-prospective-students)
+      - [General advice](#general-advice)
+      - [Statement of purpose](#statement-of-purpose)
+      - [Visit days, choosing advisor and school](#visit-days-choosing-advisor-and-school)
+    - [Advice for current students](#advice-for-current-students)
+      - [PhD survival guides](#phd-survival-guides)
+      - [Research](#research-1)
+      - [Reading](#reading)
+      - [Writing](#writing)
+      - [Blogposts](#blogposts)
+      - [Reviewing](#reviewing)
+      - [Presenting](#presenting)
+      - [Teaching](#teaching)
+      - [Fellowship applications](#fellowship-applications)
+      - [Networking](#networking)
+      - [Organizing workshops and tutorials](#organizing-workshops-and-tutorials)
+      - [Attending academic conferences](#attending-academic-conferences)
+      - [Job search](#job-search)
+    - [Memoirs](#memoirs)
 
-## Advice for prospective students
+#### Advice for prospective students
 
-### General advice
+##### General advice
 
 [Applying to PhD Programs in Computer Science by Mor Harchol-Balter](https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf)
 
@@ -289,7 +332,7 @@ Table of Contents
 
 [The PhD in CS: Getting There and Being Successful by Michael Hilton, Janet Davis, and Ian Ludden](https://conquer.cra.org/wp-content/uploads/2021/11/ThePhDinComputing_CRAEWebinar.pdf)
 
-### Statement of purpose
+##### Statement of purpose
 
 [Database of Example PhD SOPs by the CS-SOP initiative](https://cs-sop.org)
 
@@ -311,7 +354,7 @@ Table of Contents
 
 Public examples: [[Cody Coleman]](https://www.codycoleman.com/public/misc/Stanford-purpose.pdf), [[Sai Rallabandi]](http://www.cs.cmu.edu/~srallaba/pdfs/statement_PhD.pdf), [[Jeremy Lacomis]](https://www.cs.cmu.edu/~jlacomis/assets/statement/personal-statement-cmu.pdf), [[Sean Kross]](https://seankross.com/notes/grad-school-essays/ShortPersonalStatement.pdf), [[Zahid Hossain]](https://graphics.stanford.edu/~zhossain/grad/sop_mit.pdf), [[Jean Yang]](https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf)
 
-### Visit days, choosing advisor and school
+##### Visit days, choosing advisor and school
 
 [Questions to Ask a Prospective Ph.D. Advisor on Visit Day, With Thorough and Forthright Explanations by Andrew Kuznetsov](https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/)
 
@@ -321,9 +364,9 @@ Public examples: [[Cody Coleman]](https://www.codycoleman.com/public/misc/Stanfo
 
 [The Definitive ‘what do I ask/look for’ in a PhD Advisor Guide by Columbia CS](https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf)
 
-## Advice for current students
+#### Advice for current students
 
-### PhD survival guides
+##### PhD survival guides
 
 [So long, and thanks for the PhD by Ronald T. Azuma](https://www.cs.unc.edu/~azuma/hitch4.html)
 
@@ -349,7 +392,7 @@ Public examples: [[Cody Coleman]](https://www.codycoleman.com/public/misc/Stanfo
 
 [Expectation Setting by Eugene Vinitsky](http://eugenevinitsky.github.io/posts/expectation_setting.html)
 
-### Research
+##### Research
 
 [How to Do Great Research by Nick Feamster and Alex Gray](https://greatresearch.org/)
 
@@ -361,13 +404,13 @@ Public examples: [[Cody Coleman]](https://www.codycoleman.com/public/misc/Stanfo
 
 [Advice on Research and Writing by Mark Leone](http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mleone/web/how-to.html)
 
-### Reading
+##### Reading
 
 [How to Read a Paper by Srinivasan Keshav](http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf)
 
 [How to Read a Technical Paper by Jason Eisner](https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html)
 
-### Writing
+##### Writing
 
 [How to write a good CVPR submission by Bill Freeman](https://billf.mit.edu/sites/default/files/documents/cvprPapers.pdf)
 
@@ -377,11 +420,11 @@ Public examples: [[Cody Coleman]](https://www.codycoleman.com/public/misc/Stanfo
 
 [How to write a (hopefully good) paper by Martin Vetterli ](http://mri.beckman.illinois.edu/resources/good_paper.pdf)
 
-### Blogposts
+##### Blogposts
 
 [PhDLife Blog](https://phdlife.warwick.ac.uk/) - A collection of blog posts from [Warwick University](https://warwick.ac.uk)
 
-### Reviewing
+##### Reviewing
 
 [Reviewer Tutorial by CVPR 2022](https://cvpr2022.thecvf.com/sites/default/files/2021-11/How%20to%20be%20a%20good%20reviewer-tutorials%20for%20cvpr2022%20reviewers.pptx.pdf)
 
@@ -389,17 +432,17 @@ Public examples: [[Cody Coleman]](https://www.codycoleman.com/public/misc/Stanfo
 
 [How to write a reviewer report by Stanley Chan](https://engineering.purdue.edu/ChanGroup/write_review.html)
 
-### Presenting
+##### Presenting
 
 [Giving an Academic Talk by Jonathan Shewchuk](https://people.eecs.berkeley.edu/~jrs/speaking.html)
 
 [How to give a technical presentation by Michael Ernst](https://homes.cs.washington.edu/~mernst/advice/giving-talk.html)
 
-### Teaching
+##### Teaching
 
 [How to Be a Teaching Assistant by Jason Eisner](https://www.cs.jhu.edu/~jason/advice/how-to-ta.html)
 
-### Fellowship applications
+##### Fellowship applications
 
 [Tips for the NSF GRFP Application by Danielle Perry](https://web.uri.edu/graduate-writing-center/tips-for-the-nsf-grfp-application/)
 
@@ -411,15 +454,15 @@ Public examples: [[Cody Coleman]](https://www.codycoleman.com/public/misc/Stanfo
 
 Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0), [[Victoria Dean (NSF personal)]](https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf), [[Victoria Dean (NSF research)]](https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf), [[Tara Safavi (NSF)]](https://tsafavi.github.io/assets/pdf/nsf-personal.pdf), [[Paul Liang (Facebook)]](http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf), [[Devendra Chaplot (Facebook)]](https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf), [[Sai Rallabandi (Facebook)]](http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf)
 
-### Networking
+##### Networking
 
 [Networking on the Network: A Guide to Professional Skills for PhD Students by Phil Agre](https://vlsicad.ucsd.edu/Research/Advice/network.html)
 
-### Organizing workshops and tutorials
+##### Organizing workshops and tutorials
 
 [Hitchhiker’s guide to organizing an academic workshop by Ben Eysenbach and Surya Bhupatiraju](https://medium.com/@erl.leads/hitchhikers-guide-to-organizing-an-academic-workshop-cc9a5b1c32c9)
 
-### Attending academic conferences
+##### Attending academic conferences
 
 [Nine things I wish I had known the first time I came to NeurIPS by Jennifer Vaughan](https://medium.com/@jennwv/nine-things-i-wish-i-had-known-the-first-time-i-came-to-nips-b939330661ed)
 
@@ -427,7 +470,7 @@ Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.c
 
 [How To Make A Plan To Attend International Academic Conferences](https://internationalconferencealerts.com/blog/how-to-make-a-plan-to-attend-international-academic-conferences/)
 
-### Job search
+##### Job search
 
 [Tips for Computer Science Faculty Applications](https://yisongyue.medium.com/checklist-of-tips-for-computer-science-faculty-applications-9fd2480649cc)
 
@@ -451,7 +494,7 @@ Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.c
 
 [Academic job search advice by Matt Might](http://matt.might.net/articles/advice-for-academic-job-hunt/)
 
-## Memoirs
+#### Memoirs
 
 [I loved graduate school by Peter Bailis](http://www.bailis.org/blog/i-loved-graduate-school/)
 
@@ -460,3 +503,5 @@ Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.c
 [How to get a Ph.D. in computer science if you&#39;re me by Chris Martens](http://lambdamaphone.blogspot.com/2015/11/how-to-get-phd-in-computer-science-if.html)
 
 [The N=1 guide to grad school by Adam Marcus](http://marcua.net/writing/gradschool-guide/)
+
+</div>

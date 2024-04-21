@@ -1,29 +1,50 @@
 # A website template for academics
 
-## How to use it with github pages
-
-[Using Jekyll plugins on GitHub Pages](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html)
-
-## How to compile
-
-run ./compile_and_publish.sh
-
 ## Users
 
 Some users:
+<a href="https://ilafly.github.io/" target="_blank">★</a>
+<a href="https://i-vesseg.github.io/" target="_blank">★</a>
+<a href="https://xfangsn.github.io/" target="_blank">★</a>
+<a href="https://joshuagob.github.io" target="_blank">★</a>
+<a href="https://bczheng.com/" target="_blank">★</a>
+<a href="https://bazilinskyy.github.io/" target="_blank">★</a>
+<a href="https://www.coreytcallaghan.com/" target="_blank">★</a>
+<a href="https://minseoksong.github.io/" target="_blank">★</a>
+<a href="https://acme-group-cmu.github.io/" target="_blank">★</a>
+<a href="https://barrylee36.github.io/" target="_blank">★</a>
+<a href="https://adisun94.github.io/" target="_blank">★</a>
+<a href="https://comp-physics.group" target="_blank">★</a>
+<a href="https://spike.doc.ic.ac.uk/" target="_blank">★</a>
+<a href="http://www.msc.univ-paris-diderot.fr/~berhanu/" target="_blank">★</a>
+<a href="https://mashadab.github.io/" target="_blank">★</a>
+<a href="https://home.iitk.ac.in/~lalit/" target="_blank">★</a>
+<a href="https://ethan-pickering.github.io/" target="_blank">★</a>
+<a href="https://pedro-dm-gomes.github.io/" target="_blank">★</a>
+<a href="https://3tbk.github.io/3tbk/" target="_blank">★</a>
+<a href="https://felipesua.github.io/" target="_blank">★</a>
+<a href="https://shivvrat.github.io/" target="_blank">★</a>
+<a href="https://ritamraha.github.io/" target="_blank">★</a>
+<a href="https://matsesseldeurs.github.io/" target="_blank">★</a>
+<a href="https://michelleblom.github.io/" target="_blank">★</a>
+<a href="https://jrd971000.github.io/" target="_blank">★</a>
+<a href="https://melashri.net/" target="_blank">★</a>
+<a href="https://sahatulika15.github.io" target="_blank">★</a>
+<a href="https://mzhanglab.github.io" target="_blank">★</a>
+<a href="https://soar-lab.github.io" target="_blank">★</a>
+<a href="https://azharghafoor.github.io/" target="_blank">★</a>
+<a href="https://hyunwoo.info/" target="_blank">★</a>
+<a href="https://computervision0.github.io/" target="_blank">★</a>
+<a href="https://adrashid.github.io/personal-webpage/index.html" target="_blank">★</a>
+<a href="https://aleemkhan62.github.io/" target="_blank">★</a>
+<a href="https://vaibhavb007.github.io/" target="_blank">★</a>
+<a href="https://gabry993.github.io/" target="_blank">★</a>
+<a href="https://shantnuu.github.io/" target="_blank">★</a>
+<a href="https://wenbinluomath.github.io/" target="_blank">★</a>
 
-* [Ethan Pickering](https://ethan-pickering.github.io/)
-* [Lalit M. Pant](https://home.iitk.ac.in/~lalit/)
-* [Mohammad Afzal Shadab](https://mashadab.github.io/)
-* [Michael Berhanu](http://www.msc.univ-paris-diderot.fr/~berhanu/)
-* [Muhammad Haseeb Arshad](https://muhammadhaseeb.info//)
-* [Spike Research Group](https://spike.doc.ic.ac.uk/)
-* [Computational Physics @ GT](https://comp-physics.group) (my research group webpage)
-* [Nitzan Farhi](https://nitzanfarhi.github.io/)
-* [Aditya Sundar](https://adisun94.github.io/)
-* [Cheng-Chun (Barry) Lee](https://barrylee36.github.io/)
+__If you are using this template, feel free to share your site with me and I'll add it here!__
 
-## Introduction
+## Introduction 
 
 This is a statically-generated Jekyll/Liquid/Bootstrap-based website template for academics.
 I started with the [Allan lab](https://www.allanlab.org/) webpage and modified it into a personal academic webpage that met my requirements.
@@ -36,8 +57,6 @@ Some examples are:
 * Fontawesome icons (email, CV, Google scholar, ResearchGate, GitHub, etc.)
 * Dark color scheme via Bootswatch
 * Consistent and attractive `About me` page
-* CV that uses the same `bib` file as Jekyll scholar (with appropriate style files for each)
-  * no more keeping multiple bibliographies updated!
 
 I encourage the use of this webpage as a template for your own academic website.
 The remainder of this document describes how to do this.
@@ -50,18 +69,17 @@ Broadly speaking, there are three steps:
 ## Fork and build
 
 * Fork [this repository](https://github.com/sbryngelson/sbryngelson.github.io) by clicking the `fork` button in the top-right corner of its Github page.
-* Install [Jekbrew **install **chruby ruby-install xz](https://jekyllrb.com/docs/installation/)
-* [yll](https://jekyllrb.com/docs/installation/)  (version less than 4.0 required) on your local computer
-  * On MacOS, you will need to upgrade your Ruby version from the depricated v2.3 that is shipped. Follow the above Jekyll instructions closely.
+* Install [Jekyll](https://jekyllrb.com/docs/installation/)  (version less than 4.0 required) on your local computer
+    * On MacOS, you will need to upgrade your Ruby version from the depricated v2.3 that is shipped. Follow the above Jekyll instructions closely.
 * Run `$ bundle exec jekyll serve` in the repository root directory
 * Your site is now hosted locally at `localhost:4000`, which you can access with your web browser.
-  * It will be automatically re-built as you save changes to the files it contains.
-    Refreshing your web browser reveals these changes.
+   * It will be automatically re-built as you save changes to the files it contains.
+   Refreshing your web browser reveals these changes.
 
 Note:
-
-* This webpage uses Jekyll plugins like Jekyll Scholar to automatically build your bibliography.
+* This webpage uses Jekyll plugins like Jekyll Scholar to automatically build your bibliography. 
   If you are using Github pages then you will have to build the site with the `Rakefile` in the root directory of the source branch.
+  You can do so by first modifying the file as appropriate and then, after pushing your changes, execute `rake publish`.
 
 ## Customization
 
@@ -84,7 +102,6 @@ Creating new pages can be done by using existing pages as a template.
 
 All pages require header information.
 Example header data for the 'Talks' page is below.
-
 ```
 ---
 title: "Talks"
@@ -93,7 +110,6 @@ sitemap: false
 permalink: /talks/
 ---
 ```
-
 The `layout` variable corresponds to HTML layouts in the `_layouts` directory.
 The differences between most layouts is subtle and `gridlay` can generally be used.
 The permalink must be unique for each page, and corresponds to the directory that will store the page in the compiled HTML.
@@ -107,7 +123,7 @@ HTML commands and CSS styles can be directly used in a markdown files.
 #### Publication page and database
 
 The publications and talks are now listed via Jekyll Scholar.
-The bibliography file `ref.bib` is located in the `cv/` directory.
+The bibliography file `ref.bib` is located in the `assets/` directory.
 Modify according to your needs.
 
 ## Hosting
@@ -149,7 +165,6 @@ This site is built with Jekyll.
 
 Other Jekyll templates are of course available.
 Some of these are viable for very simple academic pages with little tuning:
-
 * [Minimal mistakes](https://mmistakes.github.io/minimal-mistakes/)
 * [al-folio](https://github.com/alshedivat/al-folio)
 * [academicpages](https://academicpages.github.io/)

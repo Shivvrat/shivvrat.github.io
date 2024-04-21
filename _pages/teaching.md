@@ -5,7 +5,19 @@ sitemap: false
 permalink: /teaching/
 ---
 
+<style>
+.jumbotron{
+    padding:3%;
+    padding-bottom:10px;
+    padding-top:10px;
+    margin-top:10px;
+    margin-bottom:30px;
+}
+</style>
+
 ## Teaching
+
+<div class="jumbotron">
 
 [//]: # (* Lecturer &#40;Teaching Fellow&#41;, University of Illinois at Urbana--Champaign )
 
@@ -16,3 +28,4 @@ permalink: /teaching/
     * Database Systems (Senior Level) -- F20, S21
     * Discrete Mathematics for Computing II (Senior Level)-- Su21
 
+</div>

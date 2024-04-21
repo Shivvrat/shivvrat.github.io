@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Command line - ./switch_theme.sh Cosmo
+
 if [ "$#" -ne 1 ]; then
     echo "Illegal number of parameters. Please enter one theme name from bootswatch.com. Aborting."
     exit
@@ -24,3 +26,5 @@ else
     echo $url 'does not exist, aborting.'
     exit
 fi
+
+

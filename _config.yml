@@ -51,7 +51,7 @@ group_pub_by_year: true
 nav_pages:
   - name: about
   - name: publications
-  # - name: research
+  - name: research
   - name: teaching
   - name: resources
   - name: blog

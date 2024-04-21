@@ -13,6 +13,22 @@
   .bib-authors, .bib-venue {
     font-size: 16px;
   }
+
+.text-right {
+  text-align: right;
+  float: right; /* Aligns the element to the right, keeping it on the same line */
+  margin-right: 20px; /* Adds space to the right of the text, might adjust or remove based on layout */
+  border: 2px solid #007bff; /* Adds a solid border with a color */
+  padding: 6px 8px; /* Adjusts padding inside the border, around the text */
+  background-color: #e9ecef; /* Sets a background color */
+  border-radius: 10px; /* Rounds the corners of the border */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+  color: #007bff; /* Text color to match the border for consistency */
+}
+
+
+
+
   .btn {
     margin-bottom: 5px;
     padding: 0 15px;
@@ -39,10 +55,12 @@
     border-radius: 5px; /* Rounded corners for aesthetics */
   }
   
+  
   .text-justify { text-align: justify; }
   .toggle-container { background-color: black; color: white; border-radius: 5px; padding: 10px; margin-bottom: 20px; }
 </style>
 
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 <!-- <div class="text-justify">
 {{reference | replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | replace_first: 'Arya, S.', '<b>Arya, S.</b>' | replace_first: 'Arya SV', '<b>Arya SV</b>' | replace_first: 'Arya S', '<b>Arya S</b>'}}</div> -->
@@ -102,7 +120,7 @@
 {% endif %}
 
 
-{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
+{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
 <button class="btn btn-danger btm-sm"  onclick="toggleBibtex{{entry.key}}()">BIB</button>
 {% endif %}
 
@@ -123,6 +141,10 @@
 <div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{entry.abstract}}</pre>
 </div>
+
+{% if entry.comment %}
+<div class="text-right">{{entry.comment}}</div>
+{% endif %}
 </div>
 
 <script>

@@ -1,0 +1,82 @@
+/* Custom Styles for Research Page */
+
+/* Define color variables */
+:root {
+  --primary-color: #005792;
+  /* Deep blue for primary accents */
+  --secondary-color: #e63946;
+  /* Maroon for secondary accents */
+  --accent-color: #2a9d8f;
+  /* Teal for tertiary accents and links */
+  --text-color: #333333;
+  /* Dark grey for text for better readability */
+  --background-color: #ffffff;
+  /* White for background */
+}
+
+/* Apply font styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+  /* Spacing below headings */
+}
+
+
+
+ul,
+ol {
+  padding-left: 20px;
+  /* Indent lists */
+}
+
+li {
+  margin-bottom: 0.25em;
+  /* Spacing between list items */
+}
+
+/* Link styles */
+a {
+  /* color: var(--accent-color); */
+  /* Use the accent color for links */
+  text-decoration: none;
+  /* No underline by default */
+}
+
+a:hover {
+  text-decoration: underline;
+  /* Underline on hover for better interactivity */
+  /* color: var(--secondary-color); */
+  /* Change color on hover to secondary color */
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  /* Adjust sizes for h3, h4, h5, h6 as needed */
+  .container-fluid {
+    max-width: 100%;
+    padding: 10px;
+    /* Reduce padding on smaller screens */
+  }
+
+  .jumbotron {
+    max-width: 100%;
+    padding: 10px;
+    /* Reduce padding on smaller screens */
+  }
+}
