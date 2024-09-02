@@ -1,9 +1,16 @@
 /* Increase the maximum width and padding of the content area */
 .container-fluid {
   max-width: 70%;
-  /* Allows the container to use the full width */
-  padding: 20px 40px;
-  /* Increase padding for more space around the content */
+  padding: 10px 20px;
+  /* Reduced padding for mobile phones */
+}
+
+/* Media query for devices with a minimum width of 992px (e.g., laptops) */
+@media (min-width: 992px) {
+  .container-fluid {
+    padding: 20px 40px;
+    /* Increased padding for laptops */
+  }
 }
 /* do not show numbering for bibliography */
 ol.bibliography {

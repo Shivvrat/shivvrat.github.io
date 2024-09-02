@@ -6,12 +6,13 @@ permalink: /
 ---
 ### Welcome!
 
-I am Shivvrat Arya, but feel free to call me Shiv (pronounced as [ sh ih v ]). I am currently engaged in a collaborative research projects under the guidance of [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/), funded by the DARPA Perceptually-Enabled Task Guidance (PTG) grant. Our goal is to develop Artificial Intelligence (AI) technology that guides users in the
-performance of a wide range of cognitively challenging physical tasks. This initiative draws upon the latest breakthroughs in machine perception, automated reasoning, and augmented reality. Our primary research focus is on activity recognition within Egocentric Datasets such as Epic Kitchens, and Multi-Label Datasets including Charades, AVA, Tacos, and Wetlab.
+I am Shivvrat Arya, but feel free to call me Shiv (pronounced as [ sh ih v ]). I am currently engaged in a collaborative research projects under the guidance of [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/), funded by the DARPA Perceptually-Enabled Task Guidance (PTG) and DARPA Assured Neuro Symbolic Learning and Reasoning (ANSR) grants. Our goal is to develop AI technology that guides users in the performance of cognitively challenging physical tasks, leveraging breakthroughs in machine perception, automated reasoning, and augmented reality. 
 
-During my tenure at the Indian Institute of Technology Indore (IITI) as a research intern, my research revolved around leveraging non-iterative and sophisticated neural network architectures for multi-label classification challenges. This work has led to two journal submissions and one conference paper acceptance. We benchmarked our approach against 15 diverse datasets, including yeast, scene, BibTeX, emotions, Enron, medical, corel5k, bookmarks, delicious, mediamill, and the rcv1v2 series, using metrics such as Hamming Loss, Ranking Loss, One Error, Coverage, and Average Precision. Our proposed algorithm was compared with state-of-the-art methods like Rank-SVM, ELMOnline, MLKN, BPMLL, and ELM.
+My research integrates probabilistic graphical models with deep learning for computer vision tasks, emphasizing tractable probabilistic modeling and neuro-symbolic AI. I've developed novel neural network-based inference methods for probabilistic graphical models and explored advanced inference schemes for multi-label classification. These works have been recognized with best paper awards and oral presentations.
 
-<br/>
+In video understanding, I've contributed to the development of pipelines and datasets for egocentric procedural error recognition, developed explainable models for human activity recognition, and explored predictive task guidance in augmented reality. My earlier work introduced innovative approaches to multi-label classification problems.
+
+This research builds upon my previous work at IIT Indore, where I focused on non-iterative neural network architectures for multi-label classification challenges across diverse datasets.
 
 ### About me
 
