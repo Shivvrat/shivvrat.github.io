@@ -5,15 +5,8 @@ sitemap: false
 permalink: /resources/
 ---
 
-<style>
-.jumbotron{
-    padding:3%;
-    padding-bottom:10px;
-    padding-top:10px;
-    margin-top:10px;
-    margin-bottom:30px;
-}
-</style>
+<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
+
 
 Some of these resources might be helpful during your time in academia. I have also added some software and GitHub repositories I use daily.
 (Most related to academia are taken from [Clemens Eppner&#39;s webpage](https://clemense.github.io/) and [Paul Liang](http://www.cs.cmu.edu/~pliang/)'s GitHub)

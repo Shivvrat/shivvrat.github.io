@@ -14,7 +14,7 @@ permalink: /research/
     margin-bottom:30px;
 }
 </style>
-
+<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 # **Research**
 
 
@@ -30,16 +30,17 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 <div class="jumbotron">
 
-##### **Inference within Probabilistic Models**
+#### **Inference within Probabilistic Models**
 
-###### **Neural Network-Based Inference for Probabilistic Graphical Models**
+##### **Neural Network-Based Inference for Probabilistic Graphical Models**
 
 - Neural Network Approximators for Marginal MAP Inference (**AAAI'24**)
 
+- Learning to Solve the Constrained Most Probable Explanation Task (**AISTATS'24**, **UAI TPM'24**)
 
-- Learning to Solve the Constrained Most Probable Explanation Task (**AISTATS'24**)
+- A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models (**UAI TPM'24**)
 
-###### **Optimization based Inference Schemes for Graphical Models**
+##### **Optimization based Inference Schemes for Graphical Models**
 
 - Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification (**AISTATS'24**)
 
@@ -49,7 +50,7 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 <div class="jumbotron">
 
-##### **Activity Recognition and Video Understanding**
+#### **Activity Recognition and Video Understanding**
 
 - CaptainCook4D Dataset (**DMLR'23**)
 
@@ -63,7 +64,7 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 <div class="jumbotron">
 
-##### **Multi-Label Classification**
+#### **Multi-Label Classification**
 
 - Kernelized Random Vector Functional Link Network (**IJCNN'20**)
 
