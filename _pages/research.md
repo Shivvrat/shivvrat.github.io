@@ -34,11 +34,11 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 ##### **Neural Network-Based Inference for Probabilistic Graphical Models**
 
-- Neural Network Approximators for Marginal MAP Inference (**AAAI'24**)
+- Neural Network Approximators for Marginal MAP Inference (**AAAI'24-Oral**)
 
 - Learning to Solve the Constrained Most Probable Explanation Task (**AISTATS'24**, **UAI TPM'24**)
 
-- A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models (**UAI TPM'24**)
+- A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models (**NeurIPS'24-Spotlight**, **UAI TPM'24-Best Paper Award**)
 
 ##### **Optimization based Inference Schemes for Graphical Models**
 
@@ -52,7 +52,7 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 #### **Activity Recognition and Video Understanding**
 
-- CaptainCook4D Dataset (**DMLR'23**)
+- CaptainCook4D Dataset (**NeurIPS'24**, **DMLR'23**)
 
 - Explainable Activity Recognition (**TiiS'23**)
 

@@ -68,16 +68,14 @@
 <div class="bib-entry">
   <div class="bib-title">{{ entry.title }}</div>
   <div class="bib-authors">{{ entry.author | replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | replace_first: 'Arya, S.', '<b>Arya, S.</b>' | replace_first: 'Arya SV', '<b>Arya SV</b>' | replace_first: 'Arya S', '<b>Arya S</b>' | replace_first: 'Shivvrat', '<b>Shivvrat</b>' | replace_first: 'Arya', '<b>Arya</b>' | replace_first: 'Oral', '<b>Oral</b>' }}</div>
+
 <div class="bib-venue">
-
-
-  
   {% if entry.journal or entry.booktitle %}
     In 
     {% if entry.journal %}
-      {{ entry.journal }}
+      {{ entry.journal | replace: '(', '<b>(' | replace: ')', ')</b>' }}
     {% elsif entry.booktitle %}
-      {{ entry.booktitle }}
+      {{ entry.booktitle | replace: '(', '<b>(' | replace: ')', ')</b>' }}
     {% endif %}
     , {{ entry.year }}
   {% endif %}
