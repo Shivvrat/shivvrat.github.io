@@ -31,3 +31,15 @@ ol.bibliography {
   padding-left: 15px;
 }
 */
+
+
+
+.comment-icon {
+  margin-right: 6px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.comment-text {
+  vertical-align: middle;
+}

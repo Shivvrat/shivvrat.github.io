@@ -1,6 +1,52 @@
 ---
 layout: default
 ---
-<div id="research" class="col-sm-12">
-  {{ content }}
+<style>
+  .research-area {
+      background-color: #f8f9fa;
+      border-left: 4px solid #007bff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 0 5px 5px 0;
+  }
+
+  .badge {
+      font-size: 0.8em;
+      margin-left: 5px;
+  }
+</style>
+
+<div class="container mt-4">
+  <article class="research-content">
+    {{ content }}
+  </article>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.research-content h2').each(function() {
+    $(this).nextUntil('h2').wrapAll('<div class="research-area"></div>');
+  });
+  
+  $('.research-content h2').click(function() {
+    $(this).next('.research-area').slideToggle();
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    $('.research-area').each(function() {
+        var $this = $(this);
+        var $title = $this.find('h3').first();
+        var $content = $this.find('ul').first();
+        
+        $title.click(function() {
+            $content.slideToggle();
+        });
+        
+        $title.css('cursor', 'pointer');
+    });
+});
+</script>

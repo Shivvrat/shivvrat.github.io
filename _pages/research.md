@@ -17,10 +17,13 @@ permalink: /research/
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 # **Research**
 
+---
 
 #### **Research Interests**
 
 Computer Vision, Machine (Deep) learning and Artificial Intelligence.
+
+---
 
 #### **Current Research Focus**
 
@@ -30,42 +33,54 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 <div class="jumbotron">
 
-#### **Inference within Probabilistic Models**
+#### **Inference in Probabilistic Models**
 
-##### **Neural Network-Based Inference for Probabilistic Graphical Models**
+<div class="research-area">
 
-- Neural Network Approximators for Marginal MAP Inference (**AAAI'24-Oral**)
+##### Neural Network-Based Inference for Probabilistic Graphical Models
 
-- Learning to Solve the Constrained Most Probable Explanation Task (**AISTATS'24**, **UAI TPM'24**)
+- Neural Network Approximators for Marginal MAP Inference <span class="badge bg-success">AAAI'24-Oral</span>
+- Learning to Solve the Constrained Most Probable Explanation Task <span class="badge bg-warning">AISTATS'24</span> <span class="badge bg-warning">UAI TPM'24</span>
+- A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models <span class="badge bg-success">NeurIPS'24-Spotlight</span> <span class="badge bg-success">UAI TPM'24-Best Paper Award</span>
 
-- A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models (**NeurIPS'24-Spotlight**, **UAI TPM'24-Best Paper Award**)
+</div>
 
-##### **Optimization based Inference Schemes for Graphical Models**
+<div class="research-area">
 
-- Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification (**AISTATS'24**)
+##### Optimization based Inference Schemes for Graphical Models
 
+- Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification <span class="badge bg-warning">AISTATS'24</span>
+
+</div>
+</div>
+
+
+---
+
+<div class="jumbotron">
+
+### Activity Recognition and Video Understanding
+
+<div class="research-area">
+
+
+- CaptainCook4D Dataset <span class="badge bg-warning">NeurIPS'24</span> <span class="badge bg-warning">DMLR'23</span>
+- Explainable Activity Recognition <span class="badge bg-warning">TiiS'23</span>
+- Predictive Task Guidance in Augmented Reality <span class="badge bg-warning">Poster at IEEE VR'24</span>
+
+</div>
 </div>
 
 ---
 
 <div class="jumbotron">
 
-#### **Activity Recognition and Video Understanding**
+### Multi-Label Classification
 
-- CaptainCook4D Dataset (**NeurIPS'24**, **DMLR'23**)
-
-- Explainable Activity Recognition (**TiiS'23**)
+<div class="research-area">
 
 
-- Predictive Task Guidance in Augmented Reality (**Poster at IEEE VR'24**)
+- Kernelized Random Vector Functional Link Network <span class="badge bg-warning">IJCNN'20</span>
+
 </div>
-
----
-
-<div class="jumbotron">
-
-#### **Multi-Label Classification**
-
-- Kernelized Random Vector Functional Link Network (**IJCNN'20**)
-
 </div>
