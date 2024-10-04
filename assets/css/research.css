@@ -29,16 +29,18 @@ body {
 }
 
 .research-area {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  width: 100%; /* Set a fixed width */
-  max-width: 800px; /* Set a maximum width */
-  margin-left: auto; /* Center the div horizontally */
-  margin-right: auto;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007bff;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .research-content ul {
