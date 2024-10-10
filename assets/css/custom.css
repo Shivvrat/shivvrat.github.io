@@ -1,0 +1,45 @@
+/* Styles for mobile devices */
+/* @media only screen and (max-width: 767px) {
+  .container-fluid {
+    max-width: 100%; 
+    padding: 5px 10px; 
+  }
+} */
+
+/* Media query for devices with a minimum width of 992px (e.g., laptops) */
+/* @media (min-width: 992px) {
+  .container-fluid {
+    max-width: 70%; 
+    padding: 20px 40px; 
+  }
+} */
+
+/* do not show numbering for bibliography */
+ol.bibliography {
+  list-style-type: none;
+}
+
+/* Adjust row and columns for more space */
+/* Uncomment if needed
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row>[class*='col-'] {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+*/
+
+
+
+.comment-icon {
+  margin-right: 6px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.comment-text {
+  vertical-align: middle;
+}
