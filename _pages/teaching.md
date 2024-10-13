@@ -23,5 +23,7 @@ permalink: /teaching/
 
 * Guest Lecturer, The University of Texas at Dallas
     * Artificial Intelligence (Senior Level) -- S24
+    * Artificial Intelligence (Graduate Level) -- F24
+    * Machine Learning (Graduate Level) -- F24
 
 </div>
