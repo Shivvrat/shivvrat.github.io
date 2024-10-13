@@ -53,10 +53,10 @@ nav_pages:
   - name: publications
   - name: research
   - name: teaching
+  - name: services
   - name: resources
   - name: blog
   - name: photos
-  - name: services
 #  - name: software
 #  - name: talks
 # - name: team
