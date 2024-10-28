@@ -75,12 +75,34 @@ permalink: /about/
 
 {% if site.data.awards %}
 <div class="jumbotron">
-### Awards
-<ul>
-{% for award in site.data.awards %}
- <li> {{ award.name | replace: "-","&#8211;"}} </li>
-{% endfor %}
-</ul>
+  <h3 style="font-size: 1.5em; margin-bottom: 0.5em;">Awards & Honors</h3>
+  <ul style="list-style-type: none; padding: 0;">
+    {% for award in site.data.awards %}
+    <li style="margin-bottom: 1em;">
+      <h4 style="font-size: 1.2em; margin: 0;">
+        {% assign awardName = award.name | replace: "-", "&#8211;" %}
+        {% if award.type == "presentation" %}
+          🎤
+        {% elsif award.type == "scholarship" %}
+          🎓
+        {% elsif award.type == "paper award" %}
+          🏅
+        {% else %}
+          🏆
+        {% endif %}
+        {{ awardName }}
+      </h4>
+      {% if award.event %}
+        <p style="margin: 0.3em 0 0; font-size: 1em;"> 
+          <em>{{ award.event }}</em>
+        </p>
+      {% endif %}
+      {% if award.description %}
+        <p style="margin: 0.3em 0 0; font-size: 1em;">{{ award.description }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 {% endif %}
 

@@ -58,13 +58,18 @@
 </div>
 
 <div class="jumbotron">
-  <h4>News</h4>
-
-  {% for article in site.data.news limit:5 %}
-  <b>{{ article.date }}</b>
-    <p>{{ article.headline }}</p>
-  {% endfor %}
+  <h4 style="margin-bottom: 1em; font-weight: bold;">Latest News</h4>
   
-  <h5><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">... see all News</a></h5>
+  {% for article in site.data.news limit:4 %}
+  <div style="margin-bottom: 1em;">
+    <b style="font-size: 0.9em; color: #555;">{{ article.date }}</b>
+    <p style="margin: 0.2em 0; font-size: 1em;">{{ article.headline }}</p>
+  </div>
+  {% endfor %}
 
+  <h5 style="margin-top: 1em;">
+    <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" style="text-decoration: none; color: #007bff;">
+      ... see all News
+    </a>
+  </h5>
 </div>
