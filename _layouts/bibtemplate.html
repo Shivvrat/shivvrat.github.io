@@ -37,67 +37,81 @@
     {% endif %}
   </div>
 
-  <!-- Action Buttons -->
-  <div class="bib-actions">
-    {% if entry.file %}
-      {% assign bibfile = "/papers/" | append: entry.file %}
-      {% assign bibtest = false %}
-      {% for file in site.static_files %}
-        {% if file.path contains bibfile %}
-          {% assign bibtest = true %}
+  <!-- Action Buttons and Award Section -->
+  <div class="bib-actions-container">
+    <div class="bib-actions">
+      {% if entry.file %}
+        {% assign bibfile = "/papers/" | append: entry.file %}
+        {% assign bibtest = false %}
+        {% for file in site.static_files %}
+          {% if file.path contains bibfile %}
+            {% assign bibtest = true %}
+          {% endif %}
+        {% endfor %}
+        {% if bibtest %}
+          <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank">
+            <button class="btn btn-pdf" onclick="handlePdfClick(this)" aria-label="Download PDF">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+              <span class="btn-text">PDF</span>
+            </button>
+          </a>
         {% endif %}
-      {% endfor %}
-      {% if bibtest %}
-        <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank">
-          <button class="btn btn-pdf" aria-label="Download PDF">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i> PDF
+      {% endif %}
+
+      {% if entry.doi %}
+        {% if entry.type == 'unpublished' %}
+          <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank">
+            <button class="btn btn-arxiv">
+              <i class="ai ai-arxiv"></i> ARXIV
+            </button>
+          </a>
+        {% else %}
+          <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank">
+            <button class="btn btn-doi" data-tooltip="View on DOI">
+              <i class="ai ai-doi"></i> DOI
+            </button>
+          </a>
+        {% endif %}
+      {% endif %}
+
+      {% if entry.code %}
+        <a href="{{ entry.code }}" target="_blank">
+          <button class="btn btn-code">
+            <i class="fas fa-code"></i> CODE
           </button>
         </a>
       {% endif %}
-    {% endif %}
 
-    {% if entry.doi %}
-      {% if entry.type == 'unpublished' %}
-        <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank">
-          <button class="btn btn-arxiv">
-            <i class="ai ai-arxiv"></i> ARXIV
-          </button>
-        </a>
-      {% else %}
-        <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank">
-          <button class="btn btn-doi">
-            <i class="ai ai-doi"></i> DOI
+      {% if entry.website %}
+        <a href="{{ entry.website }}" target="_blank">
+          <button class="btn btn-website">
+            <i class="fas fa-globe"></i> WEBSITE
           </button>
         </a>
       {% endif %}
-    {% endif %}
 
-    {% if entry.code %}
-      <a href="{{ entry.code }}" target="_blank">
-        <button class="btn btn-code">
-          <i class="fas fa-code"></i> CODE
+      {% if entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
+        <button class="btn btn-bib" onclick="toggleBibtex{{entry.key}}()">
+          <i class="fas fa-quote-right"></i> BIB
         </button>
-      </a>
-    {% endif %}
+      {% endif %}
 
-    {% if entry.website %}
-      <a href="{{ entry.website }}" target="_blank">
-        <button class="btn btn-website">
-          <i class="fas fa-globe"></i> WEBSITE
+      {% if entry.abstract %}
+        <button class="btn btn-abstract" onclick="toggleAbstract{{entry.key}}()">
+          <i class="fas fa-align-left"></i> ABSTRACT
         </button>
-      </a>
-    {% endif %}
-
-    {% if entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
-      <button class="btn btn-bib" onclick="toggleBibtex{{entry.key}}()">
-        <i class="fas fa-quote-right"></i> BIB
-      </button>
-    {% endif %}
-
-    {% if entry.abstract %}
-      <button class="btn btn-abstract" onclick="toggleAbstract{{entry.key}}()">
-        <i class="fas fa-align-left"></i> ABSTRACT
-      </button>
+      {% endif %}
+    </div>
+    
+    {% if entry.comment %}
+      <div class="paper-comment">
+        <div class="award-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <div class="award-content">
+          <span class="award-text">{{entry.comment}}</span>
+        </div>
+      </div>
     {% endif %}
   </div>
 
@@ -120,16 +134,14 @@
 
   <!-- Abstract Content -->
   <div id="b{{entry.key}}" class="bib-content abstract-content">
+    <div class="content-header">
+      <span>Abstract</span>
+      <button class="copy-btn" onclick="copyToClipboard('b{{entry.key}}')" aria-label="Copy abstract">
+        <i class="fas fa-copy"></i>
+      </button>
+    </div>
     <pre>{{entry.abstract}}</pre>
   </div>
-
-  <!-- Award/Comment Badge -->
-  {% if entry.comment %}
-    <div class="paper-comment">
-      <span class="comment-icon">🏆</span>
-      <span class="comment-text">{{entry.comment}}</span>
-    </div>
-  {% endif %}
 </div>
 
 <script>
@@ -154,15 +166,36 @@ function toggleElement(elementId) {
   }
 }
 
-function copyToClipboard(elementId) {
+async function copyToClipboard(elementId) {
   const element = document.getElementById(elementId);
+  const btn = element.querySelector('.copy-btn');
   const text = element.querySelector('pre').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = element.querySelector('.copy-btn');
+  
+  try {
+    await navigator.clipboard.writeText(text);
     btn.innerHTML = '<i class="fas fa-check"></i>';
+    btn.classList.add('success');
+  } catch (err) {
+    btn.innerHTML = '<i class="fas fa-times"></i>';
+    btn.classList.add('error');
+  } finally {
     setTimeout(() => {
       btn.innerHTML = '<i class="fas fa-copy"></i>';
+      btn.classList.remove('success', 'error');
     }, 2000);
-  });
+  }
+}
+
+// Add loading state handler
+function handlePdfClick(btn) {
+  btn.classList.add('loading');
+  const btnText = btn.querySelector('.btn-text');
+  const originalText = btnText.textContent;
+  btnText.textContent = 'Loading...';
+  
+  setTimeout(() => {
+    btn.classList.remove('loading');
+    btnText.textContent = originalText;
+  }, 3000);
 }
 </script>

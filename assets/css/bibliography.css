@@ -94,12 +94,20 @@
   color: var(--accent-dark);
 }
 
-/* Action Buttons */
+/* Container for buttons and award */
+.bib-actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
 .bib-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 15px;
 }
 
 .btn {
@@ -202,27 +210,43 @@
   word-wrap: break-word;
 }
 
-/* Comment Badge */
+/* Compact Award Badge */
 .paper-comment {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  float: right;
-  padding: 8px 15px;
-  background-color: var(--background-secondary);
-  border-left: 3px solid var(--highlight-color);
+  padding: 6px 12px;
+  background: linear-gradient(135deg, var(--background-secondary), #fff);
   border-radius: 20px;
-  margin-top: 10px;
+  border-left: 3px solid #ffd700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
-.comment-icon {
-  font-size: 1.1rem;
+.award-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #ffd700, #ffa000);
+  border-radius: 50%;
   margin-right: 8px;
-  color: var(--alert-color);
 }
 
-.comment-text {
+.award-icon i {
+  color: white;
   font-size: 0.9rem;
+  animation: shine 2s infinite;
+}
+
+.award-content {
+  display: flex;
+  align-items: center;
+}
+
+.award-text {
   color: var(--text-secondary);
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -291,9 +315,15 @@
     font-size: 0.85rem;
   }
 
-  .bib-actions {
+  .bib-actions-container {
     flex-direction: column;
-    gap: 10px;
+    align-items: stretch;
+  }
+
+  .bib-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    width: 100%;
   }
 
   .btn {
@@ -318,14 +348,16 @@
   }
 
   .paper-comment {
-    padding: 6px 10px;
+    width: 100%;
+    justify-content: center;
   }
 
-  .comment-icon {
+  .award-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .award-text {
     font-size: 1rem;
-  }
-
-  .comment-text {
-    font-size: 0.8rem;
   }
 } 
