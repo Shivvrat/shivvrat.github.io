@@ -1,63 +1,223 @@
 ---
 layout: default
 ---
-<style>
-.research-area {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-left: 4px solid #007bff;
-    border-radius: 0 5px 5px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-}
 
-.research-area:hover {
-    transform: translateY(-2px);
-}
+<div class="research-layout">
+  <!-- Research Header -->
+  <header class="research-header">
+    <h1 class="page-title">Research</h1>
+    <div class="header-bar"></div>
+    <p class="research-intro">
+      {{ page.intro | default: "My research focuses on advancing the field of Computer Science through innovative approaches in Machine Learning and Artificial Intelligence." }}
+    </p>
+  </header>
 
-  .badge {
-      font-size: 0.8em;
-      margin-left: 5px;
-  }
-</style>
+  <!-- Research Highlights -->
+  <section class="research-highlights">
+    <h2>Research Highlights</h2>
+    <div class="highlights-grid">
+      {% for highlight in page.highlights %}
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <i class="fas {{ highlight.icon }}"></i>
+        </div>
+        <h3>{{ highlight.title }}</h3>
+        <p>{{ highlight.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 
-<div class="container mt-4">
-  <article class="research-content">
+  <!-- Current Projects -->
+  <section class="current-projects">
+    <h2>Current Projects</h2>
+    <div class="projects-grid">
+      {% for project in page.projects %}
+      <div class="project-card">
+        {% if project.image %}
+        <div class="project-image">
+          <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="project-content">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          {% if project.collaborators %}
+          <div class="collaborators">
+            <strong>Collaborators:</strong> {{ project.collaborators }}
+          </div>
+          {% endif %}
+          {% if project.funding %}
+          <div class="funding-badge">
+            Funded by {{ project.funding }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Research Areas -->
+  <section class="research-areas">
     {{ content }}
-  </article>
+  </section>
+
+  <!-- Publications Preview -->
+  <section class="publications-preview">
+    <h2>Featured Publications</h2>
+    <div class="publications-grid">
+      {% for pub in site.data.publications limit:3 %}
+      <div class="publication-card">
+        <h3>{{ pub.title }}</h3>
+        <p class="authors">{{ pub.authors }}</p>
+        <p class="venue">{{ pub.venue }}</p>
+        <div class="pub-badges">
+          {% if pub.award %}
+          <span class="badge award-badge">
+            <i class="fas fa-award"></i> {{ pub.award }}
+          </span>
+          {% endif %}
+          {% if pub.code %}
+          <a href="{{ pub.code }}" class="badge code-badge" target="_blank">
+            <i class="fas fa-code"></i> Code
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="view-all">
+      <a href="/publications" class="btn btn-primary">View All Publications</a>
+    </div>
+  </section>
+
+  <!-- Research Group -->
+  <section class="research-group">
+    <h2>Research Group</h2>
+    <div class="group-grid">
+      {% for member in site.data.group %}
+      <div class="member-card">
+        <img src="{{ member.photo }}" alt="{{ member.name }}" class="member-photo" loading="lazy">
+        <h3>{{ member.name }}</h3>
+        <p class="member-role">{{ member.role }}</p>
+        <p class="member-focus">{{ member.focus }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Funding & Collaborations -->
+  <section class="funding-section">
+    <h2>Funding & Collaborations</h2>
+    <div class="funding-grid">
+      {% for funder in site.data.funding %}
+      <div class="funder-card">
+        <img src="{{ funder.logo }}" alt="{{ funder.name }}" class="funder-logo" loading="lazy">
+        <div class="funder-details">
+          <h3>{{ funder.name }}</h3>
+          <p>{{ funder.project }}</p>
+          <span class="grant-period">{{ funder.period }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('.research-content h2').each(function() {
-    $(this).nextUntil('h2').wrapAll('<div class="research-area"></div>');
-  });
-  
-  $('.research-content h2').click(function() {
-    $(this).next('.research-area').slideToggle();
-  });
-});
-</script>
+<style>
+/* Research Layout Styles */
+.research-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-<script>
-$(document).ready(function() {
-    $('.research-area').each(function() {
-        var $this = $(this);
-        var $title = $this.find('h3').first();
-        var $content = $this.find('ul').first();
-        
-        $title.click(function() {
-            $content.slideToggle();
-        });
-        
-        $title.css('cursor', 'pointer');
-    });
-});
-</script>
+/* Header Styles */
+.research-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header-bar {
+  width: 70px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 1rem auto;
+}
+
+.research-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Grid Layouts */
+.highlights-grid,
+.projects-grid,
+.publications-grid,
+.group-grid,
+.funding-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.highlights-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.publications-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Cards */
+.highlight-card,
+.project-card,
+.publication-card,
+.member-card,
+.funder-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover,
+.project-card:hover,
+.publication-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Images */
+.project-image img,
+.member-photo,
+.funder-logo {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.member-photo {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.award-badge {
+  background: linear-gradient(135deg, #f
+</style>

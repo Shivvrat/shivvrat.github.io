@@ -1,0 +1,97 @@
+/* Services Layout */
+.services-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header-bar {
+  width: 70px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 1rem auto;
+}
+
+.services-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Service Categories */
+.service-category {
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-header i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* Service Items */
+.service-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.service-item {
+  padding: 1.5rem;
+  background: var(--background-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.service-meta {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.year, .role, .status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .service-category {
+    background: #2d2d2d;
+  }
+  
+  .service-item {
+    background: #333;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-layout {
+    padding: 1rem;
+  }
+  
+  .service-items {
+    grid-template-columns: 1fr;
+  }
+} 

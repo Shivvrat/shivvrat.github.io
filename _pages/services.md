@@ -15,7 +15,7 @@ permalink: /services/
 
 ### Journal
 
-- `IEEE Robotics and Automation Letters (RA-L)`
+- IEEE Robotics and Automation Letters (RA-L)
 </div>
 
 
@@ -23,8 +23,8 @@ permalink: /services/
 
 ### Conference
 
-- `Conference on Uncertainty in Artificial Intelligence (UAI) 2024`
-- `Neural Information Processing Systems (NeurIPS) 2024`
+- Conference on Uncertainty in Artificial Intelligence (UAI) 2024
+- Neural Information Processing Systems (NeurIPS) 2024
 
 </div>
 

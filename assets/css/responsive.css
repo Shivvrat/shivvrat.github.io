@@ -1,27 +1,223 @@
+:root {
+  /* Academic Color Palette */
+  --primary-color: #0d47a1;      /* Deep Blue - primary brand */
+  --secondary-color: #1565c0;    /* Medium Blue - secondary */
+  --accent-color: #01579b;       /* Dark Blue - accents */
+  --success-color: #2e7d32;      /* Green for success states */
+  --warning-color: #d32f2f;      /* Red for warnings/alerts */
+  --background-light: #f5f7fa;   /* Light background */
+  --text-primary: #1a237e;       /* Dark blue text */
+  --text-secondary: #37474f;     /* Grey text */
+  --border-color: #e0e6ed;       /* Light border */
+  --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* Base Jumbotron */
 .jumbotron {
-    margin-bottom: 30px;
-    margin-top: 10px;
-    padding: 20px;
-    border-radius: 0 5px 5px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
 }
 
 .jumbotron:hover {
-    transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--shadow-color);
 }
 
-/* Styles for mobile devices */
-@media only screen and (max-width: 767px) {
-    .jumbotron {
-        padding: 15px;
-        margin-left: 5px;
-        margin-right: 5px;
-        max-width: 95%;
-    }
+/* Academic Section Styles */
+.section-academic {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Publication List */
+.publication-list {
+  list-style: none;
+  padding: 0;
+}
+
+.publication-item {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--background-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+/* Research Interests */
+.research-interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.interest-item {
+  padding: 1.5rem;
+  background: var(--background-light);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* News Section */
+.news-section {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.news-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Contact Information */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* Academic Badges */
+.academic-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.25rem;
+  color: white;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+  .jumbotron {
+    max-width: 95%;
+    margin: 1.5rem auto;
+    padding: 2rem;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .jumbotron {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .research-interests {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .jumbotron {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .jumbotron {
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+    break-inside: avoid;
+  }
+
+  .profile-image {
+    max-width: 150px;
+  }
+
+  .news-section {
+    max-height: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-light: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --border-color: #404040;
+  }
+
+  .jumbotron {
+    background: #2d2d2d;
+  }
+
+  .publication-item,
+  .interest-item {
+    background: #333333;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .jumbotron {
+    transition: none;
+  }
+
+  .jumbotron:hover {
+    transform: none;
+  }
 }

@@ -15,29 +15,26 @@ permalink: /research/
 }
 </style>
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
-# **Research**
 
 ---
 
-#### **Research Interests**
+### **Research Interests**
 
 Computer Vision, Machine (Deep) learning and Artificial Intelligence.
 
 ---
 
-#### **Current Research Focus**
+### **Current Research Focus**
 
 Probabilistic Graphical Models, tractable probabilistic modeling, integrating probabilistic graphical models and deep learning for computer vision tasks, neuro-symbolic AI.
 
----
-
 <div class="jumbotron">
 
-#### **Inference in Probabilistic Models**
+### **Inference in Probabilistic Models**
 
 <div class="research-area">
 
-##### Neural Network-Based Inference for Probabilistic Graphical Models
+#### Neural Network-Based Inference for Probabilistic Graphical Models
 
 - Neural Network Approximators for Marginal MAP Inference <span class="badge bg-success">AAAI'24-Oral</span>
 - Learning to Solve the Constrained Most Probable Explanation Task <span class="badge bg-primary">AISTATS'24</span> <span class="badge bg-primary">UAI TPM'24</span>
@@ -47,19 +44,16 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 <div class="research-area">
 
-##### Optimization based Inference Schemes for Graphical Models
+#### Optimization based Inference Schemes for Graphical Models
 
 - Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification <span class="badge bg-primary">AISTATS'24</span>
 
 </div>
 </div>
 
-
----
-
 <div class="jumbotron">
 
-### Activity Recognition and Video Understanding
+### **Activity Recognition and Video Understanding**
 
 <div class="research-area">
 
@@ -71,11 +65,9 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 </div>
 </div>
 
----
-
 <div class="jumbotron">
 
-### Multi-Label Classification
+### **Multi-Label Classification**
 
 <div class="research-area">
 
