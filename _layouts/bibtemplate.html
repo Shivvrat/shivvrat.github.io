@@ -1,241 +1,168 @@
 ---
 ---
 
-
-<style>
-  .bib-entry {
-      margin-bottom: 30px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-left: 4px solid #007bff;
-      border-radius: 0 5px 5px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-  }
-  .bib-entry:hover {
-    transform: translateY(-2px);
-  }
-  .bib-title {
-      font-size: 22px;
-      font-weight: bold;
-      color: #212529;
-      margin-bottom: 10px;
-  }
-  .bib-authors {
-      font-size: 16px;
-      color: #495057;
-      margin-bottom: 8px;
-  }
-
-.bib-venue {
-    font-size: 15px;
-    color: #6c757d;
-    font-style: italic;
-}
-
-.paper-comment {
-    display: inline-flex;
-    align-items: center;
-    float: right;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background-color: #e9ecef;
-    border-left: 3px solid #28a745;
-  clear: both;
-
-    border-radius: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-
-.comment-icon {
-    font-size: 1.2em;
-    margin-right: 8px;
-    color: #ffc107;
-}
-.comment-text {
-    font-size: 14px;
-    color: #495057;
-    font-weight: 500;
-}
-
-.text-right {
-  text-align: right;
-  float: right; /* Aligns the element to the right, keeping it on the same line */
-  margin-right: 20px; /* Adds space to the right of the text, might adjust or remove based on layout */
-  border: 2px solid #007bff; /* Adds a solid border with a color */
-  padding: 6px 8px; /* Adjusts padding inside the border, around the text */
-  background-color: #e9ecef; /* Sets a background color */
-  border-radius: 10px; /* Rounds the corners of the border */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
-  color: #007bff; /* Text color to match the border for consistency */
-}
-
-
-
-.btn {
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-.btn-light { background-color: #f8f9fa; color: black; }
-.btn-secondary { background-color: #6c757d; color: white; }
-.btn-dark { background-color: #343a40; color: white; }
-.btn-muted { background-color: #e9ecef; color: black; }
-.btn-link { background-color: transparent; color: #007bff; }
-
-.btn-success { background-color: #28a745; color: white; }
-.btn-primary { background-color: #007bff; color: white; }
-.btn-info { background-color: #17a2b8; color: white; }
-.btn-danger { background-color: #dc3545; color: white; }
-.btn-warning { background-color: #ffc107; color: black; }
-
-.btn-navy { background-color: #001f3f; color: white; }
-.btn-maroon { background-color: #85144b; color: white; }
-.btn-olive { background-color: #3d9970; color: white; }
-.btn-teal { background-color: #39cccc; color: black; }
-.btn-gray { background-color: #aaaaaa; color: black; }
-  
-  
-  
-pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    width: 100%;
-    overflow-x: auto;
-    background-color: #f1f3f5;
-    color: #212529;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    line-height: 1.5;
-    border: 1px solid #e9ecef;
-}
-  
-  
-  .text-justify { text-align: justify; }
-  .toggle-container { background-color: black; color: white; border-radius: 5px; padding: 10px; margin-bottom: 20px; }
-</style>
-
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-
-<!-- <div class="text-justify">
-{{reference | replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | replace_first: 'Arya, S.', '<b>Arya, S.</b>' | replace_first: 'Arya SV', '<b>Arya SV</b>' | replace_first: 'Arya S', '<b>Arya S</b>'}}</div> -->
+<link rel="stylesheet" href="{{ '/assets/css/bibliography.css' | relative_url }}">
 
 <div class="bib-entry">
-  <div class="bib-title">{{ entry.title }}</div>
-  <div class="bib-authors">{{ entry.author | replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | replace_first: 'Arya, S.', '<b>Arya, S.</b>' | replace_first: 'Arya SV', '<b>Arya SV</b>' | replace_first: 'Arya S', '<b>Arya S</b>' | replace_first: 'Shivvrat', '<b>Shivvrat</b>' | replace_first: 'Arya', '<b>Arya</b>' | replace_first: 'Oral', '<b>Oral</b>' }}</div>
+  <!-- Title -->
+  <div class="bib-title">
+    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank" rel="noopener">
+      {{ entry.title }}
+    </a>
+  </div>
 
-<div class="bib-venue">
-  {% if entry.journal or entry.booktitle %}
-    In 
-    {% if entry.journal %}
-      {{ entry.journal | replace: '(', '<b>(' | replace: ')', ')</b>' }}
-    {% elsif entry.booktitle %}
-      {{ entry.booktitle | replace: '(', '<b>(' | replace: ')', ')</b>' }}
+  <!-- Authors -->
+  <div class="bib-authors">
+    {{ entry.author | 
+      replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | 
+      replace_first: 'Arya, S.', '<b>Arya, S.</b>' | 
+      replace_first: 'Arya SV', '<b>Arya SV</b>' | 
+      replace_first: 'Arya S', '<b>Arya S</b>' | 
+      replace_first: 'Shivvrat', '<b>Shivvrat</b>' | 
+      replace_first: 'Arya', '<b>Arya</b>' | 
+      replace_first: 'Oral', '<b>Oral</b>' 
+    }}
+  </div>
+
+  <!-- Venue/Journal -->
+  <div class="bib-venue">
+    {% if entry.journal or entry.booktitle %}
+      In 
+      {% if entry.journal %}
+        {{ entry.journal | replace: '(', '<b>(' | replace: ')', ')</b>' }}
+      {% elsif entry.booktitle %}
+        {{ entry.booktitle | replace: '(', '<b>(' | replace: ')', ')</b>' }}
+      {% endif %}
+      , {{ entry.year }}
     {% endif %}
-    , {{ entry.year }}
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="bib-actions">
+    {% if entry.file %}
+      {% assign bibfile = "/papers/" | append: entry.file %}
+      {% assign bibtest = false %}
+      {% for file in site.static_files %}
+        {% if file.path contains bibfile %}
+          {% assign bibtest = true %}
+        {% endif %}
+      {% endfor %}
+      {% if bibtest %}
+        <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank">
+          <button class="btn btn-pdf" aria-label="Download PDF">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i> PDF
+          </button>
+        </a>
+      {% endif %}
+    {% endif %}
+
+    {% if entry.doi %}
+      {% if entry.type == 'unpublished' %}
+        <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank">
+          <button class="btn btn-arxiv">
+            <i class="ai ai-arxiv"></i> ARXIV
+          </button>
+        </a>
+      {% else %}
+        <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank">
+          <button class="btn btn-doi">
+            <i class="ai ai-doi"></i> DOI
+          </button>
+        </a>
+      {% endif %}
+    {% endif %}
+
+    {% if entry.code %}
+      <a href="{{ entry.code }}" target="_blank">
+        <button class="btn btn-code">
+          <i class="fas fa-code"></i> CODE
+        </button>
+      </a>
+    {% endif %}
+
+    {% if entry.website %}
+      <a href="{{ entry.website }}" target="_blank">
+        <button class="btn btn-website">
+          <i class="fas fa-globe"></i> WEBSITE
+        </button>
+      </a>
+    {% endif %}
+
+    {% if entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
+      <button class="btn btn-bib" onclick="toggleBibtex{{entry.key}}()">
+        <i class="fas fa-quote-right"></i> BIB
+      </button>
+    {% endif %}
+
+    {% if entry.abstract %}
+      <button class="btn btn-abstract" onclick="toggleAbstract{{entry.key}}()">
+        <i class="fas fa-align-left"></i> ABSTRACT
+      </button>
+    {% endif %}
+  </div>
+
+  <!-- Bibtex Content -->
+  {% if entry.abstract %}
+    <div id="a{{entry.key}}" class="bib-content bibtex-content" aria-label="BibTeX citation">
+      <div class="content-header">
+        <span>BibTeX Citation</span>
+        <button class="copy-btn" onclick="copyToClipboard('a{{entry.key}}')" aria-label="Copy citation">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+      <pre><code>{{ entry.bibtex }}</code></pre>
+    </div>
+  {% else %}
+    <div id="a{{entry.key}}" class="bib-content bibtex-content">
+      <pre>{{ entry.bibtex }}</pre>
+    </div>
   {% endif %}
-</div>
 
+  <!-- Abstract Content -->
+  <div id="b{{entry.key}}" class="bib-content abstract-content">
+    <pre>{{entry.abstract}}</pre>
+  </div>
 
-{% assign yeartest = true %}
-{% for publi in site.data.publist %}
-  {% if publi.year %}{% else %}
-   {% assign yeartest = false %}
+  <!-- Award/Comment Badge -->
+  {% if entry.comment %}
+    <div class="paper-comment">
+      <span class="comment-icon">🏆</span>
+      <span class="comment-text">{{entry.comment}}</span>
+    </div>
   {% endif %}
-{% endfor %}
-
-{% assign bibtest = false %}
-{% if entry.file %}
-{% assign bibfile = "/papers/" | append: entry.file %}
-{% for file in site.static_files %}
-  {% if file.path contains bibfile %}
-   {% assign bibtest = true %}
-  {% endif %}
-{% endfor %}
-{% endif %}
-
-
-
-{% if bibtest %}
-<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
-{% endif %}
-
-{% if entry.doi %}
-{% if entry.type == 'unpublished' %}
-<a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank"><button class="btn btn-primary btm-sm">ARXIV</button></a>
-{% else %}
-<a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank"><button class="btn btn-primary btm-sm">DOI</button></a>
-{% endif %}
-{% endif %}
-
-{% if entry.code %}
-<a href="{{ entry.code }}" target="_blank"><button class="btn btn-info btm-sm">CODE</button></a>
-{% endif %}
-
-{% if entry.website %}
-<a href="{{ entry.website }}" target="_blank"><button class="btn btn-secondary btm-sm">WEBSITE</button></a>
-{% endif %}
-
-{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
-<button class="btn btn-danger btm-sm"  onclick="toggleBibtex{{entry.key}}()">BIB</button>
-{% endif %}
-
-{% if entry.abstract %}
-<button class="btn btn-warning btm-sm"  onclick="toggleAbstract{{entry.key}}()">ABSTRACT</button>
-{% endif %}
-
-{% if entry.abstract %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex | remove: "entry.abstract" }}</pre>
-</div>
-{% else %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex }}</pre>
-</div>
-{% endif %}
-
-<div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{entry.abstract}}</pre>
-</div>
-
-<!-- {% if entry.comment %}
-<div class="text-right">{{entry.comment}}</div>
-{% endif %}
-</div> -->
-
-{% if entry.comment %}
-<div class="paper-comment">
-  <span class="comment-icon">🏆</span>
-  <span class="comment-text">{{entry.comment}}</span>
-</div>
-
-{% endif %}
 </div>
 
 <script>
-function toggleBibtex{{entry.key}}(parameter) {
-    var x= document.getElementById('a{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
+function toggleBibtex{{entry.key}}() {
+  toggleElement('a{{entry.key}}');
 }
-function toggleAbstract{{entry.key}}(parameter) {
-    var x= document.getElementById('b{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
+
+function toggleAbstract{{entry.key}}() {
+  toggleElement('b{{entry.key}}');
+}
+
+function toggleElement(elementId) {
+  const element = document.getElementById(elementId);
+  if (element.style.display === 'none' || !element.style.display) {
+    element.style.display = 'block';
+    element.style.animation = 'slideDown 0.3s ease-out';
+  } else {
+    element.style.animation = 'slideUp 0.3s ease-out';
+    setTimeout(() => {
+      element.style.display = 'none';
+    }, 280);
+  }
+}
+
+function copyToClipboard(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.querySelector('pre').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = element.querySelector('.copy-btn');
+    btn.innerHTML = '<i class="fas fa-check"></i>';
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-copy"></i>';
+    }, 2000);
+  });
 }
 </script>

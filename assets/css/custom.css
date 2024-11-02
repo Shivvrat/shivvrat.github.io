@@ -43,3 +43,109 @@ ol.bibliography {
 .comment-text {
   vertical-align: middle;
 }
+
+.news-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.news-header {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+.news-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.news-item {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  border-radius: 4px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.news-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.news-date i {
+  color: #3498db;
+  margin-right: 5px;
+}
+
+.news-headline {
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.news-link {
+  display: inline-block;
+  color: #3498db;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.news-link:hover {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.news-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-all-news {
+  background: #3498db;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-all-news:hover {
+  background: #2980b9;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn-all-news i {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .news-container {
+    padding: 15px;
+  }
+  
+  .news-header {
+    font-size: 1.3rem;
+  }
+}

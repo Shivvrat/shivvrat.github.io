@@ -1,0 +1,331 @@
+/* Color Variables */
+:root {
+  /* Primary Colors */
+  --primary-color: #0d47a1;         /* Deep Blue - main theme color */
+  --primary-light: #1976d2;         /* Light Blue for interactive states */
+  --secondary-color: #1565c0;       /* Medium Blue accent */
+  
+  /* Functional Colors */
+  --success-color: #2e7d32;         /* Fresh Green for success messages */
+  --warning-color: #d32f2f;         /* Rich Red for warnings */
+  --info-color: #0288d1;            /* Calm Blue for informational elements */
+  --alert-color: #ff7043;           /* Subtle Orange for attention-grabbing alerts */
+
+  /* Button Colors */
+  --button-primary: #1e88e5;        /* Bright Blue for primary buttons */
+  --button-secondary: #1565c0;      /* Muted Blue for secondary actions */
+  --button-hover: #0b79d0;          /* Slightly lighter blue for hover effect */
+
+  /* Text Colors */
+  --text-primary: #1c1c1e;          /* Very Dark Blue-Black for readability */
+  --text-secondary: #37474f;        /* Charcoal grey for supporting text */
+  --text-muted: #546e7a;            /* Cool grey for muted text */
+
+  /* Background Colors */
+  --background-primary: #f0f4f8;    /* Soft Blue-Grey for main background */
+  --background-secondary: #e3f2fd;  /* Very Light Blue for section contrast */
+  --card-background: #ffffff;       /* Clean White for cards and panels */
+  --border-color: #cfd8dc;          /* Light grey-blue for borders */
+
+  /* Additional Accent Colors */
+  --accent-light: #b3e5fc;          /* Pale Blue for highlights */
+  --accent-dark: #004ba0;           /* Dark Navy for deeper accents */
+  --highlight-color: #42a5f5;       /* Vivid Blue for highlights */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Bibliography Entry */
+.bib-entry {
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: var(--card-background);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 15px var(--shadow-color);
+  transition: transform 0.2s ease;
+}
+
+.bib-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--primary-light);
+}
+
+/* Title */
+.bib-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.bib-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bib-title a:hover {
+  color: var(--primary-color);
+}
+
+/* Authors */
+.bib-authors {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.bib-authors b {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+/* Venue */
+.bib-venue {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.bib-venue b {
+  color: var(--accent-dark);
+}
+
+/* Action Buttons */
+.bib-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Button Types */
+.btn-pdf {
+  background-color: #e53935;  /* Material Red */
+}
+
+.btn-arxiv {
+  background-color: #1565c0;  /* Material Blue */
+}
+
+.btn-doi {
+  background-color: #0277bd;  /* Lighter Blue */
+}
+
+.btn-code {
+  background-color: #2e7d32;  /* Material Green */
+}
+
+.btn-website {
+  background-color: #6a1b9a;  /* Material Purple */
+}
+
+.btn-bib {
+  background-color: #00695c;  /* Material Teal */
+}
+
+.btn-abstract {
+  background-color: #ef6c00;  /* Material Orange */
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(110%);
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+/* Content Sections */
+.bib-content {
+  display: none;
+  margin: 15px 0;
+  background: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  overflow: hidden;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  color: var(--primary-color);
+  background: var(--background-primary);
+}
+
+.bib-content pre {
+  margin: 0;
+  padding: 15px;
+  background-color: var(--background-primary);
+  color: var(--text-secondary);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Comment Badge */
+.paper-comment {
+  display: inline-flex;
+  align-items: center;
+  float: right;
+  padding: 8px 15px;
+  background-color: var(--background-secondary);
+  border-left: 3px solid var(--highlight-color);
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.comment-icon {
+  font-size: 1.1rem;
+  margin-right: 8px;
+  color: var(--alert-color);
+}
+
+.comment-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.loading {
+  background: linear-gradient(
+    90deg,
+    var(--background-primary) 25%,
+    var(--background-secondary) 50%,
+    var(--background-primary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Focus States */
+.btn:focus-visible,
+.copy-btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bib-entry {
+    padding: 20px;
+  }
+
+  .bib-title {
+    font-size: 1.2rem;
+  }
+
+  .bib-authors {
+    font-size: 0.9rem;
+  }
+
+  .bib-venue {
+    font-size: 0.85rem;
+  }
+
+  .bib-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .bib-content {
+    margin: 10px 0;
+  }
+
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copy-btn {
+    margin-top: 10px;
+  }
+
+  .bib-content pre {
+    font-size: 0.8rem;
+  }
+
+  .paper-comment {
+    padding: 6px 10px;
+  }
+
+  .comment-icon {
+    font-size: 1rem;
+  }
+
+  .comment-text {
+    font-size: 0.8rem;
+  }
+} 
