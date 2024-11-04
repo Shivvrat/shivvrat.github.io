@@ -1,34 +1,85 @@
 :root {
   /* Academic Color Palette */
-  --primary-color: #0d47a1;      /* Deep Blue - primary brand */
-  --secondary-color: #1565c0;    /* Medium Blue - secondary */
-  --accent-color: #01579b;       /* Dark Blue - accents */
+  --accent-color: #1756a9;     /* Dark Blue - accents */
   --success-color: #2e7d32;      /* Green for success states */
   --warning-color: #d32f2f;      /* Red for warnings/alerts */
-  --background-light: #f5f7fa;   /* Light background */
+  --background-light: #f8f9fa;   /* Light background */
   --text-primary: #1a237e;       /* Dark blue text */
   --text-secondary: #37474f;     /* Grey text */
   --border-color: #e0e6ed;       /* Light border */
   --shadow-color: rgba(0,0,0,0.1);
+  --accent-color-rgb: 23, 86, 169;
+  --text-color: #2c3e50;
 }
 
 /* Base Jumbotron */
+/* .jumbotron:hover {
+  transform: translateY(-7px) scale(1.01);
+  box-shadow: 
+    0 20px 40px -10px var(--shadow-color),
+    0 8px 24px -4px rgba(0,0,0,0.07),
+    inset 0 0 20px rgba(255,255,255,0.6);
+} */
+
+/* .jumbotron::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+} */
+
+/* .jumbotron:hover::before {
+  opacity: 1;
+  transform: scale(1);
+} */
+
+/* Base Jumbotron */
 .jumbotron {
-  margin: 2rem auto;
-  padding: 2.5rem;
-  background: #ffffff;
-  border-radius: 8px;
-  border-left: 4px solid var(--primary-color);
-  box-shadow: 0 4px 12px var(--shadow-color);
-  transition: all 0.3s ease;
+  margin: 3rem auto;
+  padding: 3.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--background-light) 100%);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 4px 20px -5px var(--shadow-color);
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   box-sizing: border-box;
 }
 
-.jumbotron:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px var(--shadow-color);
+/* Typography */
+.jumbotron h2, 
+.jumbotron h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+/* Add paper entry styling */
+.jumbotron .paper-entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease;
+}
+
+.jumbotron .paper-entry:hover {
+  background-color: rgba(var(--accent-color-rgb), 0.03);
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 2rem;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+  }
 }
 
 /* Academic Section Styles */
@@ -38,9 +89,9 @@
 
 .section-title {
   font-size: 2rem;
-  color: var(--text-primary);
+  color: var(--text-color);
   margin-bottom: 1.5rem;
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
   padding-bottom: 0.5rem;
 }
 
@@ -189,35 +240,5 @@
 
   .news-section {
     max-height: none;
-  }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-light: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --border-color: #404040;
-  }
-
-  .jumbotron {
-    background: #2d2d2d;
-  }
-
-  .publication-item,
-  .interest-item {
-    background: #333333;
-  }
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .jumbotron {
-    transition: none;
-  }
-
-  .jumbotron:hover {
-    transform: none;
   }
 }

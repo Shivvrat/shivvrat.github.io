@@ -74,16 +74,6 @@
   color: white;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  .service-category {
-    background: #2d2d2d;
-  }
-  
-  .service-item {
-    background: #333;
-  }
-}
 
 /* Responsive */
 @media (max-width: 768px) {

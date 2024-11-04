@@ -102,18 +102,18 @@
         </button>
       {% endif %}
     </div>
-    
-    {% if entry.comment %}
-      <div class="paper-comment">
-        <div class="award-icon">
-          <i class="fas fa-award"></i>
-        </div>
-        <div class="award-content">
-          <span class="award-text">{{entry.comment}}</span>
-        </div>
-      </div>
-    {% endif %}
   </div>
+
+  {% if entry.comment %}
+    <div class="paper-comment">
+      <div class="award-icon">
+        <i class="fas fa-award"></i>
+      </div>
+      <div class="award-content">
+        <span class="award-text">{{entry.comment}}</span>
+      </div>
+    </div>
+  {% endif %}
 
   <!-- Bibtex Content -->
   {% if entry.abstract %}
