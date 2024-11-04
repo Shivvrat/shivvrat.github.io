@@ -10,7 +10,7 @@ img{
   border-radius: 10px;
 }
 iframe {
-  width: 175px;
+  width: 80%;
   display: inline;
   vertical-align:middle;
   <!-- margin-bottom:5px; -->

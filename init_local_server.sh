@@ -1,1 +1,1 @@
-bundle exec jekyll serve --trace --livereload
+bundle exec jekyll serve --trace

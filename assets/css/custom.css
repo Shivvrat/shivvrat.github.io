@@ -1,18 +1,18 @@
 /* Styles for mobile devices */
-/* @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .container-fluid {
     max-width: 100%; 
     padding: 5px 10px; 
   }
-} */
+}
 
 /* Media query for devices with a minimum width of 992px (e.g., laptops) */
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
   .container-fluid {
     max-width: 70%; 
     padding: 20px 40px; 
   }
-} */
+}
 
 /* do not show numbering for bibliography */
 ol.bibliography {

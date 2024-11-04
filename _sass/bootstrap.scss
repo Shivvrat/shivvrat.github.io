@@ -59,7 +59,10 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
-
+section {
+    width: 80%;
+    margin: 0 auto;
+}
 body {
   margin: 0;
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -10037,7 +10040,11 @@ a.text-dark:hover, a.text-dark:focus {
     min-width: 992px !important;
   }
   .container {
-    min-width: 992px !important;
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 15px;
+      box-sizing: border-box;
   }
   .navbar {
     display: none;

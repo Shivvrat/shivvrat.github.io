@@ -1,6 +1,29 @@
 ---
 layout: default
 ---
-<div id="gridid" class="col-sm-12 col-xs-12">
-  {{ content }}
+
+<style>
+#newsid {
+    top: 7rem;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+    padding-left: 1rem;
+}
+#newsid img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures image is visible */
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div id="gridid" class="col-sm-8 col-xs-12">
+      {{ content }}
+    </div>
+    <!-- add padding between grid and sidebar -->
+    <div id="newsid" class="col-sm-4 col-xs-6 position-sticky">
+      {% include sidebar_others.html %}
+    </div>
+  </div>
 </div>

@@ -2,9 +2,7 @@
   <!-- Profile Section -->
   <div class="profile-section">
     {% for member in site.data.pi %}
-      <a href="{{site.url}}{{site.baseurl}}/about">
         <img src="{{site.url}}{{site.baseurl}}/images/teampic/{{ member.photo }}" alt="{{ member.name }}"/>
-      </a>
       <h4>{{ member.name }}</h4>
       
       <div class="social-icons">
@@ -15,46 +13,6 @@
         {% if member.researchgate %}<a href="{{ member.researchgate }}" target="_blank"><i class="ai ai-researchgate-square ai-3x"></i></a>{% endif %}
       </div>
 
-  <ul style="overflow: hidden">
-  {% if member.number_educ == 1 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 2 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 3 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 4 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education4short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 5 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education4short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education5short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 6 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education4short | replace: "-","&#8211;"}} </li>
-  <!-- <li> {{ member.education5short | replace: "-","&#8211;"}} </li> -->
-  <li> {{ member.education6short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-  </ul>
     {% endfor %}
   </div>
 
@@ -63,7 +21,7 @@
     <h4 class="news-header">Latest News</h4>
     
     <div class="news-grid">
-      {% for article in site.data.news limit:3 %}
+      {% for article in site.data.news limit:5 %}
       <div class="news-item">
         <div class="news-date">
           <i class="far fa-calendar-alt"></i>
@@ -89,4 +47,45 @@
     </div>
   </div>
 </div>
+
+<style>
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.profile-section img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-section h4 {
+    margin: 0.25rem 0;
+    font-size: 1.3rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin: 0.25rem 0;
+}
+
+.profile-section ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.profile-section li {
+    margin-bottom: 0.25rem;
+}
+</style>
 

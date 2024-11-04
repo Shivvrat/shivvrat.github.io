@@ -1,16 +1,38 @@
+<style>
+  .author__avatar img {
+    border: 3px solid #f2f2f2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    transition: transform 0.2s;
+    max-width: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .author__avatar img:hover {
+    transform: scale(1.05);
+  }
+</style>
+
 {% include base_path %}
 
 {% if page.author and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Person">
 
+
+<div itemscope itemtype="http://schema.org/Person">
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
+    	<img src="{{ author.avatar }}" alt="{{ author.name }}" class="rounded-circle" width="50" height="50">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
+  <img src="{{ author.avatar | prepend: '/images/' | prepend: base_path }}" 
+      class="author__avatar rounded-circle" 
+      alt="{{ author.name }}"
+      width="50"
+      height="50"
+      loading="lazy"
+      >
     {% endif %}
   </div>
 
