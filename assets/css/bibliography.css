@@ -389,4 +389,21 @@
   .award-text {
     font-size: 1rem;
   }
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
+.btn .btn-text {
+  vertical-align: middle;
+}
+
+/* Fallback for when icons fail to load */
+.btn i.fas:before,
+.btn i.ai:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 } 

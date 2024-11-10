@@ -2,12 +2,39 @@
 layout: default
 ---
 
+<style>
+#newsid {
+    top: 7rem;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    #newsid {
+        position: relative !important; /* Override sticky positioning */
+        top: 0;
+        height: auto; /* Allow natural height */
+        margin-top: 2rem;
+        overflow-y: visible;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-sm-8, .col-sm-4 {
+        width: 95%; /* Full width on mobile */
+        padding: 0 25px;
+    }
+}
+</style>
+
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row">
     <div id="homeid" class="col-sm-8 col-xs-12">
       {{ content }}
     </div>
-    <div id="newsid" class="col-sm-4 col-xs-6">
+    <div id="newsid" class="col-sm-4 col-xs-12 position-sticky">
       {% include sidebar.html %}
     </div>
   </div>

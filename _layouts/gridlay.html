@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<style>
+<!-- <style>
 #newsid {
     top: 7rem;
     height: calc(100vh - 7rem);
@@ -14,16 +14,8 @@ layout: default
     height: auto;
     display: block; /* Ensures image is visible */
 }
-</style>
+</style> -->
 
-<div class="container">
-  <div class="row">
-    <div id="gridid" class="col-sm-8 col-xs-12">
+    <div id="gridid" class=".col-xl">
       {{ content }}
     </div>
-    <!-- add padding between grid and sidebar -->
-    <div id="newsid" class="col-sm-4 col-xs-6 position-sticky">
-      {% include sidebar_others.html %}
-    </div>
-  </div>
-</div>

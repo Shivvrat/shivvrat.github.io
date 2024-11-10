@@ -6,7 +6,7 @@ permalink: /
 ---
 
 <div class="alert alert-info">
-🎓 I am on the academic job market for 2024-2025! 
+🎓 I am currently on the academic job market! 
 </div>
 
 ### Welcome!
