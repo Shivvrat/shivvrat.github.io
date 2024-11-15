@@ -1,6 +1,6 @@
 ---
 title: "Research"
-layout: gridlay
+layout: research_lay
 sitemap: false
 permalink: /research/
 ---
@@ -53,7 +53,7 @@ Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classifi
 
 ### **Activity Recognition and Video Understanding**
 
-<div class="research-area">
+<!-- <div class="research-area"> -->
 
 
 CaptainCook4D Dataset <span class="badge bg-primary">NeurIPS'24</span> <span class="badge bg-primary">DMLR'23</span>
@@ -62,17 +62,21 @@ Explainable Activity Recognition <span class="badge bg-primary">TiiS'23</span>
 
 Predictive Task Guidance in Augmented Reality <span class="badge bg-primary">Poster at IEEE VR'24</span>
 
-</div>
+<!-- </div> -->
 </div>
 
 <div class="jumbotron">
 
 ### **Multi-Label Classification**
 
-<div class="research-area">
+<!-- <div class="research-area"> -->
 
 
 Kernelized Random Vector Functional Link Network <span class="badge bg-primary">IJCNN'20</span>
+<!-- </div> -->
+</div>
 
-</div>
-</div>
+
+
+
+

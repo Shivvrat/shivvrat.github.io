@@ -2,8 +2,6 @@
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/bibliography.css' | relative_url }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 <div class="bib-entry">
   <!-- Title -->
@@ -70,8 +68,7 @@
         {% else %}
           <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank">
             <button class="btn btn-doi" data-tooltip="View on DOI">
-              <i class="ai ai-doi" aria-hidden="true"></i>
-              <span class="btn-text">DOI</span>
+              <i class="ai ai-doi"></i> DOI
             </button>
           </a>
         {% endif %}
@@ -80,8 +77,7 @@
       {% if entry.code %}
         <a href="{{ entry.code }}" target="_blank">
           <button class="btn btn-code">
-            <i class="fas fa-code" aria-hidden="true"></i>
-            <span class="btn-text">CODE</span>
+            <i class="fas fa-code"></i> CODE
           </button>
         </a>
       {% endif %}
@@ -89,8 +85,7 @@
       {% if entry.website %}
         <a href="{{ entry.website }}" target="_blank">
           <button class="btn btn-website">
-            <i class="fas fa-globe" aria-hidden="true"></i>
-            <span class="btn-text">WEBSITE</span>
+            <i class="fas fa-globe"></i> WEBSITE
           </button>
         </a>
       {% endif %}
@@ -109,14 +104,28 @@
     </div>
   </div>
 
-  {% if entry.comment %}
-    <div class="paper-comment">
-      <div class="award-icon">
-        <i class="fas fa-award"></i>
-      </div>
-      <div class="award-content">
-        <span class="award-text">{{entry.comment}}</span>
-      </div>
+  {% if entry.comment or entry.certificate %}
+    <div class="paper-comment-container">
+      {% if entry.comment %}
+        <div class="paper-comment">
+          <div class="award-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="award-content">
+            <span class="award-text">{{entry.comment}}</span>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if entry.certificate %}
+        <div class="certificate-container">
+          <a href="{{ entry.certificate }}" target="_blank">
+            <button class="btn btn-certificate">
+              <i class="fas fa-certificate"></i> CERTIFICATE
+            </button>
+          </a>
+        </div>
+      {% endif %}
     </div>
   {% endif %}
 

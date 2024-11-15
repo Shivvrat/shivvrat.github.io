@@ -1,6 +1,10 @@
+- name: Recognized as a Top Reviewer (among the top 8% of reviewers) for NeurIPS 2024! 
+  type: professional recognition
+
 - name: A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models
   type: paper award
   event: Spotlight Presentation at NeurIPS 2024; Best Paper Award at UAI TPM 2024
+  certificate: /certificates/tpm_certificate.jpg
 
 - name: Neural Network Approximators for Marginal MAP Inference
   type: paper award

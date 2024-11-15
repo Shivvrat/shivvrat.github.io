@@ -155,6 +155,19 @@
   background-color: #ef6c00;  /* Material Orange */
 }
 
+.btn-certificate {
+  background-color: #8b0000;  /* Dark red - more academic */
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+.btn-certificate:hover {
+  background-color: #660000;
+}
+
 .btn:hover {
   transform: translateY(-2px);
   filter: brightness(110%);
@@ -393,17 +406,34 @@
 
 .btn i {
   margin-right: 5px;
+  display: inline-block;
 }
 
 .btn .btn-text {
   vertical-align: middle;
 }
 
-/* Fallback for when icons fail to load */
-.btn i.fas:before,
-.btn i.ai:before {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-} 
+.paper-comment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+}
+
+.paper-comment, .certificate-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.btn-certificate {
+  height: 100%;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.certificate-container {
+  margin-left: auto;
+}

@@ -58,6 +58,7 @@ layout: default
     </div>
   </section>
 
+  
   <!-- Research Areas -->
   <section class="research-areas">
     {{ content }}
@@ -123,6 +124,7 @@ layout: default
       {% endfor %}
     </div>
   </section>
+
 </div>
 
 <style>
@@ -220,4 +222,40 @@ layout: default
 
 .award-badge {
   background: linear-gradient(135deg, #f
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.certificate-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-content {
+  text-align: center;
+}
+
+.certificate-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.view-certificate {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
 </style>

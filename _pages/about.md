@@ -98,6 +98,12 @@ permalink: /about/
       {% if award.description %}
         <p class="award-description">{{ award.description }}</p>
       {% endif %}
+      {% if award.certificate %}
+        <div style="text-align: center; margin-top: 10px;">
+          <a href="{{ award.certificate }}" target="_blank" class="btn btn-certificate" style="color: white; background-color: #8b0000; padding: 8px 20px; text-decoration: none; border-radius: 5px; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <i class="fa fa-certificate" style="margin-right: 8px;"></i>View Certificate</a>
+        </div>
+      {% endif %}
     </li>
     {% endfor %}
   </ul>

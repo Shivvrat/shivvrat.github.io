@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<!-- <style>
+#newsid {
+    top: 7rem;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+    padding-left: 1rem;
+}
+#newsid img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures image is visible */
+}
+</style> -->
+
+    <div id="gridid" class=".col-xl">
+      {{ content }}
+    </div>
+    <!-- certificates -->
+    {% if page.url contains '/research' %}
+        <h2>Certificates & Awards</h2>
+        <!-- add name of the certificate at the bottom of the image -->
+        {% include image.html src="/certificates/tpm_certificate.jpg" alt="Award Certificate" %}
+        <h4 style="text-align: center;">UAI TPM'24 Best Paper Award</h4>
+        <!-- center align the text -->
+    {% endif %}
