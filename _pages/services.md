@@ -13,19 +13,22 @@ permalink: /services/
 
 <div class="research-area">
 
-### Journal
+### Journals
 
+- Artificial Intelligence (**AIJ**)
+- Transactions on Machine Learning Research (**TMLR**)
 - IEEE Robotics and Automation Letters (**RA-L**)
 </div>
 
 
 <div class="research-area">
 
-### Conference
+### Conferences
 
-- Conference on Uncertainty in Artificial Intelligence (**UAI**) 
-- Neural Information Processing Systems (**NeurIPS**) 
+- Neural Information Processing Systems (**NeurIPS: Recognized as a Top Reviewer in 2024**) 
 - International Conference on Learning Representations (**ICLR**)
+- International Conference on Machine Learning (**ICML**)
+- Conference on Uncertainty in Artificial Intelligence (**UAI**) 
 - International Conference on Artificial Intelligence and Statistics (**AISTATS**)
 
 </div>
