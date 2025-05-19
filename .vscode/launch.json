@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "request": "attach",
+      "name": "Attach",
+      "preLaunchTask": "Start Jekyll",
+      "type": "debugpy",
+      "program": "${workspaceFolder}/_site/index.html"
+    }
+  ]
+}
