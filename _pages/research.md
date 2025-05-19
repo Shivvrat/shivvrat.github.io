@@ -22,7 +22,7 @@ Computer Vision, Machine (Deep) learning and Artificial Intelligence.
 
 ### **Current Research Focus**
 
-Probabilistic Graphical Models, tractable probabilistic modeling, integrating probabilistic graphical models and deep learning for computer vision tasks, neuro-symbolic AI.
+Probabilistic Graphical Models, tractable probabilistic modeling, integrating probabilistic models and deep learning models, neuro-symbolic AI, explainable AI and combinatorial optimization.
 
 <div class="jumbotron">
 
@@ -30,7 +30,7 @@ Probabilistic Graphical Models, tractable probabilistic modeling, integrating pr
 
 <div class="research-area">
 
-#### Neural Network-Based Inference for Probabilistic Graphical Models
+#### Neural Network-Based Inference
 
 Neural Network Approximators for Marginal MAP Inference <span class="badge bg-success">AAAI'24-Oral</span>
 
@@ -38,11 +38,13 @@ Learning to Solve the Constrained Most Probable Explanation Task <span class="ba
 
 A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models <span class="badge bg-success">NeurIPS'24-Spotlight</span> <span class="badge bg-success">UAI TPM'24-Best Paper Award</span>
 
+SINE - Scalable MPE Inference for Probabilistic Graphical Models using Advanced Neural Embeddings <span class="badge bg-primary">AISTATS'25</span>
+
 </div>
 
 <div class="research-area">
 
-#### Optimization based Inference Schemes for Graphical Models
+#### Optimization-based Inference Schemes
 
 Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification <span class="badge bg-primary">AISTATS'24</span>
 
@@ -51,7 +53,7 @@ Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classifi
 
 <div class="jumbotron">
 
-### **Activity Recognition and Video Understanding**
+### **Video Understanding and Activity Recognition**
 
 <!-- <div class="research-area"> -->
 

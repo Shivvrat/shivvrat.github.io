@@ -1,3 +1,18 @@
+- name: Certificate of Academic Excellence (PhD)
+  type: certificate
+  event: Awarded by the The University of Texas at Dallas for Outstanding Academic Performance in the Computer Science Graduate PhD Program
+  certificate: /certificates/UTD Academic Excellence Certificates_Page_PhD.jpg
+
+- name: Certificate of Academic Excellence (MS)
+  type: certificate
+  event: Awarded by the The University of Texas at Dallas for Outstanding Academic Performance in the Computer Science Graduate Masters Program
+  certificate: /certificates/UTD Academic Excellence Certificates_Page_MS.jpg
+
+- name: Graduate Teaching Certificate
+  type: certificate
+  event: Awarded by the Center for Teaching and Learning, The University of Texas at Dallas  
+  certificate: /certificates/FY25 GTC-Arya.jpg
+
 - name: Recognized as a Top Reviewer (among the top 8% of reviewers) for NeurIPS 2024! 
   type: professional recognition
 

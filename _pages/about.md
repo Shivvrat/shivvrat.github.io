@@ -86,6 +86,20 @@ permalink: /about/
             🎓
           {% elsif award.type == "paper award" %}
             🏅
+          {% elsif award.type == "certificate" %}
+            📜
+          {% elsif award.type == "fellowship" %}
+            🤝
+          {% elsif award.type == "travel award" %}
+            ✈️
+          {% elsif award.type == "grant" %}
+            💰
+          {% elsif award.type == "other" %}
+            🏆
+          {% elsif award.type == "honor" %}
+            🎖️
+          {% elsif award.type == "professional recognition" %}
+            🌟
           {% else %}
             🏆
           {% endif %}
