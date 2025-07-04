@@ -7,8 +7,6 @@ permalink: /software/
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-## Software
-
 <div class="jumbotron">
 
 ### **NeuPI: A Library for Neural Probabilistic Inference**

@@ -1,87 +1,499 @@
-/* Services Layout */
+/* Professional Academic Services Page Styling for R1 University Faculty */
+
+/* Import Professional Academic Color Palette */
+:root {
+  /* Primary Academic Blues */
+  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
+  
+  /* Professional Text Colors */
+  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
+  --text-secondary: #555555;      /* Medium gray for secondary text */
+  --text-light: #777777;          /* Light gray for captions */
+  
+  /* Clean Backgrounds */
+  --background: #ffffff;          /* Pure white */
+  --background-gray: #f8f9fa;     /* Very light gray */
+  --background-blue: #f0f4ff;     /* Light blue tint */
+  
+  /* Professional Borders */
+  --border-light: #e9ecef;        /* Light border */
+  --border-medium: #dee2e6;       /* Medium border */
+  
+  /* Academic Accent Colors */
+  --accent-gold: #c8b18b;         /* Gold accent for highlights */
+  --accent-green: #16cc5c;        /* Success green */
+  --warning: #ffc107;             /* Warning amber */
+  --error: #dc3545;               /* Error red */
+  
+  /* Professional Shadows */
+  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
+}
+
+/* Professional Services Layout */
 .services-layout {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--background) 0%, var(--background-gray) 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px var(--shadow-light), 0 4px 16px var(--shadow-medium);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
 }
 
-/* Header */
+.services-layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-navy) 0%, var(--accent-teal) 50%, var(--secondary-blue) 100%);
+}
+
+/* Enhanced Services Header */
 .services-header {
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
+}
+
+.services-header h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .header-bar {
-  width: 70px;
-  height: 4px;
-  background: var(--primary-color);
-  margin: 1rem auto;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-teal) 0%, var(--primary-navy) 100%);
+  margin: 2rem auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px var(--shadow-light);
 }
 
 .services-intro {
   max-width: 800px;
   margin: 0 auto;
   color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
-/* Service Categories */
+/* Professional Service Containers */
+.service-section {
+  background: var(--background);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 24px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--secondary-blue);  /* Blue for regular service */
+}
+
+/* Professional Service Categories */
 .service-category {
   margin-bottom: 3rem;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px var(--shadow-color);
+  background: var(--background);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px var(--shadow-light), 0 4px 12px var(--shadow-medium);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
 }
 
+.service-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-teal) 0%, var(--primary-navy) 100%);
+}
+
+.service-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow-medium), 0 8px 24px var(--shadow-strong);
+}
+
+/* Enhanced Category Headers */
 .category-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-light);
+  position: relative;
+}
+
+.category-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background: var(--accent-teal);
 }
 
 .category-header i {
-  font-size: 2rem;
-  color: var(--primary-color);
+  font-size: 2.5rem;
+  color: var(--primary-navy);
+  background: linear-gradient(135deg, var(--background-blue) 0%, var(--background-gray) 100%);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  border: 1px solid var(--border-light);
 }
 
-/* Service Items */
+.category-header h2 {
+  color: var(--primary-navy);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* Professional Service Items Grid */
 .service-items {
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
+/* Professional Service Items - Core Colors */
 .service-item {
-  padding: 1.5rem;
-  background: var(--background-light);
-  border-radius: 8px;
-  border-left: 4px solid var(--secondary-color);
+  background: var(--background);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--secondary-blue);
+  box-shadow: 0 4px 16px var(--shadow-light);
+  transition: all 0.2s ease;
 }
 
+.service-item:hover {
+  background: var(--background-blue);
+  transform: translateX(2px);
+}
+
+.service-item h3 {
+  color: var(--text-primary);
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.service-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+/* Professional Service Meta Information */
 .service-meta {
   display: flex;
-  gap: 1rem;
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
 }
 
 .year, .role, .status {
-  padding: 0.3rem 0.8rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
-  background: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px var(--shadow-light);
+  transition: all 0.2s ease;
+}
+
+.year {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
   color: white;
 }
 
+.role {
+  background: linear-gradient(135deg, var(--accent-teal) 0%, var(--success) 100%);
+  color: white;
+}
 
-/* Responsive */
-@media (max-width: 768px) {
+.status {
+  background: linear-gradient(135deg, var(--warning) 0%, #ea580c 100%);
+  color: white;
+}
+
+.year:hover, .role:hover, .status:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+/* Service Type Hierarchy - Clear with Core Colors */
+.service-editorial {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for editorial honors */
+}
+
+.service-distinguished {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for distinguished service */
+}
+
+.service-review {
+  border-left-color: var(--secondary-blue);  /* Blue for regular reviewing */
+}
+
+.service-committee {
+  border-left-color: var(--text-secondary);  /* Gray for committee work */
+}
+
+/* Professional Achievement Badges */
+.achievement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, var(--background-blue) 0%, var(--background) 100%);
+  border: 1px solid var(--accent-teal);
+  border-radius: 8px;
+  color: var(--primary-navy);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.achievement-badge i {
+  color: var(--accent-teal);
+}
+
+/* Professional Links and CTAs */
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-navy);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: var(--background-blue);
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.service-link:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Enhanced Statistics Display */
+.service-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--background-blue) 0%, var(--background) 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--shadow-medium);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .services-layout {
-    padding: 1rem;
+    padding: 2rem;
   }
   
   .service-items {
     grid-template-columns: 1fr;
   }
+  
+  .service-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-layout {
+    padding: 1.5rem;
+  }
+  
+  .services-header h1 {
+    font-size: 2.25rem;
+  }
+  
+  .services-intro {
+    font-size: 1rem;
+  }
+  
+  .service-category {
+    padding: 2rem;
+  }
+  
+  .category-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .category-header i {
+    font-size: 2rem;
+    padding: 0.75rem;
+  }
+  
+  .category-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .service-item {
+    padding: 1.5rem;
+  }
+  
+  .service-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .service-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-layout {
+    padding: 1rem;
+  }
+  
+  .services-header h1 {
+    font-size: 1.875rem;
+  }
+  
+  .service-category {
+    padding: 1.5rem;
+  }
+  
+  .category-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .service-item {
+    padding: 1rem;
+  }
+  
+  .year, .role, .status {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* Print Styles for Academic CVs */
+@media print {
+  .services-layout {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .service-category {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+  
+  .service-item:hover {
+    transform: none;
+  }
+  
+  .achievement-badge,
+  .service-link {
+    background: white;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Focus States for Accessibility */
+.service-link:focus {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
+}
+
+/* Animation for Loading States */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-category {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.service-item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Service Headers - Core Palette */
+.service-header {
+  background: var(--background-gray);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--secondary-blue);
+  margin-bottom: 2rem;
 } 

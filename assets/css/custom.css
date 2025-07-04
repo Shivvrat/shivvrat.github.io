@@ -1,151 +1,391 @@
-/* Styles for mobile devices */
+/* Professional Academic Custom Styling for R1 University Faculty */
+
+/* Import Professional Academic Color Palette */
+:root {
+  /* Primary Academic Blues */
+  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
+  
+  /* Professional Text Colors */
+  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
+  --text-secondary: #555555;      /* Medium gray for secondary text */
+  --text-light: #777777;          /* Light gray for captions */
+  
+  /* Clean Backgrounds */
+  --background: #ffffff;          /* Pure white */
+  --background-gray: #f8f9fa;     /* Very light gray */
+  --background-blue: #f0f4ff;     /* Light blue tint */
+  
+  /* Professional Borders */
+  --border-light: #e9ecef;        /* Light border */
+  --border-medium: #dee2e6;       /* Medium border */
+  
+  /* Academic Accent Colors */
+  --accent-gold: #c8b18b;         /* Gold accent for highlights */
+  --accent-green: #16cc5c;        /* Success green */
+  --warning: #ffc107;             /* Warning amber */
+  --error: #dc3545;               /* Error red */
+  
+  /* Professional Shadows */
+  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
+}
+
+/* Professional Responsive Layout */
 @media only screen and (max-width: 767px) {
   .container-fluid {
     max-width: 100%; 
-    padding: 5px 10px; 
+    padding: 1rem; 
   }
 }
 
-/* Media query for devices with a minimum width of 992px (e.g., laptops) */
 @media (min-width: 992px) {
   .container-fluid {
-    max-width: 70%; 
-    padding: 20px 40px; 
+    max-width: 75%; 
+    padding: 2rem 3rem; 
   }
 }
 
-/* do not show numbering for bibliography */
+/* Enhanced Bibliography Styling */
 ol.bibliography {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Adjust row and columns for more space */
-/* Uncomment if needed
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.row>[class*='col-'] {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-*/
-
-
-
+/* Professional Comment Styling */
 .comment-icon {
-  margin-right: 6px;
-  font-size: 1.1em;
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
   vertical-align: middle;
+  color: var(--accent-teal);
 }
 
 .comment-text {
   vertical-align: middle;
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
+/* Enhanced News Container - Core Palette Only */
 .news-container {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin: 20px 0;
+  background: var(--background-gray);  /* Simple gray background */
+  border-radius: 12px;
+  box-shadow: 0 4px 24px var(--shadow-light), 0 2px 8px var(--shadow-medium);
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid var(--border-light);
 }
 
+/* Professional News Header - Core Colors */
 .news-header {
-  color: #2c3e50;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #3498db;
+  color: var(--primary-navy);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--primary-navy);  /* Navy instead of teal */
 }
 
-.news-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
+/* Professional News Items - Simplified */
 .news-item {
-  background: #f8f9fa;
-  border-left: 4px solid #3498db;
-  border-radius: 4px;
-  padding: 15px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--background);
+  border-left: 4px solid var(--secondary-blue);  /* Blue for regular news */
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: all 0.2s ease;
 }
 
 .news-item:hover {
-  transform: translateX(5px);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background: var(--background-blue);  /* Simple blue tint */
+  transform: translateX(2px);  /* Minimal movement */
 }
 
+/* News Categories - Clear Hierarchy with Core Palette */
+.news-award {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for awards */
+}
+
+.news-general {
+  border-left-color: var(--text-secondary);  /* Gray for general news */
+}
+
+/* Enhanced News Date - Simplified */
 .news-date {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 8px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
 }
 
-.news-date i {
-  color: #3498db;
-  margin-right: 5px;
+/* Professional Table Enhancements */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--shadow-light);
 }
 
-.news-headline {
-  color: #2c3e50;
+table th {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+}
+
+table tr:hover {
+  background: var(--background-blue);
+}
+
+/* Professional Form Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
   font-size: 1rem;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.news-link {
-  display: inline-block;
-  color: #3498db;
-  font-size: 0.9rem;
-  margin-top: 8px;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.news-link:hover {
-  color: #2980b9;
-  text-decoration: none;
-}
-
-.news-footer {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.btn-all-news {
-  background: #3498db;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 20px;
-  text-decoration: none;
   transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  background: var(--background);
 }
 
-.btn-all-news:hover {
-  background: #2980b9;
-  color: white;
-  text-decoration: none;
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+/* Clean Professional Cards */
+.card {
+  background: var(--background);  /* Solid white background */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: var(--background-gray);  /* Simple gray on hover */
   transform: translateY(-2px);
+  box-shadow: 0 8px 32px var(--shadow-medium);
 }
 
-.btn-all-news i {
-  font-size: 0.9rem;
+.card-header {
+  background: linear-gradient(135deg, var(--background-blue) 0%, var(--background-gray) 100%);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  font-weight: 600;
+  color: var(--primary-navy);
 }
 
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Professional Alert Styling */
+.alert {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border-color: var(--success);
+  color: #065f46;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+  border-color: var(--warning);
+  color: #92400e;
+}
+
+/* Alert-info styling moved to responsive.css for better organization */
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .news-container {
-    padding: 15px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
   }
   
   .news-header {
-    font-size: 1.3rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
   }
+  
+  .news-item {
+    padding: 1.25rem;
+  }
+  
+  .news-headline {
+    font-size: 1rem;
+  }
+  
+  
+  table th,
+  table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding: 0.75rem;
+  }
+  
+  .news-container {
+    padding: 1rem;
+  }
+  
+  .news-header {
+    font-size: 1.5rem;
+  }
+  
+  .news-item {
+    padding: 1rem;
+  }
+  
+  table {
+    font-size: 0.875rem;
+  }
+}
+
+/* Professional Focus States */
+.news-link:focus,
+.form-control:focus {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
+}
+
+/* Enhanced Text Selection */
+::selection {
+  background: var(--background-blue);
+  color: var(--primary-navy);
+}
+
+/* Professional Button Hover Effects - More Subtle */
+.btn:hover {
+  transform: translateY(-1px);  /* Reduced movement */
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #1e40af;  /* Darker blue for subtle hover */
+  color: white;
+}
+
+/* Success Elements - Green Only */
+.btn-success {
+  background: var(--accent-green);
+  color: white;
+}
+
+.btn-success:hover {
+  background: #14b34d;  /* Darker green for subtle hover */
+  color: white;
+}
+
+/* Award/Honor Elements - Gold Only */
+.btn-award, .award-button {
+  background: var(--accent-gold);
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+.btn-award:hover, .award-button:hover {
+  background: #b8a67a;  /* Darker gold for subtle hover */
+  color: var(--primary-navy);
+}
+
+/* Professional Navigation - Blue for regular items */
+.nav-item {
+  background: transparent;
+  border-radius: 12px;
+  margin: 0.55rem 0;
+  color: var(--primary-navy);
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background: var(--primary-navy);
+  color: white;
+  border-color: var(--primary-navy);
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.15);
+}
+
+.nav-item:active,
+.nav-item.active {
+  background: var(--secondary-blue);
+  color: white;
+  border-color: var(--secondary-blue);
+}
+
+/* Clean Section Styling - Blue borders */
+.section {
+  background: var(--background);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  border-left: 6px solid var(--secondary-blue);  /* Blue for regular sections */
+}
+
+/* Awards section gets gold */
+.section.awards {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for awards sections */
+}
+
+/* Feature boxes - Blue for regular features */
+.feature-box {
+  background: var(--background-gray);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-left: 5px solid var(--secondary-blue);  /* Blue for regular features */
+  box-shadow: 0 4px 16px var(--shadow-light);
+}
+
+/* Achievement features get gold */
+.feature-box.achievement {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for achievements */
+}
+
+/* Content headers - Blue for regular content */
+.content-header {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-blue);  /* Blue for regular headers */
+  margin-bottom: 1rem;
+  color: var(--primary-navy);
+  font-weight: 700;
 }

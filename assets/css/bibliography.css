@@ -1,295 +1,381 @@
-/* Color Variables */
+/* Professional Academic Bibliography Styling for R1 University */
 :root {
-  /* Primary Colors */
-  --primary-color: #0d47a1;         /* Deep Blue - main theme color */
-  --primary-light: #1976d2;         /* Light Blue for interactive states */
-  --secondary-color: #1565c0;       /* Medium Blue accent */
+  /* Primary Academic Blues */
+  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
   
-  /* Functional Colors */
-  --success-color: #2e7d32;         /* Fresh Green for success messages */
-  --warning-color: #d32f2f;         /* Rich Red for warnings */
-  --info-color: #0288d1;            /* Calm Blue for informational elements */
-  --alert-color: #ff7043;           /* Subtle Orange for attention-grabbing alerts */
-
-  /* Button Colors */
-  --button-primary: #1e88e5;        /* Bright Blue for primary buttons */
-  --button-secondary: #1565c0;      /* Muted Blue for secondary actions */
-  --button-hover: #0b79d0;          /* Slightly lighter blue for hover effect */
-
-  /* Text Colors */
-  --text-primary: #1c1c1e;          /* Very Dark Blue-Black for readability */
-  --text-secondary: #37474f;        /* Charcoal grey for supporting text */
-  --text-muted: #546e7a;            /* Cool grey for muted text */
-
-  /* Background Colors */
-  --background-primary: #f0f4f8;    /* Soft Blue-Grey for main background */
-  --background-secondary: #e3f2fd;  /* Very Light Blue for section contrast */
-  --card-background: #ffffff;       /* Clean White for cards and panels */
-  --border-color: #cfd8dc;          /* Light grey-blue for borders */
-
-  /* Additional Accent Colors */
-  --accent-light: #b3e5fc;          /* Pale Blue for highlights */
-  --accent-dark: #004ba0;           /* Dark Navy for deeper accents */
-  --highlight-color: #42a5f5;       /* Vivid Blue for highlights */
-  --shadow-color: rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  /* Professional Text Colors */
+  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
+  --text-secondary: #555555;      /* Medium gray for secondary text */
+  --text-light: #777777;          /* Light gray for captions */
+  
+  /* Clean Backgrounds */
+  --background: #ffffff;          /* Pure white */
+  --background-gray: #f8f9fa;     /* Very light gray */
+  --background-blue: #f0f4ff;     /* Light blue tint */
+  
+  /* Professional Borders */
+  --border-light: #e9ecef;        /* Light border */
+  --border-medium: #dee2e6;       /* Medium border */
+  
+  /* Academic Accent Colors */
+  --accent-gold: #c8b18b;         /* Gold accent for highlights */
+  --accent-green: #16cc5c;        /* Success green */
+  --warning: #ffc107;             /* Warning amber */
+  --error: #dc3545;               /* Error red */
+  
+  /* Professional Shadows */
+  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
 }
 
-/* Bibliography Entry */
+/* Professional Bibliography Container */
 .bib-entry {
-  margin-bottom: 30px;
-  padding: 25px;
-  background-color: var(--card-background);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 0 8px 8px 0;
-  box-shadow: 0 2px 15px var(--shadow-color);
-  transition: transform 0.2s ease;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: var(--background);
+  border-left: 5px solid var(--secondary-blue);  /* Blue for regular papers */
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 4px 24px var(--shadow-light), 0 2px 8px var(--shadow-medium);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* AWARD PAPERS get gold border */
+.bib-entry.award-paper {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for award papers */
+}
+
+.bib-entry::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-navy);  /* Solid color instead of gradient */
 }
 
 .bib-entry:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border-left-color: var(--primary-light);
+  box-shadow: 0 6px 24px var(--shadow-medium);
+  border-left-color: var(--primary-navy);
 }
 
-/* Title */
+/* Academic Publication Title */
 .bib-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   line-height: 1.4;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
 }
 
 .bib-title a {
-  color: var(--text-primary);
+  color: var(--primary-navy);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  display: block;
 }
 
 .bib-title a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
-/* Authors */
+/* Author Styling with Enhanced Emphasis */
 .bib-authors {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
-  margin-bottom: 8px;
-  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .bib-authors b {
-  color: var(--primary-light);
+  color: var(--primary-navy);
   font-weight: 600;
+  background: var(--background-blue);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
-/* Venue */
+/* Venue with Academic Prestige */
 .bib-venue {
-  font-size: 0.95rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: var(--text-light);
   font-style: italic;
-  margin-bottom: 15px;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
 }
 
 .bib-venue b {
-  color: var(--accent-dark);
+  color: var(--primary-navy);
+  font-weight: 600;
+  font-style: normal;
 }
 
-/* Container for buttons and award */
+/* Professional Action Container */
 .bib-actions-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 15px;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .bib-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.75rem;
 }
 
+/* Enhanced Academic Button System - Minimal Transparent */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;  /* Much smaller padding */
+  font-size: 0.75rem;  /* Smaller font */
+  font-weight: 400;  /* Lighter weight */
+  text-decoration: none;
+  border-radius: 3px;
   transition: all 0.2s ease;
-  color: white;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Button Types */
-.btn-pdf {
-  background-color: #e53935;  /* Material Red */
-}
-
-.btn-arxiv {
-  background-color: #1565c0;  /* Material Blue */
-}
-
-.btn-doi {
-  background-color: #0277bd;  /* Lighter Blue */
-}
-
-.btn-code {
-  background-color: #2e7d32;  /* Material Green */
-}
-
-.btn-website {
-  background-color: #6a1b9a;  /* Material Purple */
-}
-
-.btn-bib {
-  background-color: #00695c;  /* Material Teal */
-}
-
-.btn-abstract {
-  background-color: #ef6c00;  /* Material Orange */
-}
-
-.btn-certificate {
-  background-color: #8b0000;  /* Dark red - more academic */
-  color: white;
-  padding: 0.5em 1em;
-  font-size: 0.9em;
-  margin-top: 8px;
-  border-radius: 4px;
-}
-
-.btn-certificate:hover {
-  background-color: #660000;
+  margin: 0.125rem;  /* Minimal margins */
+  cursor: pointer;
+  background: transparent;  /* Completely transparent */
+  border: 1px solid;  /* Border will be set by each button type */
+  box-shadow: none;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(110%);
-  box-shadow: 0 2px 5px var(--shadow-color);
+  text-decoration: none;
+  transform: none;
+  box-shadow: none;
 }
 
-/* Content Sections */
+.btn i {
+  font-size: 0.75rem;
+  margin-right: 0.125rem;
+}
+
+/* Academic Button Types - Minimal Transparent Style */
+.btn-pdf {
+  color: var(--error);
+  background: transparent;
+  border-color: var(--error);  /* Red border */
+}
+
+.btn-pdf:hover {
+  background: rgba(220, 53, 69, 0.1);  /* Subtle red tint */
+  color: var(--error);
+}
+
+.btn-arxiv {
+  color: var(--secondary-blue);
+  background: transparent;
+  border-color: var(--secondary-blue);  /* Blue border */
+}
+
+.btn-arxiv:hover {
+  background: rgba(83, 117, 226, 0.1);  /* Subtle blue tint */
+  color: var(--secondary-blue);
+}
+
+.btn-code {
+  color: var(--accent-green);
+  background: transparent;
+  border-color: var(--accent-green);  /* Green border */
+}
+
+.btn-code:hover {
+  background: rgba(22, 204, 92, 0.1);  /* Subtle green tint */
+  color: var(--accent-green);
+}
+
+.btn-bib {
+  color: var(--text-secondary);
+  background: transparent;
+  border-color: var(--text-secondary);  /* Gray border */
+}
+
+.btn-bib:hover {
+  background: rgba(85, 85, 85, 0.1);  /* Subtle gray tint */
+  color: var(--text-secondary);
+}
+
+/* Award/Honor buttons - Minimal gold style */
+.btn-certificate, .btn-award {
+  color: var(--accent-gold);
+  background: transparent;
+  border-color: var(--accent-gold);  /* Gold border */
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.125rem;
+  cursor: pointer;
+  /* make it bigger and bold */
+  font-size: 1.0rem;
+  font-weight: 600;
+}
+
+.btn-certificate:hover, .btn-award:hover {
+  background: rgba(200, 177, 139, 0.1);  /* Subtle gold tint */
+  color: var(--accent-gold);
+}
+
+/* Professional Content Sections */
 .bib-content {
   display: none;
-  margin: 15px 0;
-  background: var(--card-background);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow-color);
+  margin: 1.5rem 0;
+  background: var(--background);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--shadow-light);
   overflow: hidden;
+  border: 1px solid var(--border-light);
 }
 
 .content-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
-  background: var(--background-secondary);
-  border-bottom: 1px solid var(--border-color);
-  font-weight: 500;
-  color: var(--text-secondary);
+  padding: 1rem 1.5rem;
+  background: var(--background-gray);  /* Simple gray background */
+  border-bottom: 1px solid var(--border-light);
+  font-weight: 600;
+  color: var(--primary-navy);
 }
 
 .copy-btn {
   background: none;
   border: none;
-  color: var(--text-secondary);
+  color: var(--secondary-blue);
   cursor: pointer;
-  padding: 5px;
+  padding: 0.5rem;
   border-radius: 4px;
   transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .copy-btn:hover {
-  color: var(--primary-color);
-  background: var(--background-primary);
+  background: var(--background-blue);
+  color: var(--primary-navy);
 }
 
 .bib-content pre {
   margin: 0;
-  padding: 15px;
-  background-color: var(--background-primary);
-  color: var(--text-secondary);
-  font-family: 'Fira Code', monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  padding: 1.5rem;
+  background: var(--background-gray);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-primary);
   overflow-x: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  border: none;
 }
 
-/* Enhanced Award Badge */
+/* Enhanced Award System */
 .paper-comment {
-    display: flex;
-    align-items: center;
-    margin-top: 16px;
-    padding: 15px 25px;
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-    border: 2px solid #ffd700;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.1);
-    transition: all 0.3s ease;
-    width: fit-content;
-    position: relative;
+  background: var(--background-blue);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--secondary-blue);  /* Blue for regular comments */
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* AWARD comments get gold */
+.paper-comment.award-comment {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for award comments */
 }
 
 .paper-comment:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.2);
-    border-color: #ffeb3b;
+  transform: translateX(2px);
+  box-shadow: 0 4px 16px var(--shadow-medium);
 }
 
+/* Award Icon - Gold ONLY for actual awards */
 .award-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    background: linear-gradient(45deg, #ffd700, #f57f17);
-    border-radius: 50%;
-    margin-right: 20px;
-    box-shadow: 0 3px 12px rgba(255, 215, 0, 0.4);
-    border: 2px solid #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--accent-gold);  /* Keep gold for actual awards */
+  border-radius: 50%;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-navy);
+  box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
-.award-icon i {
-    color: #fff;
-    font-size: 1.8rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    animation: pulse 2s infinite;
+/* Regular publication icons - Blue */
+.publication-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--secondary-blue);  /* Blue for regular publications */
+  border-radius: 50%;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
 .award-content {
-    flex: 1;
+  flex: 1;
 }
 
 .award-text {
-    color: #1a237e;
-    font-weight: 600;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    text-shadow: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin: 0;
+  letter-spacing: 0.025em;
 }
 
+/* Professional Academic Badges */
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  margin: 0.25rem;
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
 
-.paper-comment::before {
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    background: linear-gradient(45deg, #ffd700, #ffeb3b);
-    color: #1a237e;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    border: 1px solid #fff;
-    letter-spacing: 0.5px;
+.bg-primary {
+  background: var(--primary-navy);  /* Solid color instead of gradient */
+  color: white;
+}
+
+.bg-success {
+  background: var(--accent-green);  /* Solid color instead of gradient */
+  color: white;
+}
+
+.bg-info {
+  background: var(--secondary-blue);  /* Solid color instead of gradient */
+  color: white;
 }
 
 /* Animations */
@@ -304,136 +390,96 @@
   }
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Loading Animation */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+.bib-content {
+  animation: slideDown 0.3s ease-out;
 }
 
-.loading {
-  background: linear-gradient(
-    90deg,
-    var(--background-primary) 25%,
-    var(--background-secondary) 50%,
-    var(--background-primary) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-/* Focus States */
-.btn:focus-visible,
-.copy-btn:focus-visible {
-  outline: 2px solid var(--primary-color);
+/* Focus States for Accessibility */
+.btn:focus,
+.copy-btn:focus {
+  outline: 2px solid var(--secondary-blue);
   outline-offset: 2px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .bib-entry {
-    padding: 20px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
   }
-
+  
   .bib-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
-
+  
   .bib-authors {
+    font-size: 1rem;
+  }
+  
+  .bib-venue {
     font-size: 0.9rem;
   }
-
-  .bib-venue {
-    font-size: 0.85rem;
-  }
-
+  
   .bib-actions-container {
     flex-direction: column;
     align-items: stretch;
   }
-
+  
   .bib-actions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .bib-content {
-    margin: 10px 0;
-  }
-
-  .content-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .copy-btn {
-    margin-top: 10px;
-  }
-
-  .bib-content pre {
-    font-size: 0.8rem;
-  }
-
-  .paper-comment {
-    width: 100%;
     justify-content: center;
   }
-
+  
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+  }
+  
   .award-icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .award-text {
-    font-size: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
   }
 }
 
-.btn i {
-  margin-right: 5px;
-  display: inline-block;
+@media (max-width: 480px) {
+  .bib-entry {
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .bib-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    text-align: center;
+    justify-content: center;
+  }
 }
 
-.btn .btn-text {
-  vertical-align: middle;
-}
-
-.paper-comment-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 40px;
-}
-
-.paper-comment, .certificate-container {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.btn-certificate {
-  height: 100%;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.certificate-container {
-  margin-left: auto;
+/* Print Styles for Academic CVs */
+@media print {
+  .bib-entry {
+    background: white;
+    box-shadow: none;
+    border: 1px solid var(--border-medium);
+    break-inside: avoid;
+  }
+  
+  .btn {
+    display: none;
+  }
+  
+  .bib-content {
+    display: block !important;
+  }
+  
+  .copy-btn {
+    display: none;
+  }
 }

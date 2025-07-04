@@ -27,8 +27,8 @@
 
 - name: Jonsson School Graduate Study Scholarship
   type: scholarship
-  description: Awarded for outstanding academic performance in graduate studies.
+  event: Awarded for outstanding academic performance in graduate studies.
 
 - name: Central Sector Scheme of Scholarships for College and University Students
   type: scholarship
-  description: Awarded by the Department of Higher Education, India, for academic excellence.
+  event: Awarded by the Department of Higher Education, India, for academic excellence.

@@ -1,3 +1,36 @@
+/* Professional Academic Color Palette - Blue & White Theme */
+:root {
+  /* Primary Academic Blues */
+  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
+  
+  /* Professional Text Colors */
+  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
+  --text-secondary: #555555;      /* Medium gray for secondary text */
+  --text-light: #777777;          /* Light gray for captions */
+  
+  /* Clean Backgrounds */
+  --background: #ffffff;          /* Pure white */
+  --background-gray: #f8f9fa;     /* Very light gray */
+  --background-blue: #f0f4ff;     /* Light blue tint */
+  
+  /* Professional Borders */
+  --border-light: #e9ecef;        /* Light border */
+  --border-medium: #dee2e6;       /* Medium border */
+  
+  /* Academic Accent Colors */
+  --accent-gold: #c8b18b;         /* Gold accent for highlights */
+  --accent-green: #16cc5c;        /* Success green */
+  --warning: #ffc107;             /* Warning amber */
+  --error: #dc3545;               /* Error red */
+  
+  /* Professional Shadows */
+  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
+}
+
 /* About Page Styling */
 .jumbotron {
   background: #fff;
@@ -20,22 +53,28 @@
 }
 
 .jumbotron h3 {
-  color: #2c3e50;
+  color: var(--primary-navy);
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
 .jumbotron h4 {
-  color: #34495e;
+  color: var(--text-secondary);
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
 /* Social Icons */
 .jumbotron a {
-  color: #3498db;
+  color: var(--secondary-blue);
   margin-right: 10px;
   transition: all 0.2s ease;
+}
+
+/* Social Icons - Subtle Hover */
+.jumbotron a:hover {
+  color: #1e40af;  /* Darker blue for subtle hover */
+  transform: translateY(-1px);
 }
 
 /* Education List */
@@ -49,32 +88,33 @@
   padding: 8px 12px;
   margin-bottom: 8px;
   background: #f8f9fa;
-  border-left: 3px solid #3498db;
+  border-left: 3px solid var(--secondary-blue);
   border-radius: 0 4px 4px 0;
   font-size: 0.95rem;
-  color: #2c3e50;
+  color: var(--text-primary);
   transition: transform 0.2s ease;
 }
 
+/* Education List Hover - Simple */
 .jumbotron ul li:hover {
-  transform: translateX(5px);
-  background: #f0f7ff;
+  transform: translateX(3px);  /* Reduced movement */
+  background: var(--background-blue);  /* Simple blue background on hover */
 }
 
 /* Awards Section Styling */
 .awards-section {
-  background: #fff;
+  background: var(--background);  /* Solid white background */
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   padding: 30px;
 }
 
 .awards-section h3 {
-  color: #2c3e50;
+  color: var(--primary-navy);
   font-size: 1.5em;
   margin-bottom: 1.2em;
   padding-bottom: 0.5em;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid var(--secondary-blue);
   position: relative;
 }
 
@@ -87,21 +127,40 @@
 }
 
 .award-item {
-  background: #f8f9fa;
+  background: var(--background-gray);  /* Simple gray background */
   border-radius: 8px;
   padding: 15px 20px;
   transition: all 0.3s ease;
-  border-left: 4px solid #3498db;
+  border-left: 4px solid var(--secondary-blue);
+}
+
+/* Award type-specific colors - Clear Hierarchy */
+.award-item[data-type="presentation"] {
+  border-left-color: var(--secondary-blue);  /* Blue for presentations */
+}
+
+.award-item[data-type="scholarship"] {
+  border-left-color: var(--accent-green);  /* Green for scholarships/funding */
+}
+
+.award-item[data-type="paper award"], 
+.award-item[data-type="best paper"],
+.award-item[data-type="honor"],
+.award-item[data-type="distinguished award"],
+
+.award-item[data-type="conference"] {
+  border-left-color: var(--text-secondary);  /* Gray for regular conference participation */
 }
 
 .award-item:hover {
-  transform: translateX(5px);
-  background: #f0f7ff;
+  transform: translateX(3px);  /* Reduced movement */
+  background: var(--background-blue);  /* Simple blue background on hover */
+  box-shadow: 0 2px 8px var(--shadow-light);  /* Subtle shadow */
 }
 
 .award-title {
-  font-size: 1.5em;
-  color: #2c3e50;
+  font-size: 2.0em;
+  color: var(--text-primary);
   margin: 0;
   display: flex;
   align-items: center;
@@ -110,48 +169,36 @@
 }
 
 .award-icon {
-  font-size: 1.3em;
+  font-size: 1.5em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 30px;
 }
-
+.award-name {
+  font-size: 2.5em;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+}
 .award-event {
   margin: 0.3em 0 0 40px;
-  color: #34495e;
-  font-size: 0.95em;
+  color: var(--text-secondary);
+  font-size: 1.15em;
 }
 
 .award-event em {
-  color: #3498db;
+  color: var(--secondary-blue);
   font-style: italic;
-  font-size: 3.0 em;
-}
-
-.award-description {
-  margin: 0.2em 0 0 40px;
-  color: #5a6c7d;
   font-size: 2.0 em;
-  line-height: 1.2;
-}
-
-/* Award type-specific colors */
-.award-item[data-type="presentation"] {
-  border-left-color: #e74c3c;
-}
-
-.award-item[data-type="scholarship"] {
-  border-left-color: #2ecc71;
-}
-
-.award-item[data-type="paper award"] {
-  border-left-color: #f1c40f;
 }
 
 /* Sponsors Section */
 .jumbotron h4 {
-  color: #2c3e50;
+  color: var(--primary-navy);
   margin-bottom: 20px;
 }
 
