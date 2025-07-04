@@ -52,12 +52,12 @@ nav_pages:
   - name: about
   - name: publications
   - name: research
+  - name: software
   - name: teaching
   - name: services
   - name: resources
   - name: blog
   # - name: photos
-#  - name: software
 #  - name: talks
 # - name: team
 

@@ -6,37 +6,41 @@ permalink: /software/
 ---
 
 <style>
-img{
-  border-radius: 10px;
-}
-iframe {
-  width: 80%;
-  display: inline;
-  vertical-align:middle;
-  <!-- margin-bottom:5px; -->
-  <!-- margin-left:5px; -->
-  <!-- border: 1px solid red; -->
-}
-.col-md-3 {
-  margin:0;
-  padding:0;
-  margin-top:10px;
-  margin-bottom:10px;
-  display:block;
-  overflow:hidden;
-  text-align:center;
-  display: table-cell;
-  height: auto;
-  float: none;
-  background:white;
-  border-radius:20px;
-  <!-- border: 1px solid black; -->
+.jumbotron{
+    padding:3%;
+    padding-bottom:10px;
+    padding-top:10px;
+    margin-top:10px;
+    margin-bottom:30px;
 }
 </style>
+<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
 ## Software
 
 <div class="jumbotron">
+
+### **NeuPI: A Library for Neural Probabilistic Inference**
+
+<a href="https://github.com/Shivvrat/NeuPI" target="_blank"><button class="btn btn-primary btn-sm">GITHUB</button></a>
+<a href="https://neupi.readthedocs.io/en/latest/" target="_blank"><button class="btn btn-success btn-sm">DOCS</button></a>
+<a href="https://neupi.readthedocs.io/en/latest/details/paper_details.html" target="_blank"><button class="btn btn-danger btn-sm">PAPERS</button></a>
+
+**Authors:** *S. Arya, T. Rahman, V. Gogate*
+
+**NeuPI** is a [PyTorch-based library](https://github.com/Shivvrat/NeuPI) for solving inference tasks in Probabilistic Models (PMs) using neural network surrogates. It provides a modular framework for training neural models in a self-supervised fashion, where the PM itself provides the supervisory signal. This approach eliminates the need for labeled training data by directly optimizing for the log-likelihood of proposed solutions.
+
+**Key features:**
+- **Self-Supervised Training**: Trains neural surrogates using only the PM definition, requiring no labeled data
+- **Advanced Inference**: Implements the **ITSELF** (Inference Time Self-Supervised Training) engine for test-time refinement, which significantly improves inference accuracy
+- **Modular Architecture**: Features a clean separation of components (PGM Evaluators, Neural Solvers, Embedders, Trainers) that are easily extensible
+
+The core workflow involves training a neural network to serve as a fast approximator for a complex PM query, using the PM itself to evaluate and guide the training process.
+
+</div>
+
+
+<!-- <div class="jumbotron">
 <div class="row align-items-end">
 <div class="col-md-9 col-sm-12">
 <h4><b>QBMMlib: Moment Methods for Fully-coupled Flows</b></h4>
@@ -67,10 +71,10 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
   <iframe src="https://player.vimeo.com/video/456290405?autoplay=1&loop=1&autopause=0&muted=1&quality=240p&background=1" height="132px" frameborder="0" allow="autoplay"></iframe>
 </div>
 </div>
-</div>
+</div> -->
 
 
-[//]: # ()
+<!-- [//]: # ()
 [//]: # (<div class="jumbotron">)
 
 [//]: # (<div class="row align-items-end">)
@@ -286,4 +290,4 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
 
 [//]: # (</div>)
 
-[//]: # (</div>)
+[//]: # (</div>) -->
