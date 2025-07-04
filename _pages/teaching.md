@@ -10,7 +10,6 @@ permalink: /teaching/
 ## Academic Teaching Experience
 
 <div class="jumbotron">
-<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
 ### Guest Lecturer
 <div class="research-area">

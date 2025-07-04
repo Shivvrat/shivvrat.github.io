@@ -5,12 +5,15 @@ sitemap: false
 permalink: /team/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
+
 ## Team
 
  **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
 
 <!--- Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors). -->
 
+<div class="jumbotron">
 ## PI
 
 {% for member in site.data.pi %}
@@ -39,8 +42,9 @@ permalink: /team/
 </div>
 
 {% endfor %}
+</div>
 
-
+<div class="jumbotron">
 ## Current Students and Postdocs
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
@@ -109,8 +113,9 @@ permalink: /team/
 {% if even_odd == 1 %}
 </div>
 {% endif %}
+</div>
 
-
+<div class="jumbotron">
 ## Alumni
 
 {% assign number_printed = 0 %}
@@ -143,9 +148,10 @@ permalink: /team/
 {% if even_odd == 1 %}
 </div>
 {% endif %}
-
+</div>
 
 {% if site.data.alumni_visitors %}
+<div class="jumbotron">
 ## Former M.S./B.S Students, Visitors
 <div class="row">
 <div class="col-sm-6 clearfix">
@@ -154,10 +160,11 @@ permalink: /team/
 {% endfor %}
 </div>
 </div>
+</div>
 {% endif %}
 
-
-
+<div class="jumbotron">
 ## Administrative Support
 <a href="exampleemail@gmail.com">Example staff</a> is helping us (and other groups) with administration.
+</div>
 

@@ -5,6 +5,8 @@ sitemap: false
 permalink: /
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
+
 <div class="alert alert-info">
 🎓 I am currently on the academic job market! 
 </div>
