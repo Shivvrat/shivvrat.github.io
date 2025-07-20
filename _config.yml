@@ -179,6 +179,29 @@ scholar:
   details_link: Details
 
   query: "@*"
+  
+  # Advanced filtering options
+  type_names:
+    inproceedings: "Conference Papers"
+    article: "Journal Articles"  
+    unpublished: "Preprints & Technical Reports"
+    phdthesis: "Doctoral Dissertations"
+    mastersthesis: "Master's Theses"
+    book: "Books"
+    incollection: "Book Chapters"
+
+  # Custom field mappings for filtering
+  replace_strings: true
+  join_strings:    true
+  
+  # Enable year-based filtering
+  year_limit: 50
+  
+  # Sort and filter options
+  sort_by: year
+  order: descending
+  group_by: year
+  group_order: descending
 
   # bibliography_list_attributes:
   #   reversed: False
