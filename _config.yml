@@ -197,11 +197,6 @@ scholar:
   # Enable year-based filtering
   year_limit: 50
   
-  # Sort and filter options
-  sort_by: year
-  order: descending
-  group_by: year
-  group_order: descending
 
   # bibliography_list_attributes:
   #   reversed: False
