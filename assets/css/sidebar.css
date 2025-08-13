@@ -93,16 +93,57 @@
   box-sizing: border-box;
 }
 
-/* Simple icon styling - let inline styles handle font families */
-.social-icons i,
+/* SVG icons styling */
+.social-icons svg {
+  width: 20px !important;
+  height: 20px !important;
+  vertical-align: middle !important;
+  display: inline-block !important;
+  fill: currentColor !important;
+}
+
+/* Email emoji styling */
 .social-icons span {
   display: inline-block !important;
   width: auto !important;
   height: auto !important;
   vertical-align: middle !important;
-  font-size: 1rem !important;
-  color: inherit !important;
   line-height: 1 !important;
+  text-align: center !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* Platform-specific SVG colors */
+.social-icons a[title="Email"] svg {
+  fill: #ea4335 !important;
+}
+
+.social-icons a[title="Curriculum Vitae"] svg {
+  fill: #8b4513 !important;
+}
+
+.social-icons a[title="Google Scholar"] svg {
+  fill: #4285f4 !important;
+}
+
+.social-icons a[title="ORCID iD"] svg {
+  fill: #a6ce39 !important;
+}
+
+.social-icons a[title="LinkedIn"] svg {
+  fill: #0a66c2 !important;
+}
+
+.social-icons a[title="Twitter/X"] svg {
+  fill: #1d9bf0 !important;
+}
+
+.social-icons a[title="GitHub"] svg {
+  fill: #24292f !important;
+}
+
+.social-icons a[title="ResearchGate"] svg {
+  fill: #00ccbb !important;
 }
 
 /* Mobile responsive - ensure grid scales properly */
@@ -120,7 +161,11 @@
     font-size: 0.7rem;
   }
   
-  .social-icons i,
+  .social-icons svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
   .social-icons span {
     font-size: 0.9rem !important;
   }
@@ -139,7 +184,11 @@
     padding: 0.1rem;
   }
   
-  .social-icons i,
+  .social-icons svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
   .social-icons span {
     font-size: 0.8rem !important;
   }
@@ -160,10 +209,16 @@
   color: inherit !important;
 }
 
-/* Add subtle animation on hover */
-.social-icons a:hover i {
-  transform: scale(1.1);
-  transition: transform 0.2s ease;
+/* Add subtle animation on hover for SVG icons */
+.social-icons a:hover svg {
+  transform: scale(1.15);
+  transition: all 0.2s ease;
+}
+
+/* Add subtle animation on hover for emoji icons */
+.social-icons a:hover span {
+  transform: scale(1.15);
+  transition: all 0.2s ease;
 }
 
 /* Compact Contact Links */
