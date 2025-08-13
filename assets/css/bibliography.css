@@ -776,11 +776,13 @@
   vertical-align: middle !important;
 }
 
-/* Ensure FontAwesome icons are properly rendered */
+/* Ensure FontAwesome icons are properly rendered - both old and new versions */
+.fas, .far, .fab, .fa,
 .bib-actions .btn .fas,
 .bib-actions .btn .far,
-.bib-actions .btn .fab {
-  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands", FontAwesome !important;
+.bib-actions .btn .fab,
+.bib-actions .btn .fa {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands", "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Pro" !important;
   speak: none !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -791,12 +793,18 @@
   -moz-osx-font-smoothing: grayscale !important;
 }
 
-.bib-actions .btn .fas {
+/* FontAwesome 6 weights */
+.fas, .bib-actions .btn .fas {
   font-weight: 900 !important;
 }
 
-.bib-actions .btn .far {
+.far, .bib-actions .btn .far {
   font-weight: 400 !important;
+}
+
+/* FontAwesome 4 compatibility (for sidebar icons) */
+.fa {
+  font-weight: 900 !important;
 }
 
 /* High contrast mode support */

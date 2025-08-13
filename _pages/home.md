@@ -17,7 +17,7 @@ seo:
 
 ### Welcome!
 
-I am Shivvrat Arya, a Ph.D. graduate in Computer Science from The University of Texas at Dallas. My research lies at the intersection of neurosymbolic AI, probabilistic reasoning, and computer vision. I collaborate with [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/) on several DARPA-funded projects:
+I am Shivvrat Arya, and I earned a Ph.D. in Computer Science from The University of Texas at Dallas. My research focused on the intersection of neurosymbolic AI, probabilistic reasoning, and computer vision. I collaborated with [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/) on several DARPA-funded projects.
 
 - **DARPA** Explainable Artificial Intelligence (XAI)
 - **DARPA** Perceptually-Enabled Task Guidance (PTG)
