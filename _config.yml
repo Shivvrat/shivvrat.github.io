@@ -11,8 +11,8 @@ title                    : "Shivvrat Arya"
 title_separator          : "-"
 name                     : &name "Shivvrat Arya"
 email: shivvrat.arya@utdallas.edu
-description              : &description "Pursuing Ph.D. in Computer Science"
-#description: Academic webpage of Shivvrat Arya
+description              : &description "Ph.D. in Computer Science"
+#description: Academic webpage of Dr. Shivvrat Arya
 baseurl: ""
 url                      : ""
 #url                      : "https://shivvrat.github.io/"

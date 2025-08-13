@@ -6,6 +6,7 @@
         <img src="{{site.url}}{{site.baseurl}}/images/teampic/{{ member.photo }}" alt="{{ member.name }}"/>
       </a>
       <h4>{{ member.name }}</h4>
+      <div class="academic-title">{{ member.info }}</div>
       
       <div class="social-icons">
         {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank" title="Email">{% include icons/email.svg %}</a>{% endif %}
@@ -25,46 +26,38 @@
         });
       </script>
 
-  <ul style="overflow: hidden">
-  {% if member.number_educ == 1 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 2 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 3 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 4 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education4short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 5 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education4short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education5short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 6 %}
-  <li> {{ member.education1short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education2short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education3short | replace: "-","&#8211;"}} </li>
-  <li> {{ member.education4short | replace: "-","&#8211;"}} </li>
-  <!-- <li> {{ member.education5short | replace: "-","&#8211;"}} </li> -->
-  <li> {{ member.education6short | replace: "-","&#8211;"}} </li>
-  {% endif %}
-  </ul>
+  <!-- Education Section -->
+  <div class="education-section">
+    <h5 class="education-header">Education</h5>
+    <div class="education-timeline">
+      {% if member.number_educ >= 3 %}
+        <div class="education-item phd-item">
+          <div class="education-content">
+            <div class="degree-title">Ph.D.</div>
+            <div class="degree-details">CS, UTD</div>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if member.number_educ >= 2 %}
+        <div class="education-item masters-item">
+          <div class="education-content">
+            <div class="degree-title">M.S.</div>
+            <div class="degree-details">CS, UTD</div>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if member.number_educ >= 1 %}
+        <div class="education-item bachelors-item">
+          <div class="education-content">
+            <div class="degree-title">B.Tech.</div>
+            <div class="degree-details">CSE, IIITV</div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
     {% endfor %}
   </div>
 
