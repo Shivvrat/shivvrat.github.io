@@ -3,6 +3,10 @@ title: "Home"
 layout: homelay
 sitemap: false
 permalink: /
+seo:
+  title: "Shivvrat Arya – Neurosymbolic AI & Probabilistic Reasoning"
+  description: "Ph.D. in Computer Science on the 2025 academic job market."
+
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
@@ -13,7 +17,7 @@ permalink: /
 
 ### Welcome!
 
-I am Shivvrat Arya (Shiv), a final-year Ph.D. candidate in Computer Science at The University of Texas at Dallas. My research lies at the intersection of neurosymbolic AI, probabilistic reasoning, and computer vision. I collaborate with [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/) on several DARPA-funded projects:
+I am Shivvrat Arya, a Ph.D. graduate in Computer Science from The University of Texas at Dallas. My research lies at the intersection of neurosymbolic AI, probabilistic reasoning, and computer vision. I collaborate with [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/) on several DARPA-funded projects:
 
 - **DARPA** Explainable Artificial Intelligence (XAI)
 - **DARPA** Perceptually-Enabled Task Guidance (PTG)
@@ -29,18 +33,19 @@ Broadly speaking, my research interests primarily focus on artificial intelligen
 - **Combinatorial Optimization**: Efficient algorithms for NP-hard problems
 - **Computer Vision**: Advanced video understanding and activity recognition
 
-### Recent Contributions
+### Highlights
 
 - Published research recognized with best paper awards, spotlight, and oral presentations
 - Developed novel neural network-based inference methods for probabilistic models
-- Created CaptainCook4D, an egocentric 4D dataset for procedural task understanding
+- Released NeuPI, a neural network-based inference engine for probabilistic models
 - Built real-time AR guidance systems for complex physical tasks
+- Created CaptainCook4D, an egocentric 4D dataset for procedural task understanding
 
 ### Education
 
-- Ph.D. in Computer Science, The University of Texas at Dallas 
-- M.S. in Computer Science, The University of Texas at Dallas 
-- B.Tech. in Computer Science and Engineering, Indian Institute of Information Technology Vadodara (2019)
+- Ph.D., Computer Science – The University of Texas at Dallas
+- M.S., Computer Science – The University of Texas at Dallas
+- B.Tech., Computer Science and Engineering – IIIT Vadodara
 
 
 

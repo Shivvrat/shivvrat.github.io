@@ -138,6 +138,60 @@
   gap: 0.75rem;
 }
 
+/* Base Button Styles for Cross-Browser Compatibility */
+.bib-actions .btn {
+  /* Reset default button styles */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  /* Ensure buttons are visible */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  
+  /* Force button visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure button container is visible */
+.bib-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.bib-actions-container {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-light);
+}
+
 /* Enhanced Academic Button System - Minimal Transparent */
 .btn {
   display: inline-flex;
@@ -171,45 +225,201 @@
 .btn-pdf {
   color: var(--error);
   background: transparent;
-  border-color: var(--error);  /* Red border */
+  border: 2px solid var(--error);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
 }
 
 .btn-pdf:hover {
-  background: rgba(220, 53, 69, 0.1);  /* Subtle red tint */
+  background: rgba(220, 53, 69, 0.1);
   color: var(--error);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
 }
 
 .btn-arxiv {
   color: var(--secondary-blue);
   background: transparent;
-  border-color: var(--secondary-blue);  /* Blue border */
+  border: 2px solid var(--secondary-blue);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
 }
 
 .btn-arxiv:hover {
-  background: rgba(83, 117, 226, 0.1);  /* Subtle blue tint */
+  background: rgba(83, 117, 226, 0.1);
   color: var(--secondary-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(83, 117, 226, 0.2);
+}
+
+.btn-doi {
+  color: #0066cc;
+  background: transparent;
+  border: 2px solid #0066cc;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.btn-doi:hover {
+  background: rgba(0, 102, 204, 0.1);
+  color: #0066cc;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.2);
 }
 
 .btn-code {
   color: var(--accent-green);
   background: transparent;
-  border-color: var(--accent-green);  /* Green border */
+  border: 2px solid var(--accent-green);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
 }
 
 .btn-code:hover {
-  background: rgba(22, 204, 92, 0.1);  /* Subtle green tint */
+  background: rgba(22, 204, 92, 0.1);
   color: var(--accent-green);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(22, 204, 92, 0.2);
+}
+
+.btn-library {
+  color: #8e44ad;
+  background: transparent;
+  border: 2px solid #8e44ad;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.btn-library:hover {
+  background: rgba(142, 68, 173, 0.1);
+  color: #8e44ad;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(142, 68, 173, 0.2);
+}
+
+.btn-website {
+  color: #e67e22;
+  background: transparent;
+  border: 2px solid #e67e22;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.btn-website:hover {
+  background: rgba(230, 126, 34, 0.1);
+  color: #e67e22;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(230, 126, 34, 0.2);
 }
 
 .btn-bib {
   color: var(--text-secondary);
   background: transparent;
-  border-color: var(--text-secondary);  /* Gray border */
+  border: 2px solid var(--text-secondary);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
 }
 
 .btn-bib:hover {
-  background: rgba(85, 85, 85, 0.1);  /* Subtle gray tint */
+  background: rgba(85, 85, 85, 0.1);
   color: var(--text-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(85, 85, 85, 0.2);
+}
+
+.btn-abstract {
+  color: #27ae60;
+  background: transparent;
+  border: 2px solid #27ae60;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.btn-abstract:hover {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.2);
 }
 
 /* Award/Honor buttons - Minimal gold style */
@@ -481,5 +691,130 @@
   
   .copy-btn {
     display: none;
+  }
+}
+
+/* Mobile and Cross-Browser Button Fallbacks */
+@media (max-width: 768px) {
+  .bib-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .bib-actions .btn {
+    width: 100%;
+    justify-content: center;
+    margin: 0.25rem 0;
+  }
+}
+
+/* Fallback for older browsers */
+@supports not (display: inline-flex) {
+  .bib-actions .btn {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/* Ensure button text is always visible */
+.btn-text {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Force button borders to be visible */
+.bib-actions .btn {
+  border-width: 2px !important;
+  border-style: solid !important;
+}
+
+/* Ensure icons are visible */
+.bib-actions .btn i,
+.bib-actions .btn .ai {
+  display: inline-block !important;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+/* Ensure FontAwesome icons are visible and properly styled */
+.bib-actions .btn .fas,
+.bib-actions .btn .far,
+.bib-actions .btn .fab,
+.bib-actions .btn .ai {
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  font-size: 0.875rem !important;
+  margin-right: 0.5rem !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  text-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Specific icon sizing for different button types */
+.btn-pdf .fas,
+.btn-doi .ai,
+.btn-code .fas,
+.btn-library .fas,
+.btn-website .fas,
+.btn-bib .fas,
+.btn-abstract .fas,
+.btn-certificate .fas {
+  font-size: 0.875rem !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Ensure button text and icons are properly aligned */
+.bib-actions .btn {
+  line-height: 1.2 !important;
+  vertical-align: middle !important;
+}
+
+/* Ensure FontAwesome icons are properly rendered */
+.bib-actions .btn .fas,
+.bib-actions .btn .far,
+.bib-actions .btn .fab {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands", FontAwesome !important;
+  speak: none !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.bib-actions .btn .fas {
+  font-weight: 900 !important;
+}
+
+.bib-actions .btn .far {
+  font-weight: 400 !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bib-actions .btn {
+    border-width: 3px !important;
+    font-weight: 700 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .bib-actions .btn {
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .bib-actions .btn:hover {
+    transform: none !important;
   }
 }
