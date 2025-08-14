@@ -92,12 +92,20 @@
   justify-content: center;
   width: 44px;
   height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 44px;
+  max-height: 44px;
   border-radius: 50%;
   background: var(--background-gray);
   border: 1px solid var(--border-light);
   transition: all 0.3s ease;
   text-decoration: none;
   color: var(--text-secondary);
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .social-icons a:hover {
@@ -111,8 +119,19 @@
 .social-icons svg {
   width: 18px !important;
   height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
   fill: var(--text-secondary) !important;
   transition: fill 0.3s ease !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+}
+
+.social-icons svg * {
+  fill: inherit !important;
+  stroke: none !important;
 }
 
 .social-icons a:hover svg {
