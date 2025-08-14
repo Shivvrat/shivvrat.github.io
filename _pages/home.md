@@ -15,8 +15,6 @@ seo:
 🎓 I am currently on the academic job market! 
 </div>
 
-### Welcome!
-
 I am Shivvrat Arya, and I earned a Ph.D. in Computer Science from The University of Texas at Dallas. My research focused on the intersection of neurosymbolic AI, probabilistic reasoning, and computer vision. I collaborated with [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/) on several DARPA-funded projects.
 
 - **DARPA** Explainable Artificial Intelligence (XAI)

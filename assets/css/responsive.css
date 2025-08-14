@@ -30,53 +30,186 @@ body {
   background-color: var(--background);
 }
 
-/* Enhanced Typography Hierarchy */
+/* Refined Academic Typography */
+:root {
+  --heading-font: 'Crimson Text', 'Garamond', 'Georgia', serif;
+  --heading-spacing: clamp(2.5rem, 6vw, 3.5rem);
+  --accent-width: clamp(40px, 8vw, 60px);
+  --border-gradient: linear-gradient(to right, var(--primary-navy), var(--secondary-blue));
+}
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  line-height: 1.2;
+  margin: var(--heading-spacing) 0 2rem;
+  position: relative;
   color: var(--primary-navy);
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 1.25rem;
-  margin-top: 2rem;
-  letter-spacing: -0.025em;
 }
 
+/* Primary Title - Distinguished elegance */
 h1 { 
-  font-size: 2.5rem; 
+  font-size: clamp(2.25rem, 6vw, 3rem);
   font-weight: 700;
-  color: var(--primary-navy);
-  border-bottom: 3px solid var(--accent-gold);
-  padding-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+  padding: 0 0 1.25rem;
+  position: relative;
+  background: var(--border-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right,
+    var(--primary-navy) 0%,
+    var(--secondary-blue) 50%,
+    transparent 100%
+  );
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: var(--accent-width);
+  height: 4px;
+  background: var(--border-gradient);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Section Title - Scholarly distinction */
 h2 { 
-  font-size: 2rem; 
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   font-weight: 600;
-  color: var(--primary-navy);
+  padding: 0.75rem 1.5rem;
+  margin-left: -1.5rem;
+  background: linear-gradient(to right,
+    var(--background-blue) 0%,
+    var(--background-blue) 3px,
+    transparent 100%
+  );
+  border-radius: 0 4px 4px 0;
+  box-shadow: 
+    inset 3px 0 0 var(--secondary-blue),
+    0 2px 4px var(--shadow-light);
 }
 
+/* Subsection - Academic clarity */
 h3 { 
-  font-size: 1.5rem; 
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
   font-weight: 600;
-  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
 }
 
+h3::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  margin-right: 1rem;
+  background: var(--border-gradient);
+  transition: width 0.3s ease;
+}
+
+h3:hover::before {
+  width: 2.5rem;
+}
+
+/* Topic Header - Research emphasis */
 h4 { 
-  font-size: 1.25rem; 
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 600;
   color: var(--text-primary);
+  padding-left: 1rem;
+  border-left: 2px solid var(--secondary-blue);
+  margin-left: -1rem;
+  transition: all 0.3s ease;
 }
 
+h4:hover {
+  color: var(--primary-navy);
+  border-left-width: 3px;
+  padding-left: 1.5rem;
+}
+
+/* Subtitle - Scholarly precision */
 h5 { 
-  font-size: 1.125rem; 
-  font-weight: 500;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: 0.04em;
 }
 
+h5::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--secondary-blue);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* Minor Title - Academic detail */
 h6 { 
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0.05em;
   color: var(--text-secondary);
+  padding-left: 1rem;
+  border-left: 1px solid var(--border-light);
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --heading-spacing: 2rem;
+    --accent-width: 30px;
+  }
+
+  h1 { padding-bottom: 1rem; }
+  h2 { margin-left: 0; padding: 0.5rem 1rem; }
+  h3::before { width: 1rem; margin-right: 0.75rem; }
+  h4 { margin-left: 0; }
+  h5 { gap: 0.5rem; }
+  h6 { padding-left: 0.75rem; }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --heading-spacing: 2rem;
+    --accent-width: 30px;
+  }
+  
+  h1 { text-align: left; }
+  h2 { margin-left: 0; padding-left: 1rem; }
+  h3 { border-bottom: none; }
+  h4::before { width: 8px; }
+  h5 { letter-spacing: 0.05em; }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.4rem; }
+  h4 { font-size: 1.2rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
 }
 
 /* Professional Content Containers */

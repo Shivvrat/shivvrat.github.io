@@ -52,13 +52,13 @@ nav_pages:
   - name: about
   - name: publications
   - name: research
+  - name: talks
   - name: software
   - name: teaching
   - name: services
   - name: resources
   # - name: blog
   # - name: photos
-#  - name: talks
 # - name: team
 
 include:

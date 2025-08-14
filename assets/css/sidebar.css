@@ -264,13 +264,65 @@
 
 .section-title {
   color: var(--primary-navy);
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   margin: 0 0 1.2rem 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   border-bottom: 1px solid var(--border-light);
   padding-bottom: 0.5rem;
+  list-style: none;
+
+}
+
+.sidebar-title {
+  font-family: 'Crimson Text', 'Garamond', 'Georgia', serif;
+  color: var(--primary-navy);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.75rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.sidebar-title::before,
+.sidebar-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-light), transparent);
+  width: 100%;
+  left: 0;
+}
+
+.sidebar-title::before {
+  bottom: 3px;
+  opacity: 0.5;
+}
+
+.sidebar-title::after {
+  background: linear-gradient(to right, 
+    transparent 0%,
+    var(--secondary-blue) 30%,
+    var(--primary-navy) 70%,
+    transparent 100%
+  );
+}
+
+/* Hover effect */
+.sidebar-title:hover::after {
+  background: linear-gradient(to right,
+    transparent 0%,
+    var(--primary-navy) 30%,
+    var(--secondary-blue) 70%,
+    transparent 100%
+  );
+  transition: background 0.3s ease;
 }
 
 .education-list {
@@ -421,7 +473,7 @@
 /* Clean News Section */
 .news-header {
   color: var(--primary-navy);
-  font-size: 1rem;
+  font-size: 0.5rem;
   font-weight: 300;
   margin: 2rem 0 1.2rem 0;
   text-transform: uppercase;
@@ -579,7 +631,7 @@
   margin-bottom: 1rem;
   color: var(--primary-navy);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   /* center the text */
   text-align: center;
 }

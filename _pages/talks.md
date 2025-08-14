@@ -3,17 +3,20 @@ title: "Talks"
 layout: gridlay
 sitemap: false
 permalink: /talks/
+scholar:
+  bibliography_template: bibtemplate_talks
+  bibliography: talks.bib
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
 <div class="jumbotron">
 ### Invited talks
-{% bibliography --query @incollection[keywords ^= invited] %}
+{% bibliography --query @talk[type ^= invited] %}
 </div>
 
-<div class="jumbotron">
+<!-- <div class="jumbotron">
 ### Regular talks
-{% bibliography --query @incollection[keywords != invited] %}
-</div>
+{% bibliography --query @talk[type != invited] %}
+</div> -->
 

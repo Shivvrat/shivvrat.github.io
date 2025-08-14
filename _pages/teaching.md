@@ -14,6 +14,7 @@ permalink: /teaching/
 ### Guest Lecturer
 <div class="research-area">
 **The University of Texas at Dallas**
+<!-- - [Artificial Intelligence (CS 4365, Senior Level)](/teaching/cs4365/) &mdash; Spring 2024 -->
 - Artificial Intelligence (CS 4365, Senior Level) &mdash; Spring 2024
 - Advanced Topics in Artificial Intelligence (CS 6364, Graduate Level) &mdash; Fall 2024
 - Machine Learning (CS 6375, Graduate Level) &mdash; Fall 2024

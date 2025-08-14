@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="gridid" class="col-sm-12">
+      <h1>{{ page.title }}</h1>
+
+      <div class="jumbotron">
+        <h2>Course Information</h2>
+        <div class="row">
+          <div class="col-sm-6">
+            {% if page.semester %}
+            <p><strong>Term:</strong> {{ page.semester }}</p>
+            {% endif %}
+            {% if page.course_number %}
+            <p><strong>Course Number:</strong> {{ page.course_number }}</p>
+            {% endif %}
+            {% if page.level %}
+            <p><strong>Level:</strong> {{ page.level }}</p>
+            {% endif %}
+            {% if page.role %}
+            <p><strong>Instructor Role:</strong> {{ page.role }}</p>
+            {% endif %}
+          </div>
+          <div class="col-sm-6">
+            {% if page.lecture_times %}
+            <p><strong>Lecture Times:</strong> {{ page.lecture_times }}</p>
+            {% endif %}
+            {% if page.location %}
+            <p><strong>Location:</strong> {{ page.location }}</p>
+            {% endif %}
+            {% if page.office_hours %}
+            <p><strong>Office Hours:</strong> {{ page.office_hours }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      {% if page.announcements %}
+      <div class="jumbotron">
+        <h2>Announcements</h2>
+        {{ page.announcements | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.description %}
+      <div class="jumbotron">
+        <h2>Course Description</h2>
+        {{ page.description | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.prerequisites %}
+      <div class="jumbotron">
+        <h2>Prerequisites</h2>
+        {{ page.prerequisites | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.textbooks %}
+      <div class="jumbotron">
+        <h2>Course Materials</h2>
+        {{ page.textbooks | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.grading %}
+      <div class="jumbotron">
+        <h2>Grading</h2>
+        {{ page.grading | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.schedule %}
+      <div class="jumbotron">
+        <h2>Course Schedule</h2>
+        <div class="table-responsive">
+          {{ page.schedule | markdownify }}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.assignments %}
+      <div class="jumbotron">
+        <h2>Assignments & Projects</h2>
+        {{ page.assignments | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.resources %}
+      <div class="jumbotron">
+        <h2>Additional Resources</h2>
+        {{ page.resources | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.policies %}
+      <div class="jumbotron">
+        <h2>Course Policies</h2>
+        {{ page.policies | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if content != "" %}
+      <div class="jumbotron">
+        <h2>Additional Information</h2>
+        {{ content }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.table-responsive {
+  overflow-x: auto;
+}
+.table-responsive table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+.table-responsive th,
+.table-responsive td {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+}
+.table-responsive thead th {
+  background-color: #f8f9fa;
+}
+.jumbotron {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 0.3rem;
+}
+</style>

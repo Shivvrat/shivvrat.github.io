@@ -9,11 +9,23 @@ permalink: /research/
 
 ### **Research Interests**
 
-Computer Vision, Machine (Deep) learning and Artificial Intelligence.
+* **Foundations & Methods**
+
+  * Machine (Deep) Learning, Probabilistic Modeling and Inference, Combinatorial Optimization, Neurosymbolic AI, Explainability and Model Interpretability
+
+* **Applications**
+
+  * HCI studies involving Deep Learning and Neurosymbolic Models
+  * Computer Vision
+  * Video Understanding
+
+<!-- ### **Research Interests**
+
+Machine (Deep) learning, Artificial Intelligence, Neurosymbolic AI, Explainable AI, Probabilistic Methods, Combinatorial Optimization, Video Understanding and Computer Vision. -->
 
 ### **Current Research Focus**
 
-Probabilistic Graphical Models, tractable probabilistic modeling, integrating probabilistic models and deep learning models, neuro-symbolic AI, explainable AI and combinatorial optimization.
+Developing neurosymbolic models that integrate deep neural architectures with symbolic reasoning and probabilistic models; advancing tractable probabilistic modeling for efficient inference; creating neural network–based solvers for large-scale combinatorial optimization using differentiable optimization layers and learned heuristics; exploring methods for explainable AI in structured and hybrid systems.
 
 <div class="jumbotron">
 

@@ -28,7 +28,7 @@
 
   <!-- Education Section -->
   <div class="education-section">
-    <h5 class="section-title">Education</h5>
+    <div class="sidebar-title">Education</div>
     <ul class="education-list">
       {% if member.number_educ >= 3 %}
         <li>
@@ -57,7 +57,7 @@
 
   <!-- News Section -->
   <div class="news-container">
-    <h5 class="section-title">News</h5>
+    <div class="sidebar-title">News</div>
     
     <div class="news-grid">
       {% for article in site.data.news limit:3 %}
