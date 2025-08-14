@@ -65,34 +65,136 @@
 }
 
 /* Social Icons */
-.jumbotron a {
-  color: var(--secondary-blue);
-  margin-right: 10px;
-  transition: all 0.2s ease;
+.about-social-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-/* Social Icons - Subtle Hover */
-.jumbotron a:hover {
-  color: #1e40af;  /* Darker blue for subtle hover */
-  transform: translateY(-1px);
+.about-social-icons::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.about-social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--background-gray);
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.about-social-icons a:hover {
+  background: var(--primary-navy);
+  border-color: var(--primary-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.about-social-icons svg {
+  width: 20px !important;
+  height: 20px !important;
+  fill: currentColor !important;
+  transition: fill 0.2s ease !important;
+}
+
+.about-social-icons a:hover svg {
+  fill: var(--background) !important;
+}
+
+/* Override any SVG-specific styles from the includes */
+.about-social-icons svg * {
+  fill: inherit !important;
+  stroke: none !important;
+}
+
+/* Platform-specific colors */
+.about-social-icons a[title="Email"] {
+  color: #ea4335;
+}
+
+.about-social-icons a[title="Curriculum Vitae"] {
+  color: #8b4513;
+}
+
+.about-social-icons a[title="Google Scholar"] {
+  color: #4285f4;
+}
+
+.about-social-icons a[title="ORCID iD"] {
+  color: #a6ce39;
+}
+
+.about-social-icons a[title="LinkedIn"] {
+  color: #0a66c2;
+}
+
+.about-social-icons a[title="Twitter/X"] {
+  color: #1d9bf0;
+}
+
+.about-social-icons a[title="GitHub"] {
+  color: #24292f;
+}
+
+.about-social-icons a[title="ResearchGate"] {
+  color: #00ccbb;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .about-social-icons {
+    gap: 0.5rem;
+    max-width: 280px;
+  }
+  
+  .about-social-icons a {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .about-social-icons svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /* Education List */
-.jumbotron ul {
+.education-list {
   list-style: none;
   padding: 0;
-  margin: 15px 0;
+  margin: 1.5rem 0 1rem 0;
 }
 
-.jumbotron ul li {
-  padding: 8px 12px;
-  margin-bottom: 8px;
-  background: #f8f9fa;
+.education-list li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background: var(--background-gray);
   border-left: 3px solid var(--secondary-blue);
-  border-radius: 0 4px 4px 0;
-  font-size: 0.95rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
   color: var(--text-primary);
-  transition: transform 0.2s ease;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+.education-list li:hover {
+  background: var(--background-blue);
+  border-left-color: var(--primary-navy);
+  transform: translateX(2px);
 }
 
 /* Education List Hover - Simple */

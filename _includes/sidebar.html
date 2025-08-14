@@ -28,42 +28,36 @@
 
   <!-- Education Section -->
   <div class="education-section">
-    <h5 class="education-header">Education</h5>
-    <div class="education-timeline">
+    <h5 class="section-title">Education</h5>
+    <ul class="education-list">
       {% if member.number_educ >= 3 %}
-        <div class="education-item phd-item">
-          <div class="education-content">
-            <div class="degree-title">Ph.D.</div>
-            <div class="degree-details">CS, UTD</div>
-          </div>
-        </div>
+        <li>
+          <div class="degree">{{ member.education3degree }}</div>
+          <div class="institution">{{ member.education3institution }}</div>
+        </li>
       {% endif %}
       
       {% if member.number_educ >= 2 %}
-        <div class="education-item masters-item">
-          <div class="education-content">
-            <div class="degree-title">M.S.</div>
-            <div class="degree-details">CS, UTD</div>
-          </div>
-        </div>
+        <li>
+          <div class="degree">{{ member.education2degree }}</div>
+          <div class="institution">{{ member.education2institution }}</div>
+        </li>
       {% endif %}
       
       {% if member.number_educ >= 1 %}
-        <div class="education-item bachelors-item">
-          <div class="education-content">
-            <div class="degree-title">B.Tech.</div>
-            <div class="degree-details">CSE, IIITV</div>
-          </div>
-        </div>
+        <li>
+          <div class="degree">{{ member.education1degree }}</div>
+          <div class="institution">{{ member.education1institution }}</div>
+        </li>
       {% endif %}
-    </div>
+    </ul>
   </div>
     {% endfor %}
   </div>
 
   <!-- News Section -->
   <div class="news-container">
-    <h4 class="news-header">Latest News</h4>
+    <h5 class="section-title">News</h5>
     
     <div class="news-grid">
       {% for article in site.data.news limit:3 %}

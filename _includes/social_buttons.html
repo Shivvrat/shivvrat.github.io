@@ -1,0 +1,49 @@
+<div class="about-social-icons">
+  {% if include.member.email %}
+    <a href="mailto:{{ include.member.email }}" target="_blank" title="Email">
+      {% include icons/email.svg %}
+    </a>
+  {% endif %}
+
+  {% if include.member.cv %}
+    <a href="{{ site.url }}{{ site.baseurl }}/{{ include.member.cv }}" target="_blank" title="Curriculum Vitae">
+      {% include icons/cv.svg %}
+    </a>
+  {% endif %}
+
+  {% if include.member.scholar %}
+    <a href="{{ include.member.scholar }}" target="_blank" title="Google Scholar">
+      {% include icons/google-scholar-square.svg %}
+    </a>
+  {% endif %}
+
+  {% if include.member.orcid %}
+    <a href="{{ include.member.orcid }}" target="_blank" title="ORCID iD">
+      {% include icons/orcid-square.svg %}
+    </a>
+  {% endif %}
+
+  {% if include.member.linkedin %}
+    <a href="{{ include.member.linkedin }}" target="_blank" title="LinkedIn">
+      {% include icons/black-linkedin-logo-15915.svg %}
+    </a>
+  {% endif %}
+
+  {% if include.member.twitter %}
+    <a href="{{ include.member.twitter }}" target="_blank" title="Twitter/X">
+      {% include icons/x.svg %}
+    </a>
+  {% endif %}
+
+  {% if include.member.github %}
+    <a href="{{ include.member.github }}" target="_blank" title="GitHub">
+      {% include icons/github.svg %}
+    </a>
+  {% endif %}
+
+  {% if include.member.researchgate %}
+    <a href="{{ include.member.researchgate }}" target="_blank" title="ResearchGate">
+      {% include icons/researchgate-square.svg %}
+    </a>
+  {% endif %}
+</div>

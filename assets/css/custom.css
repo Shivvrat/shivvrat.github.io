@@ -71,12 +71,7 @@ ol.bibliography {
 
 /* Enhanced News Container - Core Palette Only */
 .news-container {
-  background: var(--background-gray);  /* Simple gray background */
-  border-radius: 12px;
-  box-shadow: 0 4px 24px var(--shadow-light), 0 2px 8px var(--shadow-medium);
-  padding: 2rem;
-  margin: 2rem 0;
-  border: 1px solid var(--border-light);
+
 }
 
 /* Professional News Header - Core Colors */

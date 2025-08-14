@@ -13,11 +13,16 @@
 #  education1: (2018- ) Senior Postdoc, Caltech (with <a href="https://colonius.caltech.edu" target="_blank">Tim Colonius</a>)
 #  education2: (2019) Visiting Researcher, MIT (with <a href="http://sandlab.mit.edu" target="_blank">Themis Sapsis</a>)
 #  education3: (2017-8) Postdoctor Researcher <br> <a href="https://xpacc.illinois.edu" target="_blank">XPACC</a> (with <a href="https://sites.usc.edu/hptcl/" target="_blank">Carlos Pantano</a>, <a href="http://acoustics.ae.illinois.edu/" target="_blank">Dan Bodony</a>, <a href="http://jbfreund.mechse.illinois.edu/" target="_blank">Jon Freund</a>)
-  education1: B.Tech Computer Science and Engineering<br>
+  education1: B.Tech in Computer Science and Engineering<br>
     Indian Institute of Information Technology Vadodara
-  education2: M.S. CS<br> The University of Texas at Dallas
-    <br>with certificate in <a href="https://cs.utdallas.edu/education/graduate/" target="_blank">Computer Science</a>
-  education3: Ph.D. CS<br> The University of Texas at Dallas
+  education1degree: B.Tech in Computer Science and Engineering
+  education1institution: Indian Institute of Information Technology Vadodara
+  education2: M.S. in Computer Science<br> The University of Texas at Dallas
+  education2degree: M.S. in Computer Science
+  education2institution: The University of Texas at Dallas
+  education3: Ph.D. in Computer Science<br> The University of Texas at Dallas
+  education3degree: Ph.D. in Computer Science
+  education3institution: The University of Texas at Dallas
 #  education1short: (2018- ) Senior Postdoc, Caltech
 #  education2short: (2019) Visiting Researcher, MIT
 #  education3short: (2017-8) Postdoc, XPACC
