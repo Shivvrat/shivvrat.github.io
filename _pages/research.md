@@ -9,15 +9,8 @@ permalink: /research/
 
 ### **Research Interests**
 
-* **Foundations & Methods**
-
-  * Machine (Deep) Learning, Probabilistic Modeling and Inference, Combinatorial Optimization, Neurosymbolic AI, Explainability and Model Interpretability
-
-* **Applications**
-
-  * HCI studies involving Deep Learning and Neurosymbolic Models
-  * Computer Vision
-  * Video Understanding
+* **Foundations & Methods** &mdash; Machine (Deep) Learning, Probabilistic Modeling and Inference, Combinatorial Optimization, Neurosymbolic AI, Explainable and Interpretable Models
+* **Applications** &mdash; Human–AI Interaction with Neuro-symbolic and Deep Models, Computer Vision, Video Understanding, and Language Reasoning
 
 <!-- ### **Research Interests**
 
@@ -25,7 +18,7 @@ Machine (Deep) learning, Artificial Intelligence, Neurosymbolic AI, Explainable 
 
 ### **Current Research Focus**
 
-Developing neurosymbolic models that integrate deep neural architectures with symbolic reasoning and probabilistic models; advancing tractable probabilistic modeling for efficient inference; creating neural network–based solvers for large-scale combinatorial optimization using differentiable optimization layers and learned heuristics; exploring methods for explainable AI in structured and hybrid systems.
+Dr. Arya's current research focuses on developing neuro-symbolic models that integrate deep neural architectures with symbolic reasoning and probabilistic frameworks; advancing tractable probabilistic modeling to support efficient and scalable inference; creating neural network–based solvers for large-scale combinatorial optimization; and designing methods for explainable AI in structured and hybrid systems, with applications in computer vision, activity recognition, and multimodal learning.
 
 <div class="jumbotron">
 

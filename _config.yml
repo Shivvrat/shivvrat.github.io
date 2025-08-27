@@ -10,8 +10,8 @@ locale                   : "en-US"
 title                    : "Shivvrat Arya"
 title_separator          : "-"
 name                     : &name "Shivvrat Arya"
-email: shivvrat.arya@utdallas.edu
-description              : &description "Ph.D. in Computer Science"
+email: shivvrat.arya@njit.edu
+description              : &description "Assistant Professor, NJIT"
 #description: Academic webpage of Dr. Shivvrat Arya
 baseurl: ""
 url                      : ""
@@ -30,18 +30,19 @@ google_tag_manager: GTM-WNDXK54
 # Footer info
 affiliation: >
     Shivvrat Arya<br/>
-    PhD<br/>
-    <a href="https://cs.utdallas.edu/" target="_blank">Department of Computer Science</a><br/>
-    The University of Texas at Dallas
+    Assistant Professor<br/>
+    <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/>
+    New Jersey Institute of Technology
 
 location: >
-  <a href="https://cs.utdallas.edu/cmachinelearning/" target="_blank">The Center for  Machine Learning</a><br/>
-  The University of Texas at Dallas <br/>
-  800 W Campbell Rd<br/>
-  Richardson, TX 75080, ECSS 3.416
+  GITC 4304<br/>
+  <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/>
+  Ying Wu College of Computing<br/>
+  New Jersey Institute of Technology <br/>
+  Newark, NJ 07102
 
 contact: >
-    <a href="mailto:shivvrat.arya@utdallas.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Shivvrat via email</a> <br/>
+    <a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/>
 #    <a href="/aboutwebsite.html"><i class="fa fa-github fa-1x"></i> Use this site as a template!</a>
 
 # Do you want to group your publications by year? {true/false}
@@ -89,13 +90,13 @@ kramdown:
 author:
   name             : "Shivvrat Arya"
   avatar           : "Shivvrat_Arya_headshot.png"
-  bio              : "Ph.D. Student"
+  bio              : "Assistant Professor, NJIT"
   location         :
   employer         :
   pubmed           :
   orcid            : "http://orcid.org/0000-0002-9727-2533"
   googlescholar    : "https://scholar.google.com/citations?user=eM1co-kAAAAJ&hl=en"
-  email            : "shivvrat.arya@utdallas.edu"
+  email            : "shivvrat.arya@njit.edu"
   researchgate     : "https://www.researchgate.net/profile/Shivvrat-Arya"
   uri              :
   bitbucket        :
