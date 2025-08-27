@@ -46,131 +46,85 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-navy);
 }
 
-/* Primary Title - Distinguished elegance */
+/* Primary Title - Minimal and Professional */
 h1 { 
-  font-size: clamp(2.25rem, 6vw, 3rem);
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 700;
-  letter-spacing: -0.025em;
-  padding: 0 0 1.25rem;
+  color: var(--primary-navy);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  background: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+h1:hover {
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+/* Section Title - Clean and Focused */
+h2 { 
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--primary-navy);
+  padding: 0.75rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-light);
   position: relative;
-  background: var(--border-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
-h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right,
-    var(--primary-navy) 0%,
-    var(--secondary-blue) 50%,
-    transparent 100%
-  );
-}
-
-h1::before {
+h2::after {
   content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
-  width: var(--accent-width);
-  height: 4px;
-  background: var(--border-gradient);
-  border-radius: 0 2px 2px 0;
-}
-
-/* Section Title - Scholarly distinction */
-h2 { 
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  margin-left: -1.5rem;
-  background: linear-gradient(to right,
-    var(--background-blue) 0%,
-    var(--background-blue) 3px,
-    transparent 100%
-  );
-  border-radius: 0 4px 4px 0;
-  box-shadow: 
-    inset 3px 0 0 var(--secondary-blue),
-    0 2px 4px var(--shadow-light);
-}
-
-/* Subsection - Academic clarity */
-h3 { 
-  font-size: clamp(1.5rem, 3vw, 1.8rem);
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  padding-bottom: 0.5rem;
-}
-
-h3::before {
-  content: '';
-  display: inline-block;
-  width: 1.5rem;
+  width: 60px;
   height: 2px;
-  margin-right: 1rem;
-  background: var(--border-gradient);
-  transition: width 0.3s ease;
-}
-
-h3:hover::before {
-  width: 2.5rem;
-}
-
-/* Topic Header - Research emphasis */
-h4 { 
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  font-weight: 600;
-  color: var(--text-primary);
-  padding-left: 1rem;
-  border-left: 2px solid var(--secondary-blue);
-  margin-left: -1rem;
-  transition: all 0.3s ease;
-}
-
-h4:hover {
-  color: var(--primary-navy);
-  border-left-width: 3px;
-  padding-left: 1.5rem;
-}
-
-/* Subtitle - Scholarly precision */
-h5 { 
-  font-size: clamp(1.1rem, 2vw, 1.2rem);
-  font-weight: 600;
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  letter-spacing: 0.04em;
-}
-
-h5::before {
-  content: '';
-  width: 6px;
-  height: 6px;
   background: var(--secondary-blue);
-  border-radius: 50%;
-  opacity: 0.8;
 }
 
-/* Minor Title - Academic detail */
-h6 { 
+/* Subsection - Subtle Distinction */
+h3 { 
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--secondary-blue);
+  background: var(--background-gray);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Topic Header - Minimal Emphasis */
+h4 { 
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Subtitle - Clean and Simple */
+h5 { 
   font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--border-light);
+}
+
+/* Minor Title - Subtle Detail */
+h6 { 
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
-  padding-left: 1rem;
-  border-left: 1px solid var(--border-light);
-  font-variant: small-caps;
-  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 /* Responsive Adjustments */
