@@ -1,14 +1,23 @@
-@inproceedings{
-2025sine,
-title={{SINE}: Scalable {MPE} Inference for Probabilistic Graphical Models using Advanced Neural Embeddings},
-author={Shivvrat Arya and Tahrima Rahman and Vibhav Giridhar Gogate},
-booktitle={The 28th International Conference on Artificial Intelligence and Statistics},
-year={2025},
-url={https://openreview.net/forum?id=6tZxEVlpnL}, 
-code={https://github.com/Shivvrat/SINE-Advanced-Embedding-And-Discretization-For-MPE-in-PGMs}, 
-file={SINE Scalable MPE Inference.pdf},
-library={https://neupi.readthedocs.io/en/latest/}
+
+@InProceedings{pmlr-v258-arya25a,
+  title = 	 {SINE: Scalable MPE Inference for Probabilistic Graphical Models using Advanced Neural Embeddings},
+  author =       {Arya, Shivvrat and Rahman, Tahrima and Gogate, Vibhav Giridhar},
+  booktitle = 	 {Proceedings of The 28th International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {4465--4473},
+  year = 	 {2025},
+  editor = 	 {Li, Yingzhen and Mandt, Stephan and Agrawal, Shipra and Khan, Emtiyaz},
+  volume = 	 {258},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {03--05 May},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v258/main/assets/arya25a/arya25a.pdf},
+  url = 	 {https://proceedings.mlr.press/v258/arya25a.html},
+  abstract = 	 {Our paper builds on the recent trend of using neural networks trained with self-supervised or supervised learning to solve the Most Probable Explanation (MPE) task in discrete graphical models. At inference time, these networks take an evidence assignment as input and generate the most likely assignment for the remaining variables via a single forward pass. We address two key limitations of existing approaches: (1) the inability to fully exploit the graphical model’s structure and parameters, and (2) the suboptimal discretization of continuous neural network outputs. Our approach embeds model structure and parameters into a more expressive feature representation, significantly improving  performance. Existing methods rely on standard thresholding, which often yields suboptimal results due to the non-convexity of the loss function. We introduce two methods to overcome discretization challenges: (1) an external oracle-based approach that infers uncertain variables using additional evidence from confidently predicted ones, and (2) a technique that identifies and selects the highest-scoring discrete solutions near the continuous output. Experimental results on various probabilistic models demonstrate the effectiveness and scalability of our approach, highlighting its practical impact.},
+  code={https://github.com/Shivvrat/SINE-Advanced-Embedding-And-Discretization-For-MPE-in-PGMs}, 
+  file={SINE Scalable MPE Inference.pdf},
+  library={https://neupi.readthedocs.io/en/latest/}
 }
+
 @inproceedings{
 2024captaincookdnips,
 title={CaptainCook4D: A Dataset for Understanding Errors in Procedural Activities},
