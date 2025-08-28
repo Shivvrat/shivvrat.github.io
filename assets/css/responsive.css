@@ -1,41 +1,81 @@
-:root {
-  /* Core Academic Palette - Clean and Professional */
-  /* Primary Colors (95% usage) */
-  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
-  --secondary-blue: #5375e2;      /* Royal blue for interactive elements only */
-  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
-  --text-secondary: #555555;      /* Medium gray for secondary text */
-  --background: #ffffff;          /* Pure white */
-  --background-gray: #f8f9fa;     /* Very light gray */
-  --background-blue: #f0f4ff;     /* Light blue tint for hover states */
-  --border-light: #e9ecef;        /* Light border */
-  
-  /* Accent Colors (5% usage - only where needed) */
-  --accent-gold: #c8b18b;         /* ONLY for awards/honors */
-  --accent-green: #16cc5c;        /* ONLY for success states */
-  --error: #dc3545;               /* ONLY for errors/warnings */
-  
-  /* Shadows - Blue-tinted for depth */
-  --shadow-light: rgba(0, 51, 102, 0.08);
-  --shadow-medium: rgba(0, 51, 102, 0.12);
-}
+/* =========================================================
+   Academic Site CSS (v2) — accessible, fast, maintainable
+   Layers: tokens → resets → base → layout → components → utilities
+   ========================================================= */
+@layer tokens, resets, base, layout, components, utilities;
 
-/* Professional Typography */
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.65;
-  color: var(--text-primary);
-  font-size: 16px;
-  font-weight: 400;
-  background-color: var(--background);
-}
+/* ------------------------- */
+/* TOKENS                    */
+/* ------------------------- */
+@layer tokens {
+  :root {
+    /* Color scheme (light) */
+    color-scheme: light dark;
 
-/* Refined Academic Typography */
-:root {
-  --heading-font: 'Crimson Text', 'Garamond', 'Georgia', serif;
-  --heading-spacing: clamp(2.5rem, 6vw, 3.5rem);
-  --accent-width: clamp(40px, 8vw, 60px);
-  --border-gradient: linear-gradient(to right, var(--primary-navy), var(--secondary-blue));
+    /* Palette */
+    --primary-navy: #003366;        /* Deep blue for headers and primary elements */
+    --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
+    --text-primary: #2c3e50;        /* Dark blue-gray for main text */
+    --text-secondary: #555555;      /* Medium gray for secondary text */
+    --text-muted: #6b7280;          /* Muted text */
+    
+    --background: #ffffff;          /* Pure white */
+    --background-gray: #f8f9fa;     /* Very light gray */
+    --background-blue: #f0f4ff;     /* Light blue tint for hover states */
+    --border-light: #e9ecef;        /* Light border */
+    
+    /* Accent Colors (5% usage) */
+    --accent-gold: #c8b18b;         /* ONLY for awards/honors */
+    --accent-green: #16cc5c;        /* ONLY for success states */
+    --error: #dc3545;               /* ONLY for errors/warnings */
+    
+    /* Shadows */
+    --shadow-light: rgba(0, 51, 102, 0.08);
+    --shadow-medium: rgba(0, 51, 102, 0.12);
+
+    /* Typography */
+    --heading-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --body-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono-font: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+
+    /* Spacing */
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-3: .75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+
+    /* Radius */
+    --radius-sm: .375rem;
+    --radius-md: .75rem;
+    --radius-lg: 1rem;
+
+    /* Motion */
+    --ease: cubic-bezier(.4,0,.2,1);
+    --duration-fast: 120ms;
+    --duration-med: 220ms;
+  }
+
+  /* Dark mode token shifts */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #e5e7eb;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --background: #0b1220;
+      --background-gray: #0f172a;
+      --background-blue: #111827;
+
+      --border-light: #233044;
+      --border-accent: #2f3e57;
+
+      --shadow-light: rgba(0,0,0,.5);
+      --shadow-medium: rgba(0,0,0,.7);
+    }
+  }
 }
 
 /* =========================================================
@@ -481,27 +521,36 @@ body {
   h6 { font-size: 0.9rem; }
 }
 
-/* Professional Content Containers */
+/* Content Containers */
+.container {
+  inline-size: min(1100px, 92vw);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+@media (min-width: 640px) { 
+  .container { 
+    padding-inline: var(--space-5); 
+  } 
+}
+
+@media (min-width: 960px) { 
+  .container { 
+    padding-inline: var(--space-6); 
+  } 
+}
+
 .jumbotron {
-  margin: 2.5rem 0;  /* Remove auto centering, use 0 for left/right */
-  padding: 2.5rem;
-  background: var(--background);  /* Solid white instead of gradient */
-  border-radius: 12px;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 4px 24px var(--shadow-light), 0 2px 8px var(--shadow-medium);
+  margin: var(--space-6) 0;
+  padding: 0;
+  background: none;
+  border: none;
   position: relative;
-  overflow: hidden;
-  width: 100%;  /* Take full width of container like other content */
+  width: 100%;
 }
 
 .jumbotron::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--primary-navy);  /* Blue instead of gold for regular content */
+  display: none;
 }
 
 /* Professional Alert Styling */
@@ -558,66 +607,73 @@ a:hover {
   text-underline-offset: 3px;
 }
 
-/* Professional Button System - Minimal Transparent Header Buttons */
+/* Button System */
 .btn {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;  /* Much smaller padding */
-  border-radius: 3px;
-  font-size: 0.8125rem;  /* Smaller font */
-  font-weight: 400;  /* Even lighter weight */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
-  border: 1px solid var(--primary-navy);  /* Navy border to match text */
+  border: 1px solid var(--border-light);
+  background: var(--background);
+  color: var(--text-primary);
+  transition: all var(--duration-fast) var(--ease);
   cursor: pointer;
-  margin: 0.125rem;  /* Minimal margins */
-  transition: all 0.2s ease;
-  background: transparent;  /* Completely transparent */
-  color: var(--primary-navy);
-  box-shadow: none;
+  min-height: 2.5rem;
 }
 
 .btn:hover {
-  transform: none;
-  background: rgba(0, 51, 102, 0.05);  /* Very subtle hover effect */
+  border-color: var(--secondary-blue);
+  background: var(--background-blue);
+  transform: translateY(-1px);
   text-decoration: none;
-  box-shadow: none;
 }
 
+.btn i {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Button Variants */
 .btn-primary {
-  color: var(--primary-navy);
-  background: transparent;
-  border: 1px solid var(--primary-navy);  /* Navy border */
+  background: var(--primary-navy);
+  color: white;
+  border-color: var(--primary-navy);
 }
 
 .btn-primary:hover {
-  background: rgba(0, 51, 102, 0.1);  /* Subtle blue tint */
-  color: var(--primary-navy);
+  background: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+  color: white;
 }
 
 .btn-success {
-  color: var(--accent-green);
-  background: transparent;
-  border: 1px solid var(--accent-green);  /* Green border */
-}
-
-.btn-success:hover {
-  background: rgba(22, 204, 92, 0.1);  /* Subtle green tint */
-  color: var(--accent-green);
+  background: var(--accent-green);
+  color: white;
+  border-color: var(--accent-green);
 }
 
 .btn-danger {
-  color: var(--error);
-  background: transparent;
-  border: 1px solid var(--error);  /* Red border */
+  background: var(--error);
+  color: white;
+  border-color: var(--error);
 }
 
-.btn-danger:hover {
-  background: rgba(220, 53, 69, 0.1);  /* Subtle red tint */
-  color: var(--error);
-}
-
+/* Button Sizes */
 .btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.75rem;
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.85rem;
+  min-height: 2rem;
+}
+
+.btn-lg {
+  padding: var(--space-3) var(--space-5);
+  font-size: 1rem;
+  min-height: 3rem;
 }
 
 /* Academic Badge System */
