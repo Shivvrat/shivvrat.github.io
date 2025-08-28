@@ -449,34 +449,36 @@ body {
     --accent-width: 30px;
   }
 
-  /* Typography */
-  h1 { 
-    font-size: 2rem; 
-    padding-bottom: 1rem;
-    text-align: left;
+  h1 { padding-bottom: 1rem; }
+  h2 { margin-left: 0; padding: 0.5rem 1rem; }
+  h3::before { width: 1rem; margin-right: 0.75rem; }
+  h4 { margin-left: 0; }
+  h5 { gap: 0.5rem; }
+  h6 { padding-left: 0.75rem; }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --heading-spacing: 2rem;
+    --accent-width: 30px;
   }
-  h2 { 
-    font-size: 1.75rem;
-    margin-left: 0; 
-    padding: 0.5rem 1rem;
-  }
-  h3 { 
-    font-size: 1.4rem;
-    border-bottom: none;
-  }
-  h4 { 
-    font-size: 1.2rem;
-    margin-left: 0;
-  }
-  h5 { 
-    font-size: 1rem;
-    gap: 0.5rem;
-    letter-spacing: 0.05em;
-  }
-  h6 { 
-    font-size: 0.9rem;
-    padding-left: 0.75rem;
-  }
+  
+  h1 { text-align: left; }
+  h2 { margin-left: 0; padding-left: 1rem; }
+  h3 { border-bottom: none; }
+  h4::before { width: 8px; }
+  h5 { letter-spacing: 0.05em; }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.4rem; }
+  h4 { font-size: 1.2rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
 }
 
 /* Professional Content Containers */
