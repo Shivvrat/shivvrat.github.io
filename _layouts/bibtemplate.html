@@ -4,174 +4,185 @@
 <link rel="stylesheet" href="{{ '/assets/css/bibliography.css' | relative_url }}">
 
 <div class="bib-entry">
-  <!-- Title -->
-  <div class="bib-title">
-    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank" rel="noopener">
-      {{ entry.title }}
-    </a>
-  </div>
-
-  <!-- Authors -->
-  <div class="bib-authors">
-    {{ entry.author | 
-      replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | 
-      replace_first: 'Arya, S.', '<b>Arya, S.</b>' | 
-      replace_first: 'Arya SV', '<b>Arya SV</b>' | 
-      replace_first: 'Arya S', '<b>Arya S</b>' | 
-      replace_first: 'Shivvrat', '<b>Shivvrat</b>' | 
-      replace_first: 'Arya', '<b>Arya</b>' | 
-      replace_first: 'Oral', '<b>Oral</b>' 
-    }}
-  </div>
-
-  <!-- Venue/Journal -->
-  <div class="bib-venue">
-    {% if entry.journal or entry.booktitle %}
-      In 
-      {% if entry.journal %}
-        {{ entry.journal | replace: '(', '<b>(' | replace: ')', ')</b>' }}
-      {% elsif entry.booktitle %}
-        {{ entry.booktitle | replace: '(', '<b>(' | replace: ')', ')</b>' }}
-      {% endif %}
-      , {{ entry.year }}
-    {% endif %}
-  </div>
-
-  <!-- Action Buttons and Award Section -->
-  <div class="bib-actions-container">
-    <div class="bib-actions">
-      {% if entry.file %}
-        {% assign bibfile = "/papers/" | append: entry.file %}
-        {% assign bibtest = false %}
-        {% for file in site.static_files %}
-          {% if file.path contains bibfile %}
-            {% assign bibtest = true %}
-          {% endif %}
-        {% endfor %}
-        {% if bibtest %}
-          <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank">
-            <button class="btn btn-pdf" onclick="handlePdfClick(this)" aria-label="Download PDF">
-              <i class="fas fa-file-pdf" aria-hidden="true"></i>
-              <span class="btn-text">PDF</span>
-            </button>
-          </a>
-        {% endif %}
-      {% endif %}
-
+  <!-- Paper Header -->
+  <div class="paper-header">
+    <div class="paper-title">
       {% if entry.doi %}
-        {% if entry.type == 'unpublished' %}
-          <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank">
-            <button class="btn btn-arxiv">
-              <i class="ai ai-arxiv"></i> ARXIV
-            </button>
-          </a>
-        {% else %}
-          <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank">
-            <button class="btn btn-doi" data-tooltip="View on DOI">
-              <i class="ai ai-doi"></i> DOI
-            </button>
-          </a>
-        {% endif %}
-      {% endif %}
-
-      {% if entry.code %}
-        <a href="{{ entry.code }}" target="_blank">
-          <button class="btn btn-code">
-            <i class="fas fa-code"></i> CODE
-          </button>
+        <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank" rel="noopener">
+          {{ entry.title }}
         </a>
-      {% endif %}
-
-      {% if entry.library %}
-        <a href="{{ entry.library }}" target="_blank">
-          <button class="btn btn-library">
-            <i class="fas fa-code"></i> LIBRARY
-          </button>
-        </a>
-      {% endif %}
-      {% if entry.website %}
-        <a href="{{ entry.website }}" target="_blank">
-          <button class="btn btn-website">
-            <i class="fas fa-globe"></i> WEBSITE
-          </button>
-        </a>
-      {% endif %}
-
-      {% if entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
-        <button class="btn btn-bib" onclick="toggleBibtex{{entry.key}}()">
-          <i class="fas fa-quote-right"></i> BIB
-        </button>
-      {% endif %}
-
-      {% if entry.abstract %}
-        <button class="btn btn-abstract" onclick="toggleAbstract{{entry.key}}()">
-          <i class="fas fa-align-left"></i> ABSTRACT
-        </button>
+      {% else %}
+        {{ entry.title }}
       {% endif %}
     </div>
   </div>
 
+  <!-- Paper Info -->
+  <div class="paper-info">
+    <div class="paper-authors">
+      <i class="fas fa-users"></i>
+      <span>{{ entry.author | replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | replace_first: 'Arya, S.', '<b>Arya, S.</b>' | replace_first: 'Arya SV', '<b>Arya SV</b>' | replace_first: 'Arya S', '<b>Arya S</b>' | replace_first: 'Shivvrat', '<b>Shivvrat</b>' | replace_first: 'Arya', '<b>Arya</b>' | replace_first: 'Oral', '<b>Oral</b>' }}</span>
+    </div>
+    {% if entry.journal or entry.booktitle %}
+      <div class="paper-venue">
+        <i class="fas fa-book"></i>
+        {% if entry.journal %}
+          {{ entry.journal | replace: '(', '<b>(' | replace: ')', ')</b>' }}, {{ entry.year }}
+        {% elsif entry.booktitle %}
+          {{ entry.booktitle | replace: '(', '<b>(' | replace: ')', ')</b>' }}, {{ entry.year }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Paper Type -->
+  <!-- <div class="paper-type">
+    {% if entry.type == 'article' %}
+      <span class="paper-badge journal">
+        <i class="fas fa-book-open"></i> Journal Article
+      </span>
+    {% elsif entry.type == 'inproceedings' %}
+      <span class="paper-badge conference">
+        <i class="fas fa-users"></i> Conference Paper
+      </span>
+    {% elsif entry.type == 'unpublished' %}
+      <span class="paper-badge preprint">
+        <i class="fas fa-file-alt"></i> Preprint
+      </span>
+    {% elsif entry.type == 'workshop' %}
+      <span class="paper-badge workshop">
+        <i class="fas fa-chalkboard-teacher"></i> Workshop Paper
+      </span>
+    {% endif %}
+  </div> -->
+
+  <!-- Paper Resources -->
+  <div class="paper-resources">
+    {% if entry.file %}
+      {% assign bibfile = "/papers/" | append: entry.file %}
+      {% assign bibtest = false %}
+      {% for file in site.static_files %}
+        {% if file.path contains bibfile %}
+          {% assign bibtest = true %}
+        {% endif %}
+      {% endfor %}
+      {% if bibtest %}
+        <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank" class="btn btn-pdf">
+          <i class="fas fa-file-pdf"></i>
+          <span class="btn-text">PDF</span>
+        </a>
+      {% endif %}
+    {% endif %}
+
+    {% if entry.doi %}
+      {% if entry.type == 'unpublished' %}
+        <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank" class="btn btn-arxiv">
+          <i class="ai ai-arxiv"></i>
+          <span class="btn-text">arXiv</span>
+        </a>
+      {% else %}
+        <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank" class="btn btn-doi">
+          <i class="ai ai-doi"></i>
+          <span class="btn-text">DOI</span>
+        </a>
+      {% endif %}
+    {% endif %}
+
+    {% if entry.code %}
+      <a href="{{ entry.code }}" target="_blank" class="btn btn-code">
+        <i class="fas fa-code"></i>
+        <span class="btn-text">Code</span>
+      </a>
+    {% endif %}
+
+    {% if entry.library %}
+      <a href="{{ entry.library }}" target="_blank" class="btn btn-library">
+        <i class="fas fa-book"></i>
+        <span class="btn-text">Library</span>
+      </a>
+    {% endif %}
+
+    {% if entry.website %}
+      <a href="{{ entry.website }}" target="_blank" class="btn btn-website">
+        <i class="fas fa-globe"></i>
+        <span class="btn-text">Website</span>
+      </a>
+    {% endif %}
+
+    {% if entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
+      {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+      <button class="btn btn-bib" onclick="toggleBibtex{{clean_key}}()">
+        <i class="fas fa-quote-right"></i>
+        <span class="btn-text">BibTeX</span>
+      </button>
+    {% endif %}
+
+    {% if entry.abstract %}
+      {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+      <button class="btn btn-abstract" onclick="toggleAbstract{{clean_key}}()">
+        <i class="fas fa-align-left"></i>
+        <span class="btn-text">Abstract</span>
+      </button>
+    {% endif %}
+  </div>
+
+  <!-- Awards and Certificates -->
   {% if entry.comment or entry.certificate %}
-    <div class="paper-comment-container">
+    <div class="paper-highlights">
       {% if entry.comment %}
-        <div class="paper-comment">
-          <div class="award-icon">
-            <i class="fas fa-award"></i>
-          </div>
-          <div class="award-content">
-            <span class="award-text">{{entry.comment}}</span>
-          </div>
+        <div class="paper-award">
+          <i class="fas fa-award"></i>
+          <span>{{entry.comment}}</span>
         </div>
       {% endif %}
       
       {% if entry.certificate %}
-        <div class="certificate-container">
-          <a href="{{ entry.certificate }}" target="_blank">
-            <button class="btn btn-certificate">
-              <i class="fas fa-certificate"></i> CERTIFICATE
-            </button>
-          </a>
-        </div>
+        <a href="{{ entry.certificate }}" target="_blank" class="paper-certificate">
+          <i class="fas fa-certificate"></i>
+          <span>Certificate</span>
+        </a>
       {% endif %}
     </div>
   {% endif %}
 
+  <!-- Expandable Content -->
   <!-- Bibtex Content -->
-  {% if entry.abstract %}
-    <div id="a{{entry.key}}" class="bib-content bibtex-content" aria-label="BibTeX citation">
+  {% if entry.bibtex %}
+    {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+    <div id="a{{clean_key}}" class="bib-content bibtex-content" style="display: none;" aria-label="BibTeX citation">
       <div class="content-header">
         <span>BibTeX Citation</span>
-        <button class="copy-btn" onclick="copyToClipboard('a{{entry.key}}')" aria-label="Copy citation">
+        <button class="copy-btn" onclick="copyToClipboard('a{{clean_key}}')" aria-label="Copy citation">
           <i class="fas fa-copy"></i>
         </button>
       </div>
       <pre><code>{{ entry.bibtex }}</code></pre>
     </div>
-  {% else %}
-    <div id="a{{entry.key}}" class="bib-content bibtex-content">
-      <pre>{{ entry.bibtex }}</pre>
-    </div>
   {% endif %}
 
   <!-- Abstract Content -->
-  <div id="b{{entry.key}}" class="bib-content abstract-content">
-    <div class="content-header">
-      <span>Abstract</span>
-      <button class="copy-btn" onclick="copyToClipboard('b{{entry.key}}')" aria-label="Copy abstract">
-        <i class="fas fa-copy"></i>
-      </button>
+  {% if entry.abstract %}
+    {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+    <div id="b{{clean_key}}" class="bib-content abstract-content" style="display: none;">
+      <div class="content-header">
+        <span>Abstract</span>
+        <button class="copy-btn" onclick="copyToClipboard('b{{clean_key}}')" aria-label="Copy abstract">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+      <pre>{{entry.abstract}}</pre>
     </div>
-    <pre>{{entry.abstract}}</pre>
-  </div>
+  {% endif %}
 </div>
 
 <script>
-function toggleBibtex{{entry.key}}() {
-  toggleElement('a{{entry.key}}');
+{% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+function toggleBibtex{{clean_key}}() {
+  toggleElement('a{{clean_key}}');
 }
 
-function toggleAbstract{{entry.key}}() {
-  toggleElement('b{{entry.key}}');
+function toggleAbstract{{clean_key}}() {
+  toggleElement('b{{clean_key}}');
 }
 
 function toggleElement(elementId) {
@@ -206,17 +217,229 @@ async function copyToClipboard(elementId) {
     }, 2000);
   }
 }
-
-// Add loading state handler
-function handlePdfClick(btn) {
-  btn.classList.add('loading');
-  const btnText = btn.querySelector('.btn-text');
-  const originalText = btnText.textContent;
-  btnText.textContent = 'Loading...';
-  
-  setTimeout(() => {
-    btn.classList.remove('loading');
-    btnText.textContent = originalText;
-  }, 3000);
-}
 </script>
+
+<style>
+/* Bibliography Page Headings */
+.bib-section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin: 2.5rem 0 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.bib-subsection-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.bib-year-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .bib-section-title {
+    font-size: 1.75rem;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .bib-subsection-title {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .bib-year-title {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 1rem;
+  }
+}
+
+/* Enhanced Paper Entry Spacing */
+.bib-entry {
+  background: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.bib-entry:hover {
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+/* Remove jumbotron background and adjust spacing */
+.jumbotron {
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.jumbotron::before {
+  display: none;
+}
+
+.paper-header {
+  margin-bottom: 1.5rem;
+}
+
+.paper-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  line-height: 1.4;
+}
+
+.paper-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.paper-title a:hover {
+  color: var(--secondary-blue);
+}
+
+.paper-info {
+  margin: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.paper-authors, .paper-venue {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.paper-authors i {
+  color: var(--secondary-blue);
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+.paper-venue i {
+  color: var(--secondary-blue);
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+.paper-authors span {
+  flex: 1;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.paper-authors b {
+  color: var(--primary-navy);
+  font-weight: 600;
+}
+
+.paper-type {
+  margin: 1.25rem 0;
+}
+
+.paper-resources {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.paper-highlights {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.paper-award {
+  display: inline-flex;  /* Changed to inline-flex */
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #92400e;  /* Darker golden brown for better contrast */
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff7ed;  /* Warm light background */
+  border: 1px solid #fed7aa;  /* Warm golden border */
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: fit-content;  /* Only take width of content */
+}
+
+.paper-award:hover {
+  background: #ffedd5;  /* Slightly darker on hover */
+  transform: translateX(2px);
+}
+
+.paper-award i {
+  color: #d97706;  /* Brighter golden icon */
+  font-size: 1rem;
+  flex-shrink: 0;  /* Prevent icon from shrinking */
+}
+
+/* Certificate styling to match award */
+.paper-certificate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #92400e;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.paper-certificate:hover {
+  background: #ffedd5;
+  transform: translateX(2px);
+  text-decoration: none;
+}
+
+.paper-certificate i {
+  color: #d97706;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Add spacing between award and certificate when they're next to each other */
+.paper-award + .paper-certificate {
+  margin-left: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .bib-entry {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .paper-resources {
+    gap: 0.5rem;
+  }
+}
+</style>

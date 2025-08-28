@@ -193,7 +193,7 @@ h6 {
 .alert {
   padding: 1.5rem 2rem;
   border-radius: 8px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-left: 4px solid;
   font-weight: 500;
   position: relative;
@@ -208,6 +208,13 @@ h6 {
   font-size: 1.1rem;  /* Slightly larger text */
   position: relative;
   overflow: hidden;
+
+  /* reduce the margin-bottom */
+  margin-bottom: 1rem;
+  /* reduce the padding */
+  padding: 1rem 1.5rem;
+  /* reduce bnottom padding */
+  padding-bottom: 0.1rem;
 }
 
 .alert-info::before {

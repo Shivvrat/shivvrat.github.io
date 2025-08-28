@@ -15,10 +15,8 @@ scholar:
 {% bibliography --query @talk[type ^= invited] %}
 </div> -->
 
-<div class="jumbotron">
 ### Award Talks
 {% bibliography --query @talk[type ^= award] %}
-</div>
 
 
 <!-- <div class="jumbotron">
