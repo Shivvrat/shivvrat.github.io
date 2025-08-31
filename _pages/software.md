@@ -6,14 +6,24 @@ permalink: /software/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/bibliography.css' | relative_url }}">
 
 <div class="jumbotron">
 
-### **NeuPI: A Library for Neural Probabilistic Inference**
+<h2><b>NeuPI: A Library for Neural Probabilistic Inference</b></h2>
 
-<a href="https://github.com/Shivvrat/NeuPI" target="_blank"><button class="btn btn-primary btn-sm">GITHUB</button></a>
-<a href="https://neupi.readthedocs.io/en/latest/" target="_blank"><button class="btn btn-success btn-sm">DOCS</button></a>
-<a href="https://neupi.readthedocs.io/en/latest/details/paper_details.html" target="_blank"><button class="btn btn-danger btn-sm">PAPERS</button></a>
+<a href="https://github.com/Shivvrat/NeuPI" target="_blank" class="btn btn-code">
+  <i class="fas fa-code"></i>
+  <span class="btn-text">GitHub</span>
+</a>
+<a href="https://neupi.readthedocs.io/en/latest/" target="_blank" class="btn btn-library">
+  <i class="fas fa-book"></i>
+  <span class="btn-text">Docs</span>
+</a>
+<a href="https://neupi.readthedocs.io/en/latest/details/paper_details.html" target="_blank" class="btn btn-doi">
+  <i class="fas fa-file-alt"></i>
+  <span class="btn-text">Papers</span>
+</a>
 
 **Authors:** *S. Arya, T. Rahman, V. Gogate*
 

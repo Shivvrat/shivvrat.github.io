@@ -37,27 +37,6 @@
     {% endif %}
   </div>
 
-  <!-- Paper Type -->
-  <!-- <div class="paper-type">
-    {% if entry.type == 'article' %}
-      <span class="paper-badge journal">
-        <i class="fas fa-book-open"></i> Journal Article
-      </span>
-    {% elsif entry.type == 'inproceedings' %}
-      <span class="paper-badge conference">
-        <i class="fas fa-users"></i> Conference Paper
-      </span>
-    {% elsif entry.type == 'unpublished' %}
-      <span class="paper-badge preprint">
-        <i class="fas fa-file-alt"></i> Preprint
-      </span>
-    {% elsif entry.type == 'workshop' %}
-      <span class="paper-badge workshop">
-        <i class="fas fa-chalkboard-teacher"></i> Workshop Paper
-      </span>
-    {% endif %}
-  </div> -->
-
   <!-- Paper Resources -->
   <div class="paper-resources">
     {% if entry.file %}
@@ -111,9 +90,9 @@
       </a>
     {% endif %}
 
-    {% if entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' %}
+    {% if (entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop') and entry.bibtex %}
       {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-      <button class="btn btn-bib" onclick="toggleBibtex{{clean_key}}()">
+      <button class="btn btn-bib" onclick="toggleBibtex('{{clean_key}}', this)" aria-expanded="false" aria-controls="a{{clean_key}}">
         <i class="fas fa-quote-right"></i>
         <span class="btn-text">BibTeX</span>
       </button>
@@ -121,7 +100,7 @@
 
     {% if entry.abstract %}
       {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-      <button class="btn btn-abstract" onclick="toggleAbstract{{clean_key}}()">
+      <button class="btn btn-abstract" onclick="toggleAbstract('{{clean_key}}', this)" aria-expanded="false" aria-controls="b{{clean_key}}">
         <i class="fas fa-align-left"></i>
         <span class="btn-text">Abstract</span>
       </button>
@@ -151,7 +130,7 @@
   <!-- Bibtex Content -->
   {% if entry.bibtex %}
     {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-    <div id="a{{clean_key}}" class="bib-content bibtex-content" style="display: none;" aria-label="BibTeX citation">
+    <div id="a{{clean_key}}" class="bib-content bibtex-content" aria-label="BibTeX citation">
       <div class="content-header">
         <span>BibTeX Citation</span>
         <button class="copy-btn" onclick="copyToClipboard('a{{clean_key}}')" aria-label="Copy citation">
@@ -165,7 +144,7 @@
   <!-- Abstract Content -->
   {% if entry.abstract %}
     {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-    <div id="b{{clean_key}}" class="bib-content abstract-content" style="display: none;">
+    <div id="b{{clean_key}}" class="bib-content abstract-content">
       <div class="content-header">
         <span>Abstract</span>
         <button class="copy-btn" onclick="copyToClipboard('b{{clean_key}}')" aria-label="Copy abstract">
@@ -178,25 +157,27 @@
 </div>
 
 <script>
-{% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-function toggleBibtex{{clean_key}}() {
-  toggleElement('a{{clean_key}}');
+function toggleBibtex(key, btn) {
+  toggleElement('a' + key, btn);
 }
 
-function toggleAbstract{{clean_key}}() {
-  toggleElement('b{{clean_key}}');
+function toggleAbstract(key, btn) {
+  toggleElement('b' + key, btn);
 }
 
-function toggleElement(elementId) {
+function toggleElement(elementId, btn) {
   const element = document.getElementById(elementId);
-  if (element.style.display === 'none' || !element.style.display) {
-    element.style.display = 'block';
-    element.style.animation = 'slideDown 0.3s ease-out';
+  if (!element) {
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    return;
+  }
+  const isOpen = element.classList.contains('is-open');
+  if (!isOpen) {
+    element.classList.add('is-open');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
   } else {
-    element.style.animation = 'slideUp 0.3s ease-out';
-    setTimeout(() => {
-      element.style.display = 'none';
-    }, 280);
+    element.classList.remove('is-open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -272,6 +253,7 @@ async function copyToClipboard(elementId) {
 .bib-entry {
   background: var(--background);
   border: 1px solid var(--border-light);
+  border-left: 3px solid var(--secondary-blue);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -380,6 +362,43 @@ async function copyToClipboard(elementId) {
   margin: 1.25rem 0;
 }
 
+.paper-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--border-light);
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.paper-badge.journal {
+  background: #eff6ff;
+  color: var(--primary-navy);
+  border-color: #bfdbfe;
+}
+
+.paper-badge.conference {
+  background: #f0f9ff;
+  color: #075985;
+  border-color: #bae6fd;
+}
+
+.paper-badge.preprint {
+  background: #f8fafc;
+  color: #475569;
+  border-color: #e2e8f0;
+}
+
+.paper-badge.workshop {
+  background: #f0fdf4;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
 .paper-resources {
   margin: 1.5rem 0;
   display: flex;
@@ -463,6 +482,51 @@ async function copyToClipboard(elementId) {
     gap: 0.5rem;
   }
 }
+
+/* Collapsible content transitions for academic feel */
+.bib-content {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, opacity 0.28s ease;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  margin-top: 0.75rem;
+  background: var(--background);
+}
+
+.bib-content.is-open {
+  max-height: 1000px; /* large enough for most entries */
+  opacity: 1;
+}
+
+.bibtex-content pre,
+.abstract-content pre {
+  margin: 0;
+  padding: 0.75rem 1rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  overflow-x: hidden;
+}
+
+.bibtex-content code {
+  white-space: inherit;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.copy-btn.success { color: #16a34a; }
+.copy-btn.error { color: #dc2626; }
 </style>
 
 <script>

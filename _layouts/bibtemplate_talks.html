@@ -126,14 +126,15 @@
 
   <!-- Abstract Toggle -->
   {% if entry.abstract %}
+    {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
     <div class="talk-abstract-container">
-      <button class="btn btn-abstract" onclick="toggleAbstract_{{ entry.key | replace: ':', '_' }}()">
+      <button class="btn btn-abstract" onclick="toggleTalkAbstract('{{clean_key}}')">
         <i class="fas fa-align-left"></i> Abstract
       </button>
-      <div id="abstract_{{ entry.key | replace: ':', '_' }}" class="abstract-content">
+      <div id="abstract_{{clean_key}}" class="abstract-content">
         <div class="content-header">
           <span>Abstract</span>
-          <button class="copy-btn" onclick="copyToClipboard('abstract_{{ entry.key | replace: ':', '_' }}')" aria-label="Copy abstract">
+          <button class="copy-btn" onclick="copyToClipboard('abstract_{{clean_key}}')" aria-label="Copy abstract">
             <i class="fas fa-copy"></i>
           </button>
         </div>
@@ -163,8 +164,8 @@
 </div>
 
 <script>
-function toggleAbstract_{{ entry.key | replace: ':', '_' }}() {
-  const element = document.getElementById('abstract_{{ entry.key | replace: ':', '_' }}');
+function toggleTalkAbstract(key) {
+  const element = document.getElementById('abstract_' + key);
   if (element.style.maxHeight) {
     element.style.maxHeight = null;
     element.style.opacity = '0';
@@ -199,6 +200,7 @@ async function copyToClipboard(elementId) {
 /* Talk Entry Styles */
 .talk-entry {
   border: 1px solid var(--border-light);
+  border-left: 3px solid var(--primary-navy);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -262,6 +264,12 @@ async function copyToClipboard(elementId) {
   gap: 0.75rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+}
+
+.talk-badge {
+  border: 1px solid var(--border-light);
+  background: var(--background);
+  color: var(--text-primary);
 }
 
 .talk-badge {
