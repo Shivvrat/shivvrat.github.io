@@ -384,3 +384,93 @@ table tr:hover {
   color: var(--primary-navy);
   font-weight: 700;
 }
+
+/* --------------------------------------- */
+/* Unified content card (bib-style facade) */
+/* --------------------------------------- */
+
+/* Base reusable card, and apply to jumbotron/research-area site-wide */
+.content-card,
+.section-card,
+.jumbotron:not(.no-card),
+.research-area {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin: 1.25rem 0;
+  box-shadow: 0 1px 6px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  /* border-left: 3px solid var(--secondary-blue); */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.content-card:hover,
+.section-card:hover,
+.jumbotron:not(.no-card):hover,
+.research-area:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+/* Subsection card: lighter, nested look distinct from section-card */
+.subsection-card {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0 1rem;
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--secondary-blue);
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: border-left-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* When nested inside a section-card, tighten rhythm and lighten shadow */
+.section-card .subsection-card {
+  margin: 0.75rem 0 0.9rem;
+  box-shadow: 0 2px 6px var(--shadow-light);
+}
+
+/* Match publication/talk hover: change only the left accent */
+.subsection-card:hover {
+  border-left-color: var(--primary-navy);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+/* Headings at top of cards shouldn't push down content */
+.section-card > h2, .section-card > h3,
+.subsection-card > h3, .subsection-card > h4 {
+  margin-top: 0.1rem;
+}
+
+/* Optional thin variant */
+.content-card.thin { padding: 1rem 1.25rem; border-radius: 8px; }
+
+/* Optional muted variant */
+.content-card.muted,
+.jumbotron.muted,
+.research-area.muted {
+  border-left-color: var(--border-medium);
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+/* Optional award variant matching gold accent */
+.content-card.award,
+.jumbotron.award,
+.research-area.award { border-left-color: var(--accent-gold); }
+
+/* Header spacing inside cards */
+.content-card h2, .content-card h3,
+.jumbotron h2, .jumbotron h3,
+.research-area h2, .research-area h3 { margin-top: 0.25rem; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .content-card,
+  .jumbotron:not(.no-card),
+  .research-area {
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 12px var(--shadow-light);
+  }
+}

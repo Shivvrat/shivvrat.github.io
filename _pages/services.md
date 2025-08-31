@@ -7,11 +7,11 @@ permalink: /services/
 <!-- ### Organization -->
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
-<div class="jumbotron">
+<div class="section-card">
 
 ## Reviewer
 
-<div class="research-area">
+<div class="subsection-card">
 
 ### Journals
 
@@ -21,7 +21,7 @@ permalink: /services/
 </div>
 
 
-<div class="research-area">
+<div class="subsection-card">
 
 ### Conferences
 

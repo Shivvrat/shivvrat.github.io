@@ -7,7 +7,9 @@ permalink: /research/
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-### **Research Interests**
+<div class="section-card">
+
+## **Research Interests**
 
 * **Foundations & Methods** &mdash; Machine (Deep) Learning, Probabilistic Modeling and Inference, Combinatorial Optimization, Neurosymbolic AI, Explainable and Interpretable Models
 * **Applications** &mdash; Human–AI Interaction with Neuro-symbolic and Deep Models, Computer Vision, Video Understanding, and Language Reasoning
@@ -15,16 +17,22 @@ permalink: /research/
 <!-- ### **Research Interests**
 
 Machine (Deep) learning, Artificial Intelligence, Neurosymbolic AI, Explainable AI, Probabilistic Methods, Combinatorial Optimization, Video Understanding and Computer Vision. -->
+</div>
 
-### **Current Research Focus**
-
-Dr. Arya's current research focuses on developing neuro-symbolic models that integrate deep neural architectures with symbolic reasoning and probabilistic frameworks; advancing tractable probabilistic modeling to support efficient and scalable inference; creating neural network–based solvers for large-scale combinatorial optimization; and designing methods for explainable AI in structured and hybrid systems, with applications in computer vision, activity recognition, and multimodal learning.
 
 <div class="jumbotron">
 
-### **Inference in Probabilistic Models**
+## **Current Research Focus**
 
-<div class="research-area">
+Dr. Arya's current research focuses on developing neuro-symbolic models that integrate deep neural architectures with symbolic reasoning and probabilistic frameworks; advancing tractable probabilistic modeling to support efficient and scalable inference; creating neural network–based solvers for large-scale combinatorial optimization; and designing methods for explainable AI in structured and hybrid systems, with applications in computer vision, activity recognition, and multimodal learning.
+
+</div>
+
+<div class="jumbotron">
+
+## **Inference in Probabilistic Models**
+
+<div class="subsection-card">
 
 #### Neural Network-Based Inference
 
@@ -38,7 +46,7 @@ SINE - Scalable MPE Inference for Probabilistic Graphical Models using Advanced 
 
 </div>
 
-<div class="research-area">
+<div class="subsection-card">
 
 #### Optimization-based Inference Schemes
 
@@ -47,12 +55,12 @@ Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classifi
 </div>
 </div>
 
-<div class="jumbotron">
+<div class="section-card">
 
-### **Video Understanding and Activity Recognition**
+## **Video Understanding and Activity Recognition**
 
-<!-- <div class="research-area"> -->
 
+<div class="subsection-card">
 
 CaptainCook4D Dataset <span class="badge bg-primary">NeurIPS'24</span> <span class="badge bg-primary">DMLR'23</span>
 
@@ -60,18 +68,19 @@ Explainable Activity Recognition <span class="badge bg-primary">TiiS'23</span>
 
 Predictive Task Guidance in Augmented Reality <span class="badge bg-primary">Poster at IEEE VR'24</span>
 
+</div>
 <!-- </div> -->
 </div>
 
-<div class="jumbotron">
+<div class="section-card">
 
-### **Multi-Label Classification**
+## **Multi-Label Classification**
 
-<!-- <div class="research-area"> -->
+<div class="subsection-card">
 
 
 Kernelized Random Vector Functional Link Network <span class="badge bg-primary">IJCNN'20</span>
-<!-- </div> -->
+</div>
 </div>
 
 

@@ -23,7 +23,7 @@ seo:
 📢 He is currently recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research opportunities.  
 </div>
 
-### Biography  
+## Biography  
 
 Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT). He received his Ph.D. in Computer Science from the University of Texas at Dallas, where he worked with [Dr. Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Dr. Yu Xiang](https://yuxng.github.io/).  
 
@@ -31,7 +31,7 @@ His research lies at the intersection of Artificial Intelligence and Machine Lea
 
 ---
 
-### Research Focus  
+## Research Focus  
 
 - **Neurosymbolic AI**: Integrating formal world models with neural networks  
 - **Probabilistic Methods**: Novel inference approaches for graphical models  
@@ -41,7 +41,7 @@ His research lies at the intersection of Artificial Intelligence and Machine Lea
 
 ---
 
-### Research Highlights  
+## Research Highlights  
 
 - Published research recognized with **best paper awards, spotlight, and oral presentations**  
 - Developed [**NeuPI**](https://neupi.readthedocs.io/en/latest/#), a neural inference engine for probabilistic models  
@@ -50,7 +50,7 @@ His research lies at the intersection of Artificial Intelligence and Machine Lea
 
 ---
 
-### Past Work  
+## Past Work  
 
 Dr. Arya’s doctoral research was supported by several competitive federal grants, including programs from **DARPA**, the **National Science Foundation (NSF)**, and the **Air Force Office of Scientific Research (AFOSR)**. Major **DARPA** projects included:  
 
@@ -62,7 +62,7 @@ This work advanced methods for explainable reasoning, probabilistic inference, a
 
 ---
 
-### Education  
+## Education  
 
 - **Ph.D., Computer Science** – The University of Texas at Dallas  
 - **M.S., Computer Science** – The University of Texas at Dallas  

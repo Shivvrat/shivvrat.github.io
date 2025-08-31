@@ -558,3 +558,211 @@ blockquote.award-quote::before {
   background: var(--background-blue);
   color: var(--primary-navy);
 }
+
+/* -------------------------------------------------- */
+/* Heading refinements: academic, accessible, distinct */
+/* -------------------------------------------------- */
+
+/* Consistent offset for anchored headings under fixed masthead */
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 5rem;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Fluid typographic scale for headings */
+:root {
+  --h1-size: clamp(2rem, 2rem + 2vw, 2.75rem);
+  --h2-size: clamp(1.65rem, 1.65rem + 1.2vw, 2.1rem);
+  --h3-size: clamp(1.3rem, 1.3rem + 0.8vw, 1.6rem);
+  --h4-size: clamp(1.12rem, 1.12rem + 0.5vw, 1.25rem);
+  --h5-size: clamp(1.05rem, 1.05rem + 0.3vw, 1.15rem);
+  --h6-size: clamp(1rem, 1rem + 0.2vw, 1.05rem);
+}
+
+/* H1 – page title: clear bottom rule with subtle accent */
+h1 {
+  font-size: var(--h1-size);
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  padding: 0 0 0.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  letter-spacing: -0.01em;
+  border-bottom: 2px solid var(--border-light);
+}
+
+h1::before { display: none; }
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 120px;
+  height: 3px;
+  background: var(--secondary-blue);
+  border-radius: 2px;
+}
+
+/* H2 – section: left accent, no hover motion */
+h2 {
+  font-size: var(--h2-size);
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+  font-weight: 750;
+  color: var(--primary-navy);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0 0.25rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-left: 5px solid var(--secondary-blue);
+  box-shadow: none;
+  letter-spacing: -0.01em;
+}
+
+h2::before { display: none; }
+h2:hover { transform: none; box-shadow: none; border-left-color: var(--secondary-blue); }
+
+/* H3 – subsection: thinner accent */
+h3 {
+  font-size: var(--h3-size);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding: 0.125rem 0 0.125rem 0.6rem;
+  background: transparent;
+  border: none;
+  border-left: 4px solid var(--border-light);
+  box-shadow: none;
+}
+
+h3::before { display: none; }
+h3:hover { transform: none; box-shadow: none; }
+
+/* H4–H6 – minimal, structural only */
+h4 {
+  font-size: var(--h4-size);
+  font-weight: 650;
+  color: var(--text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+h5 {
+  font-size: var(--h5-size);
+  font-weight: 650;
+  color: var(--primary-navy);
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+h6 {
+  font-size: var(--h6-size);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Optional subtitle span inside H1 for academic metadata */
+h1 .subtitle {
+  display: block;
+  font-size: 0.6em;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* Mobile scaling for headings refinements */
+@media (max-width: 768px) {
+  /* Fluid sizes already handle mobile; keep margins tighter */
+  h1 { margin-top: 1.5rem; }
+  h2 { margin-top: 1.75rem; }
+  h3 { margin-top: 1.25rem; }
+}
+
+/* :target highlight to orient users after in-page jumps */
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
+  background-image: linear-gradient(to right, rgba(83,117,226,0.12), rgba(83,117,226,0));
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  background-position: 0 80%;
+  outline: 0;
+}
+
+/* Hover/focus anchor link icon that appears next to headings */
+.heading-anchor {
+  margin-left: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+h1:hover .heading-anchor,
+h2:hover .heading-anchor,
+h3:hover .heading-anchor,
+h4:hover .heading-anchor,
+h5:hover .heading-anchor,
+h6:hover .heading-anchor,
+h1:focus-within .heading-anchor,
+h2:focus-within .heading-anchor,
+h3:focus-within .heading-anchor,
+h4:focus-within .heading-anchor,
+h5:focus-within .heading-anchor,
+h6:focus-within .heading-anchor {
+  opacity: 1;
+}
+
+.heading-anchor:focus { outline: 2px solid var(--secondary-blue); outline-offset: 2px; border-radius: 2px; }
+
+/* Optional section numbering when body has .numbered-headings */
+body.numbered-headings h2 {
+  counter-reset: subsection;
+}
+
+body.numbered-headings h2::before {
+  counter-increment: section;
+  content: counter(section) '. ';
+  color: var(--text-light);
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+body.numbered-headings h3::before {
+  counter-increment: subsection;
+  content: counter(section) '.' counter(subsection) ' ';
+  color: var(--text-light);
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+/* Strict academic variant: monochrome accents and reduced decoration */
+body.strict-academic h1 {
+  border-bottom-color: #222;
+}
+
+body.strict-academic h1::after {
+  background: #222;
+}
+
+body.strict-academic h2 {
+  border-left-color: #222;
+}
+
+body.strict-academic .heading-anchor { color: #666; }
+
+body.strict-academic.numbered-headings h2::before,
+body.strict-academic.numbered-headings h3::before {
+  color: #666;
+}

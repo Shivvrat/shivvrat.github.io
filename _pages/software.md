@@ -8,9 +8,9 @@ permalink: /software/
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/bibliography.css' | relative_url }}">
 
-<div class="jumbotron">
+<div class="section-card">
 
-<h2><b>NeuPI: A Library for Neural Probabilistic Inference</b></h2>
+<h2>NeuPI: A Library for Neural Probabilistic Inference</h2>
 
 <a href="https://github.com/Shivvrat/NeuPI" target="_blank" class="btn btn-code">
   <i class="fas fa-code"></i>
