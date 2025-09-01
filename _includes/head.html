@@ -66,7 +66,94 @@
         });
         h.appendChild(a);
       });
+      // Build in-page TOC if #toc is present
+      const toc = document.getElementById('toc');
+      if (toc) {
+        const scope = document.getElementById('main-content') || document;
+        const headings = Array.from(scope.querySelectorAll('h2, h3'))
+          .filter(h => !h.closest('nav') && !h.closest('header'));
+        if (headings.length) {
+          const nav = document.createElement('nav');
+          nav.setAttribute('aria-label', 'Table of contents');
+          const ul = document.createElement('ul');
+          ul.className = 'toc-list';
+          let currentUl = ul;
+          let lastLevel = 2;
+          headings.forEach(h => {
+            const level = h.tagName === 'H2' ? 2 : 3;
+            if (!h.id) {
+              const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+              if (slug) h.id = slug;
+            }
+            if (!h.id) return;
+            if (level > lastLevel) {
+              const nested = document.createElement('ul');
+              currentUl.lastElementChild && currentUl.lastElementChild.appendChild(nested);
+              currentUl = nested;
+            } else if (level < lastLevel) {
+              currentUl = currentUl.parentElement || currentUl;
+            }
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent.replace(/¶$/,'').trim();
+            li.appendChild(a);
+            currentUl.appendChild(li);
+            lastLevel = level;
+          });
+          nav.appendChild(ul);
+          toc.innerHTML = '';
+          toc.appendChild(nav);
+        }
+      }
+
+      // Lightweight client-side search using fetch + simple substring match
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+      if (searchInput && searchResults) {
+        let idx = [];
+        fetch('{{ '/search.json' | relative_url }}').then(r => r.json()).then(data => { idx = data || []; });
+        const render = (items) => {
+          if (!items.length) { searchResults.innerHTML = '<p>No results.</p>'; return; }
+          const html = items.slice(0, 20).map(i => `<div class="subsection-card"><a href="${i.url}"><strong>${i.title}</strong></a><p>${i.content.substring(0,180)}...</p></div>`).join('');
+          searchResults.innerHTML = html;
+        };
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.trim().toLowerCase();
+          if (!q) { searchResults.innerHTML = ''; return; }
+          const results = idx.filter(i => i.title.toLowerCase().includes(q) || i.content.toLowerCase().includes(q));
+          render(results);
+        });
+      }
     });
+  </script>
+
+  <script>
+    // Outbound click tracking for analytics (arXiv/DOI/GitHub/CV)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const isOutbound = href.startsWith('http') && !href.includes(window.location.host);
+      if (!isOutbound) return;
+      if (window.gtag) {
+        gtag('event', 'click', { 'event_category': 'outbound', 'event_label': href });
+      }
+    }, { capture: true });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivvrat Arya",
+    "jobTitle": "Assistant Professor",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "New Jersey Institute of Technology"},
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "sameAs": [
+      "https://github.com/Shivvrat"
+    ]
+  }
   </script>
 
   <link rel="preconnect" href="https://player.vimeo.com">

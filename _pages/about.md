@@ -23,7 +23,7 @@ permalink: /about/
   <ul class="awards-list">
     {% for award in site.data.awards %}
     <li class="award-item">
-      <h4 class="award-title">
+      <span class="award-title">
         {% assign awardName = award.name | replace: "-", "&#8211;" %}
         <span class="award-icon">
           {% if award.type == "presentation" %}
@@ -51,7 +51,7 @@ permalink: /about/
           {% endif %}
         </span>
         {{ awardName }}
-      </h4>
+      </span>
       {% if award.event %}
         <p class="award-event"><em>{{ award.event }}</em></p>
       {% endif %}
