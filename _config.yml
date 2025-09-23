@@ -51,6 +51,7 @@ group_pub_by_year: true
 # Pages shown in navbar
 nav_pages:
   - name: about
+  - name: hiring
   - name: publications
   - name: research
   - name: talks
