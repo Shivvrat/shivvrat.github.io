@@ -564,20 +564,16 @@
 }
 
 .alert-info {
-  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);  /* Light blue gradient for distinction */
-  border: 2px solid var(--secondary-blue);  /* Full border instead of just left */
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border: 1px solid var(--secondary-blue);
   color: var(--primary-navy);
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);  /* Stronger shadow */
-  font-weight: 600;  /* Bolder text */
-  font-size: 1.1rem;  /* Slightly larger text */
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  font-weight: 100 !important;
+  font-size: 0.5rem !important;
   position: relative;
   overflow: hidden;
-
-  /* reduce the margin-bottom */
-  margin-bottom: 1rem;
-  /* reduce the padding */
-  padding: 1rem 1.5rem;
-  /* reduce bnottom padding */
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
   padding-bottom: 0.1rem;
 }
 
@@ -587,7 +583,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   z-index: 1;
 }
 
@@ -804,7 +800,7 @@ ul li::marker {
   font-size: 1.2em;
 }
 
-/* Professional Table Styling */
+/* Professional Table Styling (academic) */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -813,19 +809,109 @@ table {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px var(--shadow-light);
+  table-layout: auto; /* let content drive but stretch to full width */
+  display: table; /* ensure it occupies full available width */
 }
 
-th, td {
-  padding: 1rem;
+thead th,
+tbody td {
+  padding: 0.85rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+  word-wrap: anywhere;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
-th {
+thead th {
   background: var(--background-gray);
-  font-weight: 600;
+  font-weight: 650;
   color: var(--primary-navy);
+  position: sticky; /* sticks if table scrolls */
+  top: 0;
+  z-index: 1;
 }
+
+/* Zebra striping and row affordances */
+tbody tr:nth-child(even) { background: color-mix(in oklab, var(--background-blue) 18%, var(--background)); }
+tbody tr:hover { background: color-mix(in oklab, var(--background-blue) 30%, var(--background)); }
+
+/* Column semantics: Year, Course No., Course, Level, Department */
+/* 1: Year/Term */
+thead th:nth-child(1),
+tbody td:nth-child(1) {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+  min-width: 7.5rem;
+  width: 1%; /* compress to content */
+}
+
+/* 2: Course No. */
+thead th:nth-child(2),
+tbody td:nth-child(2) {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  min-width: 7rem;
+  width: 1%;
+  color: var(--text-secondary);
+}
+
+/* 3: Course (flex) */
+thead th:nth-child(3),
+tbody td:nth-child(3) {
+  min-width: 14rem;
+  width: auto; /* expand to fill remaining width */
+}
+
+/* 4: Level */
+thead th:nth-child(4),
+tbody td:nth-child(4) {
+  white-space: nowrap;
+  min-width: 7rem;
+  width: 1%;
+}
+
+/* 5: Department */
+thead th:nth-child(5),
+tbody td:nth-child(5) {
+  white-space: nowrap;
+  min-width: 10rem;
+  width: 1%;
+}
+
+/* On small screens, allow horizontal scrolling to avoid squishing */
+@media (max-width: 640px) {
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* Table variants */
+.teaching-table { }
+.research-table { table-layout: fixed; }
+
+/* Research table column guidance: Year, Title, Venue, Notes */
+/* Research table columns: Title | Venue */
+.research-table thead th:nth-child(1),
+.research-table tbody td:nth-child(1) {
+  width: 70%; /* title */
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.research-table thead th:nth-child(2),
+.research-table tbody td:nth-child(2) {
+  white-space: normal !important;
+  width: 30%; /* venue */
+  max-width: 32rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* After removing Notes, only 3 columns for research tables */
 
 /* Responsive Design */
 @media (max-width: 768px) {

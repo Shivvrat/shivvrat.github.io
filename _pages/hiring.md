@@ -9,66 +9,90 @@ seo:
 ---
 
 <!-- include page stylesheet -->
-<p><link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}"></p>
+<span style="display:none"><link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}"></span>
 
-### Updated: September 15, 2023
 
-I am an Assistant Professor of Computer Science at the New Jersey Institute of Technology (NJIT).
+<div class="alert alert-info">
+Updated: September 23, 2025
+</div>
 
-I have multiple fully funded Ph.D. positions in the areas of neurosymbolic AI, probabilistic modeling and inference, explainable AI, combinatorial optimization, and their applications to computer vision, video understanding, and language reasoning. Master's and undergraduate students and self-funded visiting students/scholars are also welcome to apply.
-
----
-
-## Details
-
-NJIT is a top-tier R1 research university located in the New York metropolitan area, approximately 7 miles from New York City, a hub for major technology and research companies. Qualified candidates may have opportunities for research internships and joint projects with leading industrial partners.
-
-The lab focuses on developing algorithms and systems at the intersection of machine learning and reasoning, including tractable probabilistic modeling, neural methods for inference, neuro-symbolic integration, and explainable AI. We also build practical systems for video understanding, activity recognition, and multimodal reasoning.
-
-### Example Research Topics
-
-- Neural approximators for MAP/MPE inference in probabilistic graphical models
-- Tractable probabilistic modeling and efficient inference schemes
-- Neuro-symbolic learning: integrating structured reasoning with deep learning
-- Explainable and interpretable AI for structured and hybrid models
-- Neural solvers for large-scale combinatorial optimization
-- Computer vision and video understanding with reasoning over temporal structure
-
-### Outcome
-
-Students will gain expertise in modern AI methods, including probabilistic reasoning, deep learning, interpretable modeling, and optimization; experience with scalable training/inference; and exposure to applied domains such as computer vision and multimodal understanding.
+I’m recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergrad researchers and self-funded visiting students/scholars.
 
 ---
 
-## Requirements
+### Position snapshot
 
-1. Strong background in algorithms, machine learning/AI, and probability
-2. Proficiency in Python; experience with deep learning frameworks (e.g., PyTorch)
-3. Familiarity with data structures, optimization, and graph-based models
-4. Software engineering skills: version control (Git), testing, and reproducible workflows
-5. A degree in Computer Science or a closely related field (Undergraduate/Master applicants encouraged as well)
-
-If you have prior experience in any of the following, please highlight it: probabilistic graphical models, neurosymbolic AI, combinatorial optimization, computer vision, or large-scale training/inference.
+- **University**: NJIT (R1), Newark, NJ
+- **Start**: ASAP; Spring and Fall admission cycles
 
 ---
 
-## How to Apply
+### What we work on (focus areas)
 
-Please email the following to: [shivvrat.arya@njit.edu](mailto:shivvrat.arya@njit.edu)
+Neurosymbolic AI; combinatorial optimization; scalable training/inference; probabilistic modeling and inference; graphical models; explainable/interpretable AI; computer vision, video understanding, and language-grounded reasoning.
 
-- CV (with links to publications/projects)
-- GitHub and/or project/code samples
-- A short paragraph describing your background and why you're interested in the lab
-- Optional: transcripts (unofficial are fine), and any other relevant materials
+Examples include neuro-symbolic integration, optimization-for-ML, tractable inference schemes, interpretable modeling for structured systems, and temporal reasoning for vision.
 
-### Start Date
+**Representative directions:**
 
-As soon as possible. Positions are available for Spring and Fall admissions.
+- Integrating formal world models with neural networks
+- Efficient algorithms for NP-hard problems
+- Interpretable models enabling polynomial-time reasoning
 
 ---
 
-## Notes
+### What you’ll do
 
-For general questions regarding MS and PhD admissions in the Department of Computer Science at NJIT, please refer to the official departmental resources. For such inquiries, please do not email me.
+- Prototype novel algorithms and run ablations at scale
+- Build reliable research code and reproducible pipelines
+- Design and analyze experiments; interpret results and iterate
+- Apply methods to vision/video and multimodal tasks
 
+---
 
+### What you bring
+
+- Strong fundamentals in algorithms, probability, and ML/AI
+- Proficiency in Python; experience with modern DL frameworks (e.g., PyTorch, Jax)
+- Familiarity with data structures, optimization, and graph-based models
+- Sound engineering practices: Git, testing, reproducibility
+- Plus (nice-to-have): graphical models, neuro-symbolic methods, combinatorial optimization, or computer vision
+
+---
+
+### Outcomes
+
+Depth in probabilistic reasoning, deep learning, optimization, and interpretable modeling; experience with tractable inference and neuro-symbolic integration; and applications to video/activity understanding and language reasoning.
+
+---
+
+### Lab resources
+
+- Fully funded Ph.D. positions (RA/TA support)
+- Access to high-performance computing resources and GPU clusters
+- Strong mentorship; opportunities for top-tier publications
+- Industry collaborations and internships
+
+---
+
+### Why NJIT
+
+- Ranked #72 in the U.S. for AI & Machine Learning (CSRankings)
+- Ranked #80 Graduate School for Computer Science (U.S. News & World Report)
+- Ranked #84 among National Universities and #42 among Top Public Universities (U.S. News & World Report)
+- Located in Newark, NJ, part of the NYC metropolitan area
+- ~30 minutes from Manhattan; strong industry connections
+
+---
+
+### Apply
+
+Email: [shivvrat.arya@njit.edu](mailto:shivvrat.arya@njit.edu)
+
+Include: CV (with links), GitHub and/or code samples, and a short note on your background and interests. Unofficial transcripts are welcome. Please write a few sentences introducing yourself and why you’re a good fit.
+
+For Ph.D. positions, please also apply through the official NJIT portal.
+
+---
+
+For general questions about MS/PhD admissions in NJIT Computer Science, please consult the official departmental pages. Regarding such queries, please do not email me.

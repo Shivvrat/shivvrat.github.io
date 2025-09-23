@@ -682,6 +682,20 @@
   
 }
 
+/* Subtle custom scrollbar for sidebar */
+.sidebar-container {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--border-light) var(--background-gray); /* thumb track */
+}
+.sidebar-container::-webkit-scrollbar { width: 8px; height: 8px; }
+.sidebar-container::-webkit-scrollbar-track { background: var(--background-gray); border-radius: 8px; }
+.sidebar-container::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 8px;
+  border: 2px solid var(--background-gray);
+}
+.sidebar-container::-webkit-scrollbar-thumb:hover { background: var(--secondary-blue); border-color: var(--background-gray); }
+
 /* Focus States for Accessibility */
 .social-icons a:focus,
 .news-link:focus,

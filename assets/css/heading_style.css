@@ -35,187 +35,109 @@
 
 /* Professional Typography Foundation */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
   color: var(--text-primary);
   font-size: 16px;
   font-weight: 400;
   background-color: var(--background);
 }
 
-/* Enhanced Academic Heading Hierarchy with Strong Visual Distinction */
+/* Clean Academic Heading Hierarchy */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: var(--primary-navy);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  margin-top: 3.5rem;
-  letter-spacing: -0.03em;
-  transition: all 0.2s ease;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: var(--text-primary);
+  font-weight: normal;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0;
 }
 
-/* Main Title Styling - Blue for regular headers */
+/* H1 - Page Title (2.0-2.5x body text) */
 h1 {
-  font-size: 3.25rem;
-  font-weight: 900;
-  color: var(--primary-navy);
-  margin-bottom: 3rem;
+  font-size: 2.25rem; /* 36px if body is 16px = 2.25x */
+  font-weight: bold;
+  color: var(--text-primary);
   margin-top: 0;
-  padding: 1.5rem 2rem;
-  background: var(--background-gray);
-  border-radius: 12px;
-  border-left: 6px solid var(--secondary-blue);  /* Blue instead of gold */
-  box-shadow: 0 4px 20px var(--shadow-medium);
-  position: relative;
-  text-transform: none;
-  border-bottom: none;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.5rem;
 }
 
-h1::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--primary-navy);  /* Solid color instead of gradient */
-}
-
-h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 2rem;
-  width: 150px;
-  height: 4px;
-  background: var(--secondary-blue);  /* Blue instead of gold */
-  border-radius: 2px;
-}
-
-/* Section Headings - Blue for regular sections */
+/* H2 - Main Sections (1.6-1.8x body text) */
 h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--primary-navy);
-  margin-top: 4rem;
-  margin-bottom: 2.5rem;
-  padding: 1.25rem 2rem;
-  background: var(--background-gray);
-  border-radius: 12px;
-  border-left: 6px solid var(--secondary-blue);  /* Blue instead of gold */
-  box-shadow: 0 6px 24px var(--shadow-light), 0 3px 12px var(--shadow-medium);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  text-shadow: none;
-}
-
-h2::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--secondary-blue);  /* Blue instead of gold */
-}
-
-h2:hover {
-  transform: translateX(6px) translateY(-2px);
-  box-shadow: 0 8px 32px var(--shadow-medium), 0 4px 16px var(--shadow-strong);
-  border-left-color: var(--primary-navy);
-}
-
-/* Subsection Headings - Clean Hierarchy */
-h3 {
-  font-size: 1.875rem;
-  font-weight: 700;
+  font-size: 1.75rem; /* 28px if body is 16px = 1.75x */
+  font-weight: bold;
   color: var(--text-primary);
   margin-top: 3rem;
-  margin-bottom: 1.75rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--background-gray);  /* Simple gray background */
-  border-radius: 8px;
-  border-left: 5px solid var(--secondary-blue);
-  box-shadow: 0 3px 12px var(--shadow-light);
-  position: relative;
-  transition: all 0.2s ease;
+  margin-bottom: 1.25rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-left: 3px solid var(--secondary-blue);
+  padding-left: 0.75rem;
 }
 
-h3::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--secondary-blue);  /* Blue instead of gold */
-}
-
-h3:hover {
-  transform: translateX(4px);
-  border-left-color: var(--accent-gold);
-  box-shadow: 0 4px 16px var(--shadow-medium);
-}
-
-/* Professional Sub-headings - Strong Visual Weight */
-h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
+/* H3 - Subsections (1.3-1.5x body text) */
+h3 {
+  font-size: 1.375rem; /* 22px if body is 16px = 1.375x */
+  font-weight: bold;
   color: var(--text-primary);
   margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--background-gray);
-  border-radius: 6px;
-  border-bottom: 3px solid var(--accent-gold);
-  box-shadow: 0 2px 8px var(--shadow-light);
-  position: relative;
-  text-transform: none;
-  letter-spacing: 0.025em;
-  font-size: 1.25rem;
-}
-
-h4::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 1rem;
-  width: 80px;
-  height: 3px;
-  background: var(--secondary-blue);
-}
-
-/* Minor Headings - Blue for regular content */
-h5 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--primary-navy);
-  margin-top: 2rem;
   margin-bottom: 1rem;
-  text-transform: none;
-  letter-spacing: 0.1em;
-  padding: 0.375rem 0.75rem;
-  background: var(--background-blue);
-  border-left: 4px solid var(--secondary-blue);  /* Blue instead of gold */
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0 2px 6px var(--shadow-light);
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
-h6 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  margin-top: 1.75rem;
+/* H4 - Sub-subsections */
+h4 {
+  font-size: 1.125rem; /* 18px if body is 16px = 1.125x */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 2rem;
   margin-bottom: 0.75rem;
-  text-transform: none;
-  letter-spacing: 0.15em;
-  padding: 0.25rem 0.5rem;
-  background: var(--background-gray);
-  border-radius: 4px;
-  border-left: 3px solid var(--text-light);
-  font-size: 0.875rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* H5 - Minor headings */
+h5 {
+  font-size: 1rem; /* Same as body text */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* H6 - Smallest headings */
+h6 {
+  font-size: 0.875rem; /* 14px if body is 16px = 0.875x */
+  font-weight: bold;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Enhanced Content Separation */
@@ -276,19 +198,16 @@ ul ul li, ol ol li, ul ol li, ol ul li {
   color: var(--text-secondary);
 }
 
-/* Professional Link Styling - Subtle Hover */
+/* Professional Link Styling - Clean Academic Style */
 a {
   color: var(--primary-navy);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  border-bottom: 2px solid transparent;
+  text-decoration: underline;
+  font-weight: normal;
 }
 
 a:hover {
-  color: #1e40af;  /* Darker blue instead of secondary-blue */
-  text-decoration: none;
-  border-bottom-color: var(--secondary-blue);
+  color: var(--secondary-blue);
+  text-decoration: underline;
 }
 
 a:focus {
@@ -297,170 +216,84 @@ a:focus {
   border-radius: 2px;
 }
 
-/* Professional Container Enhancements */
-.container-fluid {
-  transition: all 0.2s ease;
-}
-
-.jumbotron {
-  transition: all 0.3s ease;
-}
-
-/* Blockquotes - Blue for regular quotes, gold ONLY for prestigious quotes */
+/* Clean Academic Blockquotes */
 blockquote {
   margin: 2rem 0;
-  padding: 1.5rem 2rem;
-  background: var(--background-blue);
-  border-left: 5px solid var(--secondary-blue);  /* Blue for regular quotes */
-  border-radius: 0 8px 8px 0;
+  padding: 1rem 2rem;
+  background: var(--background-gray);
+  border-left: 4px solid var(--border-medium);
   font-style: italic;
   color: var(--text-secondary);
-  box-shadow: 0 4px 16px var(--shadow-light);
-  position: relative;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* AWARD-SPECIFIC blockquotes get gold */
-blockquote.award-quote {
-  border-left-color: var(--accent-gold);  /* Gold ONLY for award quotes */
-}
-
-blockquote::before {
-  content: '"';
-  font-size: 4rem;
-  color: var(--secondary-blue);  /* Blue for regular quotes */
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-  font-weight: bold;
-  opacity: 0.3;
-}
-
-/* Award quote styling gets gold */
-blockquote.award-quote::before {
-  color: var(--accent-gold);  /* Gold ONLY for award quotes */
-}
-
-/* Enhanced Responsive Design */
+/* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
   body {
-    padding: 0 1rem;
     font-size: 15px;
   }
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    padding: 1.25rem 1.5rem;
+    font-size: 2rem; /* 2.0x body text on mobile */
     margin-top: 0;
-  }
-
-  h1::after {
-    width: 100px;
-    height: 3px;
-    left: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   h2 {
-    font-size: 2rem;
-    padding: 1rem 1.5rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem; /* 1.6x body text on mobile */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
   }
 
   h3 {
-    font-size: 1.5rem;
-    margin-top: 2.5rem;
-    padding: 0.625rem 1.25rem;
+    font-size: 1.25rem; /* 1.33x body text on mobile */
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
   }
 
   h4 {
     font-size: 1.125rem;
-    margin-top: 2rem;
-    padding: 0.375rem 0.75rem;
-  }
-
-  h4::after {
-    width: 60px;
-    left: 0.75rem;
+    margin-top: 1.75rem;
   }
 
   h5 {
     font-size: 1rem;
-    margin-top: 1.75rem;
-    padding: 0.25rem 0.5rem;
+    margin-top: 1.5rem;
   }
 
   h6 {
     font-size: 0.875rem;
-    margin-top: 1.5rem;
-  }
-
-  ul, ol {
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  .container-fluid {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .jumbotron {
-    max-width: 100%;
-    padding: 1.5rem;
-    margin: 1rem 0;
+    margin-top: 1.25rem;
   }
 
   blockquote {
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     margin: 1.5rem 0;
-    font-size: 1rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
   body {
     font-size: 14px;
-    padding: 0 0.5rem;
   }
 
   h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-  }
-
-  h1::after {
-    width: 80px;
-    height: 2px;
-    left: 1rem;
+    font-size: 1.75rem; /* 1.75x body text on small screens */
   }
 
   h2 {
-    font-size: 1.75rem;
-    padding: 0.75rem 1rem;
-    margin-top: 2.5rem;
+    font-size: 1.375rem; /* 1.375x body text on small screens */
+    padding-left: 0.375rem;
   }
 
   h3 {
-    font-size: 1.375rem;
-    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
   }
 
   h4 {
     font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-  }
-
-  h4::after {
-    width: 40px;
-    left: 0.5rem;
   }
 
   h5 {
@@ -468,52 +301,31 @@ blockquote.award-quote::before {
   }
 
   h6 {
-    font-size: 0.8rem;
-  }
-
-  ul, ol {
-    padding-left: 1rem;
-  }
-
-  .container-fluid {
-    padding: 0.75rem;
-  }
-
-  .jumbotron {
-    padding: 1rem;
-    margin: 0.75rem 0;
+    font-size: 0.85rem;
   }
 
   blockquote {
-    padding: 0.75rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
 /* Large Screen Optimizations */
 @media only screen and (min-width: 1200px) {
   h1 {
-    font-size: 3.5rem;
-    padding: 2rem 2.5rem;
+    font-size: 2.5rem; /* 2.5x body text on large screens */
   }
 
   h2 {
-    font-size: 2.75rem;
-    padding: 1.5rem 2.5rem;
+    font-size: 1.875rem; /* 1.875x body text on large screens */
   }
 
   h3 {
-    font-size: 2.125rem;
-    padding: 1rem 2rem;
+    font-size: 1.5rem; /* 1.5x body text on large screens */
   }
 
   h4 {
-    font-size: 1.625rem;
-  }
-
-  .container-fluid {
-    max-width: 1200px;
-    margin: 0 auto;
+    font-size: 1.25rem;
   }
 }
 
@@ -522,13 +334,17 @@ blockquote.award-quote::before {
   h1, h2, h3, h4, h5, h6 {
     color: #000 !important;
     background: none !important;
-    box-shadow: none !important;
     border-color: #000 !important;
     break-after: avoid;
+    page-break-after: avoid;
   }
 
-  h2:hover, h3:hover {
-    transform: none;
+  h1 {
+    border-bottom: 1px solid #000 !important;
+  }
+
+  h2 {
+    border-left: 2px solid #000 !important;
   }
 
   a {
@@ -536,15 +352,9 @@ blockquote.award-quote::before {
     text-decoration: underline !important;
   }
 
-  .jumbotron {
-    background: white !important;
-    box-shadow: none !important;
-    border: 1px solid #ccc !important;
-  }
-
   blockquote {
-    background: #f5f5f5 !important;
-    box-shadow: none !important;
+    background: #f9f9f9 !important;
+    border-left: 2px solid #000 !important;
   }
 }
 
@@ -559,172 +369,40 @@ blockquote.award-quote::before {
   color: var(--primary-navy);
 }
 
-/* -------------------------------------------------- */
-/* Heading refinements: academic, accessible, distinct */
-/* -------------------------------------------------- */
-
-/* Consistent offset for anchored headings under fixed masthead */
+/* Academic Heading Accessibility */
 h1, h2, h3, h4, h5, h6 {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 2rem;
   word-break: normal;
-  overflow-wrap: anywhere;
-  hyphens: auto;
-}
-
-/* Fluid typographic scale for headings */
-:root {
-  --h1-size: clamp(2rem, 2rem + 2vw, 2.75rem);
-  --h2-size: clamp(1.65rem, 1.65rem + 1.2vw, 2.1rem);
-  --h3-size: clamp(1.3rem, 1.3rem + 0.8vw, 1.6rem);
-  --h4-size: clamp(1.12rem, 1.12rem + 0.5vw, 1.25rem);
-  --h5-size: clamp(1.05rem, 1.05rem + 0.3vw, 1.15rem);
-  --h6-size: clamp(1rem, 1rem + 0.2vw, 1.05rem);
-}
-
-/* H1 – page title: clear bottom rule with subtle accent */
-h1 {
-  font-size: var(--h1-size);
-  font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
-  font-weight: 800;
-  color: var(--primary-navy);
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  padding: 0 0 0.5rem;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  position: relative;
-  letter-spacing: -0.01em;
-  border-bottom: 2px solid var(--border-light);
-}
-
-h1::before { display: none; }
-h1::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 120px;
-  height: 3px;
-  background: var(--secondary-blue);
-  border-radius: 2px;
-}
-
-/* H2 – section: left accent, no hover motion */
-h2 {
-  font-size: var(--h2-size);
-  font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
-  font-weight: 750;
-  color: var(--primary-navy);
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding: 0.25rem 0 0.25rem 0.75rem;
-  background: transparent;
-  border: none;
-  border-left: 5px solid var(--secondary-blue);
-  box-shadow: none;
-  letter-spacing: -0.01em;
-}
-
-h2::before { display: none; }
-h2:hover { transform: none; box-shadow: none; border-left-color: var(--secondary-blue); }
-
-/* H3 – subsection: thinner accent */
-h3 {
-  font-size: var(--h3-size);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  padding: 0.125rem 0 0.125rem 0.6rem;
-  background: transparent;
-  border: none;
-  border-left: 4px solid var(--border-light);
-  box-shadow: none;
-}
-
-h3::before { display: none; }
-h3:hover { transform: none; box-shadow: none; }
-
-/* H4–H6 – minimal, structural only */
-h4 {
-  font-size: var(--h4-size);
-  font-weight: 650;
-  color: var(--text-primary);
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  padding: 0;
-  background: transparent;
-  border: none;
-}
-
-h5 {
-  font-size: var(--h5-size);
-  font-weight: 650;
-  color: var(--primary-navy);
-  margin-top: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-h6 {
-  font-size: var(--h6-size);
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
+  overflow-wrap: break-word;
 }
 
 /* Optional subtitle span inside H1 for academic metadata */
 h1 .subtitle {
   display: block;
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: var(--text-secondary);
-  font-weight: 500;
-  margin-top: 0.25rem;
+  font-weight: normal;
+  margin-top: 0.5rem;
+  font-style: italic;
 }
 
-/* Mobile scaling for headings refinements */
-@media (max-width: 768px) {
-  /* Fluid sizes already handle mobile; keep margins tighter */
-  h1 { margin-top: 1.5rem; }
-  h2 { margin-top: 1.75rem; }
-  h3 { margin-top: 1.25rem; }
-}
-
-/* :target highlight to orient users after in-page jumps */
+/* Simple target highlight for in-page jumps */
 h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
-  background-image: linear-gradient(to right, rgba(83,117,226,0.12), rgba(83,117,226,0));
-  background-repeat: no-repeat;
-  background-size: 100% 60%;
-  background-position: 0 80%;
+  background-color: rgba(83,117,226,0.1);
   outline: 0;
 }
 
-/* Hover/focus anchor link icon that appears next to headings */
+/* Clean heading anchor links */
 .heading-anchor {
   margin-left: 0.5rem;
-  opacity: 0;
-  transition: opacity 0.15s ease;
   color: var(--text-light);
   text-decoration: none;
 }
 
-h1:hover .heading-anchor,
-h2:hover .heading-anchor,
-h3:hover .heading-anchor,
-h4:hover .heading-anchor,
-h5:hover .heading-anchor,
-h6:hover .heading-anchor,
-h1:focus-within .heading-anchor,
-h2:focus-within .heading-anchor,
-h3:focus-within .heading-anchor,
-h4:focus-within .heading-anchor,
-h5:focus-within .heading-anchor,
-h6:focus-within .heading-anchor {
-  opacity: 1;
+.heading-anchor:focus { 
+  outline: 2px solid var(--secondary-blue); 
+  outline-offset: 2px; 
 }
-
-.heading-anchor:focus { outline: 2px solid var(--secondary-blue); outline-offset: 2px; border-radius: 2px; }
 
 /* Optional section numbering when body has .numbered-headings */
 body.numbered-headings h2 {
@@ -747,22 +425,15 @@ body.numbered-headings h3::before {
   font-weight: 600;
 }
 
-/* Strict academic variant: monochrome accents and reduced decoration */
+/* Strict academic variant: monochrome accents */
 body.strict-academic h1 {
-  border-bottom-color: #222;
-}
-
-body.strict-academic h1::after {
-  background: #222;
+  border-bottom-color: #333;
 }
 
 body.strict-academic h2 {
-  border-left-color: #222;
+  border-left-color: #333;
 }
 
-body.strict-academic .heading-anchor { color: #666; }
-
-body.strict-academic.numbered-headings h2::before,
-body.strict-academic.numbered-headings h3::before {
-  color: #666;
+body.strict-academic .heading-anchor { 
+  color: #666; 
 }

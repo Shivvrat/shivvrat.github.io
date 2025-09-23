@@ -13,17 +13,21 @@
   event: Awarded by the Center for Teaching and Learning, The University of Texas at Dallas  
   certificate: /certificates/FY25 GTC-Arya.jpg
 
-- name: Recognized as a Top Reviewer (among the top 8% of reviewers) for NeurIPS 2024! 
+- name: Recognized as a <a href="https://neurips.cc/Conferences/2024/ProgramCommittee#top-reviewers">Top Reviewer</a> (among the top 8% of reviewers) for NeurIPS 2024!
   type: professional recognition
 
-- name: A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models
+- name: Spotlight Presentation at NeurIPS 2024
   type: paper award
-  event: Spotlight Presentation at NeurIPS 2024; Best Paper Award at UAI TPM 2024
-  certificate: /certificates/tpm_certificate.jpg
+  event: Recognized for “A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models” — ranked among the top 3% of accepted papers.
 
-- name: Neural Network Approximators for Marginal MAP Inference
+- name: Oral Presentation at AAAI 2024
   type: paper award
-  event: Oral Presentation at AAAI 2024
+  event: Recognized for “Neural Network Approximators for Marginal MAP Inference”, selected among the top 6% of accepted papers
+
+- name: Best Paper Award at UAI TPM 2024
+  type: paper award
+  event: Awarded for "A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models"
+  certificate: /certificates/tpm_certificate.jpg
 
 - name: Jonsson School Graduate Study Scholarship
   type: scholarship

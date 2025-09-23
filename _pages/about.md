@@ -59,7 +59,7 @@ permalink: /about/
         <p class="award-description">{{ award.description }}</p>
       {% endif %}
       {% if award.certificate %}
-        <div style="text-align: center; margin-top: 10px;">
+        <div style=" margin-top: 10px;">
           <a href="{{ award.certificate }}" target="_blank" class="btn btn-certificate">
             <i class="fa fa-certificate" style="margin-right: 8px;"></i>View Certificate</a>
         </div>

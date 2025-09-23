@@ -12,24 +12,122 @@ permalink: /teaching/
 ## Academic Teaching Experience
 
 <div class="subsection-card">
-### Guest Lecturer
-##### The University of Texas at Dallas
-<!-- - [Artificial Intelligence (CS 4365, Senior Level)](/teaching/cs4365/) &mdash; Spring 2024 -->
-- Artificial Intelligence (CS 4365, Senior Level) &mdash; Spring 2024
-- Advanced Topics in Artificial Intelligence (CS 6364, Graduate Level) &mdash; Fall 2024
-- Machine Learning (CS 6375, Graduate Level) &mdash; Fall 2024
+### At New Jersey Institute of Technology, Newark, USA.
+
+<table class="teaching-table">
+  <thead>
+    <tr>
+      <th>Year/Term</th>
+      <th>Course No.</th>
+      <th>Course</th>
+      <th>Level</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fall 2025</td>
+      <td>CS 785</td>
+      <td>Neurosymbolic AI</td>
+      <td>Graduate Seminar</td>
+      <td>Computer Science</td>
+    </tr>
+  </tbody>
+  </table>
 </div>
 
 <div class="subsection-card">
-### Teaching Assistant
-##### The University of Texas at Dallas
-- Statistical Methods in AI and Machine Learning (Graduate) &mdash; Spring 2021
-- Database Systems (Senior Level) &mdash; Fall 2020, Spring 2021
-- Discrete Mathematics for Computing II (Senior Level) &mdash; Summer 2021
+### At The University of Texas at Dallas, USA — Guest Lecturer
+
+<table class="teaching-table">
+  <thead>
+    <tr>
+      <th>Year/Term</th>
+      <th>Course No.</th>
+      <th>Course</th>
+      <th>Level</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fall 2024</td>
+      <td>CS 6364</td>
+      <td>Artificial Intelligence</td>
+      <td>Graduate</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
+      <td>Fall 2024</td>
+      <td>CS 6375</td>
+      <td>Machine Learning</td>
+      <td>Graduate</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
+      <td>Spring 2024</td>
+      <td>CS 4365</td>
+      <td><!-- [ -->Artificial Intelligence<!-- ](/teaching/cs4365/) --></td>
+      <td>Undergraduate</td>
+      <td>Computer Science</td>
+    </tr>
+  </tbody>
+  </table>
 </div>
 
-[//]: # (### Previous Experience)
-[//]: # (* Lecturer &#40;Teaching Fellow&#41;, University of Illinois at Urbana--Champaign)
-[//]: # (    * Fundamentals of Fluid Dynamics &#40;Junior Level&#41;--2015)
+<div class="subsection-card">
+### At The University of Texas at Dallas, USA — Teaching Assistant
+
+<table class="teaching-table">
+  <thead>
+    <tr>
+      <th>Year/Term</th>
+      <th>Course No.</th>
+      <th>Course</th>
+      <th>Level</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spring 2021</td>
+      <td>CS 6347</td>
+      <td>Statistical Methods in AI and Machine Learning</td>
+      <td>Graduate</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
+      <td>Spring 2021</td>
+      <td>CS 4347</td>
+      <td>Database Systems</td>
+      <td>Undergraduate</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
+      <td>Fall 2020</td>
+      <td>CS 4347</td>
+      <td>Database Systems</td>
+      <td>Undergraduate</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
+      <td>Summer 2021</td>
+      <td>CS 3305</td>
+      <td>Discrete Mathematics for Computing II</td>
+      <td>Undergraduate</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>    
+      <td>Summer 2021</td>
+      <td>CS 3305</td>
+      <td>Discrete Mathematics for Computing II</td>
+      <td>Undergraduate</td>
+      <td>Computer Science</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+[//]: # (Add more institutions/sections below in the same table structure.)
 
 </div>

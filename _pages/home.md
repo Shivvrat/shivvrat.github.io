@@ -20,7 +20,7 @@ seo:
 </div>
 
 <div class="alert alert-info">
-📢 He is currently recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research opportunities.  
+📢 Dr. Arya is currently recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research opportunities.  
 </div>
 
 ## Biography  
@@ -34,7 +34,7 @@ His research lies at the intersection of Artificial Intelligence and Machine Lea
 ## Research Focus  
 
 - **Neurosymbolic AI**: Integrating formal world models with neural networks  
-- **Probabilistic Methods**: Novel inference approaches for graphical models  
+- **Probabilistic Methods**: Novel real-time inference approaches for graphical models  
 - **Explainable AI**: Interpretable models supporting polynomial-time reasoning  
 - **Combinatorial Optimization**: Efficient algorithms for NP-hard problems  
 - **Applications**: Vision and language tasks including video understanding and activity recognition  
