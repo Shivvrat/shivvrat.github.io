@@ -29,7 +29,7 @@ Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu Colle
 
 His research advances interpretable and trustworthy AI through two complementary directions:
 
-1. Probabilistic reasoning, neuro-symbolic AI, and explainable AI, applied to real-world problems in computer vision and natural language processing, and
+1. Probabilistic reasoning, neurosymbolic AI, and explainable AI, applied to real-world problems in computer vision and natural language processing, and
 2. Combinatorial and constrained optimization, with an emphasis on learning-based and neural approaches.
 
 Dr. Arya’s work develops AI systems that integrate structured domain knowledge with data-driven learning. His contributions span graph-based inference, symbolic reasoning, and neural solvers for optimization, with applications in video understanding, activity recognition, and multimodal reasoning.
@@ -38,10 +38,10 @@ Dr. Arya’s work develops AI systems that integrate structured domain knowledge
 
 ## Research Focus  
 
-* **Neuro-symbolic & Explainable AI** — Integrating symbolic structure with deep learning for transparent reasoning
+* **Neurosymbolic AI & Explainable Systems** — Integrating symbolic structure with deep learning for transparent reasoning
+* **Neural Combinatorial Optimization** — Learning-based solvers for combinatorial and constrained problems
 * **Probabilistic Inference** — Scalable neural methods for reasoning under uncertainty
-* **Learning-Based Optimization** — Neural solvers for combinatorial and constrained problems
-* **Applications** — Vision and language tasks including video understanding, activity recognition, and language reasoning
+* **Applications** — Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning
 
 ---
 
@@ -50,7 +50,7 @@ Dr. Arya’s work develops AI systems that integrate structured domain knowledge
 - Publications recognized with **best paper awards**, **spotlights**, and **oral presentations** at top AI/ML venues  
 - Developed **[NeuPI](https://neupi.readthedocs.io/en/latest/#)**, a neural inference engine that accelerates probabilistic reasoning from minutes to microseconds
 - Built **real-time AR guidance systems** for complex physical tasks  
-- Released **CaptainCook4D**, an egocentric 4D dataset for procedural task understanding
+- Released [**CaptainCook4D**](https://captaincook4d.github.io/captain-cook/), an egocentric 4D dataset for procedural task understanding
 
 ---
 

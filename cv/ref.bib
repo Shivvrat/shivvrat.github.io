@@ -1,3 +1,31 @@
+@inproceedings{
+malhotra2025learning,
+title={Learning to Condition: A Neural Heuristic for Scalable {MPE} Inference},
+author={Brij Malhotra and Shivvrat Arya and Tahrima Rahman and Vibhav Giridhar Gogate},
+booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+year={2025},
+url={https://openreview.net/forum?id=otIdC4tsYf},
+file={NeurIPS25_L2C.pdf}
+}
+
+@inproceedings{arya2025relink,
+author = {Arya, Shivvrat and Ghosh, Smita and Maruyama, Bryan and Srinivasan, Venkatesh},
+title = {RELINK: Edge Activation for Closed Network Influence Maximization via Deep Reinforcement Learning},
+year = {2025},
+isbn = {9798400720406},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3746252.3761006},
+doi = {10.1145/3746252.3761006},
+abstract = {Influence Maximization aims to select a subset of elements in a social network to maximize information spread under a diffusion model. While existing work primarily focuses on selecting influential nodes, these approaches assume unrestricted message propagation-an assumption that fails in closed social networks, where content visibility is constrained and node-level activations may be infeasible. Motivated by the growing adoption of privacy-focused platforms such as Signal, Discord, Instagram, and Slack, our work addresses the following fundamental question: How can we learn effective edge activation strategies for influence maximization in closed networks? To answer this question we introduce Reinforcement Learning for Link Activation (RELINK), the first DRL framework for edge-level influence maximization in privacy-constrained networks. It models edge selection as a Markov Decision Process, where the agent learns to activate edges under budget constraints. Unlike prior node-based DRL methods, RELINK uses an edge-centric Q-learning approach that accounts for structural constraints and constrained information propagation. Our framework combines a rich node embedding pipeline with an edge-aware aggregation module. The agent is trained using an n-step Double DQN objective, guided by dense reward signals that capture marginal gains in influence spread. Extensive experiments on real-world networks show that RELINK consistently outperforms existing edge-based methods, achieving up to 15\% higher influence spread and improved scalability across diverse settings.},
+booktitle = {Proceedings of the 34th ACM International Conference on Information and Knowledge Management},
+pages = {65–76},
+numpages = {12},
+keywords = {closed networks, deep reinforcement learning, edge selection, influence maximization, social network analysis},
+location = {Seoul, Republic of Korea},
+series = {CIKM '25},
+file={RELINK_CIKM2025.pdf}
+}
 
 @InProceedings{pmlr-v258-arya25a,
   title = 	 {SINE: Scalable MPE Inference for Probabilistic Graphical Models using Advanced Neural Embeddings},
@@ -18,14 +46,19 @@
   library={https://neupi.readthedocs.io/en/latest/}
 }
 
-@inproceedings{
-2024captaincookdnips,
-title={CaptainCook4D: A Dataset for Understanding Errors in Procedural Activities},
-author={Rohith Peddi and Shivvrat Arya and Bharath Challa and Likhitha Pallapothula and Akshay Vyas and Bhavya Gouripeddi and Qifan Zhang and Jikai Wang and Vasundhara Komaragiri and Eric Ragan and Nicholas Ruozzi and Yu Xiang and Vibhav Gogate},
-booktitle={The Thirty-eight Conference on Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
-month = november,
-year={2024},
-url={https://openreview.net/forum?id=YFUp7zMrM9},
+@inproceedings{2024captaincookdnips,
+author = {Peddi, Rohith and Arya, Shivvrat and Challa, Bharath and Pallapothula, Likhitha and Vyas, Akshay and Gouripeddi, Bhavya and Zhang, Qifan and Wang, Jikai and Komaragiri, Vasundhara and Ragan, Eric and Ruozzi, Nicholas and Xiang, Yu and Gogate, Vibhav},
+title = {CaptainCook4D: a dataset for understanding errors in procedural activities},
+year = {2024},
+isbn = {9798331314385},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Following step-by-step procedures is an essential component of various activities carried out by individuals in their daily lives. These procedures serve as a guiding framework that helps to achieve goals efficiently, whether it is assembling furniture or preparing a recipe. However, the complexity and duration of procedural activities inherently increase the likelihood of making errors. Understanding such procedural activities from a sequence of frames is a challenging task that demands an accurate interpretation of visual information and the ability to reason about the structure of the activity. To this end, we collect a new egocentric 4D dataset CaptainCook4D comprising 384 recordings (94.5 hours) of people performing recipes in real kitchen environments. This dataset consists of two distinct types of activities: one in which participants adhere to the provided recipe instructions and another in which they deviate and induce errors. We provide 5.3K step annotations and 10K finegrained action annotations and benchmark the dataset for the following tasks: error recognition, multi-step localization and procedure learning. https://captaincook4d.github.io/captain-cook/},
+booktitle = {Proceedings of the 38th International Conference on Neural Information Processing Systems},
+articleno = {4307},
+numpages = {54},
+location = {Vancouver, BC, Canada},
+series = {NIPS '24},
 website={https://captaincook4d.github.io/captain-cook/},
 code={https://github.com/CaptainCook4D/},
 file={NeurIPS_1088_CaptainCook4D_A_Dataset_f.pdf}
@@ -76,36 +109,24 @@ file = {TPM_11_a_neural_network_approach_for_.pdf},
 library={https://neupi.readthedocs.io/en/latest/}
 }
 
-
-@inproceedings{arya_2024_dependencynetworksa,
-  title = {Deep {{Dependency Networks}} and {{Advanced Inference Schemes}} for {{Multi-Label Classification}}},
-  booktitle = {Proceedings of {{The}} 27th {{International Conference}} on {{Artificial Intelligence}} and {{Statistics}} (AISTATS)},
-  author = {Arya, Shivvrat and Xiang, Yu and Gogate, Vibhav},
-  year = {2024},
-  month = apr,
-  pages = {2818--2826},
-  publisher = {PMLR},
-  issn = {2640-3498},
-  urldate = {2024-04-21},
-  langid = {english},
-        abstract = {We present a unified framework called deep dependency networks (DDNs) that combines dependency networks and deep learning architectures for multi-label classification, with a particular emphasis on image and video data. The primary advantage of dependency networks is their ease of training, in contrast to other probabilistic graphical models like Markov networks. In particular, when combined with deep learning architectures, they provide an intuitive, easy-to-use loss function for multi-label classification. A drawback of DDNs compared to Markov networks is their lack of advanced inference schemes, necessitating the use of Gibbs sampling. To address this challenge, we propose novel inference schemes based on local search and integer linear programming for computing the most likely assignment to the labels given observations. We evaluate our novel methods on three video datasets (Charades, TACoS, Wetlab) and three image datasets (MS-COCO, PASCAL VOC, NUS-WIDE), comparing their performance with (a) basic neural architectures and (b) neural architectures combined with Markov networks equipped with advanced inference and learning techniques. Our results demonstrate the superiority of our new DDN methods over the two competing approaches.},
-    code = {https://github.com/Shivvrat/Advanced-Inference-Schemes-for-DDNs},
-    file = {DDN_AISTATS2024CameraReady.pdf},
+@InProceedings{pmlr-v238-arya24a,
+  title = 	 {Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification},
+  author =       {Arya, Shivvrat and Xiang, Yu and Gogate, Vibhav},
+  booktitle = 	 {Proceedings of The 27th International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {2818--2826},
+  year = 	 {2024},
+  editor = 	 {Dasgupta, Sanjoy and Mandt, Stephan and Li, Yingzhen},
+  volume = 	 {238},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {02--04 May},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v238/arya24a/arya24a.pdf},
+  url = 	 {https://proceedings.mlr.press/v238/arya24a.html},
+  abstract = 	 {We present a unified framework called deep dependency networks (DDNs) that combines dependency networks and deep learning architectures for multi-label classification, with a particular emphasis on image and video data. The primary advantage of dependency networks is their ease of training, in contrast to other probabilistic graphical models like Markov networks. In particular, when combined with deep learning architectures, they provide an intuitive, easy-to-use loss function for multi-label classification. A drawback of DDNs compared to Markov networks is their lack of advanced inference schemes, necessitating the use of Gibbs sampling. To address this challenge, we propose novel inference schemes based on local search and integer linear programming for computing the most likely assignment to the labels given observations. We evaluate our novel methods on three video datasets (Charades, TACoS, Wetlab) and three image datasets (MS-COCO, PASCAL VOC, NUS-WIDE), comparing their performance with (a) basic neural architectures and (b) neural architectures combined with Markov networks equipped with advanced inference and learning techniques. Our results demonstrate the superiority of our new DDN methods over the two competing approaches.},
+  code = {https://github.com/Shivvrat/Advanced-Inference-Schemes-for-DDNs},
+  file = {DDN_AISTATS2024CameraReady.pdf},
 }
 
-
-@unpublished{peddi2023captaincook4d,
-              title         = {CaptainCook4D: A dataset for understanding errors in procedural activities},
-              author        = {Rohith Peddi and Shivvrat Arya and Bharath Challa and Likhitha Pallapothula and Akshay Vyas and Jikai Wang and Qifan Zhang and Vasundhara Komaragiri and Eric Ragan and Nicholas Ruozzi and Yu Xiang and Vibhav Gogate},
-              year          = {2023},
-              eprint        = {2312.14556},
-              archivePrefix = {arXiv},
-              code = {https://captaincook4d.github.io/captain-cook/},
-              abstract = {Following step-by-step procedures is an essential component of various activities carried out by individuals in their daily lives. These procedures serve as a guiding framework that helps to achieve goals efficiently, whether it is assembling furniture or preparing a recipe. However, the complexity and duration of procedural activities inherently increase the likelihood of making errors. Understanding such procedural activities from a sequence of frames is a challenging task that demands an accurate interpretation of visual information and the ability to reason about the structure of the activity. To this end, we collect a new egocentric 4D dataset, CaptainCook4D, comprising 384 recordings (94.5 hours) of people performing recipes in real kitchen environments. This dataset consists of two distinct types of activity: one in which participants adhere to the provided recipe instructions and another in which they deviate and induce errors. We provide 5.3K step annotations and 10K fine-grained action annotations and benchmark the dataset for the following tasks: supervised error recognition, multistep localization, and procedure learning},
-              primaryClass  = {cs.CV},
-              booktitle     = {arXiv},
-
-            }
             
 https://ojs.aaai.org/index.php/AAAI/article/view/28966
 @inproceedings{arya_2024_networkapproximatorsa,
@@ -172,17 +193,6 @@ https://ojs.aaai.org/index.php/AAAI/article/view/28966
 
               booktitle     = {IEEE Virtual Reality (IEEE VR)}
 }
-@workshop{peddi2023captaincook4dworkshop,
-              title         = {Put on your detective hat: What's wrong in this video?},
-              author        = {Rohith Peddi and Shivvrat Arya and Bharath Challa and Likhitha Pallapothula and Akshay Vyas and Jikai Wang and Qifan Zhang and Vasundhara Komaragiri and Eric Ragan and Nicholas Ruozzi and Yu Xiang and Vibhav Gogate},
-              year          = {2023},
-              month = {june},
-              file = {DMLR_ICML_2023_1.pdf},
-              booktitle     = {DMLR Workshop: Data-centric Machine Learning Research}
-}
-
-
-
 @article{Explainable_AI_TiiS,
 author = {Roy, Chiradeep* and Nourani, Mahsan* and Arya, Shivvrat* and Shanbhag, Mahesh and Rahman, Tahrima and Ragan, Eric D. and Ruozzi, Nicholas and Gogate, Vibhav (*equal contribution)},
 title = {Explainable Activity Recognition in Videos Using Deep Learning and Tractable Probabilistic Models},

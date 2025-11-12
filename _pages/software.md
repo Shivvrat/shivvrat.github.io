@@ -27,17 +27,19 @@ permalink: /software/
 
 **Authors:** *S. Arya, T. Rahman, V. Gogate*
 
-**NeuPI** is a [PyTorch-based library](https://github.com/Shivvrat/NeuPI) for solving inference tasks in Probabilistic Models (PMs) using neural network surrogates. It provides a modular framework for training neural models in a self-supervised fashion, where the PM itself provides the supervisory signal. This approach eliminates the need for labeled training data by directly optimizing for the log-likelihood of proposed solutions.
+[**NeuPI**](https://github.com/Shivvrat/NeuPI) is a PyTorch-based library for solving inference tasks in Probabilistic Models (PMs) using neural network surrogates. It provides a modular, self-supervised framework where the probabilistic model itself supplies the supervisory signal—eliminating the need for labeled training data. By learning to approximate inference directly from model structure, **NeuPI** reduces reasoning time from minutes to microseconds while maintaining high fidelity to exact inference results. 
 
 **Key features:**
-- **Self-Supervised Training**: Trains neural surrogates using only the PM definition, requiring no labeled data
-- **Advanced Inference**: Implements the **ITSELF** (Inference Time Self-Supervised Training) engine for test-time refinement, which significantly improves inference accuracy
-- **Modular Architecture**: Features a clean separation of components (PGM Evaluators, Neural Solvers, Embedders, Trainers) that are easily extensible
+- **Self-Supervised Training**: Trains neural surrogates using only the PM definition, requiring no labeled data.
+- **Advanced Inference**: Employs the **ITSELF** (Inference-Time Self-Supervised Learning) engine for test-time adaptation, significantly improving inference accuracy. 
+- **Extensible Design**: Built-in factory system for registering custom components 
 
-The core workflow involves training a neural network to serve as a fast approximator for a complex PM query, using the PM itself to evaluate and guide the training process.
+**Supported Tasks:** Most Probable Explanation (MPE), Marginal MAP, Constrained MPE
 
+**Supported Models:** Probabilistic Graphical Models, Probabilistic Circuits, Neural Autoregressive Models
+
+The library implements award-winning methods from top-tier AI/ML conferences providing both fast single-pass inference and advanced test-time adaptation capabilities for scalable probabilistic reasoning.
 </div>
-
 
 <!-- <div class="jumbotron">
 <div class="row align-items-end">

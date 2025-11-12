@@ -5,7 +5,7 @@ sitemap: false
 permalink: /grants/
 seo:
   title: "Funded Projects & Grants – Shivvrat Arya"
-  description: "DARPA (PTG, XAI, ANSR), NSF, AFOSR – funded research contributions."
+  description: "DARPA, NSF, AFOSR funded research in neurosymbolic AI, neural optimization, and probabilistic inference."
 ---
 
 <!-- page css -->
@@ -21,14 +21,14 @@ Selected funded projects grouped by agency. Work spans neurosymbolic AI, probabi
 
 ### Perceptually-enabled Task Guidance (PTG)
 
-**Summary**: Neuro-symbolic dynamic probabilistic models for structured task representation and real-time guidance in complex physical procedures.
+**Summary**: Neurosymbolic dynamic probabilistic models for structured task representation and real-time guidance in complex physical procedures.
 
 - **Institution**: Center for Machine Learning, The University of Texas at Dallas (UTD)
 - **Role**: Research Assistant
 - **Timeline**: Aug 2021 – May 2025
 - **Focus**: Neuro-Symbolic Dynamic Probabilistic Models for task representation and reasoning; real-time assistance in complex physical tasks.
 - **Contributions**:
-  - Advanced neuro-symbolic dynamic models combining structured reasoning with deep learning
+  - Advanced neurosymbolic dynamic models combining structured reasoning with deep learning
   - Improved user performance by expanding skillsets and reducing error rates in task guidance settings
   - Built robust pipelines for perception, inference, and feedback loops
 

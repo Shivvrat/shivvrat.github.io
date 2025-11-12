@@ -5,7 +5,7 @@ sitemap: false
 permalink: /hiring/
 seo:
   title: "Hiring – Open Positions in AI/ML at NJIT"
-  description: "Fully funded Ph.D. positions and research opportunities in neurosymbolic AI, probabilistic reasoning, explainable AI, and computer vision at NJIT."
+  description: "Fully funded Ph.D. positions and research opportunities in neurosymbolic AI, neural combinatorial optimization, probabilistic inference, and computer vision at NJIT."
 ---
 
 <!-- include page stylesheet -->
@@ -29,14 +29,18 @@ I’m recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergra
 
 ### What we work on (focus areas)
 
-Neurosymbolic AI; combinatorial optimization; scalable training/inference; probabilistic modeling and inference; graphical models; explainable/interpretable AI; computer vision, video understanding, and language-grounded reasoning.
+**1. Neurosymbolic AI** — Integrating symbolic structure with deep learning for transparent and interpretable AI systems
 
-Examples include neuro-symbolic integration, optimization-for-ML, tractable inference schemes, interpretable modeling for structured systems, and temporal reasoning for vision.
+**2. Neural Combinatorial Optimization** — Learning-based solvers for combinatorial and constrained optimization problems
 
-**Representative directions:**
+**3. Probabilistic Inference** — Scalable neural methods for reasoning under uncertainty in graphical models and probabilistic circuits
+
+**4. Applications** — Computer vision, video understanding, activity recognition, and multimodal reasoning
+
+**Specific directions:**
 
 - Integrating formal world models with neural networks
-- Efficient algorithms for NP-hard problems
+- Efficient neural algorithms for NP-hard problems
 - Interpretable models enabling polynomial-time reasoning
 
 ---
@@ -56,13 +60,13 @@ Examples include neuro-symbolic integration, optimization-for-ML, tractable infe
 - Proficiency in Python; experience with modern DL frameworks (e.g., PyTorch, Jax)
 - Familiarity with data structures, optimization, and graph-based models
 - Sound engineering practices: Git, testing, reproducibility
-- Plus (nice-to-have): graphical models, neuro-symbolic methods, combinatorial optimization, or computer vision
+- Plus (nice-to-have): graphical models, neurosymbolic methods, combinatorial optimization, or computer vision
 
 ---
 
 ### Outcomes
 
-Depth in probabilistic reasoning, deep learning, optimization, and interpretable modeling; experience with tractable inference and neuro-symbolic integration; and applications to video/activity understanding and language reasoning.
+Depth in probabilistic reasoning, deep learning, optimization, and interpretable modeling; experience with tractable inference and neurosymbolic integration; and applications to video/activity understanding and language reasoning.
 
 ---
 

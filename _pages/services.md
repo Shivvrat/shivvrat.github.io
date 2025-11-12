@@ -18,6 +18,8 @@ permalink: /services/
 - Artificial Intelligence (**AIJ**)
 - Transactions on Machine Learning Research (**TMLR**)
 - IEEE Robotics and Automation Letters (**RA-L**)
+- Data Mining and Knowledge Discovery
+
 </div>
 
 

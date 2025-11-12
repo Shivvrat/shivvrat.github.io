@@ -130,6 +130,15 @@
   <!-- Bibtex Content -->
   {% if entry.bibtex %}
     {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+    {% assign lines = entry.bibtex | split: '
+' %}
+    {% assign clean_bibtex = '' %}
+    {% for line in lines %}
+      {% unless line contains 'comment' or line contains 'file' or line contains 'note' or line contains 'pdf' or line contains 'library' or line contains 'website' or line contains 'code' or line contains 'certificate' %}
+        {% assign clean_bibtex = clean_bibtex | append: line | append: '
+' %}
+      {% endunless %}
+    {% endfor %}
     <div id="a{{clean_key}}" class="bib-content bibtex-content" aria-label="BibTeX citation">
       <div class="content-header">
         <span>BibTeX Citation</span>
@@ -137,7 +146,7 @@
           <i class="fas fa-copy"></i>
         </button>
       </div>
-      <pre><code>{{ entry.bibtex }}</code></pre>
+      <pre><code>{{ clean_bibtex }}</code></pre>
     </div>
   {% endif %}
 
