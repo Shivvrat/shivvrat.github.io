@@ -1,0 +1,550 @@
+/* Professional Academic Custom Styling for R1 University Faculty */
+
+/* Import Professional Academic Color Palette */
+:root {
+  /* Primary Academic Blues */
+  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
+  
+  /* Professional Text Colors */
+  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
+  --text-secondary: #555555;      /* Medium gray for secondary text */
+  --text-light: #777777;          /* Light gray for captions */
+  
+  /* Clean Backgrounds */
+  --background: #ffffff;          /* Pure white */
+  --background-gray: #f8f9fa;     /* Very light gray */
+  --background-blue: #f0f4ff;     /* Light blue tint */
+  
+  /* Professional Borders */
+  --border-light: #e9ecef;        /* Light border */
+  --border-medium: #dee2e6;       /* Medium border */
+  
+  /* Academic Accent Colors */
+  --accent-gold: #c8b18b;         /* Gold accent for highlights */
+  --accent-green: #16cc5c;        /* Success green */
+  --warning: #ffc107;             /* Warning amber */
+  --error: #dc3545;               /* Error red */
+  
+  /* Professional Shadows */
+  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
+}
+
+/* Professional Responsive Layout */
+@media only screen and (max-width: 767px) {
+  .container-fluid {
+    max-width: 100%; 
+    padding: 1rem; 
+  }
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    max-width: 75%; 
+    padding: 2rem 3rem; 
+  }
+}
+
+/* Enhanced Bibliography Styling */
+ol.bibliography {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Professional Comment Styling */
+.comment-icon {
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
+  vertical-align: middle;
+  color: var(--accent-teal);
+}
+
+.comment-text {
+  vertical-align: middle;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Enhanced News Container - Core Palette Only */
+.news-container {
+
+}
+
+/* Professional News Header - Core Colors */
+.news-header {
+  color: var(--primary-navy);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--primary-navy);  /* Navy instead of teal */
+}
+
+/* Professional News Items - Simplified */
+.news-item {
+  background: var(--background);
+  border-left: 4px solid var(--secondary-blue);  /* Blue for regular news */
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: all 0.2s ease;
+}
+
+.news-item:hover {
+  background: var(--background-blue);  /* Simple blue tint */
+  transform: translateX(2px);  /* Minimal movement */
+}
+
+/* News Categories - Clear Hierarchy with Core Palette */
+.news-award {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for awards */
+}
+
+.news-general {
+  border-left-color: var(--text-secondary);  /* Gray for general news */
+}
+
+/* Enhanced News Date - Simplified */
+.news-date {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+/* Professional Table Enhancements */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--shadow-light);
+}
+
+table th {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+}
+
+table tr:hover {
+  background: var(--background-blue);
+}
+
+/* Professional Form Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--background);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+/* Clean Professional Cards */
+.card {
+  background: var(--background);  /* Solid white background */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: var(--background-gray);  /* Simple gray on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px var(--shadow-medium);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--background-blue) 0%, var(--background-gray) 100%);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Professional Alert Styling */
+.alert {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border-color: var(--success);
+  color: #065f46;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+  border-color: var(--warning);
+  color: #92400e;
+}
+
+/* Alert-info styling moved to responsive.css for better organization */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-container {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .news-header {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .news-item {
+    padding: 1.25rem;
+  }
+  
+  .news-headline {
+    font-size: 1rem;
+  }
+  
+  
+  table th,
+  table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding: 0.75rem;
+  }
+  
+  .news-container {
+    padding: 1rem;
+  }
+  
+  .news-header {
+    font-size: 1.5rem;
+  }
+  
+  .news-item {
+    padding: 1rem;
+  }
+  
+  table {
+    font-size: 0.875rem;
+  }
+}
+
+/* Professional Focus States */
+.news-link:focus,
+.form-control:focus {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
+}
+
+/* Enhanced Text Selection */
+::selection {
+  background: var(--background-blue);
+  color: var(--primary-navy);
+}
+
+/* Professional Button Hover Effects - More Subtle */
+.btn:hover {
+  transform: translateY(-1px);  /* Reduced movement */
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #1e40af;  /* Darker blue for subtle hover */
+  color: white;
+}
+
+/* Success Elements - Green Only */
+.btn-success {
+  background: var(--accent-green);
+  color: white;
+}
+
+.btn-success:hover {
+  background: #14b34d;  /* Darker green for subtle hover */
+  color: white;
+}
+
+/* Award/Honor Elements - Gold Only */
+.btn-award, .award-button {
+  background: var(--accent-gold);
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+.btn-award:hover, .award-button:hover {
+  background: #b8a67a;  /* Darker gold for subtle hover */
+  color: var(--primary-navy);
+}
+
+/* Professional Navigation - Blue for regular items */
+.nav-item {
+  background: transparent;
+  border-radius: 12px;
+  margin: 0.55rem 0;
+  color: var(--primary-navy);
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background: var(--primary-navy);
+  color: white;
+  border-color: var(--primary-navy);
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.15);
+}
+
+.nav-item:active,
+.nav-item.active {
+  background: var(--secondary-blue);
+  color: white;
+  border-color: var(--secondary-blue);
+}
+
+/* Clean Section Styling - Blue borders */
+.section {
+  background: var(--background);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  border-left: 6px solid var(--secondary-blue);  /* Blue for regular sections */
+}
+
+/* Awards section gets gold */
+.section.awards {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for awards sections */
+}
+
+/* Feature boxes - Blue for regular features */
+.feature-box {
+  background: var(--background-gray);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-left: 5px solid var(--secondary-blue);  /* Blue for regular features */
+  box-shadow: 0 4px 16px var(--shadow-light);
+}
+
+/* Achievement features get gold */
+.feature-box.achievement {
+  border-left-color: var(--accent-gold);  /* Gold ONLY for achievements */
+}
+
+/* Content headers - Blue for regular content */
+.content-header {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-blue);  /* Blue for regular headers */
+  margin-bottom: 1rem;
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+/* --------------------------------------- */
+/* Unified content card (bib-style facade) */
+/* --------------------------------------- */
+
+/* Base reusable card, and apply to jumbotron/research-area site-wide */
+.content-card,
+.section-card,
+.jumbotron:not(.no-card),
+.research-area {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin: 1.25rem 0;
+  box-shadow: 0 1px 6px var(--shadow-light);
+  border: 1px solid var(--border-light);
+  /* border-left: 3px solid var(--secondary-blue); */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.content-card:hover,
+.section-card:hover,
+.jumbotron:not(.no-card):hover,
+.research-area:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+/* Keyboard focus-visible accent for hierarchy */
+.section-card:focus-within { outline: 0; border-left: 3px solid var(--secondary-blue); }
+.subsection-card:focus-within { outline: 0; border-left: 3px solid var(--primary-navy); }
+
+/* Subsection card: lighter, nested look distinct from section-card */
+.subsection-card {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0 1rem;
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--secondary-blue);
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: border-left-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* When nested inside a section-card, tighten rhythm and lighten shadow */
+.section-card .subsection-card {
+  margin: 0.75rem 0 0.9rem;
+  box-shadow: 0 2px 6px var(--shadow-light);
+}
+
+/* Match publication/talk hover: change only the left accent */
+.subsection-card:hover {
+  border-left-color: var(--primary-navy);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+/* Headings at top of cards shouldn't push down content */
+.section-card > h2, .section-card > h3,
+.subsection-card > h3, .subsection-card > h4 {
+  margin-top: 0.1rem;
+}
+
+/* TOC styles */
+#toc {
+  position: sticky;
+  top: 5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--background);
+  box-shadow: 0 1px 6px var(--shadow-light);
+  margin: 1rem 0;
+}
+#toc .toc-list { list-style: none; margin: 0; padding-left: 0; }
+#toc .toc-list > li { margin: 0.25rem 0; }
+#toc .toc-list li ul { margin-left: 1rem; padding-left: 0.5rem; border-left: 2px solid var(--border-light); }
+#toc a { text-decoration: none; color: var(--text-primary); }
+#toc a:hover { color: var(--secondary-blue); }
+
+/* Print cleanup: flatten cards and reveal link targets */
+@media print {
+  .section-card, .subsection-card, .content-card { box-shadow: none !important; border: 1px solid #aaa !important; }
+  a[href]:after { content: " (" attr(href) ")"; font-size: 90%; }
+}
+
+/* Awards section typography (about page) - keep compact and inline */
+.awards-section .award-item { font-size: 0.95rem; line-height: 1.5; }
+.awards-section .award-title { font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; }
+.awards-section .award-icon {
+  display: inline;
+  width: auto; height: auto;
+  background: transparent; border-radius: 0; box-shadow: none; border: none;
+  font-size: 1rem; margin-right: 0.25rem; color: inherit;
+}
+.awards-section .award-event,
+.awards-section .award-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0 0.25rem 1.5rem; /* slight indent to align under title */
+}
+
+/* Optional thin variant */
+.content-card.thin { padding: 1rem 1.25rem; border-radius: 8px; }
+
+/* Optional muted variant */
+.content-card.muted,
+.jumbotron.muted,
+.research-area.muted {
+  border-left-color: var(--border-medium);
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+/* Optional award variant matching gold accent */
+.content-card.award,
+.jumbotron.award,
+.research-area.award { border-left-color: var(--accent-gold); }
+
+/* Header spacing inside cards */
+.content-card h2, .content-card h3,
+.jumbotron h2, .jumbotron h3,
+.research-area h2, .research-area h3 { margin-top: 0.25rem; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .content-card,
+  .jumbotron:not(.no-card),
+  .research-area {
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 12px var(--shadow-light);
+  }
+}
+
+/* Utility for skip link visibility */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: var(--background);
+  color: var(--primary-navy);
+  border: 2px solid var(--secondary-blue);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px var(--shadow-light);
+  z-index: 1000;
+}
+
+/* Global scrollbar styling (fallback if scroll context is not sidebar-specific) */
+html { scrollbar-width: thin; scrollbar-color: var(--border-light) var(--background); }
+html::-webkit-scrollbar { width: 10px; height: 10px; }
+html::-webkit-scrollbar-track { background: var(--background); }
+html::-webkit-scrollbar-thumb { background-color: var(--border-light); border-radius: 8px; border: 2px solid var(--background); }
+html::-webkit-scrollbar-thumb:hover { background-color: var(--secondary-blue); }
