@@ -79,7 +79,7 @@ The project aims to build neural solvers that learn search strategies, constrain
 
 ---
 
-## How To Apply
+### How To Apply
 
 Please submit your details using the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a>.
 

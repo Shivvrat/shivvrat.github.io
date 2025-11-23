@@ -21,7 +21,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <img src="{{ site.url }}{{ site.baseurl }}/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
       {{ site.title | escape }}
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 <!--    </div>-->
@@ -32,14 +32,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           {% for link in site.data.navigation.main %}
             {% if link.dropdown %}
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{ link.title }}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.index }}">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.index }}">
                   {% for sublink in link.dropdown %}
-                    <a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                    <li><a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></li>
                   {% endfor %}
-                </div>
+                </ul>
               </li>
             {% else %}
               <li class="nav-item">

@@ -23,7 +23,7 @@ I'm recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergrad 
 - [Neurosymbolic AI](/hiring/neurosymbolic-ai) (Ph.D.)
 - [Neural Combinatorial Optimization](/hiring/neural-optimization) (Ph.D.)
 - [DRL for Graph Optimization](/hiring/drl-graph-optimization) (Undergrad/MS)
-- [Research Applications](/hiring/applications) (Application Domains)
+- [Research Applications of Neurosymbolic Methods](/hiring/applications) (Application Domains)
 
 ---
 
@@ -34,23 +34,6 @@ I'm recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergrad 
 
 ---
 
-### What we work on (focus areas)
-
-**1. Neurosymbolic AI**: Integrating symbolic structure with deep learning for transparent and interpretable AI systems
-
-**2. Neural Combinatorial Optimization**: Learning-based solvers for combinatorial and constrained optimization problems
-
-**3. Probabilistic Inference**: Scalable neural methods for reasoning under uncertainty in graphical models and probabilistic circuits
-
-**4. Applications**: Computer vision, video understanding, activity recognition, and multimodal reasoning
-
-**Specific directions:**
-
-- Integrating formal world models with neural networks
-- Efficient neural algorithms for NP-hard problems
-- Interpretable models enabling polynomial-time reasoning
-
----
 
 ### What you’ll do
 
@@ -67,7 +50,7 @@ I'm recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergrad 
 - Proficiency in Python; experience with modern DL frameworks (e.g., PyTorch, Jax)
 - Familiarity with data structures, optimization, and graph-based models
 - Sound engineering practices: Git, testing, reproducibility
-- Plus (nice-to-have): graphical models, neurosymbolic methods, combinatorial optimization, or computer vision
+- Plus (nice-to-have): graphical models, neurosymbolic methods, combinatorial optimization, constrained optimization, deep reinforcement learning, and computer vision
 
 ---
 
@@ -80,6 +63,7 @@ Depth in neurosymbolic AI, deep learning, optimization, and interpretable modeli
 ### Lab resources
 
 - Fully funded Ph.D. positions (RA/TA support)
+- Undergraduate and MS research positions (independent study or project-based)
 - Access to high-performance computing resources, including the university-wide Wulver GPU cluster (details <a href="https://arcs-njit-edu.github.io/Docs/clusters/wulver/" target="_blank">here</a>) and additional GPU machines within our lab.
 - Strong mentorship; opportunities for top-tier publications
 - Industry collaborations and internships
@@ -100,6 +84,6 @@ Depth in neurosymbolic AI, deep learning, optimization, and interpretable modeli
 
 Please do not contact me by email. Submit all inquiries through the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a> (also linked at the top of this page). Email messages may be missed, but Google Form submissions are reviewed regularly.
 
-For Ph.D. opportunities, you must also apply through the official NJIT application portal.
+For Ph.D. opportunities, you must also submit a formal application through the official NJIT admissions portal. List my name as the faculty member you wish to work with in your Statement of Purpose.
 
 For general questions about MS or Ph.D. admissions in NJIT Computer Science, please consult the official departmental pages. I cannot respond to individual admissions questions by email.

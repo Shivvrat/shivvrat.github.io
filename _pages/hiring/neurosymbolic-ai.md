@@ -16,7 +16,7 @@ This position is open to <strong>Ph.D., MS, and Undergraduate students</strong>.
 
 ---
 
-## Neurosymbolic AI Research Position
+## Neurosymbolic AI
 
 ### Project Overview
 
@@ -90,6 +90,16 @@ This position focuses on bridging the gap between neural learning and symbolic r
 * Advanced expertise in neurosymbolic AI, interpretable machine learning, and formal reasoning methods
 * Hands-on experience with state-of-the-art deep learning, symbolic reasoning frameworks, and hybrid architectures
 * Opportunities to lead and coauthor publications at top ML and AI venues such as NeurIPS, ICML, ICLR, AAAI, etc.
+
+---
+
+### How To Apply
+
+Please submit your details using the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a>.
+
+> **Note**: Choose "Neurosymbolic AI" for the question "Which of the following match your research interests?" in the google form.
+
+Selected students may be invited for a brief meeting to discuss fit and potential directions.
 
 ---
 

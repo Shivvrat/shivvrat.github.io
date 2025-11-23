@@ -15,9 +15,9 @@ seo:
 🎓 I am currently on the academic job market! 
 </div> -->
 
-<div class="alert alert-info">
+<!-- <div class="alert alert-info">
 🎓 Shivvrat Arya has joined the Department of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT) as a Tenure-Track Assistant Professor. 
-</div>
+</div> -->
 
 <div class="alert alert-info">
 📢 Dr. Arya is recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research in AI and machine learning. For more details, please see the <a href="{{ site.url }}{{ site.baseurl }}/hiring" target="_blank">hiring page</a>.

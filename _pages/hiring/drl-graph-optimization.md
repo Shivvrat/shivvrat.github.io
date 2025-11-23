@@ -16,11 +16,7 @@ This position is open to <strong>undergraduate and MS students</strong>. Choose 
 
 ## Deep Reinforcement Learning for Combinatorial Optimization on Graphs
 
-> Research in data-driven influence maximization and related problems in large-scale networks
-
----
-
-## Project Overview
+### Project Overview
 
 This project develops deep reinforcement learning (DRL) methods for hard combinatorial optimization problems on graphs, with a primary focus on **Influence Maximization (IM)** and its variants. Students will design agents that learn to select nodes or edges in large networks to optimize long-term objectives, for example, maximizing information spread or minimizing risk.
 
@@ -28,7 +24,7 @@ Traditional algorithms for these problems are accurate but often too slow on rea
 
 ---
 
-## Core Research Questions
+### Core Research Questions
 
 - How can DRL policies learn near-optimal seed selection strategies for IM and related tasks?
 - How do GNN architectures and message-passing depth affect performance and generalization across graphs?
@@ -37,7 +33,7 @@ Traditional algorithms for these problems are accurate but often too slow on rea
 
 ---
 
-## What You Will Work On
+### What You Will Work On
 
 Depending on your background and interests, you will work on a subset of the following:
 
@@ -56,7 +52,7 @@ The goal is to produce research results competitive with existing methods, suita
 
 ---
 
-## What You Will Learn
+### What You Will Learn
 
 **AI and Deep Learning**
 - Reinforcement learning for sequential decision-making on structured state spaces.
@@ -70,7 +66,7 @@ The goal is to produce research results competitive with existing methods, suita
   
 ---
 
-## Ideal Background and Interests
+### Ideal Background and Interests
 
 You are a good fit if you:
 - Enjoy AI, machine learning, and especially Deep RL.
@@ -85,7 +81,7 @@ You are a good fit if you:
 
 ---
 
-## Expected Commitment
+### Expected Commitment
 
 Typical expectations for a research-oriented project:
 
@@ -101,7 +97,7 @@ Typical expectations for a research-oriented project:
 
 ---
 
-## Possible Outcomes and Credit
+### Possible Outcomes and Credit
 
 Depending on performance and interest, outcomes may include:
 
@@ -112,7 +108,7 @@ Depending on performance and interest, outcomes may include:
 
 ---
 
-## Mentorship and Research Environment
+### Mentorship and Research Environment
 
 You will work closely with **Dr. Arya** and collaborators in a group focusing on learning-based solvers for large-scale decision-making on graphs. The group has prior experience with award-winning research, practical tooling for large graphs, and applications in social network analysis, medical, and energy systems.
 
@@ -120,7 +116,7 @@ You will have access to GPU resources, existing codebases for graph processing, 
 
 ---
 
-## How To Apply
+### How To Apply
 
 Please submit your details using the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a>.
 
