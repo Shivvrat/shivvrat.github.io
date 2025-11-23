@@ -1060,3 +1060,88 @@ a:focus {
   background: #b8a67a;  /* Darker gold for subtle hover */
   color: var(--primary-navy);
 }
+
+/* Dropdown Menu Styles for Dark Navbar */
+.navbar-dark .dropdown-menu {
+  background-color: #343a40;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  z-index: 9999 !important;
+  position: absolute !important;
+}
+
+.navbar-dark .dropdown-item {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.navbar-dark .dropdown-item:hover,
+.navbar-dark .dropdown-item:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.navbar-dark .dropdown-toggle::after {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Ensure dropdown appears below the nav item with high z-index */
+.navbar .dropdown-menu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0;
+  z-index: 9999 !important;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  list-style: none;
+}
+
+.navbar .dropdown {
+  position: relative;
+  z-index: 9999;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar .dropdown-menu.show {
+  display: block;
+  z-index: 9999 !important;
+}
+
+/* Ensure navbar itself has proper z-index */
+.navbar {
+  z-index: 9998;
+  position: relative;
+}
+
+/* Mobile dropdown adjustments */
+@media (max-width: 767.98px) {
+  .navbar .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .navbar-dark .dropdown-item {
+    padding-left: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .navbar-dark .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}

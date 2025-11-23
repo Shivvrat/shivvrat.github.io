@@ -26,6 +26,13 @@ permalink: /teaching/
   </thead>
   <tbody>
     <tr>
+      <td>Spring 2026</td>
+      <td>CS 370 (Honors)</td>
+      <td>Introduction to Artificial Intelligence</td>
+      <td>Undergraduate</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
       <td>Fall 2025</td>
       <td>CS 785</td>
       <td>Neurosymbolic AI</td>

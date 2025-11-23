@@ -1,0 +1,24 @@
+- name: "DARPA PTG PI Meeting 2022"
+  folder: ptg22
+  date: "2022"
+  location: "MIT"
+  images:
+    - file: ptg.jpg
+      caption: "PTG PI Meeting 2022"
+    - file: utd_team.jpg
+      caption: "UTD Team after their demo"
+    - file: mit_Lincoln_Labs.png
+      caption: "The photo posted by MIT Lincoln Laboratory on their <a href='https://www.ll.mit.edu/news/lincoln-laboratory-partners-darpa-test-augmented-reality-assistance-systems'>website</a>"
+
+- name: "Dr. Arya's Dissertation Defense and Hooding Ceremony"
+  folder: phd_defense_and_hooding
+  location: "The University of Texas at Dallas"
+  images:
+    - file: arya_defense.jpeg
+      caption: "Picture after Dr. Arya's Dissertation Defense"
+    - file: arya_after_defense.jpeg
+      caption: "Celebration after Dr. Arya's Dissertation Defense"
+    - file: arya_hooding.jpeg
+      caption: "Dr. Gogate and Dean González hooding Dr. Arya"
+    - file: arya_graduation.jpeg
+      caption: "Dr. Arya's graduation picture"

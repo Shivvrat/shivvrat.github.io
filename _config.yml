@@ -60,13 +60,14 @@ nav_pages:
   - name: teaching
   - name: services
   - name: resources
+  - name: gallery
   # - name: blog
-  # - name: photos
 # - name: team
 
 include:
   - .htaccess
   - _pages
+  - _pages/hiring
 
 # Conversion
 markdown: kramdown

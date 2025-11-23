@@ -29,13 +29,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-              <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
-          </li>
-          {% for page in site.nav_pages %}
-           <li class="nav-item">
-            <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/{{page.name}}">{{page.name | capitalize }}</a>
-           </li>
+          {% for link in site.data.navigation.main %}
+            {% if link.dropdown %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ link.title }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.index }}">
+                  {% for sublink in link.dropdown %}
+                    <a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                  {% endfor %}
+                </div>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
 </div>

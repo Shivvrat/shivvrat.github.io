@@ -11,12 +11,19 @@ seo:
 <!-- include page stylesheet -->
 <span style="display:none"><link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}"></span>
 
-
 <div class="alert alert-info">
-Updated: September 23, 2025
+Submit your details using the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a>. Email messages may be missed, but Google Form submissions are reviewed regularly.
 </div>
 
-I’m recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergrad researchers and self-funded visiting students/scholars.
+---
+
+I'm recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergrad researchers and self-funded visiting students/scholars.
+
+**Looking for project-specific details?** Use the dropdown menu above or view:
+- [Neurosymbolic AI](/hiring/neurosymbolic-ai) (Ph.D.)
+- [Neural Combinatorial Optimization](/hiring/neural-optimization) (Ph.D.)
+- [DRL for Graph Optimization](/hiring/drl-graph-optimization) (Undergrad/MS)
+- [Research Applications](/hiring/applications) (Application Domains)
 
 ---
 
@@ -29,13 +36,13 @@ I’m recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergra
 
 ### What we work on (focus areas)
 
-**1. Neurosymbolic AI** — Integrating symbolic structure with deep learning for transparent and interpretable AI systems
+**1. Neurosymbolic AI**: Integrating symbolic structure with deep learning for transparent and interpretable AI systems
 
-**2. Neural Combinatorial Optimization** — Learning-based solvers for combinatorial and constrained optimization problems
+**2. Neural Combinatorial Optimization**: Learning-based solvers for combinatorial and constrained optimization problems
 
-**3. Probabilistic Inference** — Scalable neural methods for reasoning under uncertainty in graphical models and probabilistic circuits
+**3. Probabilistic Inference**: Scalable neural methods for reasoning under uncertainty in graphical models and probabilistic circuits
 
-**4. Applications** — Computer vision, video understanding, activity recognition, and multimodal reasoning
+**4. Applications**: Computer vision, video understanding, activity recognition, and multimodal reasoning
 
 **Specific directions:**
 
@@ -66,14 +73,14 @@ I’m recruiting for fully funded Ph.D. roles. I also welcome strong MS/Undergra
 
 ### Outcomes
 
-Depth in probabilistic reasoning, deep learning, optimization, and interpretable modeling; experience with tractable inference and neurosymbolic integration; and applications to video/activity understanding and language reasoning.
+Depth in neurosymbolic AI, deep learning, optimization, and interpretable modeling; experience with tractable inference and neurosymbolic integration; and applications to video/activity understanding and language reasoning.
 
 ---
 
 ### Lab resources
 
 - Fully funded Ph.D. positions (RA/TA support)
-- Access to high-performance computing resources and GPU clusters
+- Access to high-performance computing resources, including the university-wide Wulver GPU cluster (details <a href="https://arcs-njit-edu.github.io/Docs/clusters/wulver/" target="_blank">here</a>) and additional GPU machines within our lab.
 - Strong mentorship; opportunities for top-tier publications
 - Industry collaborations and internships
 
@@ -91,12 +98,8 @@ Depth in probabilistic reasoning, deep learning, optimization, and interpretable
 
 ### Apply
 
-Email: [shivvrat.arya@njit.edu](mailto:shivvrat.arya@njit.edu)
+Please do not contact me by email. Submit all inquiries through the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a> (also linked at the top of this page). Email messages may be missed, but Google Form submissions are reviewed regularly.
 
-Include: CV (with links), GitHub and/or code samples, and a short note on your background and interests. Unofficial transcripts are welcome. Please write a few sentences introducing yourself and why you’re a good fit.
+For Ph.D. opportunities, you must also apply through the official NJIT application portal.
 
-For Ph.D. positions, please also apply through the official NJIT portal.
-
----
-
-For general questions about MS/PhD admissions in NJIT Computer Science, please consult the official departmental pages. Regarding such queries, please do not email me.
+For general questions about MS or Ph.D. admissions in NJIT Computer Science, please consult the official departmental pages. I cannot respond to individual admissions questions by email.

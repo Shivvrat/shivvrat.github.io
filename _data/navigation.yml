@@ -1,0 +1,40 @@
+# Navigation menu configuration with dropdown support
+# For dropdown menus, add 'dropdown' field with list of subitems
+
+main:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about
+  - title: "Hiring"
+    url: /hiring/
+    dropdown:
+      - title: "Overview"
+        url: /hiring/
+      - title: "Neurosymbolic AI"
+        url: /hiring/neurosymbolic-ai
+      - title: "Neural Optimization"
+        url: /hiring/neural-optimization
+      - title: "DRL for Graph Optimization"
+        url: /hiring/drl-graph-optimization
+      - title: "Applications of NeSy Methods"
+        url: /hiring/applications
+  - title: "Publications"
+    url: /publications
+  - title: "Research"
+    url: /research
+  - title: "Grants"
+    url: /grants
+  - title: "Talks"
+    url: /talks
+  - title: "Software"
+    url: /software
+  - title: "Teaching"
+    url: /teaching
+  - title: "Services"
+    url: /services
+  - title: "Resources"
+    url: /resources
+  - title: "Gallery"
+    url: /gallery
+

@@ -20,7 +20,7 @@ seo:
 </div>
 
 <div class="alert alert-info">
-📢 Dr. Arya is recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research in AI and machine learning.  
+📢 Dr. Arya is recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research in AI and machine learning. For more details, please see the <a href="{{ site.url }}{{ site.baseurl }}/hiring" target="_blank">hiring page</a>.
 </div>
 
 ## Biography  
@@ -38,10 +38,11 @@ Dr. Arya’s work develops AI systems that integrate structured domain knowledge
 
 ## Research Focus  
 
-* **Neurosymbolic AI & Explainable Systems** — Integrating symbolic structure with deep learning for transparent reasoning
-* **Neural Combinatorial Optimization** — Learning-based solvers for combinatorial and constrained problems
-* **Probabilistic Inference** — Scalable neural methods for reasoning under uncertainty
-* **Applications** — Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning
+* **[Neurosymbolic AI & Explainable Systems](/hiring/neurosymbolic-ai)**: Integrating symbolic structure with deep learning for transparent reasoning
+* **[Neural Combinatorial Optimization](/hiring/neural-optimization)**: Learning-based solvers for combinatorial and constrained problems
+* **[Deep Reinforcement Learning for Graph Optimization](/hiring/drl-graph-optimization)**: Learning-based solvers for combinatorial and constrained problems
+* **Probabilistic Inference**: Scalable neural methods for reasoning under uncertainty
+* **Applications**: Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning
 
 ---
 
