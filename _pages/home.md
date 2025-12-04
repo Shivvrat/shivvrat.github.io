@@ -42,7 +42,7 @@ Dr. Arya’s work develops AI systems that integrate structured domain knowledge
 * **[Neural Combinatorial Optimization](/hiring/neural-optimization)**: Learning-based solvers for combinatorial and constrained problems
 * **[Deep Reinforcement Learning for Graph Optimization](/hiring/drl-graph-optimization)**: Learning-based solvers for combinatorial and constrained problems
 * **Probabilistic Inference**: Scalable neural methods for reasoning under uncertainty
-* **Applications**: Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning
+* **[Applications of Neurosymbolic Methods](/hiring/applications)**: Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning
 
 ---
 
