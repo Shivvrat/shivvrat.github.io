@@ -30,11 +30,11 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
 
 <div class="jumbotron">
 
-## **Inference in Probabilistic Models**
+## **Inference in Neurosymbolic Models**
 
 <div class="subsection-card">
 
-#### Neural Network-Based Inference
+#### Neural Network-Based Probabilistic Inference
 
 <table class="research-table">
   <thead>
@@ -67,7 +67,7 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
 
 <div class="subsection-card">
 
-#### Optimization-based Inference Schemes
+#### Optimization-based Probabilistic Inference Schemes
 
 <table class="research-table">
   <thead>
@@ -85,6 +85,54 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
   </table>
 
 </div>
+
+<div class="subsection-card">
+
+#### Neural Network-Based Heuristics for Probabilistic Inference
+
+<table class="research-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Venue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Learning to Condition: A Neural Heuristic for Scalable MPE Inference
+</td>
+      <td><span class="badge bg-primary">NeurIPS'25</span></td>
+    </tr>
+  </tbody>
+  </table>
+
+</div>
+
+</div>
+
+<div class="jumbotron">
+
+## **Neural Network-Based Solvers for Combinatorial Optimization**
+
+<div class="subsection-card">
+
+<table class="research-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Venue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RELINK: Edge Activation for Closed Network Influence Maximization via Deep Reinforcement Learning</td>
+      <td><span class="badge bg-primary">CIKM'25</span></td>
+    </tr>
+  </tbody>
+  </table>
+
+</div>
+
 </div>
 
 <div class="section-card">

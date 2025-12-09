@@ -76,11 +76,3 @@ This work advanced explainable reasoning, probabilistic inference, and real-time
 
 
 
-<!-- ### Future Research Directions 🚀
-
-I aim to advance the field of AI through:
-- Scaling neurosymbolic systems to real-world applications
-- Developing more robust probabilistic inference methods
-- Creating interpretable AI systems for safety-critical domains -->
-
-[//]: # (Contact information and other details can be added in the sidebar)
