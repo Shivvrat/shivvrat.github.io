@@ -1,1 +1,1 @@
-rake publish --trace
+bundle exec rake publish --trace
