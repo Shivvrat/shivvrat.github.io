@@ -20,12 +20,16 @@ seo:
 </div> -->
 
 <div class="alert alert-info">
+For an overview of ongoing research and recent publications, please visit the <a href='https://aria-research-lab.github.io/'>ARIA lab website</a>.
+</div>
+
+<div class="alert alert-info">
 📢 Dr. Arya is recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research in AI and machine learning. For more details, please see the <a href="{{ site.url }}{{ site.baseurl }}/hiring" target="_blank">hiring page</a>.
 </div>
 
 ## Biography  
 
-Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT). He received his Ph.D. in Computer Science from the University of Texas at Dallas, advised by [Vibhav Gogate](https://personal.utdallas.edu/~vibhav.gogate/) and [Yu Xiang](https://yuxng.github.io/).
+Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), where he also serves as the Director of the <a href='https://aria-research-lab.github.io/'>ARIA Lab</a>. He earned his Ph.D. in Computer Science from the University of Texas at Dallas under the supervision of <a href="https://personal.utdallas.edu/~vibhav.gogate/">Vibhav Gogate</a> and <a href="https://yuxng.github.io/">Yu Xiang</a>.
 
 His research advances interpretable and trustworthy AI through two complementary directions:
 

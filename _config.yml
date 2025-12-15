@@ -11,7 +11,7 @@ title                    : "Shivvrat Arya"
 title_separator          : "-"
 name                     : &name "Shivvrat Arya"
 email: shivvrat.arya@njit.edu
-description              : &description "Assistant Professor, NJIT"
+description              : &description "Assistant Professor, NJIT Director of [ARIA Lab](https://aria-research-lab.github.io/)"
 #description: Academic webpage of Dr. Shivvrat Arya
 baseurl: ""
 url                      : ""
@@ -30,7 +30,7 @@ google_tag_manager: GTM-WNDXK54
 # Footer info
 affiliation: >
     Shivvrat Arya<br/>
-    Assistant Professor<br/>
+    Assistant Professor, Director of [ARIA Lab](https://aria-research-lab.github.io/)<br/>
     <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/>
     New Jersey Institute of Technology
 
@@ -93,7 +93,7 @@ kramdown:
 author:
   name             : "Shivvrat Arya"
   avatar           : "Shivvrat_Arya_headshot.jpg"
-  bio              : "Assistant Professor, NJIT"
+  bio              : "Assistant Professor, NJIT and Director of <a href='https://aria-research-lab.github.io/'>ARIA Lab</a>"
   location         :
   employer         :
   pubmed           :
