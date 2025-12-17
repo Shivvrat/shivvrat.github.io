@@ -23,6 +23,8 @@ main:
     url: /publications
   - title: "Research"
     url: /research
+  - title: "Advising"
+    url: /advising
   - title: "Grants"
     url: /grants
   - title: "Talks"

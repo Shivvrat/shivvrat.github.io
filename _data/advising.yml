@@ -1,0 +1,58 @@
+# Students currently being advised
+# role: PhD Advisor | MS Advisor | Undergraduate Advisor
+# status: current | graduated
+
+current_advisees:
+  # - name: "Student Name"
+  #   photo: rock.jpg  # optional, place in images/teampic/
+  #   role: "PhD Student"
+  #   research: "Research topic/area"
+  #   start_year: 2025
+  #   email: student@njit.edu  # optional
+  #   website: https://student-website.com  # optional
+  #   scholar: https://scholar.google.com/...  # optional
+  #   github: https://github.com/...  # optional
+  #   coadvisor: "Co-advisor Name"  # optional
+
+# Former students who graduated
+graduated_advisees:
+  # - name: "Former Student"
+  #   photo: rock.jpg
+  #   role: "PhD"  # PhD | MS | BS
+  #   thesis_title: "Title of Dissertation/Thesis"
+  #   graduation_year: 2025
+  #   first_position: "Position after graduation"
+  #   current_position: "Current position"  # optional
+  #   website: https://...  # optional
+
+# PhD Dissertation Committee Member
+dissertation_committee:
+  - name: "Yeqing Chen"
+    title: "Cell–Cell Communication-aware Variational Autoencoder with Gaussian Process prior"
+    university: "NJIT"
+    advisor: "Dr. Zhi Wei"
+    research: "Cell–Cell Communication-aware Variational Autoencoder with Gaussian Process prior"
+    status: current
+
+  - name: "Hanzhang Fang"
+    title: "GROVE: Gaussian pRocess VariatiOnal dEconvolution"
+    university: "NJIT"
+    advisor: "Dr. Zhi Wei"
+    research: "GROVE: Gaussian pRocess VariatiOnal dEconvolution"
+    status: current
+
+# MS Thesis Committee Member
+thesis_committee:
+  # - name: "Student Name"
+  #   title: "Thesis Title"
+  #   university: "NJIT"
+  #   advisor: "Primary Advisor Name"
+  #   research: "Research topic/area"
+  #   status: current  # current | graduated
+  #   graduation_year: 2025  # for graduated students
+  - name: "Kadir Altunel"
+    title: "Edge Co-occurrence Regularization for Node Classification"
+    university: "NJIT"
+    advisor: "Dr. Ioannis Koutis"
+    research: "Edge Co-occurrence Regularization for Node Classification"
+    status: current

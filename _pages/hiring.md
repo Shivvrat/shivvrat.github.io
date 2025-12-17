@@ -16,9 +16,9 @@ seo:
 
 <div class="jumbotron">
 
-## Join Our Research Lab
+## Join ARIA Lab
 
-I'm recruiting **Ph.D., MS, and Undergraduate students** for research positions. Ph.D. positions are fully funded; MS/Undergrad students can earn research credit. Self-funded visiting students/scholars also welcome.
+We are recruiting **Ph.D., MS, and Undergraduate students** for research positions in the [ARIA Lab](https://aria-research-lab.github.io/). Ph.D. positions are fully funded; MS/Undergrad students can earn research credit. Self-funded visiting students/scholars also welcome.
 
 | | |
 |---|---|

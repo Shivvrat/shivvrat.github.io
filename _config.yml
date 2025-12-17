@@ -54,11 +54,12 @@ nav_pages:
   - name: hiring
   - name: publications
   - name: research
+  - name: advising
   - name: grants
   - name: talks
   - name: software
   - name: teaching
-  - name: services
+  - name: service
   - name: resources
   - name: gallery
   # - name: blog
