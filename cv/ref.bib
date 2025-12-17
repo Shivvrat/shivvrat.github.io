@@ -1,0 +1,239 @@
+@phdthesis{shivvrat_arya_dissertation,
+author={Arya,Shivvrat},
+year={2025},
+title={Neural Solvers for Fast, Accurate Probabilistic Inference},
+journal={ProQuest Dissertations and Theses},
+pages={190},
+note={Copyright - Database copyright ProQuest LLC; ProQuest does not claim copyright in the individual underlying works; Last updated - 2025-12-09},
+abstract={Probabilistic Models (PMs) provide a powerful framework for representing large multivariate probability distributions, but as their expressiveness increases, inference tasks become computationally intractable. In the era of big data, the demand for complex models capable of effectively representing and reasoning over large-scale data has increased significantly. While models like probabilistic circuits allow tractable inference for specific query types, handling a broader range of queries remains challenging. Exact inference in PMs is generally NP-hard, and approximate methods, though viable, often involve trade-offs between accuracy and efficiency, leading to unreliable estimates. Achieving near-optimal solutions typically demands substantial computational resources, posing a barrier to scalability.This dissertation presents novel algorithms for key inference tasks in PMs, including Most Probable Explanation (MPE), Constrained Most Probable Explanation (CMPE), and Marginal Maximum A Posteriori (MMAP) inference. Our methods generalize across different Probabilistic Models (PMs), such as Probabilistic Graphical Models (PGMs), Probabilistic Circuits (PCs), and Neural Autoregressive Models (NAMs), enabling efficient and scalable probabilistic reasoning. Additionally, we propose a neurosymbolic framework that integrates Dependency Networks (DNs) with deep learning architectures to enhance multi-label classification. Specifically, this dissertation makes the following contributions:We develop a self-supervised learning framework for neural network-based solvers to answer predefined MPE and MMAP queries over PCs. Our approach introduces a scalable loss function with a computation cost that scales linearly with the size of the PC, enabling the training of neural solvers that match or surpass state-of-the-art solvers in solution quality while reducing inference time from seconds to microseconds.We extend inference capabilities beyond predefined queries, allowing neural solvers to answer arbitrary MPE queries over PCs, PGMs, and NAMs. To achieve this, we introduce a novel dual-network learning framework and an enhanced inference scheme that updates neural network parameters at test time, leading to improved solution quality.We eliminate the need for costly inference-time optimization in neural solvers for arbitrary MPE queries over PGMs by enhancing query encoding, which improves solution quality through richer embeddings. Additionally, we introduce two novel methods for discretizing continuous neural network outputs, further enhancing solution quality.We extend neural solvers to constrained inference, specifically the Constrained Most Probable Explanation (CMPE) task. We develop a self-supervised CMPE solver with a loss function satisfying the consistent loss property, ensuring alignment with the optimal CMPE solution—unlike existing loss functions for constrained optimization, which lack this guarantee.We propose advanced inference schemes for MPE in neurosymbolic models for multi-label classification, specifically improving inference in Deep Dependency Networks (DDNs). While DDNs offer efficient training and an intuitive loss function for multi-label classification, they traditionally rely on Gibbs sampling, which limits inference accuracy and efficiency. To address this limitation, we introduce novel inference techniques based on local search and integer linear programming (ILP), facilitating more accurate and efficient computation of the most probable label assignments.},
+keywords={Probabilistic Models; Most Probable Explanation; Probabilistic Graphical Models; Deep Dependency Networks; Integer linear programming; Computer engineering; Computer science; Information technology; Information science; 0489:Information Technology; 0723:Information science; 0984:Computer science; 0464:Computer Engineering},
+isbn={9798265467508},
+language={English},
+url={https://libproxy.utdallas.edu/login?url=https://www.proquest.com/dissertations-theses/neural-solvers-fast-accurate-probabilistic/docview/3280610279/se-2},
+comment = {Shivvrat Arya's Ph.D. Dissertation},
+file={Neural_Solvers_for_Fast,_Accur.pdf}
+}
+
+@inproceedings{
+malhotra2025learning,
+title={Learning to Condition: A Neural Heuristic for Scalable {MPE} Inference},
+author={Brij Malhotra and Shivvrat Arya and Tahrima Rahman and Vibhav Giridhar Gogate},
+booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+year={2025},
+url={https://openreview.net/forum?id=otIdC4tsYf},
+file={NeurIPS25_L2C.pdf}
+}
+
+@inproceedings{arya2025relink,
+author = {Arya, Shivvrat and Ghosh, Smita and Maruyama, Bryan and Srinivasan, Venkatesh},
+title = {RELINK: Edge Activation for Closed Network Influence Maximization via Deep Reinforcement Learning},
+year = {2025},
+isbn = {9798400720406},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3746252.3761006},
+doi = {10.1145/3746252.3761006},
+abstract = {Influence Maximization aims to select a subset of elements in a social network to maximize information spread under a diffusion model. While existing work primarily focuses on selecting influential nodes, these approaches assume unrestricted message propagation-an assumption that fails in closed social networks, where content visibility is constrained and node-level activations may be infeasible. Motivated by the growing adoption of privacy-focused platforms such as Signal, Discord, Instagram, and Slack, our work addresses the following fundamental question: How can we learn effective edge activation strategies for influence maximization in closed networks? To answer this question we introduce Reinforcement Learning for Link Activation (RELINK), the first DRL framework for edge-level influence maximization in privacy-constrained networks. It models edge selection as a Markov Decision Process, where the agent learns to activate edges under budget constraints. Unlike prior node-based DRL methods, RELINK uses an edge-centric Q-learning approach that accounts for structural constraints and constrained information propagation. Our framework combines a rich node embedding pipeline with an edge-aware aggregation module. The agent is trained using an n-step Double DQN objective, guided by dense reward signals that capture marginal gains in influence spread. Extensive experiments on real-world networks show that RELINK consistently outperforms existing edge-based methods, achieving up to 15\% higher influence spread and improved scalability across diverse settings.},
+booktitle = {Proceedings of the 34th ACM International Conference on Information and Knowledge Management},
+pages = {65–76},
+numpages = {12},
+keywords = {closed networks, deep reinforcement learning, edge selection, influence maximization, social network analysis},
+location = {Seoul, Republic of Korea},
+series = {CIKM '25},
+file={RELINK_CIKM2025.pdf}
+}
+
+@InProceedings{pmlr-v258-arya25a,
+  title = 	 {SINE: Scalable MPE Inference for Probabilistic Graphical Models using Advanced Neural Embeddings},
+  author =       {Arya, Shivvrat and Rahman, Tahrima and Gogate, Vibhav Giridhar},
+  booktitle = 	 {Proceedings of The 28th International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {4465--4473},
+  year = 	 {2025},
+  editor = 	 {Li, Yingzhen and Mandt, Stephan and Agrawal, Shipra and Khan, Emtiyaz},
+  volume = 	 {258},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {03--05 May},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v258/main/assets/arya25a/arya25a.pdf},
+  url = 	 {https://proceedings.mlr.press/v258/arya25a.html},
+  abstract = 	 {Our paper builds on the recent trend of using neural networks trained with self-supervised or supervised learning to solve the Most Probable Explanation (MPE) task in discrete graphical models. At inference time, these networks take an evidence assignment as input and generate the most likely assignment for the remaining variables via a single forward pass. We address two key limitations of existing approaches: (1) the inability to fully exploit the graphical model’s structure and parameters, and (2) the suboptimal discretization of continuous neural network outputs. Our approach embeds model structure and parameters into a more expressive feature representation, significantly improving  performance. Existing methods rely on standard thresholding, which often yields suboptimal results due to the non-convexity of the loss function. We introduce two methods to overcome discretization challenges: (1) an external oracle-based approach that infers uncertain variables using additional evidence from confidently predicted ones, and (2) a technique that identifies and selects the highest-scoring discrete solutions near the continuous output. Experimental results on various probabilistic models demonstrate the effectiveness and scalability of our approach, highlighting its practical impact.},
+  code={https://github.com/Shivvrat/SINE-Advanced-Embedding-And-Discretization-For-MPE-in-PGMs}, 
+  file={SINE Scalable MPE Inference.pdf},
+  library={https://neupi.readthedocs.io/en/latest/}
+}
+
+@inproceedings{2024captaincookdnips,
+author = {Peddi, Rohith and Arya, Shivvrat and Challa, Bharath and Pallapothula, Likhitha and Vyas, Akshay and Gouripeddi, Bhavya and Zhang, Qifan and Wang, Jikai and Komaragiri, Vasundhara and Ragan, Eric and Ruozzi, Nicholas and Xiang, Yu and Gogate, Vibhav},
+title = {CaptainCook4D: a dataset for understanding errors in procedural activities},
+year = {2024},
+isbn = {9798331314385},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Following step-by-step procedures is an essential component of various activities carried out by individuals in their daily lives. These procedures serve as a guiding framework that helps to achieve goals efficiently, whether it is assembling furniture or preparing a recipe. However, the complexity and duration of procedural activities inherently increase the likelihood of making errors. Understanding such procedural activities from a sequence of frames is a challenging task that demands an accurate interpretation of visual information and the ability to reason about the structure of the activity. To this end, we collect a new egocentric 4D dataset CaptainCook4D comprising 384 recordings (94.5 hours) of people performing recipes in real kitchen environments. This dataset consists of two distinct types of activities: one in which participants adhere to the provided recipe instructions and another in which they deviate and induce errors. We provide 5.3K step annotations and 10K finegrained action annotations and benchmark the dataset for the following tasks: error recognition, multi-step localization and procedure learning. https://captaincook4d.github.io/captain-cook/},
+booktitle = {Proceedings of the 38th International Conference on Neural Information Processing Systems},
+articleno = {4307},
+numpages = {54},
+location = {Vancouver, BC, Canada},
+series = {NIPS '24},
+website={https://captaincook4d.github.io/captain-cook/},
+code={https://github.com/CaptainCook4D/},
+file={NeurIPS_1088_CaptainCook4D_A_Dataset_f.pdf}
+}
+
+@inproceedings{arya2024_nn_mpe_nips,
+ author = {Arya, Shivvrat and Rahman, Tahrima and Gogate, Vibhav},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+ pages = {33538--33601},
+ publisher = {Curran Associates, Inc.},
+ title = {A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/3ae2d3297891cad0c56dd12d60ff7dde-Paper-Conference.pdf},
+ volume = {37},
+ year = {2024},
+comment = {Spotlight presentation (top 2% of papers)},
+url={https://openreview.net/forum?id=ufPPf9ghzP},
+file={NeurIPS_12727_A_Neural_Network_Approac.pdf},
+library={https://neupi.readthedocs.io/en/latest/}
+}
+
+
+
+@inproceedings{
+arya2024_nn_mmap_pc,
+title={Neural Network Approximators for Marginal {MAP} in Probabilistic Circuits},
+author={Shivvrat Arya and Tahrima Rahman and Vibhav Giridhar Gogate},
+booktitle={The 7th Workshop on Tractable Probabilistic Modeling (TPM)},
+year={2024},
+month = may,
+url={https://openreview.net/forum?id=ZgGg7ETVtZ},
+file = {TPM_9_neural_network_approximators_f.pdf},
+library={https://neupi.readthedocs.io/en/latest/}
+}
+
+
+@inproceedings{
+arya2024_nn_mpe,
+title={A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models},
+author={Shivvrat Arya and Tahrima Rahman and Vibhav Giridhar Gogate},
+booktitle={The 7th Workshop on Tractable Probabilistic Modeling (TPM)},
+year={2024},
+month = may,
+url={https://openreview.net/forum?id=Gn7mpdBqqf},
+comment = {Best Paper Award},
+certificate = {/certificates/tpm_certificate.jpg},
+file = {TPM_11_a_neural_network_approach_for_.pdf},
+library={https://neupi.readthedocs.io/en/latest/}
+}
+
+@InProceedings{pmlr-v238-arya24a,
+  title = 	 {Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification},
+  author =       {Arya, Shivvrat and Xiang, Yu and Gogate, Vibhav},
+  booktitle = 	 {Proceedings of The 27th International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {2818--2826},
+  year = 	 {2024},
+  editor = 	 {Dasgupta, Sanjoy and Mandt, Stephan and Li, Yingzhen},
+  volume = 	 {238},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {02--04 May},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v238/arya24a/arya24a.pdf},
+  url = 	 {https://proceedings.mlr.press/v238/arya24a.html},
+  abstract = 	 {We present a unified framework called deep dependency networks (DDNs) that combines dependency networks and deep learning architectures for multi-label classification, with a particular emphasis on image and video data. The primary advantage of dependency networks is their ease of training, in contrast to other probabilistic graphical models like Markov networks. In particular, when combined with deep learning architectures, they provide an intuitive, easy-to-use loss function for multi-label classification. A drawback of DDNs compared to Markov networks is their lack of advanced inference schemes, necessitating the use of Gibbs sampling. To address this challenge, we propose novel inference schemes based on local search and integer linear programming for computing the most likely assignment to the labels given observations. We evaluate our novel methods on three video datasets (Charades, TACoS, Wetlab) and three image datasets (MS-COCO, PASCAL VOC, NUS-WIDE), comparing their performance with (a) basic neural architectures and (b) neural architectures combined with Markov networks equipped with advanced inference and learning techniques. Our results demonstrate the superiority of our new DDN methods over the two competing approaches.},
+  code = {https://github.com/Shivvrat/Advanced-Inference-Schemes-for-DDNs},
+  file = {DDN_AISTATS2024CameraReady.pdf},
+}
+
+            
+https://ojs.aaai.org/index.php/AAAI/article/view/28966
+@inproceedings{arya_2024_networkapproximatorsa,
+  title = {Neural {{Network Approximators}} for {{Marginal MAP}} in {{Probabilistic Circuits}}},
+  author = {Arya, Shivvrat and Rahman, Tahrima and Gogate, Vibhav},
+  year = {2024},
+  month = mar,
+  journal = {Proceedings of the AAAI Conference on Artificial Intelligence (Oral)},
+  volume = {38},
+  number = {10},
+  pages = {10918--10926},
+  issn = {2374-3468},
+  abstract = {Probabilistic circuits (PCs) such as sum-product networks efficiently represent large multi-variate probability distributions. They are preferred in practice over other probabilistic representations, such as Bayesian and Markov networks, because PCs can solve marginal inference (MAR) tasks in time that scales linearly in the size of the network. Unfortunately, the most probable explanation (MPE) task and its generalization, the marginal maximum-a-posteriori (MMAP) inference task remain NP-hard in these models. Inspired by the recent work on using neural networks for generating near-optimal solutions to optimization problems such as integer linear programming, we propose an approach that uses neural networks to approximate MMAP inference in PCs. The key idea in our approach is to approximate the cost of an assignment to the query variables using a continuous multilinear function and then use the latter as a loss function. The two main benefits of our new method are that it is self-supervised, and after the neural network is learned, it requires only linear time to output a solution. We evaluate our new approach on several benchmark datasets and show that it outperforms three competing linear time approximations: max-product inference, max-marginal inference, and sequential estimation, which are used in practice to solve MMAP tasks in PCs.},
+  doi = {10.1609/aaai.v38i10.28966},
+  urldate = {2024-03-27},
+  copyright = {Copyright (c) 2024 Association for the Advancement of Artificial Intelligence},
+  file = {AAAI_arya_2024_networkapproximatorsa.pdf},
+  langid = {english},
+  comment = {Oral presentation (top 6% of papers)},
+  library={https://neupi.readthedocs.io/en/latest/}
+}
+
+@inproceedings{arya_2024_solveconstraineda,
+  title = {Learning to {{Solve}} the {{Constrained Most Probable Explanation Task}} in {{Probabilistic Graphical Models}}},
+  booktitle = {Proceedings of {{The}} 27th {{International Conference}} on {{Artificial Intelligence}} and {{Statistics}} (AISTATS)},
+  author = {Arya, Shivvrat and Rahman, Tahrima and Gogate, Vibhav},
+  year = {2024},
+  month = apr,
+  pages = {2791--2799},
+  publisher = {PMLR},
+  issn = {2640-3498},
+  urldate = {2024-04-21},
+  langid = {english},
+  volume    = {238},
+  series    = {Proceedings of Machine Learning Research},
+  url       = {https://proceedings.mlr.press/v238/arya24b.html},
+  abstract = {We propose a self-supervised learning approach for solving the following constrained optimization task in log-linear models or Markov networks. Let f and g be two log-linear models defined over the sets X and Y of random variables respectively. Given an assignment x to all variables in X (evidence) and a real number q, the constrained most-probable explanation (CMPE) task seeks to find an assignment y to all variables in Y such that f(x,y) is maximized and g(x,y)≤q. In our proposed self-supervised approach, given assignments x to X (data), we train a deep neural network that learns to output near-optimal solutions to the CMPE problem without requiring access to any pre-computed solutions. The key idea in our approach is to use first principles and approximate inference methods for CMPE to derive novel loss functions that seek to push infeasible solutions towards feasible ones and feasible solutions towards optimal ones. We analyze the properties of our proposed method and experimentally demonstrate its efficacy on several benchmark problems.},
+  file = {SS_CMPE_AISTATS2024CameraReady.pdf},
+  code = {https://github.com/Shivvrat/SS-CMPE},
+  library={https://neupi.readthedocs.io/en/latest/}
+}
+
+@inproceedings{9207436,
+  author={Chauhan, Vikas and Tiwari, Aruna and Arya, Shivvrat},
+  booktitle={2020 International Joint Conference on Neural Networks (IJCNN)},
+  title={Multi-Label classifier based on Kernel Random Vector Functional Link Network},
+  year={2020},
+  volume={},
+  number={},
+  pages={1-7},
+  abstract={In this paper, a kernelized version of the random vector functional link network is proposed for multi-label classification. This classifier uses pseudo-inverse to find output weights of the network. As pseudo-inverse is non-iterative in nature, it requires less fine-tuning to train the network. Kernelization of RVFL makes it robust and stable as no need to tune the number of neuron in the enhancement layer. A threshold function is used with a kernelized random vector functional link network to make it suitable for multi-label learning problems. Experiments performed on three benchmark multi-label datasets bibtex, emotions, and scene shows that proposed classifier outperforms various the existing multi-label classifiers.},
+  keywords={},
+  doi={10.1109/IJCNN48605.2020.9207436},
+  ISSN={2161-4407},
+  month={July},}
+
+
+@workshop{Rheault_VR2024,
+              title         = {Predictive Task Guidance with Artificial Intelligence in Augmented Reality},
+              author        = {Benjamin Rheault and Shivvrat Arya and Akshay Vyas and Jikai Wang and Rohith Peddi and Brett Benda and Vibhav Gogate and Nicholas Ruozzi and Yu Xiang and Eric D Ragan},
+              year          = {2024},
+              month = {june},
+              file = {Rheault_VR2024.pdf},
+
+              booktitle     = {IEEE Virtual Reality (IEEE VR)}
+}
+@article{Explainable_AI_TiiS,
+author = {Roy, Chiradeep* and Nourani, Mahsan* and Arya, Shivvrat* and Shanbhag, Mahesh and Rahman, Tahrima and Ragan, Eric D. and Ruozzi, Nicholas and Gogate, Vibhav (*equal contribution)},
+title = {Explainable Activity Recognition in Videos Using Deep Learning and Tractable Probabilistic Models},
+year = {2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {2160-6455},
+url = {https://doi.org/10.1145/3626961},
+doi = {10.1145/3626961},
+abstract = {We consider the following video activity recognition (VAR) task: given a video, infer the set of activities being performed in the video and assign each frame to an activity. Although VAR can be solved accurately using existing deep learning techniques, deep networks are neither interpretable nor explainable and as a result their use is problematic in high stakes decision-making applications (e.g., in healthcare, experimental Biology, aviation, law, etc.). In such applications, failure may lead to disastrous consequences and therefore it is necessary that the user is able to either understand the inner workings of the model or probe it to understand its reasoning patterns for a given decision. We address these limitations of deep networks by proposing a new approach that feeds the output of a deep model into a tractable, interpretable probabilistic model called a dynamic conditional cutset network that is defined over the explanatory and output variables and then performing joint inference over the combined model. The two key benefits of using cutset networks are: (a) they explicitly model the relationship between the output and explanatory variables and as a result the combined model is likely to be more accurate than the vanilla deep model and (b) they can answer reasoning queries in polynomial time and as a result they can derive meaningful explanations by efficiently answering explanation queries. We demonstrate the efficacy of our approach on two datasets, Textually Annotated Cooking Scenes (TACoS), and wet lab, using conventional evaluation measures such as the Jaccard Index and Hamming Loss, as well as a human-subjects study.},
+note = {Just Accepted},
+journal = {ACM Transactions on Interactive Intelligent Systems (TiiS)},
+month = {oct},
+keywords = {Tractable Probabilistic Models, Temporal Models, Dynamic Bayesian Networks, Cutset Networks}
+}
+@unpublished{arya2023deep,
+      title={Deep Dependency Networks for Multi-Label Classification},
+      author={Shivvrat Arya and Yu Xiang and Vibhav Gogate},
+      year={2023},
+      month={jan},
+      eprint={2302.00633},
+      archivePrefix={arXiv},
+      abstract={We propose a simple approach which combines the strengths of probabilistic graphical models and deep learning architectures for solving the multi-label classification task, focusing specifically on image and video data. First, we show that the performance of previous approaches that combine Markov Random Fields with neural networks can be modestly improved by leveraging more powerful methods such as iterative join graph propagation, integer linear programming, and  regularization-based structure learning. Then we propose a new modeling framework called deep dependency networks, which augments a dependency network, a model that is easy to train and learns more accurate dependencies but is limited to Gibbs sampling for inference, to the output layer of a neural network. We show that despite its simplicity, jointly learning this new architecture yields significant improvements in performance over the baseline neural network. In particular, our experimental evaluation on three video activity classification datasets: Charades, Textually Annotated Cooking Scenes (TACoS), and Wetlab, and three multi-label image classification datasets: MS-COCO, PASCAL VOC, and NUS-WIDE show that deep dependency networks are almost always superior to pure neural architectures that do not use dependency networks.},
+      primaryClass={cs.LG},
+      file = {arxiv_arya2023deep.pdf},
+      booktitle     = {arXiv},
+
+}
