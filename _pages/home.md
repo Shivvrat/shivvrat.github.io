@@ -19,17 +19,14 @@ seo:
 🎓 Shivvrat Arya has joined the Department of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT) as a Tenure-Track Assistant Professor. 
 </div> -->
 
-<div class="alert alert-info">
-For an overview of ongoing research and recent publications, please visit the <a href='https://aria-research-lab.github.io/'>ARIA lab website</a>.
-</div>
 
-<div class="alert alert-info">
+<div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
 📢 Dr. Arya is recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research in AI and machine learning. For more details, please see the <a href="{{ site.url }}{{ site.baseurl }}/hiring" target="_blank">hiring page</a>.
 </div>
 
 ## Biography  
 
-Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), where he also serves as the Director of the <a href='https://aria-research-lab.github.io/'>ARIA Lab</a>. He earned his Ph.D. in Computer Science from the University of Texas at Dallas under the supervision of <a href="https://personal.utdallas.edu/~vibhav.gogate/">Vibhav Gogate</a> and <a href="https://yuxng.github.io/">Yu Xiang</a>.
+Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), where he serves as the Director of the <a href="https://aria-research-lab.github.io/">ARIA Lab</a> and as a Core Faculty member of the <a href="https://research.njit.edu/ai/">Center for AI Research</a>. He earned his Ph.D. in Computer Science from the University of Texas at Dallas under the supervision of <a href="https://personal.utdallas.edu/~vibhav.gogate/">Vibhav Gogate</a> and <a href="https://yuxng.github.io/">Yu Xiang</a>.
 
 His research advances interpretable and trustworthy AI through two complementary directions:
 
@@ -38,6 +35,9 @@ His research advances interpretable and trustworthy AI through two complementary
 
 Dr. Arya’s work develops AI systems that integrate structured domain knowledge with data-driven learning. His contributions span graph-based inference, symbolic reasoning, and neural solvers for optimization, with applications in video understanding, activity recognition, and multimodal reasoning.
 
+<div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
+For an overview of ongoing research and recent publications, please visit the <a href='https://aria-research-lab.github.io/'>ARIA lab website</a>. 
+</div>
 ---
 
 ## Research Focus  
