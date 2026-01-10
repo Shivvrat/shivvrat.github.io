@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/research.css">
+<link rel="stylesheet" href="/assets/css/sidebar.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@5.0.0/css/mdb.min.css" integrity="sha384-9HvRwS0UzrEptu4bo8G0aI6Ymj8RhPm2Idf2QiNH2hdLTf02uUe5eUP3AB0Z0C3" crossorigin="anonymous" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" integrity="sha512-4bJdlXL9g0e8r1K4kt49d8r1YgX4AqD3uCfP8cZf6TXUaTzR/XcM31/12vE2e39u8NLfe7n5ejq3H7rU7mjbA==" crossorigin="anonymous">
+    <!-- Feather Icons for elegant, minimal design -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light" />
+
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="/about/">
+
+
+
+
+  <title>About - Shivvrat Arya</title>
+  <meta name="description" content="Assistant Professor, NJIT Director of [ARIA Lab](https://aria-research-lab.github.io/)">
+<!--  <meta name="description" content="Assistant Professor, NJIT Director of [ARIA Lab](https://aria-research-lab.github.io/)">-->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/about/">
+  <link rel="shortcut icon" type ="image/x-icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="stylesheet" href="/assets/css/heading_style.css">
+  <link rel="stylesheet" href="/assets/css/research.css">
+
+  <script>
+    // Inject accessible anchors for headings (h2–h4) after DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      const headings = document.querySelectorAll('h2, h3, h4');
+      headings.forEach(h => {
+        if (!h.id) {
+          const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+          if (slug) h.id = slug;
+        }
+        if (!h.id) return;
+        if (h.querySelector('.heading-anchor')) return;
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.className = 'heading-anchor';
+        a.setAttribute('aria-label', 'Copy link to this section');
+        a.innerHTML = '¶';
+        a.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const url = window.location.origin + window.location.pathname + '#' + h.id;
+          try { await navigator.clipboard.writeText(url); a.innerHTML = '✓'; setTimeout(() => a.innerHTML = '¶', 1200); }
+          catch { window.location.hash = h.id; }
+        });
+        h.appendChild(a);
+      });
+      // Build in-page TOC if #toc is present
+      const toc = document.getElementById('toc');
+      if (toc) {
+        const scope = document.getElementById('main-content') || document;
+        const headings = Array.from(scope.querySelectorAll('h2, h3'))
+          .filter(h => !h.closest('nav') && !h.closest('header'));
+        if (headings.length) {
+          const nav = document.createElement('nav');
+          nav.setAttribute('aria-label', 'Table of contents');
+          const ul = document.createElement('ul');
+          ul.className = 'toc-list';
+          let currentUl = ul;
+          let lastLevel = 2;
+          headings.forEach(h => {
+            const level = h.tagName === 'H2' ? 2 : 3;
+            if (!h.id) {
+              const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+              if (slug) h.id = slug;
+            }
+            if (!h.id) return;
+            if (level > lastLevel) {
+              const nested = document.createElement('ul');
+              currentUl.lastElementChild && currentUl.lastElementChild.appendChild(nested);
+              currentUl = nested;
+            } else if (level < lastLevel) {
+              currentUl = currentUl.parentElement || currentUl;
+            }
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent.replace(/¶$/,'').trim();
+            li.appendChild(a);
+            currentUl.appendChild(li);
+            lastLevel = level;
+          });
+          nav.appendChild(ul);
+          toc.innerHTML = '';
+          toc.appendChild(nav);
+        }
+      }
+
+      // Lightweight client-side search using fetch + simple substring match
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+      if (searchInput && searchResults) {
+        let idx = [];
+        fetch('/search.json').then(r => r.json()).then(data => { idx = data || []; });
+        const render = (items) => {
+          if (!items.length) { searchResults.innerHTML = '<p>No results.</p>'; return; }
+          const html = items.slice(0, 20).map(i => `<div class="subsection-card"><a href="${i.url}"><strong>${i.title}</strong></a><p>${i.content.substring(0,180)}...</p></div>`).join('');
+          searchResults.innerHTML = html;
+        };
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.trim().toLowerCase();
+          if (!q) { searchResults.innerHTML = ''; return; }
+          const results = idx.filter(i => i.title.toLowerCase().includes(q) || i.content.toLowerCase().includes(q));
+          render(results);
+        });
+      }
+    });
+  </script>
+
+  <script>
+    // Outbound click tracking for analytics (arXiv/DOI/GitHub/CV)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const isOutbound = href.startsWith('http') && !href.includes(window.location.host);
+      if (!isOutbound) return;
+      if (window.gtag) {
+        gtag('event', 'click', { 'event_category': 'outbound', 'event_label': href });
+      }
+    }, { capture: true });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivvrat Arya",
+    "jobTitle": "Assistant Professor",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "New Jersey Institute of Technology"},
+    "url": "/",
+    "sameAs": [
+      "https://github.com/Shivvrat"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com">
+  <link rel="preconnect" href="https://f.vimeocdn.com">
+
+
+
+<!-- Google Analytics (original) -->
+<!--<script>-->
+<!--  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+<!--  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+<!--  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+<!--  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');-->
+
+<!--  ga('create', 'G-9JMYG0Z6M7', 'auto');-->
+<!--  ga('send', 'pageview');-->
+
+<!--</script>-->
+
+<!-- Global site tag (gtag.js) - Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9JMYG0Z6M7');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WNDXK54');</script>
+<!-- End Google Tag Manager -->
+
+
+
+</head>
+
+
+  <style>
+    .row {
+      padding: 0; /* Removes padding */
+    }
+    .custom-content-area {
+      margin: 0; /* Optionally, reduces margin */
+      max-width: 100%; /* Ensures content uses available width */
+    }
+
+    :root {
+      font-size: 16px; /* Increase base font size */
+    }
+
+    body {
+      font-size: 1.1rem; /* Relative to root font size */
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.9rem; }
+    h3 { font-size: 1.6rem; }
+    h4 { font-size: 1.4rem; }
+    p, li, a { font-size: 1.1rem; }
+    
+    .social-icons i {
+      font-size: 2rem !important; /* Larger social icons */
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        font-size: 16px; /* Slightly smaller on mobile */
+      }
+    }
+  </style>
+  
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNDXK54"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<style>
+.center {
+  margin: auto;
+  width: 40%;
+  /*border: 3px solid #73AD21;*/
+  /*padding: 10px;*/
+}
+
+/* Hover-based dropdown for desktop */
+@media (min-width: 768px)  {
+  .navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+</style>
+
+<a href="#main-content" class="visually-hidden-focusable skip-link">Skip to content</a>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" aria-label="Main Navigation">
+<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> -->
+
+    <a class="navbar-brand title" href="/">
+     <img src="/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
+      Shivvrat Arya
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+<!--    </div>-->
+<!--    <div class="center">-->
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+            
+          
+            
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/hiring/" id="navbarDropdown3" role="button" aria-expanded="false">
+                  Hiring
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                  
+                    <li><a class="dropdown-item" href="/hiring/">Overview</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/neurosymbolic-ai">Neurosymbolic AI</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/neural-optimization">Neural Optimization</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/drl-graph-optimization">DRL for Graph Optimization</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/applications">Applications of NeSy Methods</a></li>
+                  
+                </ul>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/grants">Grants</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/research">Research</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/publications">Publications</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/advising">Advising</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/talks">Talks</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/software">Software</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/teaching">Teaching</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/service">Service</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/resources">Resources</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/gallery">Gallery</a>
+              </li>
+            
+          
+        </ul>
+</div>
+
+</nav>
+
+
+
+    <div class="container-fluid" id="main-content" role="main">
+      <div class="row">
+        <link rel="stylesheet" href="/assets/css/about.css">
+
+<div class="col-sm-12">
+  
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="/images/teampic/Shivvrat_Arya_headshot.jpg" width="100%" style="max-width:250px"/>
+        </div>
+        <div class="col-sm-8 col-xs-12">
+          <h3>Shivvrat Arya</h3>
+          <h4><i>Assistant Professor, NJIT <br> Director of <a href='https://aria-research-lab.github.io/'>ARIA Lab</a></i></h4>
+          <div class="about-social-icons">
+  
+    <a href="mailto:shivvrat.arya@njit.edu" target="_blank" title="Email">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>email [#1573]</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+
+</defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -922.000000)" fill="#000000">
+            <g id="icons" transform="translate(56.000000, 160.000000)">
+                <path d="M262,764.291 L254,771.318 L246,764.281 L246,764 L262,764 L262,764.291 Z M246,775 L246,766.945 L254,773.98 L262,766.953 L262,775 L246,775 Z M244,777 L264,777 L264,762 L244,762 L244,777 Z" id="email-[#1573]">
+
+</path>
+            </g>
+        </g>
+    </g>
+</svg>
+    </a>
+  
+
+  
+    <a href="/cv/CV_Shivvrat_Arya.pdf" target="_blank" title="Curriculum Vitae">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (1.0+r73+1)"
+   sodipodi:docname="cv.svg">
+  <title
+     id="title833">CV</title>
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     scale-x="1"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.75"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer6"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1315"
+     inkscape:window-height="713"
+     inkscape:window-x="51"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10"
+       empspacing="4" />
+    <sodipodi:guide
+       position="511.99998,64"
+       orientation="0,1"
+       id="guide23"
+       inkscape:label="baseline"
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>CV</dc:title>
+        <cc:license
+           rdf:resource="http://scripts.sil.org/OFL" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>CV</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://scripts.sil.org/OFL">
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="icon">
+    <path
+       style="stroke-width:0.07717"
+       d="m 249.17973,328.32402 c -9.78758,15.38441 -19.17851,30.4337 -40.22128,45.05521 -11.25687,7.89055 -37.16464,23.30604 -73.9908,23.30604 -70.258325,0 -126.9676516,-51.07979 -126.9676516,-140.88446 0,-78.48565 53.3447156,-140.48607 128.4662816,-140.48607 30.4337,0 57.47396,10.52167 77.38654,26.30447 18.41392,14.65033 27.03796,29.30348 34.56291,42.45573 l -52.58013,26.27338 c -3.76134,-8.62631 -8.28954,-17.64933 -19.91259,-27.40585 -12.78437,-10.15549 -25.53991,-13.15224 -36.45998,-13.15224 -42.821335,0 -65.364452,39.82459 -65.364452,84.14459 0,58.23852 29.700162,87.14305 65.364452,87.14305 34.5629,0 48.47976,-24.0418 57.47396,-39.42563 l 52.24332,26.67235 z M 433.37382,123.57317 H 504 L 411.96314,388.7947 H 344.36647 L 253.46212,123.57317 h 70.62446 l 54.84337,188.60017 z"
+       id="path2" />
+  </g>
+</svg>
+
+    </a>
+  
+
+  
+    <a href="https://scholar.google.com/citations?user=eM1co-kAAAAJ&hl=en" target="_blank" title="Google Scholar">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="template-square.svg"
+   inkscape:version="1.0 (1.0+r73+1)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 448 512"
+   height="512"
+   width="448">
+  <title
+     id="title844">Google Scholar</title>
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="27"
+     inkscape:window-x="51"
+     inkscape:window-height="713"
+     inkscape:window-width="1315"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     units="px"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer6"
+     inkscape:document-units="px"
+     inkscape:cy="256"
+     inkscape:cx="224"
+     inkscape:zoom="0.75"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       empspacing="4"
+       id="grid10"
+       type="xygrid" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label=""
+       id="guide832"
+       orientation="0,1"
+       position="448,416" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label=""
+       id="guide834"
+       orientation="0,1"
+       position="448,96" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label="baseline"
+       id="guide836"
+       orientation="0,1"
+       position="448,64" />
+    <sodipodi:guide
+       position="64,512"
+       orientation="1,0"
+       id="guide835" />
+    <sodipodi:guide
+       position="384,512"
+       orientation="1,0"
+       id="guide837" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Google Scholar</dc:title>
+        <cc:license
+           rdf:resource="http://scripts.sil.org/OFL" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Google Scholar</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://scripts.sil.org/OFL">
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="icon"
+     id="layer6"
+     inkscape:groupmode="layer">
+    <path
+       d="M 48 32 C 21.5 32 0 53.5 0 80 L 0 432 C 0 458.5 21.5 480 48 480 L 400 480 C 426.5 480 448 458.5 448 432 L 448 80 C 448 53.5 426.5 32 400 32 L 48 32 z M 188.69531 96 L 366.93555 96 L 350.46484 108.85938 L 350.46484 131.55273 C 356.58074 132.33805 355.93359 136.01292 355.93359 140.41016 L 355.93359 247.63281 C 355.93359 252.59844 351.87154 256.66211 346.90625 256.66211 L 343.58203 256.66211 C 338.6164 256.66211 334.55273 252.59808 334.55273 247.63281 L 334.55273 140.41016 C 334.55273 136.00235 333.91278 132.32357 340.07422 131.54883 L 340.07422 117.2832 L 292.65039 156.17578 C 293.19834 157.19151 293.71814 157.84328 294.21289 158.69531 C 298.37973 166.07266 300.50195 175.2445 300.50195 186.45508 C 300.50195 195.04833 299.06991 202.77005 296.16602 209.58594 C 293.2752 216.4033 289.75942 221.97045 285.6582 226.25977 C 281.55701 230.56406 277.44275 234.49591 273.32812 238.03711 C 269.21486 241.58524 265.69906 245.28375 262.82031 249.125 C 259.91892 252.95314 258.47266 256.91247 258.47266 261.01367 C 258.47266 265.12181 260.3486 269.29452 264.08594 273.5 C 267.8098 277.7186 272.39123 281.80635 277.80859 285.84375 C 283.23797 289.85418 288.65493 294.30653 294.07227 299.15039 C 299.50131 303.98623 304.05933 310.21146 307.7832 317.77148 C 311.53367 325.35666 313.4082 333.7088 313.4082 342.88867 C 313.4082 354.99795 310.32064 365.93466 304.16211 375.66797 C 297.99007 385.36114 289.94334 393.09684 280.06055 398.76758 C 270.15151 404.47697 259.55333 408.77389 248.25195 411.67773 C 236.92398 414.55506 225.68694 416 214.46289 416 C 207.37866 416 200.23024 415.4525 193.04102 414.33398 C 185.82883 413.21398 178.60279 411.2357 171.32422 408.44922 C 164.03255 405.64267 157.57316 402.19843 151.97461 398.05859 C 146.36256 393.96392 141.84477 388.67686 138.38086 382.23828 C 134.91694 375.79976 133.19727 368.55971 133.19727 360.51953 C 133.19727 350.9809 135.85421 342.13421 141.17969 333.88477 C 146.50481 325.69549 153.56199 318.85925 162.33789 313.44336 C 177.65114 303.91787 201.67434 298.03206 234.36914 295.80664 C 226.89588 286.46381 223.14648 277.66689 223.14648 269.4375 C 223.14648 264.75479 224.36834 259.73766 226.79102 254.32031 C 222.8845 254.86718 218.86242 255.17383 214.75977 255.17383 C 197.19704 255.17383 182.36436 249.46431 170.32031 237.9668 C 158.27629 226.48824 152.26172 212.1206 152.26172 194.75 C 152.26172 192.93401 152.31391 191.33134 152.44336 189.56055 L 81.064453 189.56055 L 188.69531 96 z M 220.07422 134.33398 C 208.8753 134.33398 200.28236 138.36304 194.29297 146.4043 C 188.30507 154.42442 185.30859 164.13895 185.30859 175.55078 C 185.30859 185.27059 186.9492 195.16722 190.23047 205.25781 C 193.49857 215.34329 198.8517 224.34729 206.35156 232.2832 C 213.8248 240.23914 222.52348 244.20898 232.40625 244.20898 C 243.42216 244.20898 252.02911 240.51954 258.20117 233.13672 C 264.34622 225.76629 267.43164 216.46329 267.43164 205.25781 C 267.43164 195.71264 265.80524 185.72081 262.53711 175.27148 C 259.28103 164.80901 253.85206 155.36886 246.27344 146.96484 C 238.7211 138.53274 229.97011 134.33398 220.07422 134.33398 z M 238.5918 306.41406 C 230.55711 306.41406 222.65275 307.12634 214.89258 308.54492 C 207.13241 309.92488 199.47583 312.25478 191.92383 315.54297 C 184.34522 318.81255 178.22564 323.61796 173.56445 329.97266 C 168.87661 336.31933 166.54492 343.79435 166.54492 352.39453 C 166.54492 360.59035 168.60405 367.90081 172.71875 374.26758 C 176.8214 380.59526 182.2367 385.55152 188.96875 389.09961 C 195.70076 392.65432 202.7576 395.33574 210.12695 397.09961 C 217.50975 398.85145 225.02377 399.76367 232.67969 399.76367 C 247.82231 399.76367 260.85547 396.35252 271.79297 389.53516 C 282.70351 382.71926 288.17383 372.1931 288.17383 357.98633 C 288.17383 354.99821 287.75694 352.05432 286.93555 349.18359 C 286.07694 346.2797 285.2319 343.79439 284.39844 341.73047 C 283.56499 339.70522 281.97671 337.26317 279.63281 334.45117 C 277.302 331.63256 275.51712 329.54862 274.31836 328.16211 C 273.09446 326.73003 270.80621 324.68508 267.43164 321.98242 C 264.08738 319.26867 261.95132 317.57694 261 316.95117 L 260.99805 316.95117 C 260.06034 316.29355 257.62635 314.51567 253.70703 311.63086 C 249.78813 308.72002 247.64052 307.17679 247.26172 306.99414 C 245.20436 306.62337 242.31565 306.41406 238.5918 306.41406 z "
+       id="path2" />
+  </g>
+</svg>
+
+    </a>
+  
+
+  
+    <a href="http://orcid.org/0000-0002-9727-2533" target="_blank" title="ORCID iD">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="orcid-square.svg"
+   inkscape:version="1.0 (1.0+r73+1)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 448 512"
+   height="512"
+   width="448">
+  <title
+     id="title839">Orcid</title>
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="27"
+     inkscape:window-x="51"
+     inkscape:window-height="713"
+     inkscape:window-width="1315"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     units="px"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer6"
+     inkscape:document-units="px"
+     inkscape:cy="256"
+     inkscape:cx="224"
+     inkscape:zoom="0.75"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       empspacing="4"
+       id="grid10"
+       type="xygrid" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label=""
+       id="guide832"
+       orientation="0,1"
+       position="448,416" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label=""
+       id="guide834"
+       orientation="0,1"
+       position="448,96" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label="baseline"
+       id="guide836"
+       orientation="0,1"
+       position="448,64" />
+    <sodipodi:guide
+       id="guide835"
+       orientation="1,0"
+       position="64,512" />
+    <sodipodi:guide
+       id="guide837"
+       orientation="1,0"
+       position="384,512" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Orcid</dc:title>
+        <cc:license
+           rdf:resource="http://scripts.sil.org/OFL" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Orcid</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://scripts.sil.org/OFL">
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="icon"
+     id="layer6"
+     inkscape:groupmode="layer">
+    <path
+       id="path2"
+       d="M 48 32 C 21.5 32 0 53.5 0 80 L 0 432 C 0 458.5 21.5 480 48 480 L 400 480 C 426.5 480 448 458.5 448 432 L 448 80 C 448 53.5 426.5 32 400 32 L 48 32 z M 224 96 C 312.37321 96 384 167.63992 384 256 C 384 344.36009 312.37321 416 224 416 C 135.62679 416 64 344.36009 64 256 C 64 167.63992 135.62679 96 224 96 z M 161.38672 154.25391 C 154.18656 154.25391 148.34766 160.10614 148.34766 167.2793 C 148.34766 174.50609 154.20004 180.32031 161.38672 180.32031 C 168.6 180.32031 174.42525 174.5192 174.43945 167.2793 C 174.43945 160.09263 168.6 154.25391 161.38672 154.25391 z M 151.91992 194.16016 L 151.91992 326.6543 L 170.87891 326.6543 L 170.87891 194.16016 L 151.91992 194.16016 z M 200.45312 194.16016 L 200.45312 326.45312 L 242.36133 326.45312 C 254.13446 326.45312 262.09473 326.13381 266.28125 325.48047 C 270.45462 324.80053 275.02745 323.47971 280.02734 321.5332 C 288.57391 318.30628 296.06779 313.55956 302.50781 307.21289 C 308.841 301.0795 313.70591 293.96058 317.11914 285.86719 L 317.12109 285.86719 C 320.52082 277.7873 322.25443 269.30595 322.24023 260.42578 C 322.24023 248.05256 319.1337 236.60085 312.93359 226.10742 C 306.73346 215.62745 298.39971 207.65376 287.90625 202.25391 C 277.39933 196.84058 263.16106 194.16016 245.12109 194.16016 L 200.45312 194.16016 z M 219.45312 211.03906 L 243.13281 211.03906 C 252.25286 211.03906 258.84061 211.37352 262.94727 212.08008 C 267.06743 212.76004 271.41372 214.20099 276.01367 216.34766 L 276.01367 216.3457 C 280.5735 218.50584 284.65256 221.26623 288.19922 224.59961 C 297.81257 233.58659 302.61328 245.199 302.61328 259.42578 C 302.61328 273.90595 297.93278 285.87966 288.58594 295.37305 C 285.66599 298.29299 282.45385 300.73409 278.94727 302.7207 C 275.44072 304.7208 271.06578 306.34744 265.8125 307.64062 C 260.55922 308.93379 253.20114 309.58594 243.73438 309.58594 L 219.45312 309.58594 L 219.45312 211.03906 z " />
+  </g>
+</svg>
+
+    </a>
+  
+
+  
+    <a href="https://linkedin.com/in/shivvrat" target="_blank" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+	<path d="M 83.349 0 H 6.651 C 2.978 0 0 2.887 0 6.447 v 77.106 C 0 87.114 2.978 90 6.651 90 h 76.698 C 87.022 90 90 87.114 90 83.553 V 6.447 C 90 2.887 87.022 0 83.349 0 z M 27.282 75.339 H 13.688 v -40.64 h 13.594 V 75.339 z M 20.485 29.151 h -0.088 c -4.562 0 -7.512 -3.121 -7.512 -7.021 c 0 -3.988 3.04 -7.022 7.69 -7.022 c 4.651 0 7.513 3.034 7.601 7.022 C 28.176 26.03 25.225 29.151 20.485 29.151 z M 76.299 75.339 H 62.707 V 53.598 c 0 -5.463 -1.968 -9.19 -6.887 -9.19 c -3.756 0 -5.992 2.513 -6.975 4.94 c -0.359 0.868 -0.447 2.081 -0.447 3.296 v 22.695 H 34.804 c 0 0 0.178 -36.826 0 -40.64 h 13.594 v 5.756 c 1.806 -2.769 5.036 -6.709 12.251 -6.709 c 8.944 0 15.65 5.808 15.65 18.291 V 75.339 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</svg>
+    </a>
+  
+
+  
+    <a href="https://twitter.com/ShivvratA" target="_blank" title="Twitter/X">
+      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    </a>
+  
+
+  
+    <a href="https://github.com/Shivvrat" target="_blank" title="GitHub">
+      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+
+  
+    <a href="https://www.researchgate.net/profile/Shivvrat-Arya" target="_blank" title="ResearchGate">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="template-square.svg"
+   inkscape:version="1.0 (1.0+r73+1)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 448 512"
+   height="512"
+   width="448">
+  <title
+     id="title1605">ResearchGate</title>
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="27"
+     inkscape:window-x="51"
+     inkscape:window-height="713"
+     inkscape:window-width="1315"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     units="px"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer6"
+     inkscape:document-units="px"
+     inkscape:cy="256"
+     inkscape:cx="203.33333"
+     inkscape:zoom="0.75"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       empspacing="4"
+       id="grid10"
+       type="xygrid" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label=""
+       id="guide832"
+       orientation="0,1"
+       position="448,416" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label=""
+       id="guide834"
+       orientation="0,1"
+       position="448,96" />
+    <sodipodi:guide
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="true"
+       inkscape:label="baseline"
+       id="guide836"
+       orientation="0,1"
+       position="448,64" />
+    <sodipodi:guide
+       position="64,512"
+       orientation="1,0"
+       id="guide835" />
+    <sodipodi:guide
+       position="384,512"
+       orientation="1,0"
+       id="guide837" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>ResearchGate</dc:title>
+        <cc:license
+           rdf:resource="http://scripts.sil.org/OFL" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>ResearchGate</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://scripts.sil.org/OFL">
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
+        <cc:permits
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
+        <cc:requires
+           rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="icon"
+     id="layer6"
+     inkscape:groupmode="layer">
+    <path
+       d="M 48 32 C 21.5 32 0 53.5 0 80 L 0 432 C 0 458.5 21.5 480 48 480 L 400 480 C 426.5 480 448 458.5 448 432 L 448 80 C 448 53.5 426.5 32 400 32 L 48 32 z M 325.20117 96 C 330.82804 96 335.93243 96.651372 340.45898 97.980469 C 344.93467 99.29777 348.94834 101.11477 352.49023 103.44141 C 355.98128 105.74336 359.00097 108.45416 361.49414 111.52344 C 364.05137 114.60451 366.10872 117.8918 367.7207 121.42188 C 368.34658 122.54654 368.1698 123.44247 367.17188 124.06836 L 353.27148 129.7832 C 352.09419 130.41051 351.26481 130.09098 350.61133 128.84961 C 347.4923 123.0695 344.83123 119.2734 340.45898 116.51172 C 336.03447 113.76185 331.94086 112.45703 325.20117 112.45703 C 317.87355 112.45703 314.59971 113.9142 310.00977 117.20117 C 305.45673 120.42368 302.11969 124.47694 300.15039 130.65234 C 299.75509 131.76552 299.39606 133.14769 298.97461 134.77148 C 298.62908 136.4214 298.34785 138.44168 298.16992 140.80664 C 297.99038 143.17268 297.82317 146.1016 297.66992 149.55469 C 297.56787 153.0078 297.51758 157.20137 297.51758 162.06055 C 297.51758 166.94478 297.56786 171.13868 297.66992 174.5918 C 297.82327 178.03162 297.99053 180.96013 298.16992 183.32617 C 298.34783 185.71726 298.62908 187.72549 298.97461 189.38867 C 299.39641 190.98738 299.75509 192.3661 300.15039 193.49219 C 302.11969 199.64289 304.93311 203.00606 309.07617 205.70508 C 313.16841 208.4417 317.87355 210.41211 325.20117 210.41211 C 331.71062 210.41211 337.66996 208.55732 341.55664 205.73047 C 345.40647 202.90468 348.60259 199.17139 350.03516 194.06836 C 350.6625 191.91967 351.46763 189.24603 352.01758 185.97266 C 352.51636 182.69897 352.51758 179.23534 352.51758 174.45312 C 352.51758 173.69762 352.09388 173.3125 351.39062 173.3125 L 329.12695 173.3125 C 327.87376 173.3125 327.25977 172.7001 327.25977 171.44727 L 327.25977 158.68555 C 327.25977 157.41946 327.87376 156.80469 329.12695 156.80469 L 369.98438 156.80469 C 371.26371 156.80469 371.86523 157.41911 371.86523 158.68555 L 371.86523 169.5918 C 371.86523 175.37192 371.86484 180.73178 371.26367 185.69336 C 370.68758 190.65496 369.90853 194.94977 368.92383 198.08203 C 365.80339 207.89137 360.85476 214.8745 353.27148 220.07812 C 345.66207 225.32118 335.85368 228.14648 325.20117 228.14648 C 314.25539 228.14648 305.03638 225.62955 297.51758 220.62891 C 289.9855 215.56528 284.59997 208.13333 281.31445 198.19727 C 280.68713 196.3182 280.20261 194.3877 279.83203 192.36719 C 279.4482 190.35994 279.10141 188.019 278.79492 185.32031 C 278.47552 182.5966 278.27128 179.40138 278.14453 175.62891 C 278.01631 171.88256 277.96484 167.30393 277.96484 162.06055 C 277.96484 156.7914 278.01659 152.27876 278.14453 148.51953 C 278.27168 144.74705 278.47552 141.5101 278.79492 138.8125 C 279.10141 136.12674 279.4482 133.77484 279.83203 131.76758 C 280.20261 129.74708 280.68909 127.82829 281.31641 125.94922 C 284.60193 116.01316 289.9855 108.54511 297.51758 103.53125 C 305.03642 98.518462 314.25539 96 325.20117 96 z M 173.52734 173.8125 C 217.09601 173.8125 250.33008 193.67089 250.33008 236.45898 C 250.33008 265.48697 227.41412 294.54191 196.46875 301.7793 C 215.20225 335.0277 237.7209 364.44058 254.54883 382.75195 C 264.4473 393.45532 278.19453 403.01953 291.94141 403.01953 L 291.94141 412.93164 C 287.74856 414.86159 280.88088 416 274.39648 416 C 252.23637 416 234.67781 407.22664 223.19531 393.45508 C 210.61105 378.95271 188.44983 347.61039 165.15039 305.98633 C 152.89914 305.98633 144.88164 305.98606 135.71289 305.21875 L 135.71289 369.00391 C 135.71289 392.7001 141.08505 397.67521 151.39062 399.17188 L 171.26367 401.88086 L 171.26367 412.93164 C 161.71108 412.56105 139.54998 411.80469 122.36328 411.80469 C 104.39603 411.80469 86.441431 412.56105 76.134766 412.93164 L 76.134766 401.88086 L 90.636719 399.17188 C 100.61111 397.27953 106.28906 392.7001 106.28906 369.00391 L 106.28906 218.50586 C 106.28906 194.79824 100.61076 190.24462 90.636719 188.32617 L 76.134766 185.66602 L 76.134766 174.58008 C 85.661226 174.95066 100.95604 174.94922 116.26367 174.94922 C 133.04039 174.94922 151.00846 173.8125 173.52734 173.8125 z M 166.66016 190.99805 C 156.34026 190.99805 144.52429 190.9983 135.71289 191.76562 L 135.71289 287.61133 C 144.52429 288.44166 150.22826 288.78711 163.2207 288.78711 C 197.2364 288.78711 217.84961 268.54435 217.84961 238.36523 C 217.84961 207.82875 198.76959 190.99805 166.66016 190.99805 z "
+       id="path2" />
+  </g>
+</svg>
+
+    </a>
+  
+</div>
+
+          <ul class="education-list" style="overflow: hidden">
+          
+            <li>B.Tech in Computer Science and Engineering<br> Indian Institute of Information Technology Vadodara</li>
+          
+          
+            <li>M.S. in Computer Science<br> The University of Texas at Dallas</li>
+          
+          
+            <li>Ph.D. in Computer Science<br> The University of Texas at Dallas</li>
+          
+          
+          
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+  
+<div class="section-card awards-section">
+  <h2 id="awards--honors">Awards &amp; Honors</h2>
+  <ul class="awards-list">
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 📜 </span> Certificate of Academic Excellence (PhD) </span>       <p class="award-event"><em>Awarded by the The University of Texas at Dallas for Outstanding Academic Performance in the Computer Science Graduate PhD Program</em></p>
+      <div style=" margin-top: 10px;">
+<a href="/certificates/UTD Academic Excellence Certificates_Page_PhD.jpg" target="_blank" class="btn btn-certificate"> <em class="fa fa-certificate" style="margin-right: 8px;"></em>View Certificate</a>
+      </div>
+    </li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 📜 </span> Certificate of Academic Excellence (MS) </span>       <p class="award-event"><em>Awarded by the The University of Texas at Dallas for Outstanding Academic Performance in the Computer Science Graduate Masters Program</em></p>
+      <div style=" margin-top: 10px;">
+<a href="/certificates/UTD Academic Excellence Certificates_Page_MS.jpg" target="_blank" class="btn btn-certificate"> <em class="fa fa-certificate" style="margin-right: 8px;"></em>View Certificate</a>
+      </div>
+    </li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 📜 </span> Graduate Teaching Certificate </span>       <p class="award-event"><em>Awarded by the Center for Teaching and Learning, The University of Texas at Dallas</em></p>
+      <div style=" margin-top: 10px;">
+<a href="/certificates/FY25 GTC-Arya.jpg" target="_blank" class="btn btn-certificate"> <em class="fa fa-certificate" style="margin-right: 8px;"></em>View Certificate</a>
+      </div>
+    </li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 🌟 </span> Recognized as a <a href="https://neurips.cc/Conferences/2024/ProgramCommittee#top&#8211;reviewers">Top Reviewer</a> (among the top 8% of reviewers) for NeurIPS 2024! </span></li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 🏅 </span> Spotlight Presentation at NeurIPS 2024 </span>       <p class="award-event"><em>Recognized for “A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models” — ranked among the top 2% of accepted papers.</em></p>
+    </li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 🏅 </span> Oral Presentation at AAAI 2024 </span>       <p class="award-event"><em>Recognized for “Neural Network Approximators for Marginal MAP Inference”, selected among the top 6% of accepted papers</em></p>
+    </li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 🏅 </span> Best Paper Award at UAI TPM 2024 </span>       <p class="award-event"><em>Awarded for "A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models"</em></p>
+      <div style=" margin-top: 10px;">
+<a href="/certificates/tpm_certificate.jpg" target="_blank" class="btn btn-certificate"> <em class="fa fa-certificate" style="margin-right: 8px;"></em>View Certificate</a>
+      </div>
+    </li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 🎓 </span> Jonsson School Graduate Study Scholarship </span>       <p class="award-event"><em>Awarded for outstanding academic performance in graduate studies.</em></p>
+    </li>
+    <li class="award-item"><span class="award-title"> <span class="award-icon"> 🎓 </span> Central Sector Scheme of Scholarships for College and University Students </span>       <p class="award-event"><em>Awarded by the Department of Higher Education, India, for academic excellence.</em></p>
+    </li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2 id="sponsors">Sponsors</h2>
+  <div style="display:block; text-align:center; margin-left:auto; margin-right:auto;">
+
+  </div>
+</div>
+
+
+</div>
+      </div>
+    </div>
+
+    <br/>
+<section id="footer">
+<div class="container-footer">
+  <div class="panel-footer">
+	  <div class="row">
+		<div class="col-sm-4">
+		    <h5>About</h5>	
+            <p>Shivvrat Arya<br/> Assistant Professor, Director of [ARIA Lab](https://aria-research-lab.github.io/)<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> New Jersey Institute of Technology
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Contact</h5>	
+            <p><a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/>
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Coordinates</h5>	
+            <p>GITC 4304<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> Ying Wu College of Computing<br/> New Jersey Institute of Technology <br/> Newark, NJ 07102
+</p>
+		</div>
+	  </div>
+
+      <center><p>&copy 2026 Shivvrat Arya </p></center>
+	</div>
+  </div>
+</div>
+
+<script src="/assets/javascript/bootstrap/jquery.min.js"></script>
+<!-- <script src="/assets/javascript/popper/dist/umd/popper.min.js"></script> -->
+<script src="/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+<!-- <script src="/assets/javascript/shb.js"></script> -->
+
+
+
+  </body>
+
+</html>

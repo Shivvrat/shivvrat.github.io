@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/research.css">
+<link rel="stylesheet" href="/assets/css/sidebar.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@5.0.0/css/mdb.min.css" integrity="sha384-9HvRwS0UzrEptu4bo8G0aI6Ymj8RhPm2Idf2QiNH2hdLTf02uUe5eUP3AB0Z0C3" crossorigin="anonymous" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" integrity="sha512-4bJdlXL9g0e8r1K4kt49d8r1YgX4AqD3uCfP8cZf6TXUaTzR/XcM31/12vE2e39u8NLfe7n5ejq3H7rU7mjbA==" crossorigin="anonymous">
+    <!-- Feather Icons for elegant, minimal design -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light" />
+
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="/posts/2022-08-21/jekyll-website/">
+
+
+
+
+  <title>How to create Academic Website using Jekyll - Shivvrat Arya</title>
+  <meta name="description" content="In this post we will look at how to make Academic Website using Jekyll">
+<!--  <meta name="description" content="Assistant Professor, NJIT Director of [ARIA Lab](https://aria-research-lab.github.io/)">-->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/posts/2022-08-21/jekyll-website/">
+  <link rel="shortcut icon" type ="image/x-icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="stylesheet" href="/assets/css/heading_style.css">
+  <link rel="stylesheet" href="/assets/css/research.css">
+
+  <script>
+    // Inject accessible anchors for headings (h2–h4) after DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      const headings = document.querySelectorAll('h2, h3, h4');
+      headings.forEach(h => {
+        if (!h.id) {
+          const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+          if (slug) h.id = slug;
+        }
+        if (!h.id) return;
+        if (h.querySelector('.heading-anchor')) return;
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.className = 'heading-anchor';
+        a.setAttribute('aria-label', 'Copy link to this section');
+        a.innerHTML = '¶';
+        a.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const url = window.location.origin + window.location.pathname + '#' + h.id;
+          try { await navigator.clipboard.writeText(url); a.innerHTML = '✓'; setTimeout(() => a.innerHTML = '¶', 1200); }
+          catch { window.location.hash = h.id; }
+        });
+        h.appendChild(a);
+      });
+      // Build in-page TOC if #toc is present
+      const toc = document.getElementById('toc');
+      if (toc) {
+        const scope = document.getElementById('main-content') || document;
+        const headings = Array.from(scope.querySelectorAll('h2, h3'))
+          .filter(h => !h.closest('nav') && !h.closest('header'));
+        if (headings.length) {
+          const nav = document.createElement('nav');
+          nav.setAttribute('aria-label', 'Table of contents');
+          const ul = document.createElement('ul');
+          ul.className = 'toc-list';
+          let currentUl = ul;
+          let lastLevel = 2;
+          headings.forEach(h => {
+            const level = h.tagName === 'H2' ? 2 : 3;
+            if (!h.id) {
+              const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+              if (slug) h.id = slug;
+            }
+            if (!h.id) return;
+            if (level > lastLevel) {
+              const nested = document.createElement('ul');
+              currentUl.lastElementChild && currentUl.lastElementChild.appendChild(nested);
+              currentUl = nested;
+            } else if (level < lastLevel) {
+              currentUl = currentUl.parentElement || currentUl;
+            }
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent.replace(/¶$/,'').trim();
+            li.appendChild(a);
+            currentUl.appendChild(li);
+            lastLevel = level;
+          });
+          nav.appendChild(ul);
+          toc.innerHTML = '';
+          toc.appendChild(nav);
+        }
+      }
+
+      // Lightweight client-side search using fetch + simple substring match
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+      if (searchInput && searchResults) {
+        let idx = [];
+        fetch('/search.json').then(r => r.json()).then(data => { idx = data || []; });
+        const render = (items) => {
+          if (!items.length) { searchResults.innerHTML = '<p>No results.</p>'; return; }
+          const html = items.slice(0, 20).map(i => `<div class="subsection-card"><a href="${i.url}"><strong>${i.title}</strong></a><p>${i.content.substring(0,180)}...</p></div>`).join('');
+          searchResults.innerHTML = html;
+        };
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.trim().toLowerCase();
+          if (!q) { searchResults.innerHTML = ''; return; }
+          const results = idx.filter(i => i.title.toLowerCase().includes(q) || i.content.toLowerCase().includes(q));
+          render(results);
+        });
+      }
+    });
+  </script>
+
+  <script>
+    // Outbound click tracking for analytics (arXiv/DOI/GitHub/CV)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const isOutbound = href.startsWith('http') && !href.includes(window.location.host);
+      if (!isOutbound) return;
+      if (window.gtag) {
+        gtag('event', 'click', { 'event_category': 'outbound', 'event_label': href });
+      }
+    }, { capture: true });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivvrat Arya",
+    "jobTitle": "Assistant Professor",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "New Jersey Institute of Technology"},
+    "url": "/",
+    "sameAs": [
+      "https://github.com/Shivvrat"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com">
+  <link rel="preconnect" href="https://f.vimeocdn.com">
+
+
+
+<!-- Google Analytics (original) -->
+<!--<script>-->
+<!--  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+<!--  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+<!--  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+<!--  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');-->
+
+<!--  ga('create', 'G-9JMYG0Z6M7', 'auto');-->
+<!--  ga('send', 'pageview');-->
+
+<!--</script>-->
+
+<!-- Global site tag (gtag.js) - Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9JMYG0Z6M7');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WNDXK54');</script>
+<!-- End Google Tag Manager -->
+
+
+
+</head>
+
+
+  <style>
+    .row {
+      padding: 0; /* Removes padding */
+    }
+    .custom-content-area {
+      margin: 0; /* Optionally, reduces margin */
+      max-width: 100%; /* Ensures content uses available width */
+    }
+
+    :root {
+      font-size: 16px; /* Increase base font size */
+    }
+
+    body {
+      font-size: 1.1rem; /* Relative to root font size */
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.9rem; }
+    h3 { font-size: 1.6rem; }
+    h4 { font-size: 1.4rem; }
+    p, li, a { font-size: 1.1rem; }
+    
+    .social-icons i {
+      font-size: 2rem !important; /* Larger social icons */
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        font-size: 16px; /* Slightly smaller on mobile */
+      }
+    }
+  </style>
+  
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNDXK54"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<style>
+.center {
+  margin: auto;
+  width: 40%;
+  /*border: 3px solid #73AD21;*/
+  /*padding: 10px;*/
+}
+
+/* Hover-based dropdown for desktop */
+@media (min-width: 768px)  {
+  .navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+</style>
+
+<a href="#main-content" class="visually-hidden-focusable skip-link">Skip to content</a>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" aria-label="Main Navigation">
+<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> -->
+
+    <a class="navbar-brand title" href="/">
+     <img src="/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
+      Shivvrat Arya
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+<!--    </div>-->
+<!--    <div class="center">-->
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+            
+          
+            
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/hiring/" id="navbarDropdown3" role="button" aria-expanded="false">
+                  Hiring
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                  
+                    <li><a class="dropdown-item" href="/hiring/">Overview</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/neurosymbolic-ai">Neurosymbolic AI</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/neural-optimization">Neural Optimization</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/drl-graph-optimization">DRL for Graph Optimization</a></li>
+                  
+                    <li><a class="dropdown-item" href="/hiring/applications">Applications of NeSy Methods</a></li>
+                  
+                </ul>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/grants">Grants</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/research">Research</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/publications">Publications</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/advising">Advising</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/talks">Talks</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/software">Software</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/teaching">Teaching</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/service">Service</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/resources">Resources</a>
+              </li>
+            
+          
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/gallery">Gallery</a>
+              </li>
+            
+          
+        </ul>
+</div>
+
+</nav>
+
+
+
+    <div class="container-fluid" id="main-content" role="main">
+      <div class="row">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to create Academic Website using Jekyll</h1>
+    <p class="post-meta"><time datetime="2022-08-21T00:00:00-07:00" itemprop="datePublished">Aug 21, 2022</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post we will look at how to make Academic Website using Jekyll</p>
+
+<h2 id="getting-started-in-jekyll">Getting Started in Jekyll</h2>
+
+<p>You need a Github account to host your website on github. Hence <a href="http://www.github.com/">go to Github and register for an account</a> if you have not done so already.</p>
+
+<p>While what follows is not strictly mandatory, I strongly encourage installing Jekyll locally on your computer. It would help you to play with your website contents and change some things here and there without risking your website hosted on github.</p>
+
+<ol>
+  <li><strong>Install Xcode (Mac users)</strong>.</li>
+  <li><strong>Install Jekyll</strong>. I like <a href="https://jekyllrb.com/docs/installation/macos/">this blog</a> alot.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gem install jekyll
+    
+</code></pre></div></div>
+
+<p>…<a href="http://jekyllrb.com/docs/installation/">that should be it</a>.</p>
+
+<ul>
+  <li><strong>Create a directory for your website</strong>. Call it whatever you want, but make it intuitive.</li>
+  <li>Then there are two ways to go forward. I would recommend the first one -
+    <ol>
+      <li>Go to <strong>Github</strong> and search for <strong>jekyll templates</strong>. Choose the one you like and use it as a template for your own website. (My Website is based on <a href="https://github.com/sbryngelson/academic-website-template">this</a> template) Or</li>
+      <li><strong>Have Jekyll make your basic site for you</strong> In a terminal window, change the directory to what will be your future website and enter <code class="language-plaintext highlighter-rouge">jekyll new .</code>.</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="advantages-of-github-and-jekyll">Advantages of Github and Jekyll</h2>
+
+<p>Let us look at why hosting your website on github.com and using jekyll to create it is advantageous -</p>
+<ul>
+  <li><strong>It’s free</strong>.</li>
+  <li><strong>It’s portable</strong>. Github accounts will stay the same no matter your university affiliation.</li>
+  <li><strong>It’s fast, but flexible</strong>.</li>
+</ul>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <br/>
+<section id="footer">
+<div class="container-footer">
+  <div class="panel-footer">
+	  <div class="row">
+		<div class="col-sm-4">
+		    <h5>About</h5>	
+            <p>Shivvrat Arya<br/> Assistant Professor, Director of [ARIA Lab](https://aria-research-lab.github.io/)<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> New Jersey Institute of Technology
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Contact</h5>	
+            <p><a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/>
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Coordinates</h5>	
+            <p>GITC 4304<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> Ying Wu College of Computing<br/> New Jersey Institute of Technology <br/> Newark, NJ 07102
+</p>
+		</div>
+	  </div>
+
+      <center><p>&copy 2026 Shivvrat Arya </p></center>
+	</div>
+  </div>
+</div>
+
+<script src="/assets/javascript/bootstrap/jquery.min.js"></script>
+<!-- <script src="/assets/javascript/popper/dist/umd/popper.min.js"></script> -->
+<script src="/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+<!-- <script src="/assets/javascript/shb.js"></script> -->
+
+
+
+  </body>
+
+</html>
