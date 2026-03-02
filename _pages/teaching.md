@@ -14,6 +14,7 @@ permalink: /teaching/
 <div class="subsection-card">
 ### At New Jersey Institute of Technology, Newark, USA.
 
+<!-- Syllabus links: wrap course name in <a href="{{ '/syllabus/FILENAME.pdf' | relative_url }}">Course Name</a> when syllabus exists in syllabus/ -->
 <table class="teaching-table">
   <thead>
     <tr>
@@ -27,14 +28,14 @@ permalink: /teaching/
   <tbody>
     <tr>
       <td>Spring 2026</td>
-      <td>CS 370 (Honors)</td>
+      <td><a href="{{ '/syllabus/CS-370-H02-2026-Spring-Arya.pdf' | relative_url }}">  CS 370 (Honors)</a></td>
       <td>Introduction to Artificial Intelligence</td>
       <td>Undergraduate</td>
       <td>Computer Science</td>
     </tr>
     <tr>
       <td>Fall 2025</td>
-      <td>CS 785</td>
+      <td><a href="{{ '/syllabus/CS-785-003-2025-Fall-Arya.pdf' | relative_url }}">CS 785</a></td>
       <td>Neurosymbolic AI</td>
       <td>Graduate Seminar</td>
       <td>Computer Science</td>
