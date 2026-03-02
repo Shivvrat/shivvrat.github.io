@@ -19,22 +19,22 @@ main:
         url: /hiring/drl-graph-optimization
       - title: "Applications of NeSy Methods"
         url: /hiring/applications
-  - title: "Publications"
-    url: /publications
-  - title: "Research"
-    url: /research
-  - title: "Advising"
-    url: /advising
   - title: "Grants"
     url: /grants
+  - title: "Research"
+    url: /research
+  - title: "Publications"
+    url: /publications
+  - title: "Advising"
+    url: /advising
   - title: "Talks"
     url: /talks
   - title: "Software"
     url: /software
   - title: "Teaching"
     url: /teaching
-  - title: "Services"
-    url: /services
+  - title: "Service"
+    url: /service
   - title: "Resources"
     url: /resources
   - title: "Gallery"

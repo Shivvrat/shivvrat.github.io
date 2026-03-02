@@ -27,7 +27,7 @@ permalink: /service/
 
 ### Conferences
 
-- Neural Information Processing Systems (**NeurIPS: Recognized as a Top Reviewer in 2024**) 
+- Neural Information Processing Systems (**NeurIPS: Recognized as a <a href='https://neurips.cc/Conferences/2024/ProgramCommittee#top-reviewers' target='_blank'>Top Reviewer</a> in 2024**) 
 - International Conference on Learning Representations (**ICLR**)
 - International Conference on Machine Learning (**ICML**)
 - AAAI Conference on Artificial Intelligence (**AAAI**)

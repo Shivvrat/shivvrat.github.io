@@ -77,8 +77,4 @@ This work advanced explainable reasoning, probabilistic inference, and real-time
 
 - **Ph.D., Computer Science** – The University of Texas at Dallas  
 - **M.S., Computer Science** – The University of Texas at Dallas  
-- **B.Tech., Computer Science and ![1765923135829](image/home/1765923135829.png)ng** – IIIT Vadodara  
-
-
-
-
+- **B.Tech., Computer Science and Engineering** – IIIT Vadodara  

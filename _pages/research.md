@@ -104,6 +104,12 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
       <td><span class="badge bg-primary">NeurIPS'25</span></td>
     </tr>
   </tbody>
+  <tbody>
+    <tr>
+      <td>Learning to Guide Local Search for MPE Inference in Probabilistic Graphical Models</td>
+      <td><span class="badge bg-primary">ArXiv</span></td>
+    </tr>
+  </tbody>
   </table>
 
 </div>

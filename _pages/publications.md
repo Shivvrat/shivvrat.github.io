@@ -9,7 +9,8 @@ scholar:
 ---
 
 <div class="jumbotron">
-  {% bibliography --query @*[year!=0] --group_by year %}
+  {% bibliography --query @*[year!=0] %}
+
 </div>
 
 <div class="jumbotron">
