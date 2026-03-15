@@ -31,6 +31,7 @@ permalink: /service/
 - International Conference on Learning Representations (**ICLR**)
 - International Conference on Machine Learning (**ICML**)
 - AAAI Conference on Artificial Intelligence (**AAAI**)
+- SIGKDD Conference on Knowledge Discovery and Data Mining (**KDD**)
 - Conference on Uncertainty in Artificial Intelligence (**UAI**) 
 - International Conference on Artificial Intelligence and Statistics (**AISTATS**)
 
