@@ -11,6 +11,10 @@ seo:
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
 <div class="alert alert-info">
+For the latest project descriptions and openings, please visit the <a href="https://aria-research-lab.github.io/hiring/" target="_blank">ARIA Lab hiring page</a>.
+</div>
+
+<div class="alert alert-info">
 📝 <strong>Ready to apply?</strong> Submit your details using the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a>. Email may be missed—form submissions are reviewed regularly.
 </div>
 
@@ -42,19 +46,19 @@ We are recruiting **Ph.D., MS, and Undergraduate students** for research positio
   </thead>
   <tbody>
     <tr>
-      <td><a href="/hiring/neurosymbolic-ai"><strong>Neurosymbolic AI</strong></a><br><small>Integrate symbolic reasoning with deep learning for transparent, interpretable AI systems.</small></td>
+      <td><a href="https://aria-research-lab.github.io/hiring/neurosymbolic-ai" target="_blank"><strong>Neurosymbolic AI</strong></a><br><small>Integrate symbolic reasoning with deep learning for transparent, interpretable AI systems.</small></td>
       <td><span class="badge bg-primary">Ph.D. Lead</span> <span class="badge bg-success">MS/Undergrad</span></td>
     </tr>
     <tr>
-      <td><a href="/hiring/neural-optimization"><strong>Neural Combinatorial Optimization</strong></a><br><small>Learn to build neural solvers for combinatorial problems.</small></td>
+      <td><a href="https://aria-research-lab.github.io/hiring/neural-optimization" target="_blank"><strong>Neural Combinatorial Optimization</strong></a><br><small>Learn to build neural solvers for combinatorial problems.</small></td>
       <td><span class="badge bg-primary">Ph.D. Lead</span> <span class="badge bg-success">MS/Undergrad</span></td>
     </tr>
     <tr>
-      <td><a href="/hiring/drl-graph-optimization"><strong>DRL for Graph Optimization</strong></a><br><small>Apply deep reinforcement learning to graph-based combinatorial optimization problems.</small></td>
+      <td><a href="https://aria-research-lab.github.io/hiring/drl-graph-optimization" target="_blank"><strong>DRL for Graph Optimization</strong></a><br><small>Apply deep reinforcement learning to graph-based combinatorial optimization problems.</small></td>
       <td><span class="badge bg-success">MS / Undergrad</span></td>
     </tr>
     <tr>
-      <td><a href="/hiring/applications"><strong>Application Domains</strong></a><br><small>Apply neurosymbolic methods to vision, video understanding, and multimodal reasoning.</small></td>
+      <td><a href="https://aria-research-lab.github.io/hiring/applications" target="_blank"><strong>Application Domains</strong></a><br><small>Apply neurosymbolic methods to vision, video understanding, and multimodal reasoning.</small></td>
       <td><span class="badge bg-info">All Levels</span></td>
     </tr>
   </tbody>

@@ -43,11 +43,11 @@ For an overview of ongoing research and recent publications, please visit the <a
 ## Research Focus  
 
 <ul class="research-focus-list">
-<li><a href="/hiring/neurosymbolic-ai">Neurosymbolic AI & Explainable Systems:</a> Integrating symbolic structure with deep learning for transparent reasoning. We develop hybrid architectures that combine neural pattern recognition with logical inference for interpretable decision-making.</li>
-<li><a href="/hiring/neural-optimization">Neural Combinatorial Optimization:</a> Learning-based solvers for combinatorial and constrained problems. Our work explores neural architectures that learn to solve NP-hard optimization problems efficiently.</li>
-<li><a href="/hiring/drl-graph-optimization">Deep Reinforcement Learning for Graph Optimization:</a> Graph neural networks combined with reinforcement learning for solving complex graph-based optimization problems, including routing, scheduling, and resource allocation.</li>
+<li><a href="https://aria-research-lab.github.io/hiring/neurosymbolic-ai" target="_blank">Neurosymbolic AI & Explainable Systems:</a> Integrating symbolic structure with deep learning for transparent reasoning. We develop hybrid architectures that combine neural pattern recognition with logical inference for interpretable decision-making.</li>
+<li><a href="https://aria-research-lab.github.io/hiring/neural-optimization" target="_blank">Neural Combinatorial Optimization:</a> Learning-based solvers for combinatorial and constrained problems. Our work explores neural architectures that learn to solve NP-hard optimization problems efficiently.</li>
+<li><a href="https://aria-research-lab.github.io/hiring/drl-graph-optimization" target="_blank">Deep Reinforcement Learning for Graph Optimization:</a> Graph neural networks combined with reinforcement learning for solving complex graph-based optimization problems, including routing, scheduling, and resource allocation.</li>
 <li><strong>Probabilistic Inference:</strong> Scalable neural methods for reasoning under uncertainty. We develop efficient algorithms for probabilistic graphical models and neural approaches to approximate inference.</li>
-<li><a href="/hiring/applications">Applications of Neurosymbolic Methods:</a> Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning. Applying neurosymbolic AI to real-world tasks requiring structured understanding.</li>
+<li><a href="https://aria-research-lab.github.io/hiring/applications" target="_blank">Applications of Neurosymbolic Methods:</a> Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning. Applying neurosymbolic AI to real-world tasks requiring structured understanding.</li>
 </ul>
 
 ---

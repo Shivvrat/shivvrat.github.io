@@ -68,7 +68,6 @@ nav_pages:
 include:
   - .htaccess
   - _pages
-  - _pages/hiring
 
 # Conversion
 markdown: kramdown
