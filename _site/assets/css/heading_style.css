@@ -1,0 +1,439 @@
+/* Professional Academic Heading Styles for R1 University Faculty */
+
+/* Import Professional Academic Color Palette */
+:root {
+  /* Primary Academic Blues */
+  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
+  
+  /* Professional Text Colors */
+  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
+  --text-secondary: #555555;      /* Medium gray for secondary text */
+  --text-light: #777777;          /* Light gray for captions */
+  
+  /* Clean Backgrounds */
+  --background: #ffffff;          /* Pure white */
+  --background-gray: #f8f9fa;     /* Very light gray */
+  --background-blue: #f0f4ff;     /* Light blue tint */
+  
+  /* Professional Borders */
+  --border-light: #e9ecef;        /* Light border */
+  --border-medium: #dee2e6;       /* Medium border */
+  
+  /* Academic Accent Colors */
+  --accent-gold: #c8b18b;         /* Gold accent for highlights */
+  --accent-green: #16cc5c;        /* Success green */
+  --warning: #ffc107;             /* Warning amber */
+  --error: #dc3545;               /* Error red */
+  
+  /* Professional Shadows */
+  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
+}
+
+/* Professional Typography Foundation */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--background);
+}
+
+/* Clean Academic Heading Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: var(--text-primary);
+  font-weight: normal;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0;
+}
+
+/* H1 - Page Title (2.0-2.5x body text) */
+h1 {
+  font-size: 2.25rem; /* 36px if body is 16px = 2.25x */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+/* H2 - Main Sections (1.6-1.8x body text) */
+h2 {
+  font-size: 1.75rem; /* 28px if body is 16px = 1.75x */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-left: 3px solid var(--secondary-blue);
+  padding-left: 0.75rem;
+}
+
+/* H3 - Subsections (1.3-1.5x body text) */
+h3 {
+  font-size: 1.375rem; /* 22px if body is 16px = 1.375x */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* H4 - Sub-subsections */
+h4 {
+  font-size: 1.125rem; /* 18px if body is 16px = 1.125x */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* H5 - Minor headings */
+h5 {
+  font-size: 1rem; /* Same as body text */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* H6 - Smallest headings */
+h6 {
+  font-size: 0.875rem; /* 14px if body is 16px = 0.875x */
+  font-weight: bold;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Enhanced Content Separation */
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Content following headings gets proper spacing */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  margin-top: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Enhanced List Styling with Better Hierarchy */
+ul, ol {
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li::marker {
+  color: var(--accent-gold);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+ol li::marker {
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+/* Nested Lists with Clear Hierarchy */
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+ul ul li, ol ol li, ul ol li, ol ul li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Professional Link Styling - Clean Academic Style */
+a {
+  color: var(--primary-navy);
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+a:hover {
+  color: var(--secondary-blue);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Clean Academic Blockquotes */
+blockquote {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  background: var(--background-gray);
+  border-left: 4px solid var(--border-medium);
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design for Mobile */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2rem; /* 2.0x body text on mobile */
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem; /* 1.6x body text on mobile */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem; /* 1.33x body text on mobile */
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    margin-top: 1.75rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+    margin-top: 1.25rem;
+  }
+
+  blockquote {
+    padding: 0.75rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.75rem; /* 1.75x body text on small screens */
+  }
+
+  h2 {
+    font-size: 1.375rem; /* 1.375x body text on small screens */
+    padding-left: 0.375rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+  }
+
+  h6 {
+    font-size: 0.85rem;
+  }
+
+  blockquote {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large Screen Optimizations */
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem; /* 2.5x body text on large screens */
+  }
+
+  h2 {
+    font-size: 1.875rem; /* 1.875x body text on large screens */
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 1.5x body text on large screens */
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Print Styles for Academic Documents */
+@media print {
+  h1, h2, h3, h4, h5, h6 {
+    color: #000 !important;
+    background: none !important;
+    border-color: #000 !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h1 {
+    border-bottom: 1px solid #000 !important;
+  }
+
+  h2 {
+    border-left: 2px solid #000 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  blockquote {
+    background: #f9f9f9 !important;
+    border-left: 2px solid #000 !important;
+  }
+}
+
+/* Focus and Selection States */
+::selection {
+  background: var(--background-blue);
+  color: var(--primary-navy);
+}
+
+::-moz-selection {
+  background: var(--background-blue);
+  color: var(--primary-navy);
+}
+
+/* Academic Heading Accessibility */
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 2rem;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Optional subtitle span inside H1 for academic metadata */
+h1 .subtitle {
+  display: block;
+  font-size: 0.7em;
+  color: var(--text-secondary);
+  font-weight: normal;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Simple target highlight for in-page jumps */
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
+  background-color: rgba(83,117,226,0.1);
+  outline: 0;
+}
+
+/* Clean heading anchor links */
+.heading-anchor {
+  margin-left: 0.5rem;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.heading-anchor:focus { 
+  outline: 2px solid var(--secondary-blue); 
+  outline-offset: 2px; 
+}
+
+/* Optional section numbering when body has .numbered-headings */
+body.numbered-headings h2 {
+  counter-reset: subsection;
+}
+
+body.numbered-headings h2::before {
+  counter-increment: section;
+  content: counter(section) '. ';
+  color: var(--text-light);
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+body.numbered-headings h3::before {
+  counter-increment: subsection;
+  content: counter(section) '.' counter(subsection) ' ';
+  color: var(--text-light);
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+/* Strict academic variant: monochrome accents */
+body.strict-academic h1 {
+  border-bottom-color: #333;
+}
+
+body.strict-academic h2 {
+  border-left-color: #333;
+}
+
+body.strict-academic .heading-anchor { 
+  color: #666; 
+}
