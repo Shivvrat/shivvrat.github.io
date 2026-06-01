@@ -56,3 +56,10 @@ thesis_committee:
     advisor: "Dr. Ioannis Koutis"
     research: "Edge Co-occurrence Regularization for Node Classification"
     status: current
+
+  - name: "Sabdha Ambati"
+    title: "Benchmarking AI Understanding of Adolescent Digital Language"
+    university: "NJIT"
+    advisor: "Dr. Guiling Wang"
+    research: "Benchmarking AI Understanding of Adolescent Digital Language"
+    status: current
