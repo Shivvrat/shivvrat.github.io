@@ -1,0 +1,17 @@
+services:
+  site:
+    build: .
+    image: shivvrat-jekyll
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll
+    environment:
+      BUNDLE_FROZEN: "1"
+    command:
+      - sh
+      - -c
+      - |
+        echo "Local URL: http://localhost:4000"
+        bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling

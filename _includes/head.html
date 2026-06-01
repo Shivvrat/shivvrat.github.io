@@ -26,7 +26,7 @@
     <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url}}"/>
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
 
 
 
@@ -35,8 +35,8 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <!--  <meta name="description" content="{{ site.description }}">-->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
+  <link rel="shortcut icon" type ="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
 
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/heading_style.css" | relative_url }}">
@@ -149,7 +149,7 @@
     "name": "Shivvrat Arya",
     "jobTitle": "Assistant Professor",
     "affiliation": {"@type": "CollegeOrUniversity", "name": "New Jersey Institute of Technology"},
-    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "url": "{{ site.baseurl }}/",
     "sameAs": [
       "https://github.com/Shivvrat"
     ]

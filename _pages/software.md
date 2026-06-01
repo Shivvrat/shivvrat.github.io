@@ -47,7 +47,7 @@ The library implements award-winning methods from top-tier AI/ML conferences pro
 <h4><b>QBMMlib: Moment Methods for Fully-coupled Flows</b></h4>
 <a href="https://github.com/sbryngelson/QBMMlib" target="_blank"><button class="btn btn-primary btn-sm">GIT: QBMMLIB</button></a>
 <a href="https://github.com/sbryngelson/PyQBMMlib" target="_blank"><button class="btn btn-primary btn-sm">GIT: PyQBMMLIB</button></a>
-<a href="{{ site.url }}{{ site.baseurl }}/papers/bryngelson-SoftX-20.pdf" target="_blank"><button class="btn btn-danger btn-sm">PAPER</button></a> 
+<a href="{{ site.baseurl }}/papers/bryngelson-SoftX-20.pdf" target="_blank"><button class="btn btn-danger btn-sm">PAPER</button></a> 
 
 <b>Author:</b>
 <i>S. H. Bryngelson</i>
@@ -84,7 +84,7 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
 
 [//]: # (<a href="https://mfc-caltech.github.io" target="_blank">)
 
-[//]: # (<img src="{{ site.url }}{{ site.baseurl }}/images/software/mfc-logo2.png" width="50%" />)
+[//]: # (<img src="{{ site.baseurl }}/images/software/mfc-logo2.png" width="50%" />)
 
 [//]: # (</a>)
 
@@ -94,7 +94,7 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
 
 [//]: # (<a href="https://github.com/ComputationalFlowPhysics/MFC-Caltech" target="_blank"><button class="btn btn-primary btn-sm">GITHUB</button></a>)
 
-[//]: # (<a href="{{ site.url }}{{ site.baseurl }}/papers/bryngelson-CPC-19.pdf" target="_blank"><button class="btn btn-danger btn-sm">PAPER</button></a> )
+[//]: # (<a href="{{ site.baseurl }}/papers/bryngelson-CPC-19.pdf" target="_blank"><button class="btn btn-danger btn-sm">PAPER</button></a> )
 
 [//]: # ()
 [//]: # (<b>Authors:</b>)
@@ -144,7 +144,7 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
 
 [//]: # (<a href="https://code-mphi.github.io/ECOGEN/" target="_blank">)
 
-[//]: # (<img src="{{ site.url }}{{ site.baseurl }}/images/software/ecogen.png" width="60%" />)
+[//]: # (<img src="{{ site.baseurl }}/images/software/ecogen.png" width="60%" />)
 
 [//]: # (</a>)
 
@@ -195,7 +195,7 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
 
 [//]: # (<a href="https://xpacc-dev.bitbucket.io/PlasCom2/" target="_blank">)
 
-[//]: # (<img src="{{ site.url }}{{ site.baseurl }}/images/software/xpacc.png" width="50%" />)
+[//]: # (<img src="{{ site.baseurl }}/images/software/xpacc.png" width="50%" />)
 
 [//]: # (</a>)
 
@@ -254,7 +254,7 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
 
 [//]: # (<div class="col-md-9 col-sm-12">)
 
-[//]: # (<img src="{{ site.url }}{{ site.baseurl }}/images/software/rbc3d.png" width="50%" />)
+[//]: # (<img src="{{ site.baseurl }}/images/software/rbc3d.png" width="50%" />)
 
 [//]: # (<h4><b>Spectral Boundary Integral Solver for Cell-scale Flows</b></h4>)
 
@@ -285,7 +285,7 @@ Example notebooks demonstrate QBMMlib on bubble dynamics problems.
 
 [//]: # (<div class="col-md-3 col-sm-12">)
 
-[//]: # (  <img src="{{site.url}}{{site.baseurl}}/images/respic/network.jpeg" width="175px "/>)
+[//]: # (  <img src="{{ site.baseurl }}/images/respic/network.jpeg" width="175px "/>)
 
 [//]: # (</div>)
 

@@ -8,6 +8,11 @@ scholar:
   bibliography_template: bibtemplate
 ---
 
+
+<div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
+For latest publications and preprints, please visit the <a href="https://aria-research-lab.github.io/publications" target="_blank">ARIA Lab publications page</a>.
+</div>
+
 <div class="jumbotron">
   {% bibliography --query @*[year!=0] %}
 

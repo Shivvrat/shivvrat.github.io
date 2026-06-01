@@ -21,7 +21,7 @@ seo:
 
 
 <div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
-📢 Dr. Arya is recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research in AI and machine learning. For more details, please see the <a href="{{ site.url }}{{ site.baseurl }}/hiring" target="_blank">hiring page</a>.
+📢 Dr. Arya is recruiting motivated Ph.D. students (Spring & Fall 2026) as well as undergraduate and master’s students interested in research in AI and machine learning. For more details, please see the <a href="{{ site.baseurl }}/hiring" target="_blank">hiring page</a>.
 </div>
 
 ## Biography  

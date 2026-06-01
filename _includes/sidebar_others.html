@@ -2,12 +2,12 @@
   <!-- Profile Section -->
   <div class="profile-section">
     {% for member in site.data.pi %}
-        <img src="{{site.url}}{{site.baseurl}}/images/teampic/{{ member.photo }}" alt="{{ member.name }}"/>
+        <img src="{{ site.baseurl }}/images/teampic/{{ member.photo }}" alt="{{ member.name }}"/>
       <h4>{{ member.name }}</h4>
       
       <div class="social-icons">
         {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank"><i class="fa fa-envelope-square fa-3x"></i></a>{% endif %}
-        {% if member.cv %}<a href="{{ site.url }}{{ site.baseurl }}/{{ member.cv }}" target="_blank"><i class="ai ai-cv-square ai-3x"></i></a>{% endif %}
+        {% if member.cv %}<a href="{{ site.baseurl }}/{{ member.cv }}" target="_blank"><i class="ai ai-cv-square ai-3x"></i></a>{% endif %}
         {% if member.scholar %}<a href="{{ member.scholar }}" target="_blank"><i class="ai ai-google-scholar-square ai-3x"></i></a>{% endif %}
         {% if member.github %}<a href="{{ member.github }}" target="_blank"><i class="fa fa-github-square fa-3x"></i></a>{% endif %}
         {% if member.researchgate %}<a href="{{ member.researchgate }}" target="_blank"><i class="ai ai-researchgate-square ai-3x"></i></a>{% endif %}
@@ -40,7 +40,7 @@
     </div>
 
     <div class="news-footer">
-      <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" class="btn-all-news">
+      <a href="{{ site.baseurl }}/allnews.html" class="btn-all-news">
         View All News
         <i class="fas fa-arrow-right"></i>
       </a>

@@ -2,15 +2,15 @@
   <!-- Profile Section -->
   <div class="profile-section">
     {% for member in site.data.pi %}
-      <a href="{{site.url}}{{site.baseurl}}/about">
-        <img src="{{site.url}}{{site.baseurl}}/images/teampic/{{ member.photo }}" alt="{{ member.name }}"/>
+      <a href="{{ site.baseurl }}/about">
+        <img src="{{ site.baseurl }}/images/teampic/{{ member.photo }}" alt="{{ member.name }}"/>
       </a>
       <h4>{{ member.name }}</h4>
       <div class="academic-title">{{ member.info }}</div>
       
       <div class="social-icons">
         {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank" title="Email">{% include icons/email.svg %}</a>{% endif %}
-        {% if member.cv %}<a href="{{ site.url }}{{ site.baseurl }}/{{ member.cv }}" target="_blank" title="Curriculum Vitae">{% include icons/cv.svg %}</a>{% endif %}
+        {% if member.cv %}<a href="{{ site.baseurl }}/{{ member.cv }}" target="_blank" title="Curriculum Vitae">{% include icons/cv.svg %}</a>{% endif %}
         {% if member.scholar %}<a href="{{ member.scholar }}" target="_blank" title="Google Scholar">{% include icons/google-scholar-square.svg %}</a>{% endif %}
         {% if member.orcid %}<a href="{{ member.orcid }}" target="_blank" title="ORCID iD">{% include icons/orcid-square.svg %}</a>{% endif %}
         {% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank" title="LinkedIn">{% include icons/black-linkedin-logo-15915.svg %}</a>{% endif %}
@@ -79,7 +79,7 @@
     </div>
 
     <div class="news-footer">
-      <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" class="btn-all-news">
+      <a href="{{ site.baseurl }}/allnews.html" class="btn-all-news">
         View All News
         <i class="fas fa-arrow-right"></i>
       </a>

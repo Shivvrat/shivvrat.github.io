@@ -88,8 +88,8 @@ layout: default
     <div class="gallery-grid">
       {% for image in event.images %}
       <div class="gallery-item">
-        <a href="{{ site.url }}{{ site.baseurl }}/photos/{{ event.folder }}/{{ image.file }}" target="_blank">
-          <img src="{{ site.url }}{{ site.baseurl }}/photos/{{ event.folder }}/{{ image.file }}" alt="{{ image.caption }}">
+        <a href="{{ site.baseurl }}/photos/{{ event.folder }}/{{ image.file }}" target="_blank">
+          <img src="{{ site.baseurl }}/photos/{{ event.folder }}/{{ image.file }}" alt="{{ image.caption }}">
           {% if image.caption %}
           <div class="gallery-caption">{{ image.caption }}</div>
           {% endif %}

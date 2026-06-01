@@ -27,7 +27,7 @@ permalink: /advising/
 
 <div class="col-sm-6 clearfix">
   {% if student.photo %}
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ student.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ site.baseurl }}/images/teampic/{{ student.photo }}" class="img-responsive" width="25%" style="float: left" />
   {% endif %}
   <h4>{{ student.name }}</h4>
   <i>{{ student.role }}{% if student.start_year %}, Started {{ student.start_year }}{% endif %}</i><br>
