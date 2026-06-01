@@ -42,7 +42,7 @@ serve_site() {
 }
 
 compile_site() {
-    docker run --rm -it \
+    docker run --rm \
         -v "$PWD:/srv/jekyll" \
         -e BUNDLE_FROZEN=1 \
         "$image_name" \
@@ -61,7 +61,7 @@ publish_site() {
     ssh_mount=(-v "$ssh_dir:/root/.ssh")
 
     get_git_identity
-    docker run --rm -it \
+    docker run --rm \
         -v "$PWD:/srv/jekyll" \
         "${ssh_mount[@]}" \
         -e BUNDLE_FROZEN=1 \

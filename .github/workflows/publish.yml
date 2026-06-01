@@ -1,0 +1,38 @@
+name: Publish website
+
+on:
+  push:
+    branches:
+      - source
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-website
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install SSH deploy key
+        env:
+          WEBSITE_DEPLOY_KEY: ${{ secrets.WEBSITE_DEPLOY_KEY }}
+        run: |
+          if [ -z "$WEBSITE_DEPLOY_KEY" ]; then
+            echo "Missing WEBSITE_DEPLOY_KEY secret." >&2
+            exit 1
+          fi
+
+          mkdir -p ~/.ssh
+          printf '%s\n' "$WEBSITE_DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+      - name: Publish site
+        run: bash ./compile_and_publish.sh

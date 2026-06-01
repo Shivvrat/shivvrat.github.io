@@ -43,3 +43,15 @@ bash ./docker-jekyll.sh publish
 
 The publish command expects your SSH key directory at `~/.ssh`, or set
 `SSH_KEY_DIR` to a different path.
+
+## GitHub Actions Publishing
+
+Commits pushed to the `source` branch run `.github/workflows/publish.yml`. The
+workflow calls `compile_and_publish.sh`, which builds the Docker image and runs
+the existing `rake publish` task.
+
+To let the workflow push the compiled site to `Shivvrat/shivvrat.github.io`,
+add a repository secret named `WEBSITE_DEPLOY_KEY` containing a private SSH key
+that has write access to the repository. The matching public key should be added
+as a deploy key with write access, or the private key should belong to a GitHub
+account with write access.
