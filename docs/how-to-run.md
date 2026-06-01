@@ -47,11 +47,9 @@ The publish command expects your SSH key directory at `~/.ssh`, or set
 ## GitHub Actions Publishing
 
 Commits pushed to the `source` branch run `.github/workflows/publish.yml`. The
-workflow calls `compile_and_publish.sh`, which builds the Docker image and runs
-the existing `rake publish` task.
+workflow builds the site with Docker and publishes the generated `_site` folder
+to the `master` branch using GitHub Actions' built-in token.
 
-To let the workflow push the compiled site to `Shivvrat/shivvrat.github.io`,
-add a repository secret named `WEBSITE_DEPLOY_KEY` containing a private SSH key
-that has write access to the repository. The matching public key should be added
-as a deploy key with write access, or the private key should belong to a GitHub
-account with write access.
+No deploy key is needed for the automated workflow. If GitHub rejects the push,
+check the repository settings under **Actions > General > Workflow permissions**
+and make sure workflows have read and write permissions.

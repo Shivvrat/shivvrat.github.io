@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: publish-website
@@ -21,18 +21,12 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Install SSH deploy key
-        env:
-          WEBSITE_DEPLOY_KEY: ${{ secrets.WEBSITE_DEPLOY_KEY }}
-        run: |
-          if [ -z "$WEBSITE_DEPLOY_KEY" ]; then
-            echo "Missing WEBSITE_DEPLOY_KEY secret." >&2
-            exit 1
-          fi
-
-          mkdir -p ~/.ssh
-          printf '%s\n' "$WEBSITE_DEPLOY_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
+      - name: Build site
+        run: bash ./docker-jekyll.sh compile
 
       - name: Publish site
-        run: bash ./compile_and_publish.sh
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: master
+          folder: _site
+          clean: true
