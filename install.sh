@@ -14,14 +14,14 @@ if [ "$1" = "docker" ]; then
     
     # Build Docker image
     echo "Building Jekyll Docker image..."
-    docker build -t shivvrat-jekyll .
+    bash ./docker-jekyll.sh image
     
     echo "Docker setup complete!"
     echo "Usage:"
-    echo "  ./docker-jekyll.sh dev    - Start development server"
-    echo "  ./docker-jekyll.sh run    - Start production server"
-    echo "  ./docker-jekyll.sh stop   - Stop server"
-    echo "  ./docker-jekyll.sh shell  - Open container shell"
+    echo "  ./docker-jekyll.sh serve   - Start development server"
+    echo "  ./docker-jekyll.sh compile - Build the site inside Docker"
+    echo "  ./docker-jekyll.sh publish - Compile and publish the site"
+    echo "  ./docker-jekyll.sh shell   - Open container shell"
     exit 0
 fi
 
