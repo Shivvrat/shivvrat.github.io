@@ -29,7 +29,7 @@ permalink: /service/
 
 - Neural Information Processing Systems (**NeurIPS: Recognized as a <a href='https://neurips.cc/Conferences/2024/ProgramCommittee#top-reviewers' target='_blank'>Top Reviewer</a> in 2024**) 
 - International Conference on Learning Representations (**ICLR**)
-- International Conference on Machine Learning (**ICML**)
+- International Conference on Machine Learning (**ICML: Recognized as a <a href='https://icml.cc/Conferences/2026/ProgramCommittee#silver' target='_blank'>Silver Reviewer</a> in 2026**)
 - AAAI Conference on Artificial Intelligence (**AAAI**)
 - SIGKDD Conference on Knowledge Discovery and Data Mining (**KDD**)
 - Conference on Uncertainty in Artificial Intelligence (**UAI**) 

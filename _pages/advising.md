@@ -156,6 +156,39 @@ permalink: /advising/
 </div>
 {% endif %}
 
+{% if site.data.advising.qualifying_exam_committee.size > 0 %}
+<div class="jumbotron">
+
+### PhD Qualifying Exam Committee Member
+
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th>Student</th>
+<th>Title</th>
+<th>University</th>
+<th>Advisor</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+{% for student in site.data.advising.qualifying_exam_committee %}
+<tr>
+<td>{% if student.website %}<a href="{{ student.website }}" target="_blank">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
+<td>{{ student.title }}</td>
+<td>{{ student.university }}</td>
+<td>{{ student.advisor }}</td>
+<td>{{ student.date }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+</div>
+{% endif %}
+
 {% if site.data.advising.thesis_committee.size > 0 %}
 <div class="jumbotron">
 
@@ -223,7 +256,7 @@ permalink: /advising/
 </div>
 {% endif %}
 
-{% if site.data.advising.current_advisees.size == 0 and site.data.advising.graduated_advisees.size == 0 and site.data.advising.dissertation_committee.size == 0 and site.data.advising.thesis_committee.size == 0 %}
+{% if site.data.advising.current_advisees.size == 0 and site.data.advising.graduated_advisees.size == 0 and site.data.advising.dissertation_committee.size == 0 and site.data.advising.qualifying_exam_committee.size == 0 and site.data.advising.thesis_committee.size == 0 %}
 <div class="jumbotron">
 <p><em>Advising information coming soon.</em></p>
 </div>

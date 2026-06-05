@@ -28,18 +28,36 @@ graduated_advisees:
 # PhD Dissertation Committee Member
 dissertation_committee:
   - name: "Yeqing Chen"
-    title: "Cell–Cell Communication-aware Variational Autoencoder with Gaussian Process prior"
+    title: "Cell-Cell Communication-aware Variational Autoencoder with Dynamic Graph Laplacian Constraints"
     university: "NJIT"
     advisor: "Dr. Zhi Wei"
-    research: "Cell–Cell Communication-aware Variational Autoencoder with Gaussian Process prior"
+    research: "Cell-Cell Communication-aware Variational Autoencoder with Dynamic Graph Laplacian Constraints"
     status: current
 
   - name: "Hanzhang Fang"
-    title: "GROVE: Gaussian pRocess VariatiOnal dEconvolution"
+    title: "Generative Spatial Deconvolution via Disentangled Latent Factors and Domain-Adaptive Decoder Transfer"
     university: "NJIT"
     advisor: "Dr. Zhi Wei"
-    research: "GROVE: Gaussian pRocess VariatiOnal dEconvolution"
+    research: "Generative Spatial Deconvolution via Disentangled Latent Factors and Domain-Adaptive Decoder Transfer"
     status: current
+
+# PhD Qualifying Exam Committee Member
+qualifying_exam_committee:
+  - name: "Xiaoliang Wu"
+    title: "Evaluating Reasoning-Intensive Retrieval through Information-Seeking and Causal Attribution in Stock Price Dynamics"
+    university: "NJIT"
+    advisor: "Dr. Jing Li"
+    research: "Evaluating Reasoning-Intensive Retrieval through Information-Seeking and Causal Attribution in Stock Price Dynamics"
+    status: completed
+    date: "2026-03-12"
+
+  - name: "Mohith Oduru"
+    title: "Spatially-Indexed Persistent Memory: A 3D-Indexed Latent Memory Module for Unsupervised Egocentric World Models"
+    university: "NJIT"
+    advisor: "Dr. Margarita Vinnikov"
+    research: "Spatially-Indexed Persistent Memory: A 3D-Indexed Latent Memory Module for Unsupervised Egocentric World Models"
+    status: completed
+    date: "2026-05-15"
 
 # MS Thesis Committee Member
 thesis_committee:
