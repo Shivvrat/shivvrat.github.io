@@ -10,7 +10,7 @@ scholar:
 
 
 <div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
-For latest publications and preprints, please visit the <a href="https://aria-research-lab.github.io/publications" target="_blank">ARIA Lab publications page</a>.
+For latest publications and preprints, please visit the <a href="https://aria-research-lab.github.io/publications" target="_blank">ARIA Lab publications page</a> and <a href="https://scholar.google.com/citations?user=eM1co-kAAAAJ&hl=en" target="_blank">Dr. Arya's Google Scholar profile</a>.
 </div>
 
 <div class="jumbotron">
@@ -18,7 +18,7 @@ For latest publications and preprints, please visit the <a href="https://aria-re
 
 </div>
 
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h2 class="bib-subsection-title">Under Review</h2>
   {% bibliography --query @*[year=0] %}
-</div>
+</div> -->

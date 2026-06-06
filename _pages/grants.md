@@ -62,7 +62,7 @@ Selected funded projects grouped by agency. Work spans neurosymbolic AI, probabi
 
 ---
 
-## NSF – National Science Foundation
+## NSF – National Science Foundation (IIS-1652835)
 
 **Summary**: AI/ML methodology projects spanning probabilistic inference and interpretable modeling.
 
@@ -77,14 +77,18 @@ Selected funded projects grouped by agency. Work spans neurosymbolic AI, probabi
 
 ## AFOSR – Air Force Office of Scientific Research
 
-**Summary**: Robust, explainable AI for safety-critical applications.
+**Summary**: Human-aware probabilistic logic for learning with fewer labels from multimodal data to model credibility.
 
-- **Institution**: Center for Machine Learning, UTD
+- **Institution**: University of Texas at Dallas
 - **Role**: Research Assistant
-- **Focus**: Robust, explainable AI for safety-critical use cases
+- **Program**: Air Force Defense Research Sciences Program (CFDA 12.800)
+- **Related Opportunity**: FA955021S0001
+- **Place of Performance**: Texas, United States
+- **Funding Agency**: Air Force Office of Scientific Research (AFOSR), DoD / USAF / AFMC / AFRL
+- **Focus**: Human-aware probabilistic logic approach for learning with less labeled multimodal data and modeling credibility
 - **Contributions**:
-  - Built interpretable pipelines and validated performance against baselines
-  - Emphasized reliability and deployment considerations
+  - Supported research on probabilistic logic and credibility modeling for multimodal learning
+  - Advanced reliable learning methods designed to reduce label requirements
 
 ---
 
