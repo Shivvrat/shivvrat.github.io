@@ -887,7 +887,58 @@ tbody td:nth-child(5) {
 }
 
 /* Table variants */
-.teaching-table { }
+.teaching-table {
+  table-layout: fixed;
+  max-width: 100%;
+}
+
+.teaching-table th,
+.teaching-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.teaching-table th:nth-child(1),
+.teaching-table td:nth-child(1) {
+  width: 18%;
+  min-width: 0;
+  white-space: normal;
+}
+
+.teaching-table th:nth-child(2),
+.teaching-table td:nth-child(2) {
+  width: 11%;
+  min-width: 0;
+  white-space: normal;
+}
+
+.teaching-table th:nth-child(3),
+.teaching-table td:nth-child(3) {
+  width: 31%;
+  min-width: 0;
+}
+
+.teaching-table th:nth-child(4),
+.teaching-table td:nth-child(4) {
+  width: 15%;
+  min-width: 0;
+}
+
+.teaching-table th:nth-child(5),
+.teaching-table td:nth-child(5) {
+  width: 25%;
+  min-width: 0;
+  white-space: normal;
+}
+
+@media (max-width: 900px) {
+  .teaching-table th,
+  .teaching-table td {
+    padding: 0.65rem 0.55rem;
+  }
+}
 .research-table { table-layout: fixed; }
 
 /* Research table column guidance: Year, Title, Venue, Notes */

@@ -7,6 +7,11 @@ permalink: /research/
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
+
+<div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 4px;">
+For latest research updates, please visit the <a href="https://aria-research-lab.github.io/research" target="_blank">ARIA Lab research page</a>.
+</div>
+
 <div class="section-card">
 
 ## **Research Interests**
@@ -28,7 +33,7 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
 
 </div>
 
-<div class="jumbotron">
+<!-- <div class="jumbotron">
 
 ## **Inference in Neurosymbolic Models**
 
@@ -173,7 +178,7 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
 
 </div>
 <!-- </div> -->
-</div>
+<!-- </div>
 
 <div class="section-card">
 
@@ -196,8 +201,7 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
   </tbody>
   </table>
 </div>
-</div>
-
+</div> -->
 
 
 

@@ -24,8 +24,10 @@ main:
     url: /teaching
   - title: "Service"
     url: /service
-  - title: "Resources"
-    url: /resources
+  # - title: "Certifications"
+  #   url: /certifications
   - title: "Gallery"
     url: /gallery
+  - title: "Resources"
+    url: /resources
 

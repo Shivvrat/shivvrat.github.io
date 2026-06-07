@@ -7,45 +7,17 @@ permalink: /teaching/
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-
 <div class="section-card">
+
 ## Academic Teaching Experience
 
+{% assign teaching_by_institution = site.data.academic_teaching | group_by: "institution" %}
+{% for institution_group in teaching_by_institution %}
+{% assign teaching_by_role = institution_group.items | group_by: "role" %}
+{% for role_group in teaching_by_role %}
 <div class="subsection-card">
-### At New Jersey Institute of Technology, Newark, USA.
 
-<!-- Syllabus links: wrap course name in <a href="{{ '/syllabus/FILENAME.pdf' | relative_url }}">Course Name</a> when syllabus exists in syllabus/ -->
-<table class="teaching-table">
-  <thead>
-    <tr>
-      <th>Year/Term</th>
-      <th>Course No.</th>
-      <th>Course</th>
-      <th>Level</th>
-      <th>Department</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Spring 2026</td>
-      <td><a href="{{ '/syllabus/CS-370-H02-2026-Spring-Arya.pdf' | relative_url }}">  CS 370 (Honors)</a></td>
-      <td>Introduction to Artificial Intelligence</td>
-      <td>Undergraduate</td>
-      <td>Computer Science</td>
-    </tr>
-    <tr>
-      <td>Fall 2025</td>
-      <td><a href="{{ '/syllabus/CS-785-003-2025-Fall-Arya.pdf' | relative_url }}">CS 785</a></td>
-      <td>Neurosymbolic AI</td>
-      <td>Graduate Seminar</td>
-      <td>Computer Science</td>
-    </tr>
-  </tbody>
-  </table>
-</div>
-
-<div class="subsection-card">
-### At The University of Texas at Dallas, USA — Guest Lecturer
+### At {{ institution_group.name }}{% if role_group.name %} -- {{ role_group.name }}{% endif %}
 
 <table class="teaching-table">
   <thead>
@@ -58,84 +30,26 @@ permalink: /teaching/
     </tr>
   </thead>
   <tbody>
+    {% for course in role_group.items %}
+    {% assign course_url = course.url | strip %}
+    {% assign course_number = course.course | strip %}
     <tr>
-      <td>Fall 2024</td>
-      <td>CS 6364</td>
-      <td>Artificial Intelligence</td>
-      <td>Graduate</td>
-      <td>Computer Science</td>
+      <td>{{ course.term }}</td>
+      <td>{% if course_url != "" and course_number != "" %}<a href="{{ course_url | relative_url }}">{{ course_number }}</a>{% else %}{{ course_number }}{% endif %}</td>
+      <td>{{ course.title }}</td>
+      <td>{{ course.level }}</td>
+      <td>{{ course.department }}</td>
     </tr>
-    <tr>
-      <td>Fall 2024</td>
-      <td>CS 6375</td>
-      <td>Machine Learning</td>
-      <td>Graduate</td>
-      <td>Computer Science</td>
-    </tr>
-    <tr>
-      <td>Spring 2024</td>
-      <td>CS 4365</td>
-      <td><!-- [ -->Artificial Intelligence<!-- ](/teaching/cs4365/) --></td>
-      <td>Undergraduate</td>
-      <td>Computer Science</td>
-    </tr>
+    {% endfor %}
   </tbody>
-  </table>
+</table>
+
 </div>
+{% endfor %}
+{% endfor %}
 
-<div class="subsection-card">
-### At The University of Texas at Dallas, USA — Teaching Assistant
-
-<table class="teaching-table">
-  <thead>
-    <tr>
-      <th>Year/Term</th>
-      <th>Course No.</th>
-      <th>Course</th>
-      <th>Level</th>
-      <th>Department</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Spring 2021</td>
-      <td>CS 6347</td>
-      <td>Statistical Methods in AI and Machine Learning</td>
-      <td>Graduate</td>
-      <td>Computer Science</td>
-    </tr>
-    <tr>
-      <td>Spring 2021</td>
-      <td>CS 4347</td>
-      <td>Database Systems</td>
-      <td>Undergraduate</td>
-      <td>Computer Science</td>
-    </tr>
-    <tr>
-      <td>Fall 2020</td>
-      <td>CS 4347</td>
-      <td>Database Systems</td>
-      <td>Undergraduate</td>
-      <td>Computer Science</td>
-    </tr>
-    <tr>
-      <td>Summer 2021</td>
-      <td>CS 3305</td>
-      <td>Discrete Mathematics for Computing II</td>
-      <td>Undergraduate</td>
-      <td>Computer Science</td>
-    </tr>
-    <tr>    
-      <td>Summer 2021</td>
-      <td>CS 3305</td>
-      <td>Discrete Mathematics for Computing II</td>
-      <td>Undergraduate</td>
-      <td>Computer Science</td>
-    </tr>
-  </tbody>
-  </table>
-</div>
-
-[//]: # (Add more institutions/sections below in the same table structure.)
+{% if site.data.academic_teaching.size == 0 %}
+<p><em>Teaching information coming soon.</em></p>
+{% endif %}
 
 </div>

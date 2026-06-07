@@ -3,50 +3,73 @@
   course: CS 370
   title: Introduction to Artificial Intelligence - Honors
   level: Undergraduate
-  role: Instructor Of Record
+  role: Course Instructor
   modality: In Person
+  department: Department of Computer Science
+  institution: New Jersey Institute of Technology
+  location: Newark, NJ
+  url: /syllabus/CS-370-H02-2026-Spring-Arya.pdf
   summary: Taught the honors section of Introduction to Artificial Intelligence as
     the sole instructor
-- term: Spring 2024
-  course: Artificial Intelligence
-  title: Artificial Intelligence (Senior Level)
-  level: Undergraduate
-  role: Guest Lecturer
-  modality: In Person
-  summary: Delivered lectures and facilitated class activities focused on core topics
-    in Artificial Intelligence
 - term: Fall 2025
   course: CS 785 ST
   title: NeuroSymbolic AI
-  level: Phd
-  role: Instructor Of Record
+  level: PhD
+  role: Course Instructor
   modality: In Person
+  department: Department of Computer Science
+  institution: New Jersey Institute of Technology
+  location: Newark, NJ
+  url: /syllabus/CS-785-003-2025-Fall-Arya.pdf
   summary: Developed and taught a new Ph.D. seminar course expanding the department's
     AI curriculum; Planned adaptation of course material for inclusion in the undergraduate
     CS curriculum
+- term: Spring 2024
+  course: CS 4365
+  title: Artificial Intelligence
+  level: Undergraduate
+  role: Guest Lecturer
+  modality: In Person
+  department: Department of Computer Science
+  institution: The University of Texas at Dallas
+  location: Richardson, TX
+  url: ''
+  summary: Delivered lectures and facilitated class activities focused on core topics
+    in Artificial Intelligence
 - term: Fall 2024
-  course: Artificial Intelligence
-  title: Artificial Intelligence (Graduate Level)
+  course: CS 6375
+  title: Machine Learning
   level: Graduate
   role: Guest Lecturer
   modality: In Person
-  summary: Taught lectures and guided class discussions on advanced topics in Artificial
-    Intelligence
-- term: Fall 2024
-  course: Machine Learning
-  title: Machine Learning (Graduate Level)
-  level: Graduate
-  role: Guest Lecturer
-  modality: In Person
+  department: Department of Computer Science
+  institution: The University of Texas at Dallas
+  location: Richardson, TX
+  url: ''
   summary: Delivered instructional content and moderated discussions on advanced Machine
     Learning concepts
-- term: August 2020 - August 2021
-  course: Statistical Methods in AI and Machine Learning; Database Systems; Discrete
-    Mathematics for Computing II
-  title: Teaching Assistant, Department of Computer Science, The University of Texas
-    at Dallas
-  level: Mixed
-  role: Other
+- term: Fall 2024
+  course: CS 6364
+  title: Artificial Intelligence
+  level: Graduate
+  role: Guest Lecturer
   modality: In Person
+  department: Department of Computer Science
+  institution: The University of Texas at Dallas
+  location: Richardson, TX
+  url: ''
+  summary: Taught lectures and guided class discussions on advanced topics in Artificial
+    Intelligence
+- term: August 2020 - August 2021
+  course: ''
+  title: Statistical Methods in AI and Machine Learning; Database Systems; Discrete
+    Mathematics for Computing II
+  level: Mixed
+  role: Teaching Assistant
+  modality: In Person
+  department: Department of Computer Science
+  institution: The University of Texas at Dallas
+  location: Richardson, TX
+  url: ''
   summary: Graded assignments; Held office hours; Conducted project demonstrations;
     Developed supplementary materials and homework solutions
