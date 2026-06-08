@@ -69,7 +69,7 @@ Selected funded projects grouped by agency. Work spans neurosymbolic AI, probabi
 **Summary**: AI/ML methodology projects spanning probabilistic inference and interpretable modeling.
 
 - **Institution**: Center for Machine Learning, UTD
-- **Role**: Research Contributor
+- **Role**: Graduate Research Assistant
 - **Timeline**: 2021 - 2025
 - **Focus**: AI/ML methodology spanning probabilistic inference and interpretable modeling
 - **Contributions**:
@@ -83,7 +83,7 @@ Selected funded projects grouped by agency. Work spans neurosymbolic AI, probabi
 **Summary**: Human-aware probabilistic logic for learning with fewer labels from multimodal data to model credibility.
 
 - **Institution**: University of Texas at Dallas
-- **Role**: Research Contributor
+- **Role**: Graduate Research Assistant
 - **Timeline**: 2021 - 2025
 - **Program**: Air Force Defense Research Sciences Program (CFDA 12.800)
 - **Related Opportunity**: FA955021S0001
