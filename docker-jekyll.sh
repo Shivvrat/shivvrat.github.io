@@ -45,6 +45,7 @@ compile_site() {
     docker run --rm \
         -v "$PWD:/srv/jekyll" \
         -e BUNDLE_FROZEN=1 \
+        -e JEKYLL_ENV=production \
         "$image_name" \
         bundle exec jekyll build
 }
