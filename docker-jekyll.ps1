@@ -52,6 +52,7 @@ function Compile-Site {
         'run', '--rm', '-it',
         '-v', "${repoRoot}:/srv/jekyll",
         '-e', 'BUNDLE_FROZEN=1',
+        '-e', 'JEKYLL_ENV=production',
         $imageName,
         'bundle', 'exec', 'jekyll', 'build'
     )
