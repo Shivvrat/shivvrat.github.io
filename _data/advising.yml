@@ -39,6 +39,22 @@ qualifying_exam_committee:
     Causal Attribution in Stock Price Dynamics
   status: completed
   date: '2026-03-12'
+- name: Xun Song
+  title: 'MarkAug: Out-of-Distribution Detection in Single-Cell Annotation via Marker-Gene
+    Augmentation'
+  university: NJIT
+  advisor: Dr. Zhi Wei
+  research: 'MarkAug: Out-of-Distribution Detection in Single-Cell Annotation via
+    Marker-Gene Augmentation'
+  status: completed
+  date: '2026-06-15'
+- name: Yuanjie Zou
+  title: Hierarchical Conformal Risk Control for Ontology-Guided Cell-Type Annotation
+  university: NJIT
+  advisor: Dr. Zhi Wei
+  research: Hierarchical Conformal Risk Control for Ontology-Guided Cell-Type Annotation
+  status: completed
+  date: '2026-06-17'
 thesis_committee:
 - name: Kadir Altunel
   title: Edge Co-occurrence Regularization for Node Classification
