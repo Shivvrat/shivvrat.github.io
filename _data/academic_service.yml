@@ -59,6 +59,20 @@
   - professional-service
 - section: Conference Reviewer
   scope: profession
+  organization: ACM International Conference on Information and Knowledge Management
+  display: ACM International Conference on Information and Knowledge Management <strong>(CIKM)</strong>
+  activity: Conference paper reviewing
+  role: Reviewer
+  start: ''
+  end: ''
+  summary: Conference reviewer
+  order: 45
+  tags:
+  - reviewer
+  - conference
+  - professional-service
+- section: Conference Reviewer
+  scope: profession
   organization: International Conference on Artificial Intelligence and Statistics
   display: International Conference on Artificial Intelligence and Statistics <strong>(AISTATS)</strong>
   activity: Conference paper reviewing
