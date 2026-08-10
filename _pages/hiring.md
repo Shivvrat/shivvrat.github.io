@@ -27,8 +27,8 @@ We are recruiting **Ph.D., MS, and Undergraduate students** for research positio
 | | |
 |---|---|
 | **University** | NJIT (R1), Newark NJ |
-| **Start Date** | Spring/Fall 2026 |
-| **Ph.D. Funding** | RA/TA (2 fully funded positions + self-funded)  |
+| **Start Date** | {{ site.data.recruiting.start_terms_slash }} |
+| **Ph.D. Funding** | {{ site.data.recruiting.phd_funding_summary }} |
 | **MS/Undergrad** | Research credit available |
 
 </div>
@@ -71,9 +71,9 @@ We are recruiting **Ph.D., MS, and Undergraduate students** for research positio
 ## Who Can Apply
 
 #### Ph.D. Students
-- Up to **2 TA/RA positions** for Spring 2026
+- Up to **{{ site.data.recruiting.phd_max_funded }} TA/RA positions** for {{ site.data.recruiting.start_terms_first }}
 - Strong research background in AI/ML required
-- Must also apply through <a href="https://www.njit.edu/admissions/graduate" target="_blank">NJIT admissions portal</a>
+- Must also apply through <a href="{{ site.data.recruiting.admissions_url }}" target="_blank">NJIT admissions portal</a>
 
 #### MS Students
 - Research credit via **CS 700B** (Master's Project) or **CS 701B** (Master's Thesis)
@@ -134,7 +134,7 @@ We are recruiting **Ph.D., MS, and Undergraduate students** for research positio
 
 ## Lab Resources
 
-- **Funding**: Fully funded Ph.D. (RA/TA), research credit for MS/Undergrad
+- **Funding**: Fully funded Ph.D. ({{ site.data.recruiting.phd_funding_type }}), research credit for MS/Undergrad
 - **Compute**: University <a href="https://arcs-njit-edu.github.io/Docs/clusters/wulver/" target="_blank">Wulver GPU cluster</a> + lab GPUs
 - **Mentorship**: Direct guidance, publication opportunities at top venues (NeurIPS, ICML, ICLR, AAAI, KDD, CIKM, etc.)
 <!-- - **Industry**: Collaborations and internship connections -->
