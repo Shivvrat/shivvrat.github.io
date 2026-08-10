@@ -26,7 +26,7 @@ seo:
 
 ## Biography  
 
-Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), where he serves as the Director of the <a href="https://aria-research-lab.github.io/">ARIA Lab</a> and as a Core Faculty member of the <a href="https://research.njit.edu/ai/">Center for AI Research</a>. He earned his Ph.D. in Computer Science from the University of Texas at Dallas under the supervision of <a href="https://personal.utdallas.edu/~vibhav.gogate/">Vibhav Gogate</a> and <a href="https://yuxng.github.io/">Yu Xiang</a>.
+Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), where he serves as the Director of the <a href="https://aria-research-lab.github.io/">ARIA Lab</a> and as a Core Faculty member of the <a href="https://research.njit.edu/ai/">Center for AI Research</a>. He earned his Ph.D. in Computer Science from the University of Texas at Dallas under the supervision of <a href="https://personal.utdallas.edu/~vibhav.gogate/">{{ site.data.pi[0].phd_advisor }}</a> and <a href="https://yuxng.github.io/">{{ site.data.pi[0].phd_co_advisor }}</a>.
 
 His research advances interpretable and trustworthy AI through two complementary directions:
 
@@ -75,6 +75,6 @@ This work advanced explainable reasoning, probabilistic inference, and real-time
 
 ## Education  
 
-- **Ph.D., Computer Science** – The University of Texas at Dallas  
-- **M.S., Computer Science** – The University of Texas at Dallas  
+- **Ph.D., Computer Science** – {{ site.data.pi[0].education3institution }}  
+- **M.S., Computer Science** – {{ site.data.pi[0].education2institution }}  
 - **B.Tech., Computer Science and Engineering** – IIIT Vadodara  

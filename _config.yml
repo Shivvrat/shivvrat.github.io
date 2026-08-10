@@ -27,23 +27,11 @@ twitter:
 google_analytics: G-9JMYG0Z6M7
 google_tag_manager: GTM-WNDXK54
 # Help - https://desiredpersona.com/google-analytics-jekyll/
-# Footer info
-affiliation: >
-    Shivvrat Arya<br/>
-    Assistant Professor, Director of [ARIA Lab](https://aria-research-lab.github.io/)<br/>
-    <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/>
-    New Jersey Institute of Technology
-
-location: >
-  GITC 4304<br/>
-  <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/>
-  Ying Wu College of Computing<br/>
-  New Jersey Institute of Technology <br/>
-  Newark, NJ 07102
-
-contact: >
-    <a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/>
-#    <a href="/aboutwebsite.html"><i class="fa fa-github fa-1x"></i> Use this site as a template!</a>
+# Footer info: identity/affiliation/office/contact facts are centralized in
+# arya-academic-data/profile and generated into _data/pi.yml (see
+# affiliation_html/location_html/contact_html), consumed directly by
+# _includes/footer.html. These _config.yml fields are intentionally no longer
+# populated here to avoid a second, driftable copy of the same facts.
 
 # Do you want to group your publications by year? {true/false}
 group_pub_by_year: true
@@ -90,7 +78,12 @@ kramdown:
   parse_block_html: true
   html_to_native: true
 
-# Site Author
+# Site Author: _includes/author-profile.html no longer reads this block (it
+# now reads site.data.pi[0], generated from arya-academic-data/profile). This
+# block must stay populated with matching values, though, because the
+# jekyll-feed plugin (see `plugins:` below) reads site.author.name/email
+# directly for the Atom feed's <author> tag and cannot consume _data/*.yml.
+# Keep these in sync with arya-academic-data/profile by hand.
 author:
   name             : "Shivvrat Arya"
   avatar           : "Shivvrat_Arya_headshot.jpg"
