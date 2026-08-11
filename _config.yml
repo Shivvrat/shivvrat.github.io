@@ -150,7 +150,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-minifier
-  # - jekyll-gallery-generator
 
 # jekyll-seo-tag: default social-share image (og:image/twitter:image) when a
 # page doesn't set its own `image:` front matter.

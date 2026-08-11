@@ -1,0 +1,12 @@
+# Config for `lychee` (see check_links.sh), consumed via `--config lychee.toml`.
+root_dir = "_site"
+
+# Domains that reliably 403/429 non-browser requests (bot/scraper blocking)
+# regardless of whether the link is actually valid. Checked manually instead
+# of relying on an automated check for these.
+exclude = [
+  "medium\\.com",
+  "academia\\.stackexchange\\.com",
+  "cacm\\.acm\\.org",
+  "quora\\.com",
+]
