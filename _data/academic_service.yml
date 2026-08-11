@@ -73,6 +73,20 @@
   - professional-service
 - section: Conference Reviewer
   scope: profession
+  organization: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+  display: ACM SIGKDD Conference on Knowledge Discovery and Data Mining <strong>(KDD)</strong>
+  activity: Conference paper reviewing
+  role: Reviewer
+  start: ''
+  end: ''
+  summary: Conference reviewer
+  order: 50
+  tags:
+  - reviewer
+  - conference
+  - professional-service
+- section: Conference Reviewer
+  scope: profession
   organization: International Conference on Artificial Intelligence and Statistics
   display: International Conference on Artificial Intelligence and Statistics <strong>(AISTATS)</strong>
   activity: Conference paper reviewing
