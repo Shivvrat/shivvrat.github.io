@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Personal Site"
+  short_description: "Build and verify the personal website"
+  default_prompt: "Use $run-personal-site to preview and verify the personal website."
