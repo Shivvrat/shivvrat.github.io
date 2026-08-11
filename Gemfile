@@ -15,6 +15,7 @@ gem "jekyll-paginate"
 gem "jekyll-sitemap"
 gem "jekyll-gist"
 gem "jekyll-feed"
+gem "jekyll-minifier"
 gem "minimal-mistakes-jekyll"
 gem 'jekyll-gallery-generator'
 gem "faraday-retry"

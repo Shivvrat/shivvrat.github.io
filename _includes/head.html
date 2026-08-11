@@ -3,6 +3,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- title=false: jekyll-seo-tag's own <title> uses a hardcoded " | "
+       separator, not this site's title_separator convention (that key is
+       minimal-mistakes-specific and jekyll-seo-tag doesn't read it) - keep
+       our own <title> below so the browser tab / bookmark text stays
+       "Page Title - Shivvrat Arya" as before. -->
+  {% seo title=false %}
+  <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
   <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -24,16 +32,7 @@
     {% elsif site.icon != blank %}
     <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url}}"/>
     {% endif %}
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
-
-
-
-
-  <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-<!--  <meta name="description" content="{{ site.description }}">-->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
   <link rel="shortcut icon" type ="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
 
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">

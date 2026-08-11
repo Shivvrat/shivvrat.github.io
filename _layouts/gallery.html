@@ -89,7 +89,7 @@ layout: default
       {% for image in event.images %}
       <div class="gallery-item">
         <a href="{{ site.baseurl }}/photos/{{ event.folder }}/{{ image.file }}" target="_blank">
-          <img src="{{ site.baseurl }}/photos/{{ event.folder }}/{{ image.file }}" alt="{{ image.caption }}">
+          <img src="{{ site.baseurl }}/photos/{{ event.folder }}/{{ image.file }}" alt="{{ image.caption }}" loading="lazy">
           {% if image.caption %}
           <div class="gallery-caption">{{ image.caption }}</div>
           {% endif %}

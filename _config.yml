@@ -144,12 +144,28 @@ permalink: /:categories/:title/
 
 plugins:
   - jekyll/scholar
-  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-minifier
   # - jekyll-gallery-generator
+
+# jekyll-seo-tag: default social-share image (og:image/twitter:image) when a
+# page doesn't set its own `image:` front matter.
+logo: /images/teampic/Shivvrat_Arya_headshot.jpg
+
+# jekyll-minifier: only runs when JEKYLL_ENV=production (production build/CI,
+# not local `jekyll serve`). Deliberately leaves JS untouched - the hand-written
+# inline scripts in head.html and jekyll-scholar's bibliography toggle behavior
+# aren't worth the risk a JS minifier can introduce for the marginal savings
+# from the small amount of inline JS this site has.
+jekyll-minifier:
+  compress_javascript: false
+  compress_css: true
+  compress_json: true
+  remove_comments: true
 
 plugins_dir: [jekyll-scholar]
 group_pub_by_year: true

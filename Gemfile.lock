@@ -33,12 +33,14 @@ GEM
       time (< 1.0)
     csl-styles (2.0.2)
       csl (~> 2.0)
+    cssminify2 (2.1.0)
     csv (3.3.5)
     date (3.5.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
+    execjs (2.10.1)
     exifr (1.5.1)
     faraday (2.14.2)
       faraday-net_http (>= 2.0, < 3.5)
@@ -51,6 +53,7 @@ GEM
     ffi (1.17.4-x86_64-linux-gnu)
     forwardable (1.4.0)
     forwardable-extended (2.6.0)
+    htmlcompressor (0.4.0)
     http_parser.rb (0.8.1)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
@@ -78,6 +81,12 @@ GEM
       octokit (~> 4.2)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-minifier (0.2.2)
+      cssminify2 (~> 2.1.0)
+      htmlcompressor (~> 0.4)
+      jekyll (~> 4.0)
+      json-minify (~> 0.0.3)
+      terser (~> 1.2.3)
     jekyll-paginate (1.1.0)
     jekyll-readme-index (0.3.0)
       jekyll (>= 3.0, < 5.0)
@@ -101,6 +110,8 @@ GEM
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.19.7)
+    json-minify (0.0.3)
+      json (> 0)
     kramdown (2.5.2)
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
@@ -160,6 +171,8 @@ GEM
     stringio (3.2.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
+    terser (1.2.8)
+      execjs (>= 0.3.0, < 3)
     time (0.4.2)
       date
     unicode-display_width (1.8.0)
@@ -178,6 +191,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-gallery-generator
   jekyll-gist
+  jekyll-minifier
   jekyll-paginate
   jekyll-readme-index
   jekyll-remote-theme
