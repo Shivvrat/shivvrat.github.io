@@ -23,7 +23,6 @@ github:
 twitter:
   username               : "ShivvratA"
 # Google analytics ID: Remove or use your own!
-#google_analytics: UA-167467135-1
 google_analytics: G-9JMYG0Z6M7
 google_tag_manager: GTM-WNDXK54
 # Help - https://desiredpersona.com/google-analytics-jekyll/
@@ -78,12 +77,13 @@ kramdown:
   parse_block_html: true
   html_to_native: true
 
-# Site Author: _includes/author-profile.html no longer reads this block (it
-# now reads site.data.pi[0], generated from arya-academic-data/profile). This
-# block must stay populated with matching values, though, because the
-# jekyll-feed plugin (see `plugins:` below) reads site.author.name/email
-# directly for the Atom feed's <author> tag and cannot consume _data/*.yml.
-# Keep these in sync with arya-academic-data/profile by hand.
+# Site Author: identity/affiliation facts are centralized in
+# arya-academic-data/profile and generated into site.data.pi[0], consumed by
+# _includes/footer.html and others. This block must stay populated with
+# matching values, though, because the jekyll-feed plugin (see `plugins:`
+# below) reads site.author.name/email directly for the Atom feed's <author>
+# tag and cannot consume _data/*.yml. Keep these in sync with
+# arya-academic-data/profile by hand.
 author:
   name             : "Shivvrat Arya"
   avatar           : "Shivvrat_Arya_headshot.jpg"
@@ -172,9 +172,6 @@ scholar:
   # join_strings: true
   # group_by: year
   group_order: descending
-  details_dir: bibliography
-  details_layout: bibtex.html
-  details_link: Details
 
   query: "@*"
   
@@ -211,25 +208,6 @@ highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-them
 repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 
-# Gallery Details
-gallery:
-  dir: photos               # Path to the gallery
-  symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
-  title: "Photos"           # Title for gallery index page
-  title_prefix: "Photos: "  # Title prefix for gallery pages. Gallery title = title_prefix + gallery_name
-  sort_field: "date_time"   # How to sort galleries on the index page.
-                            # Possible values are: title, date_time, best_image
-  thumbnail_size:
-    x: 400                  # max width of thumbnails (in pixels)
-    y: 400                  # max height of thumbnails (in pixels)
-  # The following options are for individual galleries.
-  galleries:
-    ptg22:
-      best_image: ptg.jpg  # The image to show on the gallery index page. Defaults to the last image.
-      name: "DARPA PTG PI Meeting 2022" # Info fields can be used in custom templates.
-
-
-
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -245,17 +223,13 @@ exclude:
   - .jekyll-assets-cache
   - .sass-cache
   - CHANGELOG
-  - Capfile
-  - Gruntfile.js
   - LICENSE
   - README
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
   - config
-  - gulpfile.js
   - log
   - node_modules
-  - package.json
   - tmp
   - vendor
