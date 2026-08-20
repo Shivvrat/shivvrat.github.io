@@ -30,6 +30,13 @@ qualifying_exam_committee:
     for Unsupervised Egocentric World Models'
   status: completed
   date: '2026-05-15'
+- name: Shameen Shrestha
+  title: The Attribution Jacobian for decomposition of evidence in an image
+  university: NJIT
+  advisor: Dr. Kieran Murphy
+  research: The Attribution Jacobian for decomposition of evidence in an image
+  status: completed
+  date: '2026-08-21'
 - name: Xiaoliang Wu
   title: Evaluating Reasoning-Intensive Retrieval through Information-Seeking and
     Causal Attribution in Stock Price Dynamics
