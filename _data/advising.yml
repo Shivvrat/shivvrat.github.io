@@ -20,6 +20,13 @@ dissertation_committee:
     Laplacian Constraints
   status: current
   date: '2025-12-12'
+- name: Yuanjie Zou
+  title: Towards Better Representations in Single-Cell Foundation Models
+  university: NJIT
+  advisor: Dr. Zhi Wei
+  research: Towards Better Representations in Single-Cell Foundation Models
+  status: current
+  date: '2026-08-31'
 qualifying_exam_committee:
 - name: Mohith Oduru
   title: 'Spatially-Indexed Persistent Memory: A 3D-Indexed Latent Memory Module for
