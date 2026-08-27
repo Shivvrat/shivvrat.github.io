@@ -18,7 +18,8 @@
   scope: profession
   organization: International Conference on Machine Learning (ICML 2026)
   display: 'International Conference on Machine Learning <strong>(ICML: Recognized
-    as a Silver Reviewer in 2026)</strong>'
+    as a <a href="https://icml.cc/Conferences/2026/ProgramCommittee\#silver" target="_blank">Silver
+    Reviewer</a> in 2026)</strong>'
   activity: Conference paper reviewing
   role: Reviewer
   start: '2026-01-01'
