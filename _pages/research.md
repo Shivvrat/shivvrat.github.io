@@ -33,6 +33,14 @@ Dr. Arya's current research focuses on developing neurosymbolic models that inte
 
 </div>
 
+<div class="section-card">
+
+## **Collaboration**
+
+We welcome collaborations with academic and industry researchers on projects aligned with the research areas described above. If you are interested in exploring potential collaborations, please contact Dr. Arya.
+
+</div>
+
 <!-- <div class="jumbotron">
 
 ## **Inference in Neurosymbolic Models**
