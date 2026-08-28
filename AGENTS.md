@@ -8,7 +8,7 @@
 | --- | --- |
 | A fact behind a generated file: `_data/pi.yml`, `_data/recruiting.yml`, `_data/academic_teaching.yml`, `_data/academic_service.yml`, `_data/organizational_responsibilities.yml`, `_data/certifications.yml`, `_data/academic_talks.yml`, `_data/advising.yml`, `cv/talks.bib`, `_pages/grants.md` | **Not here.** Edit `arya-academic-data` in the hub, then `docker compose run --rm sync sync --write` from the hub root. See [`arya-academic-data/AGENTS.md`](../arya-academic-data/AGENTS.md). |
 | Hand-written narrative pages (`_pages/home.md`, `_pages/research.md`, `_pages/team.md`, `_pages/software.md`), `_data/news.yml`, other non-generated `_data/*.yml` | Right here — edit the file directly. |
-| `_config.yml`'s `author.name`/`author.email` | Right here, but **keep them manually in sync** with `arya-academic-data/profile` — Jekyll parses `_config.yml` before Liquid runs, so it can never read generated `_data/*.yml`. |
+| `_config.yml`'s `author.name`/`author.email` | Right here, but **keep them manually in sync** with `arya-academic-data/10-profile/profile` — Jekyll parses `_config.yml` before Liquid runs, so it can never read generated `_data/*.yml`. |
 | `cv/ref.bib` (this site's own publication bibliography) | Right here — website-owned, sync never rewrites it. |
 | Jekyll/Docker build issues | `Dockerfile`, `docker-compose.yml`, `docker-jekyll.sh`/`.ps1` |
 
