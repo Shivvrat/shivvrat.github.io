@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+# set -euo pipefail
 
 bash "$(dirname "$0")/docker-jekyll.sh" serve
+
+# bash "docker-jekyll.sh" serve
