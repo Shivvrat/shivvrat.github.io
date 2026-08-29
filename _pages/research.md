@@ -7,212 +7,22 @@ permalink: /research/
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
+# Research
 
-<div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 4px;">
-For latest research updates, please visit the <a href="https://aria-research-lab.github.io/research" target="_blank">ARIA Lab research page</a>.
-</div>
+My research develops structured, interpretable, and efficient AI methods that integrate learning, reasoning, and optimization. I focus on probabilistic and neurosymbolic reasoning, learning-based combinatorial optimization, and structured models for vision and multimodal systems.
 
-<div class="section-card">
+## Inference in Neurosymbolic Models
 
-## **Research Interests**
+I develop learning-based methods for efficient inference in probabilistic and neurosymbolic models, including MPE, constrained MPE, and marginal MAP inference. This work explores self-supervised learning, learned representations, and neural guidance for solving otherwise computationally expensive inference problems. Representative work includes SINE (AISTATS 2025), neural MPE inference (NeurIPS 2024 Spotlight; UAI TPM Best Paper), neural marginal MAP inference (AAAI 2024 Oral), and constrained MPE inference (AISTATS 2024).
 
-* **Foundations & Methods** &mdash; Machine (Deep) Learning, Neurosymbolic AI, Combinatorial Optimization, Probabilistic Modeling and Inference, Explainable and Interpretable Models
-* **Applications** &mdash; Human–AI Interaction with Neurosymbolic and Deep Models, Computer Vision, Video Understanding, and Language Reasoning
+[NeuPI](https://neupi.readthedocs.io/en/latest/)
 
-<!-- ### **Research Interests**
+## Neural Combinatorial Optimization
 
-Machine (Deep) learning, Artificial Intelligence, Neurosymbolic AI, Explainable AI, Probabilistic Methods, Combinatorial Optimization, Video Understanding and Computer Vision. -->
-</div>
+I develop learning-based methods for discrete and graph-structured optimization, with an emphasis on learning representations, policies, and search strategies that improve solution quality and computational efficiency. This direction includes reinforcement-learning approaches for combinatorial problems in graphs and structured domains. Representative work includes RELINK (CIKM 2025).
 
+## Structured Vision and Multimodal Systems
 
-<div class="jumbotron">
+I study structured reasoning for understanding complex visual and multimodal environments, particularly procedural activities, errors, explanations, and task guidance. Representative work includes CaptainCook4D, explainable activity recognition in videos, and predictive task guidance in augmented reality.
 
-## **Current Research Focus**
-
-Dr. Arya's current research focuses on developing neurosymbolic models that integrate deep neural architectures with symbolic reasoning and probabilistic frameworks; advancing tractable probabilistic modeling to support efficient and scalable inference; creating neural network–based solvers for large-scale combinatorial optimization; and designing methods for explainable AI in structured and hybrid systems, with applications in computer vision, activity recognition, and multimodal learning.
-
-</div>
-
-<div class="section-card">
-
-## **Collaboration**
-
-<div class="alert alert-info">
-🤝 We welcome collaborations with academic and industry researchers on projects aligned with the research areas described above. If you are interested in exploring potential collaborations, please contact Dr. Arya.
-</div>
-
-</div>
-
-<!-- <div class="jumbotron">
-
-## **Inference in Neurosymbolic Models**
-
-<div class="subsection-card">
-
-#### Neural Network-Based Probabilistic Inference
-
-<table class="research-table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Venue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>SINE - Scalable MPE Inference for Probabilistic Graphical Models using Advanced Neural Embeddings</td>
-      <td><span class="badge bg-primary">AISTATS'25</span></td>
-    </tr>
-    <tr>
-      <td>A Neural Network Approach for Efficiently Answering Most Probable Explanation Queries in Probabilistic Models</td>
-      <td><span class="badge bg-success">NeurIPS'24-Spotlight</span> <span class="badge bg-success">UAI TPM'24-Best Paper Award</span></td>
-    </tr>
-    <tr>
-      <td>Learning to Solve the Constrained Most Probable Explanation Task</td>
-      <td><span class="badge bg-primary">AISTATS'24</span> <span class="badge bg-primary">UAI TPM'24</span></td>
-    </tr>
-    <tr>
-      <td>Neural Network Approximators for Marginal MAP Inference</td>
-      <td><span class="badge bg-success">AAAI'24-Oral</span></td>
-    </tr>
-  </tbody>
-  </table>
-
-</div>
-
-<div class="subsection-card">
-
-#### Optimization-based Probabilistic Inference Schemes
-
-<table class="research-table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Venue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Deep Dependency Networks and Advanced Inference Schemes for Multi-Label Classification</td>
-      <td><span class="badge bg-primary">AISTATS'24</span></td>
-    </tr>
-  </tbody>
-  </table>
-
-</div>
-
-<div class="subsection-card">
-
-#### Neural Network-Based Heuristics for Probabilistic Inference
-
-<table class="research-table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Venue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Learning to Condition: A Neural Heuristic for Scalable MPE Inference
-</td>
-      <td><span class="badge bg-primary">NeurIPS'25</span></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>Learning to Guide Local Search for MPE Inference in Probabilistic Graphical Models</td>
-      <td><span class="badge bg-primary">ArXiv</span></td>
-    </tr>
-  </tbody>
-  </table>
-
-</div>
-
-</div>
-
-<div class="jumbotron">
-
-## **Neural Network-Based Solvers for Combinatorial Optimization**
-
-<div class="subsection-card">
-
-<table class="research-table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Venue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>RELINK: Edge Activation for Closed Network Influence Maximization via Deep Reinforcement Learning</td>
-      <td><span class="badge bg-primary">CIKM'25</span></td>
-    </tr>
-  </tbody>
-  </table>
-
-</div>
-
-</div>
-
-<div class="section-card">
-
-## **Video Understanding and Activity Recognition**
-
-
-<div class="subsection-card">
-
-<table class="research-table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Venue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CaptainCook4D Dataset</td>
-      <td><span class="badge bg-primary">NeurIPS'24</span> <span class="badge bg-primary">DMLR'23</span></td>
-    </tr>
-    <tr>
-      <td>Explainable Activity Recognition</td>
-      <td><span class="badge bg-primary">TiiS'23</span></td>
-    </tr>
-    <tr>
-      <td>Predictive Task Guidance in Augmented Reality</td>
-      <td><span class="badge bg-primary">IEEE VR'24 Poster</span></td>
-    </tr>
-  </tbody>
-  </table>
-
-</div>
-<!-- </div> -->
-<!-- </div>
-
-<div class="section-card">
-
-## **Multi-Label Classification**
-
-<div class="subsection-card">
-
-<table class="research-table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Venue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Kernelized Random Vector Functional Link Network</td>
-      <td><span class="badge bg-primary">IJCNN'20</span></td>
-    </tr>
-  </tbody>
-  </table>
-</div>
-</div> -->
-
-
-
-
+For current projects, ongoing research directions, and detailed project descriptions, visit the [**ARIA Lab Research**](https://aria-research-lab.github.io/research) page.
