@@ -5,7 +5,7 @@ sitemap: false
 permalink: /
 seo:
   title: "Shivvrat Arya – Neurosymbolic AI & Probabilistic Reasoning"
-  description: "Ph.D. in Computer Science on the 2025 academic job market."
+  description: "Assistant Professor of Computer Science at NJIT and Director of the ARIA Lab."
 
 ---
 
@@ -26,17 +26,12 @@ seo:
 
 ## Biography  
 
-Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), where he serves as the Director of the <a href="https://aria-research-lab.github.io/">ARIA Lab</a> and as a Core Faculty member of the <a href="https://research.njit.edu/ai/">Center for AI Research</a>. He earned his Ph.D. in Computer Science from the University of Texas at Dallas under the supervision of <a href="https://personal.utdallas.edu/~vibhav.gogate/">{{ site.data.pi[0].phd_advisor }}</a> and <a href="https://yuxng.github.io/">{{ site.data.pi[0].phd_co_advisor }}</a>.
+Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), Director of the [ARIA Lab](https://aria-research-lab.github.io/), and a Core Faculty member of the [Center for AI Research](https://research.njit.edu/ai/). His research develops structured, interpretable, and efficient AI methods that integrate learning, reasoning, and optimization, with a focus on probabilistic and neurosymbolic reasoning, neural combinatorial optimization, and structured vision and multimodal systems.
 
-His research advances interpretable and trustworthy AI through two complementary directions:
-
-1. Probabilistic reasoning, neurosymbolic AI, and explainable AI, applied to real-world problems in computer vision and natural language processing, and
-2. Combinatorial and constrained optimization, with an emphasis on learning-based and neural approaches.
-
-Dr. Arya’s work develops AI systems that integrate structured domain knowledge with data-driven learning. His contributions span graph-based inference, symbolic reasoning, and neural solvers for optimization, with applications in video understanding, activity recognition, and multimodal reasoning.
+He received his Ph.D. in Computer Science from The University of Texas at Dallas, where he was advised by <a href="https://personal.utdallas.edu/~vibhav.gogate/">{{ site.data.pi[0].phd_advisor }}</a> and <a href="https://yuxng.github.io/">{{ site.data.pi[0].phd_co_advisor }}. His doctoral research focused on learning-based methods for probabilistic inference and structured reasoning.
 
 <div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
-For an overview of ongoing research and recent publications, please visit the <a href='https://aria-research-lab.github.io/'>ARIA lab website</a>. 
+For current projects and research activity, visit the <a href="https://aria-research-lab.github.io/">ARIA Lab website</a>.
 </div>
 ---
 
@@ -60,15 +55,7 @@ For an overview of ongoing research and recent publications, please visit the <a
 
 ---
 
-## Past Work  
-
-Dr. Arya’s doctoral research was supported by competitive federal grants from **DARPA**, the **National Science Foundation (NSF)**, and the **Air Force Office of Scientific Research (AFOSR)**. Major DARPA programs included:
-
-- **Explainable Artificial Intelligence (XAI)**  
-- **Perceptually-Enabled Task Guidance (PTG)**  
-- **Assured Neuro Symbolic Learning and Reasoning (ANSR)**  
-
-This work advanced explainable reasoning, probabilistic inference, and real-time task guidance, resulting in award-winning publications and widely used datasets.
+For earlier externally funded research contributions, including work supported through DARPA, NSF, and AFOSR projects, see [Funded Projects](/grants/).
 
 ---
 
