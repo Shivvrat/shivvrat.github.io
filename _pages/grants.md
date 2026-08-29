@@ -30,7 +30,9 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-## DARPA
+## Prior Funded Research Contributions
+
+### DARPA
 
 ### Perceptually-enabled Task Guidance (PTG)
 
@@ -75,7 +77,7 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-## NSF – National Science Foundation (IIS-1652835)
+### NSF – National Science Foundation (IIS-1652835)
 
 **Summary**: AI/ML methodology projects spanning probabilistic inference and interpretable modeling.
 
@@ -89,7 +91,7 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-## AFOSR – Air Force Office of Scientific Research
+### AFOSR – Air Force Office of Scientific Research
 
 **Summary**: Human-aware probabilistic logic for learning with fewer labels from multimodal data to model credibility.
 

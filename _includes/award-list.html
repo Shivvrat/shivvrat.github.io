@@ -1,0 +1,24 @@
+{% assign awards = include.awards %}
+{% if awards.size > 0 %}
+  <h3>{{ include.heading }}</h3>
+  <ul class="awards-list">
+    {% for award in awards %}
+    {% assign award_url = award.url | strip %}
+    {% assign certificate_url = award.certificate | strip %}
+    <li class="award-item">
+      <span class="award-title">
+        <span class="award-icon">
+          {% if award.group == "research" %}🏅{% elsif award.group == "professional" %}🌟{% else %}🎓{% endif %}
+        </span>
+        {% if award_url != "" %}<a href="{{ award_url }}" target="_blank" rel="noopener">{{ award.title }}</a>{% else %}{{ award.title }}{% endif %}
+      </span>
+      {% if award.event %}<p class="award-event"><em>{{ award.event }}</em></p>{% endif %}
+      {% if certificate_url != "" %}
+      <div style="margin-top: 10px;">
+        <a href="{{ certificate_url | relative_url }}" target="_blank" class="btn btn-certificate"><i class="fa fa-certificate" style="margin-right: 8px;"></i>View Certificate</a>
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endif %}

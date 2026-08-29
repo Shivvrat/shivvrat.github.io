@@ -14,9 +14,17 @@ For latest publications and preprints, please visit the <a href="https://aria-re
 </div>
 
 <div class="jumbotron">
-  {% bibliography --query @*[year!=0] %}
+  <h2 class="bib-subsection-title">Dissertation</h2>
+  {% bibliography --query @phdthesis %}
 
 </div>
+
+<div class="jumbotron">
+  {% bibliography --query !@phdthesis[year!=0] %}
+
+</div>
+
+
 
 <!-- <div class="jumbotron">
   <h2 class="bib-subsection-title">Under Review</h2>
