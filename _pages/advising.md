@@ -7,51 +7,45 @@ permalink: /advising/
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-## Advising
-
----
-
+{% assign advising_levels = "PhD|MS|BS" | split: "|" %}
 {% if site.data.advising.current_advisees.size > 0 %}
 <div class="jumbotron">
 
-### Current Advisees
+## Research Group / Advisees
 
-{% assign number_printed = 0 %}
-{% for student in site.data.advising.current_advisees %}
+{% for level in advising_levels %}
+{% assign level_advisees = site.data.advising.current_advisees | where: "level", level %}
+{% if level_advisees.size > 0 %}
+### {{ level }} Students
 
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  {% if student.photo %}
-  <img src="{{ site.baseurl }}/images/teampic/{{ student.photo }}" alt="{{ student.name }}" class="img-responsive" width="25%" style="float: left" loading="lazy" />
-  {% endif %}
-  <h4>{{ student.name }}</h4>
-  <i>{{ student.role }}{% if student.start_year %}, Started {{ student.start_year }}{% endif %}</i><br>
-  {% if student.research %}<small><strong>Research:</strong> {{ student.research }}</small><br>{% endif %}
-  {% if student.coadvisor %}<small><strong>Co-advisor:</strong> {{ student.coadvisor }}</small><br>{% endif %}
-  
-  {% if student.website %}<a href="{{ student.website }}" target="_blank"><i class="fa fa-home fa-2x"></i></a> {% endif %}
-  {% if student.email %}<a href="mailto:{{ student.email }}" target="_blank"><i class="fa fa-envelope-square fa-2x"></i></a> {% endif %}
-  {% if student.scholar %}<a href="{{ student.scholar }}" target="_blank"><i class="ai ai-google-scholar-square ai-2x"></i></a> {% endif %}
-  {% if student.github %}<a href="{{ student.github }}" target="_blank"><i class="fa fa-github-square fa-2x"></i></a> {% endif %}
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
+{% assign project_groups = level_advisees | group_by: "title" %}
+<div class="table-responsive">
+<table class="table advising-table">
+<thead>
+<tr>
+<th style="width: 24%; white-space: normal; overflow-wrap: anywhere;">Project / Thesis</th>
+<th>Student</th>
+<th>Course(s)</th>
+<th>University</th>
+</tr>
+</thead>
+<tbody>
+{% for project in project_groups %}
+{% assign project_students = project.items %}
+{% for student in project_students %}
+<tr>
+{% if forloop.first %}<td rowspan="{{ project_students.size }}" style="width: 24%; white-space: normal; overflow-wrap: anywhere;">{{ project.name }}</td>{% endif %}
+<td>{% if student.website %}<a href="{{ student.website }}" target="_blank">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
+<td>{% if student.courses.size > 0 %}{{ student.courses | join: "; " }}{% endif %}</td>
+{% if forloop.first %}<td rowspan="{{ project_students.size }}">{{ student.university }}</td>{% endif %}
+</tr>
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
+{% endfor %}
+</tbody>
+</table>
 </div>
 {% endif %}
+{% endfor %}
 
 </div>
 {% endif %}
@@ -59,7 +53,12 @@ permalink: /advising/
 {% if site.data.advising.graduated_advisees.size > 0 %}
 <div class="jumbotron">
 
-### Graduated Students
+## Former Advisees
+
+{% for level in advising_levels %}
+{% assign level_advisees = site.data.advising.graduated_advisees | where: "level", level %}
+{% if level_advisees.size > 0 %}
+### {{ level }} Students
 
 <div class="table-responsive">
 <table class="table">
@@ -67,6 +66,7 @@ permalink: /advising/
 <tr>
 <th>Name</th>
 <th>Degree</th>
+<th>University</th>
 <th>Year</th>
 <th>Thesis/Dissertation</th>
 <th>Position</th>
@@ -77,6 +77,7 @@ permalink: /advising/
 <tr>
 <td>{% if student.website %}<a href="{{ student.website }}" target="_blank">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
 <td>{{ student.role }}</td>
+<td>{{ student.university }}</td>
 <td>{{ student.graduation_year }}</td>
 <td>{{ student.thesis_title }}</td>
 <td>{% if student.current_position %}{{ student.current_position }}{% else %}{{ student.first_position }}{% endif %}</td>
@@ -85,6 +86,8 @@ permalink: /advising/
 </tbody>
 </table>
 </div>
+{% endif %}
+{% endfor %}
 
 </div>
 {% endif %}
@@ -92,7 +95,7 @@ permalink: /advising/
 {% if site.data.advising.dissertation_committee.size > 0 %}
 <div class="jumbotron">
 
-### PhD Dissertation Committee Member
+## Dissertation Committees
 
 {% assign current_diss = site.data.advising.dissertation_committee | where: "status", "current" %}
 {% assign graduated_diss = site.data.advising.dissertation_committee | where: "status", "graduated" %}
@@ -159,7 +162,7 @@ permalink: /advising/
 {% if site.data.advising.qualifying_exam_committee.size > 0 %}
 <div class="jumbotron">
 
-### PhD Qualifying Exam Committee Member
+## Qualifying Examination Committees
 
 <div class="table-responsive">
 <table class="table">
@@ -192,7 +195,7 @@ permalink: /advising/
 {% if site.data.advising.thesis_committee.size > 0 %}
 <div class="jumbotron">
 
-### MS Thesis Committee Member
+## Thesis Committees
 
 {% assign current_thesis = site.data.advising.thesis_committee | where: "status", "current" %}
 {% assign graduated_thesis = site.data.advising.thesis_committee | where: "status", "graduated" %}

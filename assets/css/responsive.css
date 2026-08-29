@@ -892,6 +892,41 @@ tbody td:nth-child(5) {
   max-width: 100%;
 }
 
+.advising-table {
+  table-layout: auto;
+  width: 100%;
+  min-width: 760px;
+}
+
+.advising-table th,
+.advising-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.advising-table th:nth-child(1),
+.advising-table td:nth-child(1) {
+  width: 24%;
+  max-width: 24rem;
+}
+
+.advising-table th:nth-child(2),
+.advising-table td:nth-child(2) {
+  width: 20%;
+}
+
+.advising-table th:nth-child(3),
+.advising-table td:nth-child(3) {
+  width: 31%;
+}
+
+.advising-table th:nth-child(4),
+.advising-table td:nth-child(4) {
+  width: 25%;
+}
+
 .teaching-table th,
 .teaching-table td {
   white-space: normal;
