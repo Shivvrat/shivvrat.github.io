@@ -57,10 +57,10 @@ For current projects and research activity, visit the <a href="https://aria-rese
 
 For earlier externally funded research contributions, including work supported through DARPA, NSF, and AFOSR projects, see [Funded Projects](/grants/).
 
----
+<!-- ---
 
 ## Education  
 
 - **Ph.D., Computer Science** – {{ site.data.pi[0].education3institution }}  
 - **M.S., Computer Science** – {{ site.data.pi[0].education2institution }}  
-- **B.Tech., Computer Science and Engineering** – IIIT Vadodara  
+- **B.Tech., Computer Science and Engineering** – IIIT Vadodara   -->
