@@ -11,7 +11,7 @@ permalink: /advising/
 {% if site.data.advising.current_advisees.size > 0 %}
 <div class="jumbotron">
 
-## Research Group / Advisees
+## Research Advisees
 
 {% for level in advising_levels %}
 {% assign level_advisees = site.data.advising.current_advisees | where: "level", level %}

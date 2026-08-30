@@ -7,6 +7,7 @@
   url: /certificates/FY25 GTC-Arya.jpg
   summary: Fulfilled Epigeum coursework, faculty teaching observation, reflective
     essays, and semester-long teaching experience
+  teaching_section: true
 - title: Convolutional Neural Networks
   provider: Coursera
   year: 2018-2019

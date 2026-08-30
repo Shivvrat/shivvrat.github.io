@@ -22,7 +22,7 @@ For the latest project descriptions and openings, please visit the <a href="http
 
 ## Join ARIA Lab
 
-We are recruiting **Ph.D., MS, and Undergraduate students** for research positions in the [ARIA Lab](https://aria-research-lab.github.io/). Ph.D. positions are fully funded; MS/Undergrad students can earn research credit. Self-funded visiting students/scholars also welcome.
+We are recruiting **Ph.D., MS, and undergraduate students** for research positions in the [ARIA Lab](https://aria-research-lab.github.io/). Ph.D. positions are fully funded, and research-credit opportunities may be available for MS and undergraduate students. Self-funded visiting students and scholars are also welcome.
 
 | | |
 |---|---|
@@ -76,57 +76,12 @@ We are recruiting **Ph.D., MS, and Undergraduate students** for research positio
 - Must also apply through <a href="{{ site.data.recruiting.admissions_url }}" target="_blank">NJIT admissions portal</a>
 
 #### MS Students
-- Research credit via **CS 700B** (Master's Project) or **CS 701B** (Master's Thesis)
+- Research credit may be available when an appropriate project and supervision are available. MS students can pursue research through {{ site.data.recruiting.research_credit_ms_courses | join: " or " }}. Course enrollment does not guarantee authorship or publication.
 - Exceptional contributors may continue long-term
 
 #### Undergraduates
-- Research credit via **CS 488** (Independent Study)
+- Research credit may be available when an appropriate project and supervision are available. Undergraduate students can pursue research through {{ site.data.recruiting.research_credit_undergrad_courses | join: " or " }}. Course enrollment does not guarantee authorship or publication.
 - Outstanding contributors may extend to full research projects
-
-</div>
-
-<div class="jumbotron">
-
-## What You'll Do
-
-- Prototype novel algorithms and run ablations at scale
-- Build reliable, reproducible research pipelines
-- Design experiments, interpret results, and iterate
-- Apply methods to vision/video and multimodal tasks
-- Work on projects that can be submitted to top-tier AI/ML venues
-
-</div>
-
-<div class="section-card">
-
-## What You'll Bring
-
-<table>
-  <thead>
-    <tr>
-      <th>Essential</th>
-      <th>Nice to Have</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Strong ML/AI fundamentals</td>
-      <td>Neurosymbolic AI</td>
-    </tr>
-    <tr>
-      <td>Python + PyTorch/JAX (optional PyTorch Geometric)</td>
-      <td>Combinatorial/constrained optimization</td>
-    </tr>
-    <tr>
-      <td>Algorithms & probability</td>
-      <td>Deep reinforcement learning</td>
-    </tr>
-    <tr>
-      <td>Git, testing, reproducibility</td>
-      <td>Graphical models, probabilistic circuits</td>
-    </tr>
-  </tbody>
-</table>
 
 </div>
 
@@ -145,9 +100,8 @@ We are recruiting **Ph.D., MS, and Undergraduate students** for research positio
 
 ## Why NJIT
 
-- Ranked #72 in the U.S. for AI & Machine Learning (CSRankings)
-- Ranked #80 Graduate School for Computer Science (U.S. News & World Report)
-- Ranked #84 among National Universities and #42 among Top Public Universities (U.S. News & World Report)
+- Ranked #60 in the U.S. for AI & Machine Learning (CSRankings)
+- Ranked #80 among National Universities and #40 among Top Public Universities (U.S. News & World Report)
 - Located in Newark, NJ, part of the NYC metropolitan area
 - ~30 minutes from Manhattan; strong industry connections
 

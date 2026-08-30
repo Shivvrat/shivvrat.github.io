@@ -38,9 +38,9 @@ For current projects and research activity, visit the <a href="https://aria-rese
 ## Research Focus  
 
 <ul class="research-focus-list">
-<li><a href="https://aria-research-lab.github.io/hiring/neurosymbolic-ai" target="_blank">Neurosymbolic AI & Explainable Systems:</a> Integrating symbolic structure with deep learning for transparent reasoning. We develop hybrid architectures that combine neural pattern recognition with logical inference for interpretable decision-making.</li>
+<li><a href="https://aria-research-lab.github.io/hiring/neurosymbolic-ai" target="_blank">Neurosymbolic AI:</a> Integrating symbolic and probabilistic reasoning with deep learning to build structured and interpretable AI systems. We develop hybrid methods that combine neural representations with logical constraints and probabilistic inference for reliable reasoning and decision-making.</li>
 <li><a href="https://aria-research-lab.github.io/hiring/neural-optimization" target="_blank">Neural Combinatorial Optimization:</a> Learning-based solvers for combinatorial and constrained problems. Our work explores neural architectures that learn to solve NP-hard optimization problems efficiently.</li>
-<li><a href="https://aria-research-lab.github.io/hiring/drl-graph-optimization" target="_blank">Deep Reinforcement Learning for Graph Optimization:</a> Graph neural networks combined with reinforcement learning for solving complex graph-based optimization problems, including routing, scheduling, and resource allocation.</li>
+<li><a href="https://aria-research-lab.github.io/hiring/drl-graph-optimization" target="_blank">Deep Reinforcement Learning for Graph Optimization:</a> Developing learning-based solvers that combine graph neural networks with reinforcement learning for combinatorial optimization on graphs. Applications include social networks, routing, scheduling, and resource allocation.</li>
 <li><a href="https://aria-research-lab.github.io/hiring/applications" target="_blank">Applications of Neurosymbolic Methods:</a> Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning. Applying neurosymbolic AI to real-world tasks requiring structured understanding.</li>
 </ul>
 

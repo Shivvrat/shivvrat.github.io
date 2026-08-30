@@ -65,7 +65,7 @@ permalink: /service/
 #### Department Service
 
 {% for item in department_service %}
-- <strong>{{ item.role }}:</strong> {{ item.display }}{% assign context = item.context | strip %}{% if context != "" %}<br><small>{{ context }}</small>{% endif %}{% assign summary = item.summary | strip %}{% if summary != "" %}<br><small>{{ summary }}</small>{% endif %}
+- <strong>{{ item.role }}:</strong> {{ item.display }}{% assign summary = item.summary | strip %}{% if summary != "" %}<br><small>{{ summary }}</small>{% endif %}
 {% endfor %}
 
 </div>
@@ -78,7 +78,7 @@ permalink: /service/
 #### University Service
 
 {% for item in university_service %}
-- <strong>{{ item.role }}:</strong> {{ item.display }}{% assign context = item.context | strip %}{% if context != "" %}<br><small>{{ context }}</small>{% endif %}{% assign summary = item.summary | strip %}{% if summary != "" %}<br><small>{{ summary }}</small>{% endif %}
+- <strong>{{ item.role }}:</strong> {{ item.display }}{% assign summary = item.summary | strip %}{% if summary != "" %}<br><small>{{ summary }}</small>{% endif %}
 {% endfor %}
 
 </div>
@@ -100,7 +100,7 @@ permalink: /service/
 
 <div class="subsection-card">
 {% for item in institution.items %}
-- <strong>{{ item.role }}:</strong> {{ item.display }}{% assign context = item.context | strip %}{% if context != "" %}<br><small>{{ context }}</small>{% endif %}
+- <strong>{{ item.role }}:</strong> {{ item.display }}
 {% endfor %}
 </div>
 {% endfor %}

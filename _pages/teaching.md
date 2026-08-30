@@ -19,6 +19,7 @@ permalink: /teaching/
 
 ### At {{ institution_group.name }}{% if role_group.name %} -- {{ role_group.name }}{% endif %}
 
+<div class="table-responsive">
 <table class="teaching-table">
   <thead>
     <tr>
@@ -43,6 +44,7 @@ permalink: /teaching/
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 </div>
 {% endfor %}
@@ -50,6 +52,22 @@ permalink: /teaching/
 
 {% if site.data.academic_teaching.size == 0 %}
 <p><em>Teaching information coming soon.</em></p>
+{% endif %}
+
+{% assign teaching_certificates = site.data.certifications | where: "teaching_section", true %}
+{% if teaching_certificates.size > 0 %}
+<div class="subsection-card">
+
+### Certificates
+
+{% for certificate in teaching_certificates %}
+<div class="certificate-entry">
+  <span><strong>{{ certificate.title }}</strong>{% if certificate.provider %} — {{ certificate.provider }}{% endif %}</span>
+  {% if certificate.url %}<a class="btn btn-primary btn-sm" href="{{ certificate.url | relative_url }}" target="_blank" rel="noopener">View Certificate</a>{% endif %}
+</div>
+{% endfor %}
+
+</div>
 {% endif %}
 
 </div>
