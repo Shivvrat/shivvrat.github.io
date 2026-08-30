@@ -346,6 +346,19 @@
 /* COMPONENTS (BEM)          */
 /* ------------------------- */
 @layer components {
+  /* Funding categories are nested under the page-level funding heading. */
+  #textid > h3[id="external-funding-for-original-investigations"],
+  #textid > h3[id="industry-sponsored-research-and-gifts"],
+  #textid > h3[id="prior-externally-funded-research-contributions"] {
+    margin-top: 2rem;
+    padding: .65rem .9rem;
+    border-left: 4px solid var(--academic-blue);
+    border-bottom: 1px solid var(--border-accent);
+    background: var(--bg-accent);
+    color: var(--academic-navy);
+    font-size: var(--size-3);
+  }
+
   /* Section modifiers */
   .research-section h2 { color: var(--research-accent); }
   .research-section h2::after { background: linear-gradient(90deg, var(--research-accent), var(--academic-navy)); }

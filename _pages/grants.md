@@ -19,9 +19,11 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-## Principal Investigator
+## Research Funding and Sponsored Support
 
-### Lambda Research Grant Program
+### Industry-Sponsored Research and Gifts
+
+#### Lambda Research Grant Program
 
 * **Role:** Principal Investigator
 * **Status:** Awarded
@@ -30,11 +32,11 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-## Prior Funded Research Contributions
+### Prior Externally Funded Research Contributions
 
-### DARPA
+#### DARPA
 
-### Perceptually-enabled Task Guidance (PTG)
+##### Perceptually-enabled Task Guidance (PTG)
 
 **Summary**: Neurosymbolic dynamic probabilistic models for structured task representation and real-time guidance in complex physical procedures.
 
@@ -49,7 +51,7 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-### Explainable Artificial Intelligence (XAI)
+##### Explainable Artificial Intelligence (XAI)
 
 **Summary**: Interpretable AI systems that preserve predictive performance while providing faithful, human-understandable rationales.
 
@@ -63,7 +65,7 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-### Assured Neuro Symbolic Learning and Reasoning (ANSR)
+##### Assured Neuro Symbolic Learning and Reasoning (ANSR)
 
 **Summary**: Secure and reliable neurosymbolic learning with a focus on robustness and assurance.
 
@@ -77,7 +79,7 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-### NSF – National Science Foundation (IIS-1652835)
+#### NSF – National Science Foundation (IIS-1652835)
 
 **Summary**: AI/ML methodology projects spanning probabilistic inference and interpretable modeling.
 
@@ -91,7 +93,7 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
 
 ---
 
-### AFOSR – Air Force Office of Scientific Research
+#### AFOSR – Air Force Office of Scientific Research
 
 **Summary**: Human-aware probabilistic logic for learning with fewer labels from multimodal data to model credibility.
 
@@ -108,9 +110,3 @@ Selected funded research projects spanning neurosymbolic AI, probabilistic infer
   - Advanced reliable learning methods designed to reduce label requirements
 
 ---
-
-## Recognition & Impact
-
-- Best Paper Awards; spotlight and oral presentations (NeurIPS, AAAI)
-- Real-time inference algorithms for probabilistic models with improved accuracy and efficiency
-- Practical systems combining reasoning with perception for video understanding and task guidance
