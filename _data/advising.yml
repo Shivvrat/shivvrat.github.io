@@ -95,13 +95,6 @@ qualifying_exam_committee:
     Marker-Gene Augmentation'
   status: completed
   date: '2026-06-15'
-- name: Yuanjie Zou
-  title: Hierarchical Conformal Risk Control for Ontology-Guided Cell-Type Annotation
-  university: NJIT
-  advisor: Dr. Zhi Wei
-  research: Hierarchical Conformal Risk Control for Ontology-Guided Cell-Type Annotation
-  status: completed
-  date: '2026-06-17'
 thesis_committee:
 - name: Kadir Altunel
   title: Edge Co-occurrence Regularization for Node Classification
