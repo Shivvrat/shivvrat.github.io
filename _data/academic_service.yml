@@ -31,6 +31,22 @@
   - professional-service
 - section: Conference Reviewer
   scope: profession
+  organization: NeurIPS (Education Track)
+  display: 'Neural Information Processing Systems <strong>(NeurIPS: Education Track)</strong>'
+  activity: Conference paper reviewing
+  role: Reviewer
+  start: '2026-09-19'
+  end: ''
+  summary: Conference reviewer for NeurIPS 2026 Education Track
+  order: 15
+  tags:
+  - reviewer
+  - neurips
+  - education-track
+  - conference
+  - professional-service
+- section: Conference Reviewer
+  scope: profession
   organization: International Conference on Machine Learning (ICML 2026)
   display: 'International Conference on Machine Learning <strong>(ICML: Recognized
     as a <a href="https://icml.cc/Conferences/2026/ProgramCommittee\#silver" target="_blank">Silver
