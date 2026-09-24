@@ -20,10 +20,10 @@ I develop learning-based methods for efficient inference in **probabilistic and 
 This research includes three complementary directions:
 
 * **Neural approximators for probabilistic inference**, where neural networks directly predict solutions to inference problems such as MPE, constrained MPE, and marginal MAP.
-* **Learned heuristics for classical inference algorithms**, where neural models guide search, conditioning, branching, or other decisions within established optimization and inference procedures.
+* **Learned heuristics and dual bounds for classical inference algorithms**, where neural models guide search, conditioning, branching, or provide valid-by-construction dual warm-starts within established optimization and inference procedures.
 * **Optimization-based structured inference**, where probabilistic dependencies and domain constraints are incorporated into optimization procedures for structured prediction.
 
-Representative work includes **SINE** (AISTATS 2025), **Learning to Condition** (NeurIPS 2025), **ITSELF** and **GUIDE** (NeurIPS 2024 Spotlight; UAI TPM 2024 Best Paper), neural marginal MAP inference (AAAI 2024 Oral), constrained MPE inference (AISTATS 2024), and deep dependency networks with structured inference (AISTATS 2024).
+Representative work includes **Neural Dual Bounds** (NeurIPS 2026 Spotlight), **SINE** (AISTATS 2025), **Learning to Condition** (NeurIPS 2025), **ITSELF** and **GUIDE** (NeurIPS 2024 Spotlight; UAI TPM 2024 Best Paper), neural marginal MAP inference (AAAI 2024 Oral), constrained MPE inference (AISTATS 2024), and deep dependency networks with structured inference (AISTATS 2024).
 
 We have released these methods through **[NeuPI](https://neupi.readthedocs.io/en/latest/)**, a unified library that makes our neural probabilistic inference methods accessible through a common interface.
 

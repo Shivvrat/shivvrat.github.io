@@ -7,12 +7,17 @@
 | Your change | Goes in |
 | --- | --- |
 | A fact behind a generated file: `_data/pi.yml`, `_data/recruiting.yml`, `_data/academic_teaching.yml`, `_data/academic_service.yml`, `_data/organizational_responsibilities.yml`, `_data/certifications.yml`, `_data/academic_talks.yml`, `_data/advising.yml`, `cv/talks.bib`, `_pages/grants.md` | **Not here.** Edit `arya-academic-data` in the hub, then `docker compose run --rm sync sync --write` from the hub root. See [`arya-academic-data/AGENTS.md`](../arya-academic-data/AGENTS.md). |
-| Hand-written narrative pages (`_pages/home.md`, `_pages/research.md`, `_pages/team.md`, `_pages/software.md`), `_data/news.yml`, other non-generated `_data/*.yml` | Right here — edit the file directly. |
+| Hand-written narrative pages (`_pages/home.md`, `_pages/research.md`, `_pages/team.md`, `_pages/software.md`), `_data/news.yml`, other non-generated `_data/*.yml` | Right here — edit the file directly. Whenever a new paper is added, **always update `_pages/research.md`** (place in its corresponding section or add a new section) and add a news highlight to `_data/news.yml`. |
 | `_config.yml`'s `author.name`/`author.email` | Right here, but **keep them manually in sync** with `arya-academic-data/10-profile/profile` — Jekyll parses `_config.yml` before Liquid runs, so it can never read generated `_data/*.yml`. |
-| `cv/ref.bib` (this site's own publication bibliography) | Right here — website-owned, sync never rewrites it. |
+| `cv/ref.bib` (personal site publication bibliography) | Historical/frozen — **do not add new papers here** (new papers belong on the ARIA Lab site only). News announcements for new papers go in `_data/news.yml`. |
 | Jekyll/Docker build issues | `Dockerfile`, `docker-compose.yml`, `docker-jekyll.sh`/`.ps1` |
 
 **Never hand-edit a file marked generated above** — it's overwritten on the next `sync --write`.
+
+## Data and Content Consistency
+
+- **Follow existing style**: When adding new content, narrative text, or data, strictly follow the established practices, structure, formatting, and style of existing records and pages.
+- **Research page updates**: Whenever a new paper is added, update `_pages/research.md` to include the paper under its corresponding section (or create a new section if it starts a new research direction).
 
 ## What's generated vs. hand-written
 
