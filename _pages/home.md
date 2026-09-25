@@ -26,9 +26,9 @@ seo:
 
 ## Biography  
 
-Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), Director of the [ARIA Lab](https://aria-research-lab.github.io/), and a Core Faculty member of the [Center for AI Research](https://research.njit.edu/ai/). His research develops structured, interpretable, and efficient AI methods that integrate learning, reasoning, and optimization, with a focus on probabilistic and neurosymbolic reasoning, neural combinatorial optimization, and structured vision and multimodal systems.
+Shivvrat Arya is an Assistant Professor of Computer Science at the Ying Wu College of Computing, New Jersey Institute of Technology (NJIT), Director of the [ARIA Lab](https://aria-research-lab.github.io/), and a Core Faculty member of the [Center for AI Research](https://research.njit.edu/ai/). His research develops structured, interpretable, and efficient AI methods that integrate learning, reasoning, and optimization, with a focus on probabilistic and neurosymbolic reasoning, neural combinatorial optimization, structured and multimodal intelligence, and AI for scientific discovery.
 
-He received his Ph.D. in Computer Science from The University of Texas at Dallas, where he was advised by <a href="https://personal.utdallas.edu/~vibhav.gogate/">{{ site.data.pi[0].phd_advisor }}</a> and <a href="https://yuxng.github.io/">{{ site.data.pi[0].phd_co_advisor }}. His doctoral research focused on learning-based methods for probabilistic inference and structured reasoning.
+He received his Ph.D. in Computer Science from The University of Texas at Dallas, where he was advised by <a href="https://personal.utdallas.edu/~vibhav.gogate/">{{ site.data.pi[0].phd_advisor }}</a> and <a href="https://yuxng.github.io/">{{ site.data.pi[0].phd_co_advisor }}</a>. His doctoral research focused on learning-based methods for probabilistic inference and structured reasoning.
 
 <div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
 For current projects and research activity, visit the <a href="https://aria-research-lab.github.io/">ARIA Lab website</a>.
@@ -38,20 +38,21 @@ For current projects and research activity, visit the <a href="https://aria-rese
 ## Research Focus  
 
 <ul class="research-focus-list">
-<li><a href="https://aria-research-lab.github.io/hiring/neurosymbolic-ai" target="_blank">Neurosymbolic AI:</a> Integrating symbolic and probabilistic reasoning with deep learning to build structured and interpretable AI systems. We develop hybrid methods that combine neural representations with logical constraints and probabilistic inference for reliable reasoning and decision-making.</li>
-<li><a href="https://aria-research-lab.github.io/hiring/neural-optimization" target="_blank">Neural Combinatorial Optimization:</a> Learning-based solvers for combinatorial and constrained problems. Our work explores neural architectures that learn to solve NP-hard optimization problems efficiently.</li>
-<li><a href="https://aria-research-lab.github.io/hiring/drl-graph-optimization" target="_blank">Deep Reinforcement Learning for Graph Optimization:</a> Developing learning-based solvers that combine graph neural networks with reinforcement learning for combinatorial optimization on graphs. Applications include social networks, routing, scheduling, and resource allocation.</li>
-<li><a href="https://aria-research-lab.github.io/hiring/applications" target="_blank">Applications of Neurosymbolic Methods:</a> Computer vision, video understanding, activity recognition, human-computer interaction, and multimodal reasoning. Applying neurosymbolic AI to real-world tasks requiring structured understanding.</li>
+<li><a href="{{ '/research/#neuro-symbolic-reasoning-and-probabilistic-inference' | relative_url }}">Neuro-Symbolic and Probabilistic Reasoning:</a> Integrating deep learning with probabilistic graphical models, circuits, and classical solvers to enable scalable, guaranteed, and real-time inference under uncertainty and constraints.</li>
+<li><a href="{{ '/research/#neural-combinatorial-optimization' | relative_url }}">Neural Combinatorial Optimization:</a> Developing deep reinforcement learning and graph representation learning methods to learn adaptive, structure-aware decision policies for complex combinatorial and network optimization problems.</li>
+<li><a href="{{ '/research/#structured-and-multimodal-intelligence' | relative_url }}">Structured and Multimodal Intelligence:</a> Bridging high-dimensional perception with procedural workflows, temporal reasoning, and human-in-the-loop guidance for procedural video understanding and trustworthy multimodal systems.</li>
+<li><a href="{{ '/research/#ai-for-scientific-discovery' | relative_url }}">AI for Scientific Discovery:</a> Incorporating domain priors, biological networks, and mechanistic constraints into deep generative models for structured scientific discovery, with an emphasis on single-cell genomics and computational biology.</li>
 </ul>
 
 ---
 
 ## Research Highlights  
 
-- Publications recognized with **best paper awards**, **spotlights**, and **oral presentations** at top AI/ML venues  
-- Developed **[NeuPI](https://neupi.readthedocs.io/en/latest/#)**, a neural inference engine that accelerates probabilistic reasoning from minutes to microseconds
-- Built **real-time AR guidance systems** for complex physical tasks  
-- Released [**CaptainCook4D**](https://captaincook4d.github.io/captain-cook/), an egocentric 4D dataset for procedural task understanding
+- **Research Recognition**: Publications recognized with **best paper awards**, **spotlights**, and **oral presentations** at top AI/ML venues  
+- **Neural-Augmented Probabilistic Inference**: Developed **[NeuPI](https://neupi.readthedocs.io/en/latest/)**, an open-source neural inference engine accelerating probabilistic reasoning from minutes to microseconds, alongside **Neural Dual Bounds** ([NeurIPS 2026 Spotlight](https://openreview.net/forum?id=fdwZvjybdN), top 1%) and **Learning to Condition** ([NeurIPS 2025](https://openreview.net/forum?id=otIdC4tsYf)).
+- **Neural Combinatorial Optimization**: Developed **[RELINK](https://dl.acm.org/doi/10.1145/3746252.3761006)** (CIKM 2025), a deep reinforcement learning framework for sequential edge activation and influence maximization in privacy-constrained closed networks.
+- **Structured Multimodal Intelligence**: Released [**CaptainCook4D**](https://captaincook4d.github.io/captain-cook/) (NeurIPS 2024 D&B Track), a 94.5-hour egocentric 4D dataset for procedural activity understanding, error recognition, and assistive AR guidance.
+* **AI-Driven Augmented Reality Guidance**: Developed real-time AR guidance systems for complex physical tasks, combining predictive modeling with proactive assistance for multi-step procedures.
 
 ---
 
