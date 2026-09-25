@@ -3,15 +3,15 @@ title: "Publications"
 layout: gridlay
 sitemap: false
 permalink: /publications/
-years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
 scholar:
   bibliography_template: bibtemplate
-  bibtex_skip_fields: [abstract, month_numeric, comment, file, certificate, library, website]
+  bibtex_skip_fields: [abstract, month_numeric, comment, file, certificate, library, website, pdf, preview, award, selected, abbr, bibtex_show, poster, slides, code]
 ---
 
 
 <div class="alert" style="background-color: #FEF3E2; border: 1px solid #F5DEB3; border-radius: 12px; color: #333; padding: 4px 6px; margin-bottom: 12px;">
-For latest publications and preprints, please visit the <a href="https://aria-research-lab.github.io/publications" target="_blank">ARIA Lab publications page</a> and <a href="https://scholar.google.com/citations?user=eM1co-kAAAAJ&hl=en" target="_blank">Dr. Arya's Google Scholar profile</a>.
+For research publications from the ARIA Research Lab, please visit the <a href="https://aria-research-lab.github.io/publications" target="_blank">ARIA Lab publications page</a>. You can also visit <a href="https://scholar.google.com/citations?user=eM1co-kAAAAJ&hl=en" target="_blank">Dr. Arya's Google Scholar profile</a>.
 </div>
 
 <div class="jumbotron">

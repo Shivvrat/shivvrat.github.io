@@ -11,6 +11,10 @@
         <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank" rel="noopener">
           {{entry.title}}
         </a>
+      {% elsif entry.url %}
+        <a href="{{ entry.url }}" target="_blank" rel="noopener">
+          {{entry.title}}
+        </a>
       {% else %}
         {{entry.title}}
       {% endif %}
@@ -39,19 +43,27 @@
 
   <!-- Paper Resources -->
   <div class="paper-resources">
-    {% if entry.file %}
-      {% assign bibfile = "/papers/" | append: entry.file %}
-      {% assign bibtest = false %}
-      {% for file in site.static_files %}
-        {% if file.path contains bibfile %}
-          {% assign bibtest = true %}
-        {% endif %}
-      {% endfor %}
-      {% if bibtest %}
-        <a href="{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank" class="btn btn-pdf">
+    {% assign entry_file = entry.pdf | default: entry.file %}
+    {% if entry_file %}
+      {% if entry_file contains '://' %}
+        <a href="{{ entry_file }}" target="_blank" rel="noopener" class="btn btn-pdf">
           <i class="fas fa-file-pdf"></i>
           <span class="btn-text">PDF</span>
         </a>
+      {% else %}
+        {% assign bibfile = "/papers/" | append: entry_file %}
+        {% assign bibtest = false %}
+        {% for file in site.static_files %}
+          {% if file.path contains bibfile %}
+            {% assign bibtest = true %}
+          {% endif %}
+        {% endfor %}
+        {% if bibtest %}
+          <a href="{{ site.baseurl }}/papers/{{ entry_file }}" target="_blank" class="btn btn-pdf">
+            <i class="fas fa-file-pdf"></i>
+            <span class="btn-text">PDF</span>
+          </a>
+        {% endif %}
       {% endif %}
     {% endif %}
 
@@ -67,6 +79,12 @@
           <span class="btn-text">DOI</span>
         </a>
       {% endif %}
+    {% elsif entry.eprint or (entry.url contains 'arxiv.org') %}
+      {% assign arxiv_id = entry.eprint | default: entry.url | split: 'abs/' | last %}
+      <a href="https://arxiv.org/abs/{{ arxiv_id }}" target="_blank" class="btn btn-arxiv">
+        <i class="ai ai-arxiv"></i>
+        <span class="btn-text">arXiv</span>
+      </a>
     {% endif %}
 
     {% if entry.code %}
@@ -88,9 +106,14 @@
         <i class="fas fa-globe"></i>
         <span class="btn-text">Website</span>
       </a>
+    {% elsif entry.url and entry.doi == nil and (entry.url contains 'arxiv.org' == false) and (entry.url contains 'biorxiv.org' == false) %}
+      <a href="{{ entry.url }}" target="_blank" class="btn btn-website">
+        <i class="fas fa-external-link-alt"></i>
+        <span class="btn-text">Link</span>
+      </a>
     {% endif %}
 
-    {% if (entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'phdthesis' or entry.type == 'mastersthesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop') and entry.bibtex %}
+    {% if (entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'phdthesis' or entry.type == 'mastersthesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' or entry.type == 'misc') and entry.bibtex %}
       {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
       <button type="button" class="btn btn-bib" onclick="copyBibtex('{{clean_key}}', this, event)" aria-label="Copy BibTeX citation to clipboard">
         <i class="fas fa-quote-right"></i>
@@ -109,12 +132,13 @@
   </div>
 
   <!-- Awards and Certificates -->
-  {% if entry.comment or entry.certificate %}
+  {% assign paper_award = entry.annotation | default: entry.award | default: entry.comment %}
+  {% if paper_award or entry.certificate %}
     <div class="paper-highlights">
-      {% if entry.comment %}
+      {% if paper_award %}
         <div class="paper-award">
           <i class="fas fa-award"></i>
-          <span>{{entry.comment}}</span>
+          <span>{{paper_award}}</span>
         </div>
       {% endif %}
       
