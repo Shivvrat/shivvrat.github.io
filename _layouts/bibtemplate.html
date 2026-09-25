@@ -90,12 +90,13 @@
       </a>
     {% endif %}
 
-    {% if (entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop') and entry.bibtex %}
+    {% if (entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'phdthesis' or entry.type == 'mastersthesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop') and entry.bibtex %}
       {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-      <button class="btn btn-bib" onclick="toggleBibtex('{{clean_key}}', this)" aria-expanded="false" aria-controls="a{{clean_key}}">
+      <button type="button" class="btn btn-bib" onclick="copyBibtex('{{clean_key}}', this, event)" aria-label="Copy BibTeX citation to clipboard">
         <i class="fas fa-quote-right"></i>
         <span class="btn-text">BibTeX</span>
       </button>
+      <textarea id="bib_{{clean_key}}" class="d-none" style="display:none;" aria-hidden="true" tabindex="-1">{{- entry.bibtex | escape -}}</textarea>
     {% endif %}
 
     {% if entry.abstract %}
@@ -127,28 +128,6 @@
   {% endif %}
 
   <!-- Expandable Content -->
-  <!-- Bibtex Content -->
-  {% if entry.bibtex %}
-    {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-    {% assign lines = entry.bibtex | split: '
-' %}
-    {% assign clean_bibtex = '' %}
-    {% for line in lines %}
-      {% unless line contains 'comment' or line contains 'file' or line contains 'note' or line contains 'pdf' or line contains 'library' or line contains 'website' or line contains 'code' or line contains 'certificate' %}
-        {% assign clean_bibtex = clean_bibtex | append: line | append: '
-' %}
-      {% endunless %}
-    {% endfor %}
-    <div id="a{{clean_key}}" class="bib-content bibtex-content" aria-label="BibTeX citation">
-      <div class="content-header">
-        <span>BibTeX Citation</span>
-        <button class="copy-btn" onclick="copyToClipboard('a{{clean_key}}')" aria-label="Copy citation">
-          <i class="fas fa-copy"></i>
-        </button>
-      </div>
-      <pre><code>{{ clean_bibtex }}</code></pre>
-    </div>
-  {% endif %}
 
   <!-- Abstract Content -->
   {% if entry.abstract %}
@@ -166,8 +145,71 @@
 </div>
 
 <script>
-function toggleBibtex(key, btn) {
-  toggleElement('a' + key, btn);
+function copyBibtex(key, btn, event) {
+  if (event) {
+    if (event.preventDefault) event.preventDefault();
+    if (event.stopPropagation) event.stopPropagation();
+  }
+  const bibElement = document.getElementById('bib_' + key) || document.getElementById('a' + key);
+  if (!bibElement) return;
+  const text = (bibElement.value !== undefined ? bibElement.value : bibElement.textContent) || '';
+
+  const finish = (success) => {
+    if (!btn) return;
+    const textSpan = btn.querySelector('.btn-text');
+    const icon = btn.querySelector('i, em, .fas');
+
+    if (btn._copyTimeout) {
+      clearTimeout(btn._copyTimeout);
+    }
+
+    if (success) {
+      if (textSpan) textSpan.textContent = 'Copied!';
+      if (icon) icon.className = 'fas fa-check';
+      btn.classList.add('copied');
+    } else {
+      if (textSpan) textSpan.textContent = 'Failed';
+      if (icon) icon.className = 'fas fa-times';
+    }
+
+    btn._copyTimeout = setTimeout(() => {
+      if (textSpan) textSpan.textContent = 'BibTeX';
+      if (icon) icon.className = 'fas fa-quote-right';
+      btn.classList.remove('copied');
+      btn._copyTimeout = null;
+    }, 2000);
+  };
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => finish(true)).catch(() => {
+      fallbackCopy(text, finish);
+    });
+  } else {
+    fallbackCopy(text, finish);
+  }
+}
+
+function fallbackCopy(text, callback) {
+  try {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    textarea.setAttribute('readonly', '');
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    const successful = document.execCommand('copy');
+    document.body.removeChild(textarea);
+    callback(successful);
+  } catch (err) {
+    callback(false);
+  }
+}
+
+function toggleBibtex(key, btn, event) {
+  copyBibtex(key, btn, event);
 }
 
 function toggleAbstract(key, btn) {
@@ -536,6 +578,13 @@ async function copyToClipboard(elementId) {
 
 .copy-btn.success { color: #16a34a; }
 .copy-btn.error { color: #dc2626; }
+.btn-bib.copied {
+  color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+.btn-bib.copied:hover {
+  background: rgba(22, 163, 74, 0.1);
+}
 </style>
 
 <script>

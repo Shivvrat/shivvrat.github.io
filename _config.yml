@@ -172,6 +172,7 @@ scholar:
 # https://github.com/inukshuk/jekyll-scholar
 
   bibliography_template: bibtemplate
+  bibtex_skip_fields: [abstract, month_numeric, comment, file, certificate, library, website]
   last_name: Arya
   first_name: [Shivvrat, S.]
 

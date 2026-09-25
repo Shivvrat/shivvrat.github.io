@@ -397,6 +397,15 @@
   box-shadow: 0 4px 8px rgba(85, 85, 85, 0.2);
 }
 
+.btn-bib.copied {
+  color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+
+.btn-bib.copied:hover {
+  background: rgba(22, 163, 74, 0.1);
+}
+
 .btn-abstract {
   color: #27ae60;
   background: transparent;

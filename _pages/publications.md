@@ -6,6 +6,7 @@ permalink: /publications/
 years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
 scholar:
   bibliography_template: bibtemplate
+  bibtex_skip_fields: [abstract, month_numeric, comment, file, certificate, library, website]
 ---
 
 
