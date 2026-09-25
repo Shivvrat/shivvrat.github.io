@@ -9,62 +9,51 @@ permalink: /research/
 
 # Research
 
-My research develops structured, interpretable, and efficient AI methods that integrate **learning, reasoning, and optimization**. I am particularly interested in using neural methods to solve computationally challenging reasoning and optimization problems while preserving the structure and constraints of the underlying domain.
+My research develops learning-based methods for reasoning and decision-making in complex, structured domains. Operating at the intersection of machine learning, probabilistic modeling, symbolic reasoning, and mathematical optimization, my goal is to build AI systems that are reliable, interpretable, and scalable.
 
-My work spans **probabilistic and neurosymbolic reasoning**, **neural combinatorial optimization**, and **structured vision and multimodal AI**, with applications to graphical models, networks, video understanding, human-AI interaction, and scientific domains.
+My core research agenda focuses on **neuro-symbolic reasoning and probabilistic inference**—spanning both direct neural approximation of inference problems and neural methods that augment classical solvers—alongside **neural combinatorial optimization** for structured decision-making. Building on these foundations, I study **structured and multimodal intelligence**, including procedural video understanding and human-guided vision-language systems, and develop methods for **AI for scientific discovery**, particularly in computational biology.
 
-## Inference in Neurosymbolic Models
+## Neuro-Symbolic Reasoning and Probabilistic Inference
 
-I develop learning-based methods for efficient inference in **probabilistic and neurosymbolic models**. A central goal is to replace or augment computationally expensive inference procedures with neural models that exploit the structure of the underlying probabilistic model while retaining high solution quality.
+I develop learning-based and optimization-based methods for reasoning under uncertainty in structured probabilistic models. My research combines neural networks with probabilistic inference, symbolic structure, classical algorithms, and mathematical optimization to improve the efficiency and scalability of challenging inference tasks. Rather than committing to a single computational paradigm, this work explores how learned and algorithmic components can be combined at different levels of the inference pipeline:
 
-This research includes three complementary directions:
+* **Neural approximation**, where neural networks directly learn computationally expensive inference mappings, producing high-quality solutions to queries such as MPE, constrained MPE, and marginal MAP in one or a few forward passes, optionally followed by inference-time optimization.
+* **Neural augmentation**, where learned neural components operate within or alongside classical inference algorithms, providing warm starts, conditioning strategies, branching policies, node-selection heuristics, or local-search guidance while retaining the underlying solver framework.
+* **Optimization-based structured inference**, where mathematical optimization techniques, including integer linear programming and local search, reason directly over structured probabilistic dependencies and combinatorial constraints.
 
-* **Neural approximators for probabilistic inference**, where neural networks directly predict solutions to inference problems such as MPE, constrained MPE, and marginal MAP.
-* **Learned heuristics and dual bounds for classical inference algorithms**, where neural models guide search, conditioning, branching, or provide valid-by-construction dual warm-starts within established optimization and inference procedures.
-* **Optimization-based structured inference**, where probabilistic dependencies and domain constraints are incorporated into optimization procedures for structured prediction.
+Representative work includes **Neural Dual Bounds** (NeurIPS 2026 Spotlight), which learns valid-by-construction dual warm starts for MAP and constrained MAP inference; **Learning to Condition** (NeurIPS 2025), which learns conditioning, branching, and node-selection heuristics from solver search traces; **SINE** (AISTATS 2025), which improves neural MPE inference through structure- and parameter-aware embeddings and advanced discretization; and **BEACON** (arXiv 2026), which learns reusable neural guidance for local search in repeated MPE inference. Our earlier work introduced neural MPE inference with inference-time self-improvement and teacher-student training (NeurIPS 2024 Spotlight; UAI TPM 2024 Best Paper), self-supervised neural approximators for marginal MAP inference in probabilistic circuits (AAAI 2024 Oral), self-supervised inference under explicit probabilistic constraints (AISTATS 2024), and deep dependency networks with local-search and integer-programming-based structured inference (AISTATS 2024).
 
-Representative work includes **Neural Dual Bounds** (NeurIPS 2026 Spotlight), **SINE** (AISTATS 2025), **Learning to Condition** (NeurIPS 2025), **ITSELF** and **GUIDE** (NeurIPS 2024 Spotlight; UAI TPM 2024 Best Paper), neural marginal MAP inference (AAAI 2024 Oral), constrained MPE inference (AISTATS 2024), and deep dependency networks with structured inference (AISTATS 2024).
 
-We have released these methods through **[NeuPI](https://neupi.readthedocs.io/en/latest/)**, a unified library that makes our neural probabilistic inference methods accessible through a common interface.
+
+We have released these neural inference methods through **[NeuPI](https://neupi.readthedocs.io/en/latest/)**, a unified open-source library that makes our algorithms accessible through a common interface.
 
 ## Neural Combinatorial Optimization
 
-I develop **neural and reinforcement learning methods for combinatorial optimization**, particularly for graph-structured problems where conventional optimization methods can become computationally expensive at scale.
+I develop learning-based methods for solving large-scale combinatorial and constrained optimization problems over structured domains. This research combines deep reinforcement learning, representation learning, and classical optimization to learn effective decision policies for problems with large discrete action spaces, complex dependencies, and domain-specific constraints.
 
-My work investigates how learned representations, policies, and search strategies can exploit structural information in a problem instance to make better discrete decisions. I am particularly interested in methods that combine neural prediction with graph structure, optimization algorithms, and domain-specific constraints rather than treating combinatorial optimization as an unstructured prediction problem.
+A particular focus is graph-structured optimization over complex networks, where solutions require sequentially selecting or modifying discrete elements such as nodes or edges. These methods aim to amortize expensive optimization across problem instances by learning policies that capture reusable structural patterns while accommodating operational, privacy, and application-specific constraints.
 
-Representative work includes **RELINK** (CIKM 2025), which develops a deep reinforcement learning framework for edge-level influence maximization in privacy-constrained networks.
+Representative work includes **RELINK** (CIKM 2025), which develops a deep reinforcement learning framework for edge-level influence maximization in privacy-constrained closed networks.
 
-## Structured Vision and Video Understanding
+## Structured and Multimodal Intelligence
 
-I study **structured reasoning for visual understanding**, particularly for procedural activities where recognizing individual actions alone is insufficient to understand the broader task.
+I develop learning methods for reasoning over complex perceptual and multimodal data by combining high-dimensional representations with explicit structure. This research investigates how temporal dependencies, task structure, relational representations, and human feedback can bridge low-level perception and higher-level reasoning, prediction, and decision-making:
 
-This research investigates models that reason about temporal dependencies, procedural structure, errors, explanations, and future actions. The broader objective is to build systems that move beyond frame-level recognition toward representations capable of supporting interpretable reasoning and intelligent assistance.
+* **Structured Video Understanding and Activity Reasoning:** Focuses on modeling the temporal and procedural structure of complex activities in video and augmented reality (AR). Rather than treating videos as collections of isolated frames, these models capture multi-step workflows, action dependencies, and deviations from expected procedures to support procedural error detection, temporal localization, explanation, and predictive task guidance.
+* **Human-Guided Vision-Language and Multimodal AI:** Investigates multimodal systems that connect visual and linguistic representations with structured human feedback. This work explores how interactive human-in-the-loop guidance—ranging from rich natural-language commentary and word-level corrections to lightweight corrective signals—can calibrate model reasoning and improve downstream multimodal reliability.
 
-Representative work includes **CaptainCook4D** (NeurIPS 2024 Datasets and Benchmarks Track), explainable activity recognition using deep learning and tractable probabilistic models (ACM TiiS 2023), and predictive task guidance for augmented reality.
+Representative work includes **CaptainCook4D** (NeurIPS 2024 Datasets and Benchmarks Track), explainable activity recognition using deep learning and tractable probabilistic models (ACM TiiS 2023), predictive task guidance in augmented reality (IEEE VR 2024), and text-based human-in-the-loop feedback in vision-language models (ACM TiiS 2026).
 
-## Vision-Language and Multimodal AI
+## AI for Scientific Discovery
 
-I investigate **vision-language and multimodal systems** that combine visual perception, language, and structured reasoning. A particular focus is on incorporating human feedback and domain knowledge to improve the reliability, interpretability, and effectiveness of multimodal models.
+I develop machine learning methods that incorporate scientific structure, domain knowledge, and physical constraints into data-driven models for scientific discovery, focusing on domains where observations are high-dimensional, interactions are structured, and purely black-box learning fails to capture underlying mechanisms.
 
-This work studies how different forms of human supervision can guide vision-language models and how structured feedback can improve downstream image and video understanding.
+In **computational biology**, current work focuses on structured representation learning for single-cell genomics and transcriptomics. By embedding biological knowledge—including molecular interactions and cell-cell communication networks—directly into deep generative models, we learn representations that better reflect cellular organization, heterogeneity, and intercellular relationships.
 
-Representative work includes **Comparison of Text-Based Inputs for Human-in-the-Loop Feedback in Vision-Language Models** (ACM TiiS 2026).
-
-## AI for Computational Biology
-
-I also collaborate on applications of **machine learning and structured representation learning to computational biology**, where domain structure can provide important constraints on learning from high-dimensional biological data.
-
-Current work includes representation learning for single-cell transcriptomics using graph-based models of cell-cell communication, including **CoLa-VAE**, which incorporates dynamically constructed graph Laplacian constraints into variational representation learning.
-
-## Multi-Label Learning
-
-My earlier work also includes **multi-label classification**, particularly methods that model dependencies among output labels and connect naturally to my broader interests in structured prediction and probabilistic inference.
-
-This includes work on kernel-based multi-label classifiers and deep dependency networks for structured image and video classification.
+Representative work includes **CoLa-VAE** (bioRxiv 2026), which integrates cell-cell communication structure into a variational autoencoder through dynamic graph Laplacian regularization derived from ligand-receptor interactions.
 
 ## ARIA Research Lab
 
 These research directions are developed within the **Algorithms and Architectures for Reasoning and Intelligent Automation (ARIA) Lab** at NJIT.
 
-For current projects, detailed research descriptions, software, and publications, visit the [**ARIA Lab Research**](https://aria-research-lab.github.io/research) page.
+For detailed project descriptions, software releases, research directions, and publications, visit the [**ARIA Lab Research**](https://aria-research-lab.github.io/research) page.
