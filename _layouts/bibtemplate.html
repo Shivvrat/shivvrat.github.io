@@ -113,7 +113,7 @@
       </a>
     {% endif %}
 
-    {% if (entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'phdthesis' or entry.type == 'mastersthesis' or entry.type == 'inproceedings' or entry.type == 'report' or entry.type == 'workshop' or entry.type == 'misc') and entry.bibtex %}
+    {% if entry.bibtex %}
       {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
       <button type="button" class="btn btn-bib" onclick="copyBibtex('{{clean_key}}', this, event)" aria-label="Copy BibTeX citation to clipboard">
         <i class="fas fa-quote-right"></i>
