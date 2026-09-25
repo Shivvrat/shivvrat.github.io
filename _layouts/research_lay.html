@@ -2,38 +2,6 @@
 layout: default
 ---
 
-<!-- <style>
-#newsid {
-    top: 7rem;
-    height: calc(100vh - 7rem);
-    overflow-y: auto;
-    padding-left: 1rem;
-}
-#newsid img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Ensures image is visible */
-}
-</style> -->
-
     <div id="gridid" class=".col-xl">
       {{ content }}
     </div>
-    {% if page.url contains '/research' %}
-        <section id="certificates-awards" class="certificates-awards">
-            <h2>Certificates & Awards</h2>
-            <div class="certificate-gallery">
-            {% for award in site.data.awards %}
-                {% assign certificate_url = award.certificate | strip %}
-                {% if award.group == "research" and certificate_url != "" %}
-                <figure class="certificate-gallery-item">
-                    <a href="{{ certificate_url | relative_url }}" target="_blank" rel="noopener">
-                        <img src="{{ certificate_url | relative_url }}" alt="{{ award.title }}" loading="lazy">
-                    </a>
-                    <figcaption>{{ award.title }}</figcaption>
-                </figure>
-                {% endif %}
-            {% endfor %}
-            </div>
-        </section>
-    {% endif %}
