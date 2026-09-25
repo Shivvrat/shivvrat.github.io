@@ -3,7 +3,20 @@
 
 <link rel="stylesheet" href="{{ '/assets/css/bibliography.css' | relative_url }}">
 
-<div class="bib-entry">
+{% assign paper_award = nil %}
+{% if entry.award and entry.award != "" %}
+  {% assign paper_award = entry.award %}
+{% elsif entry.annotation and entry.annotation != "" %}
+  {% unless entry.annotation contains "Dissertation" or entry.type == "phdthesis" %}
+    {% assign paper_award = entry.annotation %}
+  {% endunless %}
+{% elsif entry.comment and entry.comment != "" %}
+  {% unless entry.comment contains "Dissertation" or entry.type == "phdthesis" %}
+    {% assign paper_award = entry.comment %}
+  {% endunless %}
+{% endif %}
+
+<div class="bib-entry{% if paper_award %} award-paper award-paper-highlight{% endif %}">
   <!-- Paper Header -->
   <div class="paper-header">
     <div class="paper-title">
@@ -132,7 +145,6 @@
   </div>
 
   <!-- Awards and Certificates -->
-  {% assign paper_award = entry.annotation | default: entry.award | default: entry.comment %}
   {% if paper_award or entry.certificate %}
     <div class="paper-highlights">
       {% if paper_award %}

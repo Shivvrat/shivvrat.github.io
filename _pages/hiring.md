@@ -4,137 +4,77 @@ layout: textlay
 sitemap: false
 permalink: /hiring/
 seo:
-  title: "Hiring – Open Positions in AI/ML at NJIT"
-  description: "Fully funded Ph.D. positions and research opportunities in neurosymbolic AI, neural combinatorial optimization, probabilistic inference, and computer vision at NJIT."
+  title: "Hiring & Research Opportunities – ARIA Research Lab at NJIT"
+  description: "Opportunities for Ph.D., master's, and undergraduate students to conduct research in AI and machine learning at the ARIA Research Lab at NJIT."
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-<div class="alert alert-info">
-For the latest project descriptions and openings, please visit the <a href="https://aria-research-lab.github.io/hiring/" target="_blank">ARIA Lab hiring page</a>.
-</div>
-
-<div class="alert alert-info">
-📝 <strong>Ready to apply?</strong> Submit your details using the <a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank">Google Form</a>. Email may be missed—form submissions are reviewed regularly.
-</div>
-
 <div class="jumbotron">
 
-## Join ARIA Lab
+## Student Research Opportunities & Lab Recruiting
 
-We are recruiting **Ph.D., MS, and undergraduate students** for research positions in the [ARIA Lab](https://aria-research-lab.github.io/). Ph.D. positions are fully funded, and research-credit opportunities may be available for MS and undergraduate students. Self-funded visiting students and scholars are also welcome.
+I direct the **[ARIA Research Lab](https://aria-research-lab.github.io/)** in the Department of Computer Science at the **New Jersey Institute of Technology (NJIT)**. Our lab investigates problems at the intersection of reasoning, learning, and optimization, including neurosymbolic AI, neural combinatorial optimization, deep reinforcement learning on graphs, and multimodal applications in vision and video understanding.
 
-| | |
-|---|---|
-| **University** | NJIT (R1), Newark NJ |
-| **Start Date** | {{ site.data.recruiting.start_terms_slash }} |
-| **Ph.D. Funding** | {{ site.data.recruiting.phd_funding_summary }} |
-| **MS/Undergrad** | Research credit available |
+Comprehensive details on current research openings, specific project descriptions, student qualifications, and course pathways are maintained centrally on the **ARIA Lab Hiring page**.
 
-</div>
-
-<div class="section-card">
-
-## Open Research Projects
-
-<table class="research-table">
-  <thead>
-    <tr>
-      <th>Project</th>
-      <th>Level</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://aria-research-lab.github.io/hiring/neurosymbolic-ai" target="_blank"><strong>Neurosymbolic AI</strong></a><br><small>Integrate symbolic reasoning with deep learning for transparent, interpretable AI systems.</small></td>
-      <td><span class="badge bg-primary">Ph.D. Lead</span> <span class="badge bg-success">MS/Undergrad</span></td>
-    </tr>
-    <tr>
-      <td><a href="https://aria-research-lab.github.io/hiring/neural-optimization" target="_blank"><strong>Neural Combinatorial Optimization</strong></a><br><small>Learn to build neural solvers for combinatorial problems.</small></td>
-      <td><span class="badge bg-primary">Ph.D. Lead</span> <span class="badge bg-success">MS/Undergrad</span></td>
-    </tr>
-    <tr>
-      <td><a href="https://aria-research-lab.github.io/hiring/drl-graph-optimization" target="_blank"><strong>DRL for Graph Optimization</strong></a><br><small>Apply deep reinforcement learning to graph-based combinatorial optimization problems.</small></td>
-      <td><span class="badge bg-success">MS / Undergrad</span></td>
-    </tr>
-    <tr>
-      <td><a href="https://aria-research-lab.github.io/hiring/applications" target="_blank"><strong>Application Domains</strong></a><br><small>Apply neurosymbolic methods to vision, video understanding, and multimodal reasoning.</small></td>
-      <td><span class="badge bg-info">All Levels</span></td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-<div class="section-card">
-
-## Who Can Apply
-
-#### Ph.D. Students
-- Up to **{{ site.data.recruiting.phd_max_funded }} TA/RA positions** for {{ site.data.recruiting.start_terms_first }}
-- Strong research background in AI/ML required
-- Must also apply through <a href="{{ site.data.recruiting.admissions_url }}" target="_blank">NJIT admissions portal</a>
-
-#### MS Students
-- Research credit may be available when an appropriate project and supervision are available. MS students can pursue research through {{ site.data.recruiting.research_credit_ms_courses | join: " or " }}. Course enrollment does not guarantee authorship or publication.
-- Exceptional contributors may continue long-term
-
-#### Undergraduates
-- Research credit may be available when an appropriate project and supervision are available. Undergraduate students can pursue research through {{ site.data.recruiting.research_credit_undergrad_courses | join: " or " }}. Course enrollment does not guarantee authorship or publication.
-- Outstanding contributors may extend to full research projects
-
-</div>
-
-<div class="section-card">
-
-## Lab Resources
-
-- **Funding**: Fully funded Ph.D. ({{ site.data.recruiting.phd_funding_type }}), research credit for MS/Undergrad
-- **Compute**: University <a href="https://arcs-njit-edu.github.io/Docs/clusters/wulver/" target="_blank">Wulver GPU cluster</a> + lab GPUs
-- **Mentorship**: Direct guidance, publication opportunities at top venues (NeurIPS, ICML, ICLR, AAAI, KDD, CIKM, etc.)
-<!-- - **Industry**: Collaborations and internship connections -->
-
-</div>
-
-<div class="jumbotron">
-
-## Why NJIT
-
-- Ranked #60 in the U.S. for AI & Machine Learning (CSRankings)
-- Ranked #80 among National Universities and #40 among Top Public Universities (U.S. News & World Report)
-- Located in Newark, NJ, part of the NYC metropolitan area
-- ~30 minutes from Manhattan; strong industry connections
-
-Located in Newark, NJ—part of the NYC metropolitan area with strong industry connections.
-
-</div>
-
-<div class="section-card">
-
-## FAQ
-
-**Q: Should I email you directly?**  
-No, please use the Google Form. Emails are often missed, but form submissions are reviewed regularly.
-
-**Q: Do I need publications to apply?**  
-Not required, but helpful. We value demonstrated research potential and strong fundamentals.
-
-**Q: Can international students apply?**  
-Yes! Ph.D. positions are fully funded regardless of citizenship.
-
-**Q: What's the application timeline?**  
-We review applications on a rolling basis. Apply early for best consideration.
-
-</div>
-
-<div class="jumbotron">
-
-## Ready to Apply?
-
-Submit your details via Google Form. For Ph.D., also apply through NJIT admissions and mention my name in your Statement of Purpose.
-
-<p style="text-align: center; margin-top: 1.5rem;">
-<a href="https://forms.gle/SYb5HQeXQB3ogedo9" target="_blank" class="btn btn-primary btn-lg">Submit Application →</a>
+<p style="margin-top: 1.5rem; margin-bottom: 0.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+  <a href="https://aria-research-lab.github.io/hiring/" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Visit ARIA Lab Hiring &amp; Open Projects →</a>
+  <a href="{{ site.data.recruiting.application_form_url }}" class="btn btn-success btn-lg" target="_blank" rel="noopener">Submit Application Form (Google Form) →</a>
 </p>
+
+</div>
+
+<div class="section-card">
+
+## Current Recruiting Cycle: {{ site.data.recruiting.start_terms_and }}
+
+<div class="table-responsive">
+<table class="table">
+<tbody>
+<tr>
+<th style="width: 28%;">Recruiting Status</th>
+<td><strong>Active</strong> for {{ site.data.recruiting.start_terms_and }}</td>
+</tr>
+<tr>
+<th>Ph.D. Funding</th>
+<td>{{ site.data.recruiting.phd_funding_summary }}</td>
+</tr>
+<tr>
+<th>M.S. &amp; Undergraduate</th>
+<td>Research credit available ({{ site.data.recruiting.research_credit_ms_courses | join: "/" }} for MS; {{ site.data.recruiting.research_credit_undergrad_courses | join: "/" }} for BS)</td>
+</tr>
+<tr>
+<th>Visiting Researchers</th>
+<td>Self-funded visiting students and scholars welcome</td>
+</tr>
+<tr>
+<th>Application Portals</th>
+<td><a href="{{ site.data.recruiting.application_form_url }}" target="_blank" rel="noopener">ARIA Lab Google Form</a> &amp; <a href="{{ site.data.recruiting.admissions_url }}" target="_blank" rel="noopener">NJIT Graduate Admissions</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Opportunities by Level
+
+- **Ph.D. Students**: We are currently seeking up to **{{ site.data.recruiting.phd_max_funded_words }} funded Ph.D. students** ({{ site.data.recruiting.phd_funding_type }}) for {{ site.data.recruiting.start_terms_slash }}. Applicants should possess a strong foundation in machine learning, algorithms, mathematics, or optimization. Prospective students must submit their profile via the [Google Form]({{ site.data.recruiting.application_form_url }}) and formally apply through the [NJIT Graduate Admissions portal]({{ site.data.recruiting.admissions_url }}), explicitly mentioning **Dr. Shivvrat Arya** and the **ARIA Lab** in their Statement of Purpose. Self-funded applicants and fellowship holders are also welcome.
+- **M.S. and Undergraduate Students**: Motivated NJIT students can participate in mentored research projects for academic credit ({{ site.data.recruiting.research_credit_ms_courses | join: " or " }} for MS; {{ site.data.recruiting.research_credit_undergrad_courses | join: " or " }} for BS). Please consult the [ARIA Lab Undergraduate & M.S. Research Guide](https://aria-research-lab.github.io/hiring/undergraduate-ms-research) for course registration requirements and project pathways.
+- **Visiting Scholars & Remote Collaborators**: Visiting researchers and self-funded scholars interested in collaborating on aligned research topics are invited to submit their interests through the application form.
+
+</div>
+
+<div class="section-card">
+
+## Prospective Student Inquiries & FAQ
+
+**How do I indicate interest in joining the lab as a Ph.D. student?**  
+Please complete the [ARIA Lab Google Form]({{ site.data.recruiting.application_form_url }}) and submit your official application through the [NJIT Admissions portal]({{ site.data.recruiting.admissions_url }}). Make sure to mention **Dr. Shivvrat Arya** in your Statement of Purpose (SOP) so your application is routed for review.
+
+**Should I email you my CV directly?**  
+Please use the [Google Form]({{ site.data.recruiting.application_form_url }}) instead of emailing directly. Due to high inquiry volume, individual emails with attached CVs can easily be missed. Submissions through the form are systematically organized and evaluated for all open positions.
+
+**Where can I find project descriptions, lab resources, and admissions criteria?**  
+All in-depth details—including active project descriptions, GPU compute resources, prerequisite backgrounds, and general admissions criteria—are documented on the **[ARIA Lab Hiring Page](https://aria-research-lab.github.io/hiring/)**.
 
 </div>

@@ -44,9 +44,23 @@
   overflow: hidden;
 }
 
-/* AWARD PAPERS get gold border */
-.bib-entry.award-paper {
-  border-left-color: var(--accent-gold);  /* Gold ONLY for award papers */
+/* AWARD & SPOTLIGHT PAPERS (Gold/Amber Border & Warm Background, matching ARIA Lab) */
+.bib-entry.award-paper,
+.bib-entry.award-paper-highlight {
+  border-left: 5px solid #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(255, 255, 255, 0.98) 55%, rgba(245, 158, 11, 0.02) 100%);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.12), 0 2px 8px rgba(0, 51, 102, 0.06);
+}
+
+.bib-entry.award-paper::before,
+.bib-entry.award-paper-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b);
 }
 
 .bib-entry::before {
@@ -63,6 +77,14 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 24px var(--shadow-medium);
   border-left-color: var(--primary-navy);
+}
+
+.bib-entry.award-paper:hover,
+.bib-entry.award-paper-highlight:hover {
+  transform: translateY(-2px);
+  border-left-color: #d97706;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(255, 255, 255, 0.98) 55%, rgba(245, 158, 11, 0.04) 100%);
+  box-shadow: 0 6px 26px rgba(245, 158, 11, 0.2), 0 4px 12px rgba(0, 51, 102, 0.08);
 }
 
 /* Academic Publication Title */
@@ -569,6 +591,78 @@
   letter-spacing: 0.025em;
 }
 
+/* Award & Recognition Badges (matching ARIA Lab style) */
+.paper-highlights {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.paper-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
+  color: #92400e;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.1);
+  transition: all 0.2s ease;
+}
+
+.paper-award:hover {
+  background: rgba(245, 158, 11, 0.22);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-1px);
+}
+
+.paper-award i,
+.paper-award .fas,
+.paper-award em {
+  color: #d97706;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.paper-certificate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
+  color: #065f46;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.paper-certificate:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.paper-certificate i,
+.paper-certificate .fas,
+.paper-certificate em {
+  color: #059669;
+  font-size: 0.9rem;
+}
+
 /* Professional Academic Badges */
 .badge {
   display: inline-block;
@@ -833,5 +927,39 @@
   
   .bib-actions .btn:hover {
     transform: none !important;
+  }
+}
+
+/* Dark mode adjustments for award paper highlighting */
+@media (prefers-color-scheme: dark) {
+  .bib-entry.award-paper,
+  .bib-entry.award-paper-highlight {
+    border-left-color: #fbbf24;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.14) 0%, rgba(30, 41, 59, 0.98) 60%, rgba(245, 158, 11, 0.03) 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(245, 158, 11, 0.1);
+  }
+
+  .bib-entry.award-paper:hover,
+  .bib-entry.award-paper-highlight:hover {
+    border-left-color: #f59e0b;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(30, 41, 59, 0.98) 60%, rgba(245, 158, 11, 0.05) 100%);
+  }
+
+  .paper-award {
+    color: #fef3c7;
+    background: rgba(245, 158, 11, 0.22);
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .paper-award:hover {
+    background: rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.6);
+  }
+
+  .paper-award i,
+  .paper-award .fas,
+  .paper-award em {
+    color: #fbbf24;
   }
 }
