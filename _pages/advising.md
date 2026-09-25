@@ -3,6 +3,9 @@ title: "Advising"
 layout: gridlay
 sitemap: false
 permalink: /advising/
+seo:
+  title: "Advising & Student Mentoring – Shivvrat Arya"
+  description: "Student research mentoring, master's and undergraduate project advisement, and doctoral/thesis committee service by Shivvrat Arya at NJIT."
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
@@ -11,35 +14,31 @@ permalink: /advising/
 {% if site.data.advising.current_advisees.size > 0 %}
 <div class="jumbotron">
 
-## Research Advisees
+## Student Research Mentoring
 
 {% for level in advising_levels %}
 {% assign level_advisees = site.data.advising.current_advisees | where: "level", level %}
 {% if level_advisees.size > 0 %}
 ### {{ level }} Students
 
-{% assign project_groups = level_advisees | group_by: "title" %}
 <div class="table-responsive">
 <table class="table advising-table">
 <thead>
 <tr>
-<th style="width: 24%; white-space: normal; overflow-wrap: anywhere;">Project / Thesis</th>
+<th>Project / Thesis</th>
 <th>Student</th>
 <th>Course(s)</th>
 <th>University</th>
 </tr>
 </thead>
 <tbody>
-{% for project in project_groups %}
-{% assign project_students = project.items %}
-{% for student in project_students %}
+{% for student in level_advisees %}
 <tr>
-{% if forloop.first %}<td rowspan="{{ project_students.size }}" style="width: 24%; white-space: normal; overflow-wrap: anywhere;">{{ project.name }}</td>{% endif %}
-<td>{% if student.website %}<a href="{{ student.website }}" target="_blank">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
-<td>{% if student.courses.size > 0 %}{{ student.courses | join: "; " }}{% endif %}</td>
-{% if forloop.first %}<td rowspan="{{ project_students.size }}">{{ student.university }}</td>{% endif %}
+<td>{% if student.title and student.title != "" %}{{ student.title }}{% elsif student.research and student.research != "" %}{{ student.research }}{% else %}—{% endif %}</td>
+<td>{% if student.website %}<a href="{{ student.website }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
+<td>{% if student.courses and student.courses.size > 0 %}{{ student.courses | join: "; " }}{% else %}—{% endif %}</td>
+<td>{{ student.university | default: "NJIT" }}</td>
 </tr>
-{% endfor %}
 {% endfor %}
 </tbody>
 </table>
@@ -73,14 +72,14 @@ permalink: /advising/
 </tr>
 </thead>
 <tbody>
-{% for student in site.data.advising.graduated_advisees %}
+{% for student in level_advisees %}
 <tr>
-<td>{% if student.website %}<a href="{{ student.website }}" target="_blank">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
+<td>{% if student.website %}<a href="{{ student.website }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
 <td>{{ student.role }}</td>
-<td>{{ student.university }}</td>
+<td>{{ student.university | default: "NJIT" }}</td>
 <td>{{ student.graduation_year }}</td>
-<td>{{ student.thesis_title }}</td>
-<td>{% if student.current_position %}{{ student.current_position }}{% else %}{{ student.first_position }}{% endif %}</td>
+<td>{{ student.thesis_title | default: "—" }}</td>
+<td>{% if student.current_position %}{{ student.current_position }}{% elsif student.first_position %}{{ student.first_position }}{% else %}—{% endif %}</td>
 </tr>
 {% endfor %}
 </tbody>
