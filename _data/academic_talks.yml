@@ -36,21 +36,23 @@
   format: in-person
   award: ''
   abstract: Deep learning has revolutionized fields such as image recognition, robotics,
-    and speech processing. However, it often struggles in critical scenarios, facing
-    challenges like misinterpreting occlusions, susceptibility to adversarial attacks,
-    and poor generalization across distributional shifts. By integrating symbolic
-    and probabilistic reasoning into deep learning, these limitations can be addressed,
-    providing systems that are more interpretable, consistent, and capable of handling
-    uncertainty. Neuro-symbolic-probabilistic models (NSPMs) merge deep learning's
-    perceptual strengths with structured reasoning, making AI both more reliable and
-    explainable. However, inference in these models remains a challenge--exact inference
-    is NP-hard and generally intractable in practical applications. In this talk,
-    I will present my ongoing research on neural solvers that enable scalable and
-    accurate inference within NSPMs, making them viable tools for real-time systems.
-    I will also showcase how these solvers improve efficiency, reducing inference
-    times from seconds to microseconds. Through experimental results and practical
-    use cases, I will demonstrate how these advancements enable the deployment of
-    NSPMs in time-critical applications, where rapid and accurate decision-making
+    and speech processing. Deep learning has revolutionized fields such as image recognition,
+    robotics, and speech processing. However, it often struggles in critical scenarios
+    involving occlusions, adversarial perturbations, and distribution shifts. By integrating
+    symbolic and probabilistic reasoning into deep learning, these limitations can
+    be addressed, providing systems that are more interpretable, consistent, and capable
+    of handling uncertainty. By integrating symbolic and probabilistic reasoning into
+    deep learning, these limitations can be addressed, providing systems that are
+    more interpretable, consistent, and capable of handling uncertainty. Neuro-symbolic-probabilistic
+    models (NSPMs) merge deep learning's perceptual strengths with structured reasoning,
+    making AI both more reliable and explainable. However, inference in these models
+    remains a challenge--exact inference is NP-hard and generally intractable in practical
+    applications. In this talk, I will present my ongoing research on neural solvers
+    that enable scalable and accurate inference within NSPMs, making them viable tools
+    for real-time systems. I will also showcase how these solvers improve efficiency,
+    reducing inference times from seconds to microseconds. Through experimental results
+    and practical use cases, I will demonstrate how these advancements enable the
+    deployment of NSPMs in time-critical applications, where rapid and accurate decision-making
     is essential.
 - title: A Neural Network Approach for Efficiently Answering Most Probable Explanation
     Queries in Probabilistic Models

@@ -80,7 +80,7 @@ Before joining NJIT, I contributed as a graduate researcher to several federally
 * **Key Contributions:**
 
   * Developed algorithms for scalable inference in probabilistic models.
-  * Supported publications recognized through best paper, spotlight, and oral presentations at NeurIPS, AAAI and UAI TPM.
+  * Supported publications recognized through best paper, spotlight, and oral presentations at NeurIPS, AAAI, and UAI TPM.
 
 ---
 

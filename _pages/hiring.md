@@ -14,7 +14,7 @@ seo:
 
 ## Student Research Opportunities & Lab Recruiting
 
-I direct the **[ARIA Research Lab](https://aria-research-lab.github.io/)** in the Department of Computer Science at the **New Jersey Institute of Technology (NJIT)**. Our lab investigates problems at the intersection of reasoning, learning, and optimization, including neurosymbolic AI, neural combinatorial optimization, deep reinforcement learning on graphs, and multimodal applications in vision and video understanding.
+I direct the **[ARIA Research Lab](https://aria-research-lab.github.io/)** in the Department of Computer Science at the **New Jersey Institute of Technology (NJIT)**. Our lab investigates problems at the intersection of learning, reasoning, and optimization, with research spanning neuro-symbolic reasoning and probabilistic inference, neural combinatorial optimization, structured and multimodal intelligence, and AI for scientific discovery.
 
 Comprehensive details on current research openings, specific project descriptions, student qualifications, and course pathways are maintained centrally on the **ARIA Lab Hiring page**.
 

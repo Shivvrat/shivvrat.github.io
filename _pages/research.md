@@ -28,7 +28,7 @@ My research agenda is organized around four synergistic pillars:
 
 ## Neuro-Symbolic Reasoning and Probabilistic Inference
 
-Exact inference in structured probabilistic models—such as answering Most Probable Explanation (MPE), constrained MPE, or marginal MAP queries—is computationally intractable (NP-hard or #P-hard). Traditional solvers rely on exponential-time search or relaxation heuristics that struggle to meet the latency demands of real-time intelligent systems. My research explores how learned models can transform the efficiency of probabilistic inference without abandoning mathematical rigor.
+Many exact inference tasks in structured probabilistic models, including MPE, constrained MPE, and marginal MAP, are computationally intractable in general. Traditional solvers rely on exponential-time search or relaxation heuristics that struggle to meet the latency demands of real-time intelligent systems. My research explores how learned models can transform the efficiency of probabilistic inference without abandoning mathematical rigor.
 
 Rather than committing to a single computational paradigm, my work develops hybrid architectures across the inference hierarchy:
 
@@ -50,7 +50,7 @@ Rather than committing to a single computational paradigm, my work develops hybr
 
 Combinatorial optimization problems over discrete structures—such as graphs and complex relational networks—underpin critical decision-making in routing, resource allocation, network security, and influence propagation. Classical combinatorial algorithms face severe computational bottlenecks on large-scale instances, whereas greedy or handcrafted heuristics often fail to adapt to complex, domain-specific constraints.
 
-My research in neural combinatorial optimization explores how deep reinforcement learning (DRL) and graph representation learning can learn effective, instance-adaptive decision policies. By formulating discrete sequential decisions (such as node or edge selection) as Markov Decision Processes, we train neural policies that exploit recurring topological symmetries and structural invariants across problem distributions. This amortizes the computational cost of optimization, delivering near-optimal decisions at high throughput while strictly respecting operational, budget, and privacy constraints.
+My research in neural combinatorial optimization explores how deep reinforcement learning (DRL) and graph representation learning can learn effective, instance-adaptive decision policies. By formulating discrete sequential decisions (such as node or edge selection) as Markov Decision Processes, we train neural policies that exploit recurring topological symmetries and structural invariants across problem distributions. This amortizes the computational cost of optimization, enabling efficient decision-making while explicitly accounting for operational, budget, privacy, and other domain-specific constraints.
 
 **Representative Contribution:**
 * **RELINK** (CIKM 2025): A deep reinforcement learning framework that formulates edge-level influence maximization under strict privacy constraints in closed networks as a sequential Markov Decision Process, outperforming traditional heuristic and non-learning baselines.
@@ -76,9 +76,9 @@ This agenda spans two interconnected threads:
 
 ## AI for Scientific Discovery
 
-Scientific domains are characterized by complex, high-dimensional observations governed by underlying mechanistic, biological, or physical principles. Standard black-box machine learning approaches frequently falter in these regimes, producing predictions that are physically implausible or fail to generalize beyond narrow training distributions. My research develops domain-grounded machine learning frameworks that incorporate mechanistic constraints, relational structures, and scientific priors directly into deep generative and probabilistic models.
+Scientific domains are characterized by complex, high-dimensional observations governed by underlying biological, physical, or mechanistic structure. My research develops machine learning methods that incorporate domain knowledge, relational structure, and scientific priors directly into learned representations and generative models. The goal is to move beyond purely data-driven pattern recognition toward models that better reflect the organization and interactions underlying scientific data.
 
-In **computational biology**, my work focuses on structured representation learning for single-cell genomics, transcriptomics, and spatial biology. Rather than analyzing gene expression in isolation, we incorporate intercellular signaling mechanisms—such as cell-cell communication networks derived from ligand-receptor interactions—directly into deep generative models. This allows us to learn low-dimensional cellular representations that preserve organizational topology, resolve cellular heterogeneity, and reveal biologically meaningful interactions across diverse tissue microenvironments.
+In **computational biology**, my work focuses on structured representation learning for single-cell genomics, transcriptomics, and spatial biology. Rather than analyzing gene expression in isolation, we incorporate intercellular signaling mechanisms, such as cell-cell communication networks derived from ligand-receptor interactions, directly into deep generative models. This allows us to learn cellular representations that preserve organizational structure, resolve cellular heterogeneity, and capture biologically meaningful interactions across tissue microenvironments.
 
 **Representative Contribution:**
 * **CoLa-VAE** (bioRxiv 2026): A cell-cell communication-aware variational autoencoder that regularizes latent cellular representations using dynamic graph Laplacian constraints built from ligand-receptor interactomes, significantly improving cell-type identification and intercellular relationship mapping ([Code](https://github.com/Yeqing95/CoLa-VAE)).
