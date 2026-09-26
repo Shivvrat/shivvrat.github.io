@@ -52,8 +52,15 @@
   margin-bottom: 1rem;
 }
 
+/* Keep the venue and resource buttons close without stacked margins. */
+.bib-entry .paper-info,
+.bib-entry .paper-venue {
+  margin-bottom: 0;
+}
+
 /* Avoid extra space below buttons and around collapsed abstracts. */
 .bib-entry .paper-resources {
+  margin-top: 0.5rem;
   margin-bottom: 0;
 }
 
