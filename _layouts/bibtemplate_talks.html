@@ -1,8 +1,6 @@
 ---
 ---
-<link rel="stylesheet" href="{{ '/assets/css/bibliography.css' | relative_url }}">
-
-<div class="talk-entry">
+<div class="talk-entry{% if entry.award %} award-talk{% endif %}">
   <!-- Talk Title with Date -->
   <div class="talk-header">
     <div class="talk-date">
@@ -47,12 +45,12 @@
   <!-- Venue Information -->
   <div class="talk-venue">
     <div class="venue-name">
-      <i class="fas fa-map-marker-alt"></i>
+      <i class="fas fa-university"></i>
       {{ entry.venue }}
     </div>
     {% if entry.location %}
       <div class="venue-location">
-        <i class="fas fa-globe-americas"></i>
+        <i class="fas fa-map-marker-alt"></i>
         {{ entry.location }}
       </div>
     {% endif %}
@@ -93,57 +91,62 @@
     {% endif %}
   </div>
 
-  <!-- Resources Section -->
-  <div class="talk-resources">
-    {% if entry.slides %}
-      <a href="{{ entry.slides }}" target="_blank" class="btn btn-slides">
-        <i class="fas fa-file-powerpoint"></i>
-        <span class="btn-text">Slides</span>
-      </a>
-    {% endif %}
+  <!-- Resources Section (Slides, Video, Paper, Code, Abstract) -->
+  {% if entry.slides or entry.video or entry.paper or entry.code or entry.abstract %}
+    <div class="talk-resources">
+      {% if entry.slides %}
+        <a href="{{ entry.slides }}" target="_blank" class="btn btn-slides" rel="noopener">
+          <i class="fas fa-file-powerpoint"></i>
+          <span class="btn-text">Slides</span>
+        </a>
+      {% endif %}
 
-    {% if entry.video %}
-      <a href="{{ entry.video }}" target="_blank" class="btn btn-video">
-        <i class="fas fa-play-circle"></i>
-        <span class="btn-text">Recording</span>
-      </a>
-    {% endif %}
+      {% if entry.video %}
+        <a href="{{ entry.video }}" target="_blank" class="btn btn-video" rel="noopener">
+          <i class="fas fa-play-circle"></i>
+          <span class="btn-text">Recording</span>
+        </a>
+      {% endif %}
 
-    {% if entry.paper %}
-      <a href="{{ entry.paper }}" target="_blank" class="btn btn-paper">
-        <i class="fas fa-file-alt"></i>
-        <span class="btn-text">Related Paper</span>
-      </a>
-    {% endif %}
+      {% if entry.paper %}
+        <a href="{{ entry.paper }}" target="_blank" class="btn btn-paper" rel="noopener">
+          <i class="fas fa-file-alt"></i>
+          <span class="btn-text">Related Paper</span>
+        </a>
+      {% endif %}
 
-    {% if entry.code %}
-      <a href="{{ entry.code }}" target="_blank" class="btn btn-code">
-        <i class="fas fa-code"></i>
-        <span class="btn-text">Code</span>
-      </a>
-    {% endif %}
-  </div>
+      {% if entry.code %}
+        <a href="{{ entry.code }}" target="_blank" class="btn btn-code" rel="noopener">
+          <i class="fas fa-code"></i>
+          <span class="btn-text">Code</span>
+        </a>
+      {% endif %}
 
-  <!-- Abstract Toggle -->
-  {% if entry.abstract %}
-    {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
-    <div class="talk-abstract-container">
-      <button class="btn btn-abstract" onclick="toggleTalkAbstract('{{clean_key}}')">
-        <i class="fas fa-align-left"></i> Abstract
-      </button>
-      <div id="abstract_{{clean_key}}" class="abstract-content">
-        <div class="content-header">
-          <span>Abstract</span>
-          <button class="copy-btn" onclick="copyToClipboard('abstract_{{clean_key}}')" aria-label="Copy abstract">
-            <i class="fas fa-copy"></i>
-          </button>
-        </div>
-        <div class="abstract-text">{{entry.abstract}}</div>
-      </div>
+      {% if entry.abstract %}
+        {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+        <button type="button" class="btn btn-abstract" onclick="toggleTalkAbstract('{{clean_key}}', this)" aria-expanded="false" aria-controls="abstract_{{clean_key}}">
+          <i class="fas fa-align-left"></i>
+          <span class="btn-text">Abstract</span>
+        </button>
+      {% endif %}
     </div>
   {% endif %}
 
-  <!-- Additional Information -->
+  <!-- Collapsible Abstract Panel -->
+  {% if entry.abstract %}
+    {% assign clean_key = entry.key | replace: ':', '_' | replace: '.', '_' | replace: ',', '_' | replace: ' ', '_' %}
+    <div id="abstract_{{clean_key}}" class="talk-abstract-content">
+      <div class="content-header">
+        <button type="button" class="copy-btn" onclick="copyTalkAbstract('abstract_{{clean_key}}', this)" aria-label="Copy abstract">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <div class="abstract-text">{{entry.abstract}}</div>
+    </div>
+  {% endif %}
+
+  <!-- Additional Information / Awards -->
   {% if entry.comment or entry.award %}
     <div class="talk-highlights">
       {% if entry.comment %}
@@ -164,267 +167,44 @@
 </div>
 
 <script>
-function toggleTalkAbstract(key) {
-  const element = document.getElementById('abstract_' + key);
-  if (element.style.maxHeight) {
-    element.style.maxHeight = null;
-    element.style.opacity = '0';
-  } else {
-    element.style.maxHeight = element.scrollHeight + 'px';
-    element.style.opacity = '1';
-  }
-}
+if (typeof window.toggleTalkAbstract === 'undefined') {
+  window.toggleTalkAbstract = function(key, btn) {
+    var el = document.getElementById('abstract_' + key);
+    if (!el) return;
+    var isOpen = el.classList.contains('is-open');
+    if (isOpen) {
+      el.classList.remove('is-open');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    } else {
+      el.classList.add('is-open');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    }
+  };
 
-async function copyToClipboard(elementId) {
-  const element = document.getElementById(elementId);
-  const btn = element.querySelector('.copy-btn');
-  const text = element.querySelector('.abstract-text').textContent;
-  
-  try {
-    await navigator.clipboard.writeText(text);
-    btn.innerHTML = '<i class="fas fa-check"></i>';
-    btn.classList.add('success');
-  } catch (err) {
-    btn.innerHTML = '<i class="fas fa-times"></i>';
-    btn.classList.add('error');
-  } finally {
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fas fa-copy"></i>';
-      btn.classList.remove('success', 'error');
-    }, 2000);
-  }
+  window.copyTalkAbstract = async function(elementId, btn) {
+    var el = document.getElementById(elementId);
+    if (!el) return;
+    var textEl = el.querySelector('.abstract-text');
+    var text = textEl ? textEl.textContent.trim() : '';
+    var textSpan = btn ? btn.querySelector('.copy-text') : null;
+    var icon = btn ? btn.querySelector('i') : null;
+    
+    try {
+      await navigator.clipboard.writeText(text);
+      if (icon) icon.className = 'fas fa-check';
+      if (textSpan) textSpan.textContent = 'Copied!';
+      if (btn) btn.classList.add('success');
+    } catch (err) {
+      if (icon) icon.className = 'fas fa-times';
+      if (textSpan) textSpan.textContent = 'Failed';
+      if (btn) btn.classList.add('error');
+    } finally {
+      setTimeout(function() {
+        if (icon) icon.className = 'fas fa-copy';
+        if (textSpan) textSpan.textContent = 'Copy';
+        if (btn) btn.classList.remove('success', 'error');
+      }, 2000);
+    }
+  };
 }
 </script>
-
-<style>
-/* Talk Entry Styles */
-.talk-entry {
-  border: 1px solid var(--border-light);
-  border-left: 3px solid var(--secondary-blue);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  transition: all 0.3s ease;
-}
-
-.talk-entry:hover {
-  border-left-color: var(--primary-navy);
-  transform: translateY(-2px);
-}
-
-/* Talk Header */
-.talk-header {
-  margin-bottom: 1rem;
-}
-
-.talk-date {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.talk-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--primary-navy);
-  line-height: 1.4;
-}
-
-.talk-title a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.talk-title a:hover {
-  color: var(--secondary-blue);
-}
-
-/* Venue Information */
-.talk-venue {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  color: var(--text-primary);
-}
-
-.venue-name, .venue-location {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* Talk Badges */
-.talk-type {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.talk-badge {
-  border: 1px solid var(--border-light);
-  background: var(--background);
-  color: var(--text-primary);
-}
-
-.talk-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.talk-badge i {
-  font-size: 0.9rem;
-}
-
-.invited {
-  background: #fdf2f8;
-  color: #be185d;
-  border: 1px solid #fbcfe8;
-}
-
-.conference {
-  background: #eff6ff;
-  color: #1e40af;
-  border: 1px solid #bfdbfe;
-}
-
-.workshop {
-  background: #f0fdf4;
-  color: #166534;
-  border: 1px solid #bbf7d0;
-}
-
-.seminar {
-  background: #faf5ff;
-  color: #6b21a8;
-  border: 1px solid #e9d5ff;
-}
-
-.virtual {
-  background: #f8fafc;
-  color: #475569;
-  border: 1px solid #e2e8f0;
-}
-
-.hybrid {
-  background: #fff7ed;
-  color: #9a3412;
-  border: 1px solid #fed7aa;
-}
-
-.in-person {
-  background: #f0f9ff;
-  color: #075985;
-  border: 1px solid #bae6fd;
-}
-
-/* Resources Section */
-.talk-resources {
-  display: flex;
-  gap: 0.75rem;
-  margin: 1rem 0;
-  flex-wrap: wrap;
-}
-
-.talk-resources .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  border: 1px solid var(--border-light);
-  background: var(--background);
-  color: var(--text-primary);
-}
-
-.talk-resources .btn:hover {
-  background: var(--background-blue);
-  border-color: var(--secondary-blue);
-  transform: translateY(-1px);
-}
-
-/* Abstract Section */
-.talk-abstract-container {
-  margin-top: 1rem;
-}
-
-.abstract-content {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  margin-top: 0.5rem;
-}
-
-.content-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--border-light);
-  background: var(--background);
-}
-
-.abstract-text {
-  padding: 1rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-primary);
-}
-
-/* Talk Highlights */
-.talk-highlights {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-light);
-}
-
-.talk-comment, .talk-award {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.talk-award {
-  color: #b45309;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .talk-entry {
-    padding: 1rem;
-  }
-
-  .talk-venue {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .talk-resources {
-    gap: 0.5rem;
-  }
-
-  .talk-resources .btn {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.85rem;
-  }
-}
-</style>

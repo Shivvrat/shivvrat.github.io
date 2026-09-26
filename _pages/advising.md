@@ -21,8 +21,15 @@ seo:
 {% if level_advisees.size > 0 %}
 ### {{ level }} Students
 
+{% assign project_groups = level_advisees | group_by: "title" %}
 <div class="table-responsive">
 <table class="table advising-table">
+<colgroup>
+<col style="width: 34%;">
+<col style="width: 20%;">
+<col style="width: 32%;">
+<col style="width: 14%;">
+</colgroup>
 <thead>
 <tr>
 <th>Project / Thesis</th>
@@ -32,13 +39,16 @@ seo:
 </tr>
 </thead>
 <tbody>
-{% for student in level_advisees %}
+{% for project in project_groups %}
+{% assign project_students = project.items %}
+{% for student in project_students %}
 <tr>
-<td>{% if student.title and student.title != "" %}{{ student.title }}{% elsif student.research and student.research != "" %}{{ student.research }}{% else %}—{% endif %}</td>
+{% if forloop.first %}<td rowspan="{{ project_students.size }}">{% if project.name and project.name != "" %}{{ project.name }}{% else %}—{% endif %}</td>{% endif %}
 <td>{% if student.website %}<a href="{{ student.website }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}{{ student.name }}{% endif %}</td>
 <td>{% if student.courses and student.courses.size > 0 %}{{ student.courses | join: "; " }}{% else %}—{% endif %}</td>
-<td>{{ student.university | default: "NJIT" }}</td>
+{% if forloop.first %}<td rowspan="{{ project_students.size }}">{{ student.university | default: "NJIT" }}</td>{% endif %}
 </tr>
+{% endfor %}
 {% endfor %}
 </tbody>
 </table>

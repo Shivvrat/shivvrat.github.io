@@ -850,49 +850,6 @@ thead th {
 tbody tr:nth-child(even) { background: color-mix(in oklab, var(--background-blue) 18%, var(--background)); }
 tbody tr:hover { background: color-mix(in oklab, var(--background-blue) 30%, var(--background)); }
 
-/* Column semantics: Year, Course No., Course, Level, Department */
-/* 1: Year/Term */
-thead th:nth-child(1),
-tbody td:nth-child(1) {
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-  color: var(--text-secondary);
-  min-width: 7.5rem;
-  width: 1%; /* compress to content */
-}
-
-/* 2: Course No. */
-thead th:nth-child(2),
-tbody td:nth-child(2) {
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-  min-width: 7rem;
-  width: 1%;
-  color: var(--text-secondary);
-}
-
-/* 3: Course (flex) */
-thead th:nth-child(3),
-tbody td:nth-child(3) {
-  min-width: 14rem;
-  width: auto; /* expand to fill remaining width */
-}
-
-/* 4: Level */
-thead th:nth-child(4),
-tbody td:nth-child(4) {
-  white-space: nowrap;
-  min-width: 7rem;
-  width: 1%;
-}
-
-/* 5: Department */
-thead th:nth-child(5),
-tbody td:nth-child(5) {
-  white-space: nowrap;
-  min-width: 10rem;
-  width: 1%;
-}
 
 /* On small screens, allow horizontal scrolling to avoid squishing */
 @media (max-width: 640px) {
@@ -916,30 +873,28 @@ tbody td:nth-child(5) {
 .advising-table th,
 .advising-table td {
   white-space: normal;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: normal;
-  hyphens: auto;
 }
 
-.advising-table th:nth-child(1),
-.advising-table td:nth-child(1) {
-  width: 24%;
-  max-width: 24rem;
+.advising-table td[rowspan] {
+  vertical-align: middle;
 }
 
-.advising-table th:nth-child(2),
-.advising-table td:nth-child(2) {
+.advising-table th:nth-child(1) {
+  width: 34%;
+}
+
+.advising-table th:nth-child(2) {
   width: 20%;
 }
 
-.advising-table th:nth-child(3),
-.advising-table td:nth-child(3) {
-  width: 31%;
+.advising-table th:nth-child(3) {
+  width: 32%;
 }
 
-.advising-table th:nth-child(4),
-.advising-table td:nth-child(4) {
-  width: 25%;
+.advising-table th:nth-child(4) {
+  width: 14%;
 }
 
 .certificate-entry {

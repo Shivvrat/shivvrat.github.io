@@ -20,7 +20,7 @@ For research publications from the ARIA Research Lab, please visit the <a href="
 
 </div>
 
-<div class="jumbotron">]
+<div class="jumbotron">
   <h2 class="bib-subsection-title">Publications</h2>
   {% bibliography --query !@phdthesis[year!=0] %}
 </div>
