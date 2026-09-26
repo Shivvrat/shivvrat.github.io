@@ -44,19 +44,36 @@
   overflow: hidden;
 }
 
-/* Keep entries without awards compact; awarded cards retain their spacing. */
-.bib-entry:not(.award-paper):not(.award-paper-highlight) {
+/* Keep all publication cards compact, including awarded entries. */
+.bib-entry:not(.award-paper):not(.award-paper-highlight),
+.bib-entry.award-paper,
+.bib-entry.award-paper-highlight {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
-/* No award row follows these buttons; collapsed abstracts must occupy no space. */
-.bib-entry:not(.award-paper):not(.award-paper-highlight) .paper-resources {
+/* Avoid extra space below buttons and around collapsed abstracts. */
+.bib-entry .paper-resources {
   margin-bottom: 0;
 }
 
-.bib-entry:not(.award-paper):not(.award-paper-highlight) .bib-content:not(.is-open) {
+.bib-entry .bib-content:not(.is-open) {
   display: none;
+}
+
+.bib-entry .paper-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.bib-entry .paper-award,
+.bib-entry .paper-certificate {
+  margin-bottom: 0;
 }
 
 /* Award & Spotlight papers: match the ARIA Lab warm gold card treatment. */
