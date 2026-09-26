@@ -53,3 +53,21 @@ to the `master` branch using GitHub Actions' built-in token.
 No deploy key is needed for the automated workflow. If GitHub rejects the push,
 check the repository settings under **Actions > General > Workflow permissions**
 and make sure workflows have read and write permissions.
+
+## Page headings
+
+The grid, text, research, home, about, and gallery layouts render one H1 from
+page frontmatter through `_includes/page-title.html`. Do not repeat that title
+in the page body. Home and About pass `hidden=true` to keep their H1 accessible
+without displaying the page name. The page, post, and course layouts already render their own
+H1; direct uses of the default layout must supply one in their content.
+
+Use H2 for main sections, H3 for subsections, and H4 only within an H3 section.
+Choose levels for document structure rather than font size. Shared heading
+styles live in `assets/css/heading_style.css`.
+
+After building, check the rendered headings with:
+
+```bash
+python3 tools/check_headings.py
+```
