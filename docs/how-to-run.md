@@ -58,7 +58,8 @@ and make sure workflows have read and write permissions.
 
 The grid, text, research, home, about, and gallery layouts render one H1 from
 page frontmatter through `_includes/page-title.html`. Do not repeat that title
-in the page body. The page, post, and course layouts already render their own
+in the page body. Home and About pass `hidden=true` to keep their H1 accessible
+without displaying the page name. The page, post, and course layouts already render their own
 H1; direct uses of the default layout must supply one in their content.
 
 Use H2 for main sections, H3 for subsections, and H4 only within an H3 section.

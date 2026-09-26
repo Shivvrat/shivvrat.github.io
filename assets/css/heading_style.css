@@ -491,3 +491,16 @@ body.strict-academic .heading-anchor {
 }
 
 #footer .footer-heading::after { content: none; }
+
+/* Home and About retain an accessible title without displaying a page label. */
+#main-content h1.page-title--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
