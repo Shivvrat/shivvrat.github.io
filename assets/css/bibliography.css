@@ -44,10 +44,27 @@
   overflow: hidden;
 }
 
-/* AWARD & SPOTLIGHT PAPERS (Golden accent left border, same background and styling as regular papers) */
+/* Keep entries without awards compact; awarded cards retain their spacing. */
+.bib-entry:not(.award-paper):not(.award-paper-highlight) {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* No award row follows these buttons; collapsed abstracts must occupy no space. */
+.bib-entry:not(.award-paper):not(.award-paper-highlight) .paper-resources {
+  margin-bottom: 0;
+}
+
+.bib-entry:not(.award-paper):not(.award-paper-highlight) .bib-content:not(.is-open) {
+  display: none;
+}
+
+/* Award & Spotlight papers: match the ARIA Lab warm gold card treatment. */
 .bib-entry.award-paper,
 .bib-entry.award-paper-highlight {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.04) 0%, rgba(245, 158, 11, 0.01) 100%);
   border-left-color: #f59e0b;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.08);
 }
 
 .bib-entry::before {
@@ -66,9 +83,16 @@
   border-left-color: var(--primary-navy);
 }
 
+.bib-entry.award-paper::before,
+.bib-entry.award-paper-highlight::before {
+  background: #f59e0b;
+}
+
 .bib-entry.award-paper:hover,
 .bib-entry.award-paper-highlight:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(245, 158, 11, 0.02) 100%);
   border-left-color: #d97706;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.14);
 }
 
 /* Academic Publication Title */
@@ -918,12 +942,16 @@
 @media (prefers-color-scheme: dark) {
   .bib-entry.award-paper,
   .bib-entry.award-paper-highlight {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.07) 0%, rgba(245, 158, 11, 0.015) 100%);
     border-left-color: #fbbf24;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
   }
 
   .bib-entry.award-paper:hover,
   .bib-entry.award-paper-highlight:hover {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.09) 0%, rgba(245, 158, 11, 0.025) 100%);
     border-left-color: #f59e0b;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   }
 
   .paper-award {
