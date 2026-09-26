@@ -4,6 +4,7 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
 
 <div class="col-sm-12">
+  {% include page-title.html %}
   {% for member in site.data.pi %}
     <div class="jumbotron">
       <div class="row">
@@ -11,8 +12,8 @@ layout: default
           <img src="{{ site.baseurl }}/images/teampic/{{ member.photo }}" alt="{{ member.name }}" width="100%" style="max-width:250px"/>
         </div>
         <div class="col-sm-8 col-xs-12">
-          <h3>{{ member.name }}</h3>
-          <h4><i>{{ member.info }}</i></h4>
+          <h2>{{ member.name }}</h2>
+          <p class="academic-title"><i>{{ member.info }}</i></p>
           {% include social_buttons.html member=member %}
 
           <ul class="education-list" style="overflow: hidden">

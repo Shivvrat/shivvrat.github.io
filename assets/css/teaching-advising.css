@@ -1,0 +1,149 @@
+/* Shared presentation for the two data-backed academic record pages. */
+.academic-records {
+  min-width: 0;
+}
+
+.academic-records .records-intro {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.academic-records .records-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.25rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.academic-records .records-nav a {
+  font-size: .95rem;
+}
+
+.academic-records .section-card {
+  margin: 0 0 2rem;
+  padding: 1.5rem;
+}
+
+.academic-records .section-card:hover,
+.academic-records .subsection-card:hover {
+  transform: none;
+}
+
+.academic-records h2 {
+  margin-top: 0;
+  scroll-margin-top: 2rem;
+}
+
+.academic-records h3 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 .75rem;
+}
+
+.academic-records .subsection-card {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.academic-records .subsection-card h3 {
+  margin-top: 0;
+}
+
+.academic-records .records-role {
+  color: var(--text-secondary);
+  font-size: .95rem;
+  margin-bottom: .75rem;
+}
+
+.academic-records .table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: .75rem 0 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: .5rem;
+}
+
+.academic-records table {
+  display: table;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: .95rem;
+}
+
+.academic-records table a {
+  font-size: inherit;
+}
+
+.academic-records .records-table {
+  min-width: 640px;
+}
+
+.academic-records th,
+.academic-records td {
+  padding: .85rem .75rem;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+.academic-records th {
+  background: var(--background-gray);
+  color: var(--primary-navy);
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: .9rem;
+}
+
+.academic-records .certificate-entry + .certificate-entry {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 640px) {
+  .academic-records .section-card {
+    padding: 1rem;
+  }
+
+  .academic-records .subsection-card {
+    padding: .75rem;
+  }
+}
+
+@media print {
+  .academic-records .records-nav {
+    display: none;
+  }
+
+  .academic-records .table-responsive {
+    overflow: visible;
+  }
+
+  .academic-records table {
+    min-width: 0;
+  }
+}
+
+.academic-records .teaching-table {
+  table-layout: auto;
+}
+
+.academic-records .teaching-table th:nth-child(2),
+.academic-records .teaching-table td:nth-child(2),
+.academic-records .teaching-table th:nth-child(4),
+.academic-records .teaching-table td:nth-child(4) {
+  width: auto;
+  white-space: nowrap;
+}
+
+/* These full-width pages do not use the layout's Bootstrap column gutters. */
+#main-content > .row {
+  margin-inline: 0;
+}
+
+#gridid {
+  width: 100%;
+  min-width: 0;
+}

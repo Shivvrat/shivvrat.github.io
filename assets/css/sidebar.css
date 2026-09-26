@@ -46,7 +46,7 @@
 }
 
 /* Academic Name - Clean Typography */
-.profile-section h4 {
+.profile-section .profile-name {
   color: var(--text-primary);
   font-size: 1.6rem;
   font-weight: 400;
@@ -652,7 +652,7 @@
     height: 100px;
   }
   
-  .profile-section h4 {
+  .profile-section .profile-name {
     font-size: 1rem;
   }
   

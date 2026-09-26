@@ -6,4 +6,5 @@ sitemap: false
 permalink: /aboutwebsite.html
 ---
 
-{% include README.md %}
+{% capture website_readme %}{% include README.md %}{% endcapture %}
+{{ website_readme | remove_first: "# Shivvrat Arya's website" }}

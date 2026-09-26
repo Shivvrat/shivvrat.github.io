@@ -7,8 +7,6 @@ permalink: /team/
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-## Team
-
  **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.baseurl }}/hiring/) **!**
 
 <!--- Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors). -->
@@ -20,7 +18,7 @@ permalink: /team/
 
 <div class="row">
   <img src="{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="18%" style="float: left" />
-  <h4>{{ member.name }}</h4>
+  <h3>{{ member.name }}</h3>
   <i>{{ member.info }}</i><br>
 
   {% if member.website %}<a href="{{ member.website }}" target="_blank"><i class="fa fa-home fa-2x"></i></a> {% endif %}
@@ -57,7 +55,7 @@ permalink: /team/
 
 <div class="col-sm-6 clearfix">
   <img src="{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" loading="lazy" />
-  <h4>{{ member.name }}</h4>
+  <h3>{{ member.name }}</h3>
   <i>{{ member.info }}<br></i>
 
   {% if member.website %}<a href="{{ member.website }}" target="_blank"><i class="fa fa-home fa-2x"></i></a> {% endif %}
@@ -129,7 +127,7 @@ permalink: /team/
 
 <div class="col-sm-6 clearfix">
   <img src="{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" loading="lazy" />
-  <h4>{{ member.name }}</h4>
+  <h3>{{ member.name }}</h3>
   <i>{{ member.duration }} <br> Role: {{ member.info }}</i>
   <ul style="overflow: hidden">
 

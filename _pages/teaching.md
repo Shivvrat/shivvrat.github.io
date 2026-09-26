@@ -6,6 +6,11 @@ permalink: /teaching/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/teaching-advising.css' | relative_url }}">
+
+<div class="academic-records" markdown="1">
+
+<p class="records-intro">Courses, teaching experience, and teaching certificates.</p>
 
 <div class="section-card">
 
@@ -17,17 +22,19 @@ permalink: /teaching/
 {% for role_group in teaching_by_role %}
 <div class="subsection-card">
 
-### At {{ institution_group.name }}{% if role_group.name %} -- {{ role_group.name }}{% endif %}
+### {{ institution_group.name }}
 
-<div class="table-responsive">
+{% if role_group.name %}<p class="records-role">{{ role_group.name }}</p>{% endif %}
+
+<div class="table-responsive" tabindex="0" role="region" aria-label="Teaching records">
 <table class="teaching-table">
   <thead>
     <tr>
-      <th>Year/Term</th>
-      <th>Course No.</th>
-      <th>Course</th>
-      <th>Level</th>
-      <th>Department</th>
+      <th scope="col">Year/Term</th>
+      <th scope="col">Course No.</th>
+      <th scope="col">Course</th>
+      <th scope="col">Level</th>
+      <th scope="col">Department</th>
     </tr>
   </thead>
   <tbody>
@@ -69,5 +76,7 @@ permalink: /teaching/
 
 </div>
 {% endif %}
+
+</div>
 
 </div>
