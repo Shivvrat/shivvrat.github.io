@@ -50,7 +50,7 @@ For current projects and research activity, visit the <a href="https://aria-rese
 
 - **Research Recognition**: Publications recognized with **best paper awards**, **spotlights**, and **oral presentations** at top AI/ML venues  
 - **Neural-Augmented Probabilistic Inference**: Developed **[NeuPI](https://neupi.readthedocs.io/en/latest/)**, an open-source neural inference engine accelerating probabilistic reasoning from minutes to microseconds, alongside **Neural Dual Bounds** ([NeurIPS 2026 Spotlight](https://openreview.net/forum?id=fdwZvjybdN), top 1%) and **Learning to Condition** ([NeurIPS 2025](https://openreview.net/forum?id=otIdC4tsYf)).
-- **Neural Combinatorial Optimization**: Developed **[RELINK](https://dl.acm.org/doi/10.1145/3746252.3761006)** (CIKM 2025), a deep reinforcement learning framework for sequential edge activation and influence maximization in privacy-constrained closed networks.
+- **Neural Combinatorial Optimization**: Developed **[RELINK](https://dl.acm.org/doi/10.1145/3746252.3761006)** (CIKM 2025 Oral), a deep reinforcement learning framework for sequential edge activation and influence maximization in privacy-constrained closed networks.
 - **Structured Multimodal Intelligence**: Released [**CaptainCook4D**](https://captaincook4d.github.io/captain-cook/) (NeurIPS 2024 D&B Track), a 94.5-hour egocentric 4D dataset for procedural activity understanding, error recognition, and assistive AR guidance.
 * **AI-Driven Augmented Reality Guidance**: Developed real-time AR guidance systems for complex physical tasks, combining predictive modeling with proactive assistance for multi-step procedures.
 
