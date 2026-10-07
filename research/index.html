@@ -199,56 +199,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 &lt;p class="demo-video-caption" id="calc-speedup-highlight" style="margin-top: 0.65rem; margin-bottom: 0;"&gt;
   &lt;strong&gt;Key Takeaway:&lt;/strong&gt; For 10,000 queries, SSMP finishes in &lt;strong&gt;98.7 ms&lt;/strong&gt;, whereas the traditional baseline stalls for &lt;strong&gt;7.51 hours&lt;/strong&gt; (over 273,000&amp;times; speedup), unlocking real-time probabilistic reasoning.
 &lt;/p&gt;
-</code></pre></div> </div> </div> <details class="demo-table-details"> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;summary&gt;View Comprehensive Methodology &amp; Benchmark Comparison Table&lt;/summary&gt;
-&lt;div class="demo-table-wrap"&gt;
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th&gt;Method&lt;/th&gt;
-        &lt;th&gt;Venue / Honor&lt;/th&gt;
-        &lt;th&gt;Task&lt;/th&gt;
-        &lt;th&gt;Inference Mechanism&lt;/th&gt;
-        &lt;th&gt;Latency (1 Inf)&lt;/th&gt;
-        &lt;th&gt;Throughput&lt;/th&gt;
-        &lt;th&gt;Speedup&lt;/th&gt;
-        &lt;th&gt;Supervised Labels?&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;strong&gt;SSMP&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;AAAI 2024 Oral&lt;/td&gt;
-        &lt;td&gt;Marginal MAP in PCs&lt;/td&gt;
-        &lt;td&gt;Amortized continuous multilinear relaxation&lt;/td&gt;
-        &lt;td&gt;&lt;strong&gt;9.870 &amp;micro;s&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;strong&gt;101,317.12 /s&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;strong&gt;&amp;times;273,860.2&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;Zero (Self-Supervised)&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;strong&gt;ITSELF&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;NeurIPS 2024 Spotlight&lt;/td&gt;
-        &lt;td&gt;Arbitrary MPE in PMs&lt;/td&gt;
-        &lt;td&gt;Inference-time self-supervised optimization&lt;/td&gt;
-        &lt;td&gt;&lt;strong&gt;784.000 ms&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;strong&gt;1.28 /s&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;strong&gt;&amp;times;3.4&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;Zero (Self-Supervised)&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;strong&gt;Traditional Baseline&lt;/strong&gt;&lt;/td&gt;
-        &lt;td&gt;Exact&lt;/td&gt;
-        &lt;td&gt;Standard Combinatorial Search&lt;/td&gt;
-        &lt;td&gt;Branch-and-bound&lt;/td&gt;
-        &lt;td&gt;2.703 s&lt;/td&gt;
-        &lt;td&gt;0.37 /s&lt;/td&gt;
-        &lt;td&gt;&amp;times;1.0&lt;/td&gt;
-        &lt;td&gt;N/A&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-</code></pre></div> </div> </details> </div> </details> <script>
+</code></pre></div> </div> </div> </div> </details> <script>
 (function() {
   function initBenchmarkCalculator() {
     var buttons = document.querySelectorAll(".workload-btn");
@@ -307,4 +258,595 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     initBenchmarkCalculator();
   }
 })();
-</script> <p><strong>Representative Contributions &amp; Software:</strong></p> <ul> <li><strong>Neural Dual Bounds</strong> (NeurIPS 2026 Spotlight): Architectures providing valid-by-construction dual warm-starts for Join Graph Linear Programming (JGLP), accelerating MAP and constrained MAP inference while guaranteeing bounding certificates.</li> <li><strong>Learning to Condition (L2C)</strong> (NeurIPS 2025): Neural search policies learned from solver traces that guide variable conditioning and branch-and-bound node selection (<a href="https://github.com/brijml/L2C">Code</a>).</li> <li><strong>SINE</strong> (AISTATS 2025): Structural and parameter-aware neural embeddings for real-time MPE inference in probabilistic graphical models.</li> <li><strong>BEACON</strong> (arXiv 2026): Amortized neural guidance that steers local-search transitions in repeated MPE queries.</li> <li>Foundational inference frameworks: <strong>ITSELF</strong> for neural MPE with test-time self-improvement (NeurIPS 2024 Spotlight; UAI TPM 2024 Best Paper Award; 3.4× speedup), <strong>SSMP</strong> continuous multilinear relaxations for marginal MAP in probabilistic circuits (AAAI 2024 Oral; &gt;273,000× speedup), self-supervised constrained MPE (AISTATS 2024), and deep dependency networks with ILP inference (AISTATS 2024).</li> <li><strong><a href="https://neupi.readthedocs.io/en/latest/">NeuPI</a></strong>: We have unified these neural inference methods into NeuPI, an open-source library that makes our algorithms accessible through a common interface.</li> </ul> <hr/> <h2 id="neural-combinatorial-optimization">Neural Combinatorial Optimization</h2> <p>Combinatorial optimization problems over discrete structures—such as graphs and complex relational networks—underpin critical decision-making in routing, resource allocation, network security, and influence propagation. Classical combinatorial algorithms face severe computational bottlenecks on large-scale instances, whereas greedy or handcrafted heuristics often fail to adapt to complex, domain-specific constraints.</p> <p>My research in neural combinatorial optimization explores how deep reinforcement learning (DRL) and graph representation learning can learn effective, instance-adaptive decision policies. By formulating discrete sequential decisions (such as node or edge selection) as Markov Decision Processes, we train neural policies that exploit recurring topological symmetries and structural invariants across problem distributions. This amortizes the computational cost of optimization, enabling efficient decision-making while explicitly accounting for operational, budget, privacy, and other domain-specific constraints.</p> <p><strong>Representative Contribution:</strong></p> <ul> <li><strong>RELINK</strong> (CIKM 2025 Oral): A deep reinforcement learning framework that formulates edge-level influence maximization under strict privacy constraints in closed networks as a sequential Markov Decision Process, outperforming traditional heuristic and non-learning baselines.</li> </ul> <hr/> <h2 id="structured-and-multimodal-intelligence">Structured and Multimodal Intelligence</h2> <p>Perceptual intelligence in complex environments requires more than mapping sensory inputs to isolated semantic labels; it demands reasoning over temporal dependencies, procedural workflows, and structured human interactions. My work in structured and multimodal intelligence integrates high-dimensional visual and linguistic representations with explicit task models to bridge low-level perception and higher-level reasoning.</p> <p>This agenda spans two interconnected threads:</p> <ul> <li><strong>Procedural Video Understanding and Activity Reasoning:</strong> Real-world human activities unfold through multi-step workflows with sequential dependencies and potential execution errors. Moving beyond frame-level action recognition, my research develops structured models that capture procedural hierarchies, track user progress, detect execution errors, and provide proactive predictive guidance in physical environments and augmented reality (AR).</li> <li><strong>Human-Guided Vision-Language Systems:</strong> To ensure multimodal systems remain trustworthy and aligned with user intent, I investigate interactive human-in-the-loop learning. Rather than treating models as static black boxes, this work explores how different granularities of human feedback—from natural language explanations and corrective annotations to lightweight scalar critiques—can calibrate multimodal reasoning, resolve perceptual ambiguities, and adapt models to dynamic deployment contexts.</li> </ul> <p><strong>Representative Contributions &amp; Datasets:</strong></p> <ul> <li><strong>CaptainCook4D</strong> (NeurIPS 2024 Datasets and Benchmarks Track): A 94.5-hour egocentric 4D multimodal dataset comprising 384 recordings of complex recipe executions, capturing both successful and errorful trials with fine-grained temporal and procedural step annotations (<a href="https://captaincook4d.github.io/captain-cook/">Project</a>).</li> <li><strong>Explainable Video Reasoning</strong> (ACM TiiS 2023): Hybrid architectures combining deep video representations with dynamic cutset networks to enable tractable probabilistic queries and interpretable activity explanations.</li> <li><strong>Predictive Task Guidance in AR</strong> (IEEE VR 2024): Real-time augmented-reality systems that anticipate user actions and deliver proactive task assistance during complex physical procedures.</li> <li><strong>Human-in-the-Loop Multimodal Feedback</strong> (ACM TiiS 2026): A comprehensive empirical study comparing textual commentary, word corrections, and scalar feedback mechanisms for steering vision-language model predictions.</li> </ul> <hr/> <h2 id="ai-for-scientific-discovery">AI for Scientific Discovery</h2> <p>Scientific domains are characterized by complex, high-dimensional observations governed by underlying biological, physical, or mechanistic structure. My research develops machine learning methods that incorporate domain knowledge, relational structure, and scientific priors directly into learned representations and generative models. The goal is to move beyond purely data-driven pattern recognition toward models that better reflect the organization and interactions underlying scientific data.</p> <p>In <strong>computational biology</strong>, my work focuses on structured representation learning for single-cell genomics, transcriptomics, and spatial biology. Rather than analyzing gene expression in isolation, we incorporate intercellular signaling mechanisms, such as cell-cell communication networks derived from ligand-receptor interactions, directly into deep generative models. This allows us to learn cellular representations that preserve organizational structure, resolve cellular heterogeneity, and capture biologically meaningful interactions across tissue microenvironments.</p> <p><strong>Representative Contribution:</strong></p> <ul> <li><strong>CoLa-VAE</strong> (bioRxiv 2026): A cell-cell communication-aware variational autoencoder that regularizes latent cellular representations using dynamic graph Laplacian constraints built from ligand-receptor interactomes, significantly improving cell-type identification and intercellular relationship mapping (<a href="https://github.com/Yeqing95/CoLa-VAE">Code</a>).</li> </ul> <hr/> <h2 id="aria-research-lab">ARIA Research Lab</h2> <p>These research directions form the foundation of my work in the <strong>Algorithms and Architectures for Reasoning and Intelligent Automation (ARIA) Lab</strong> at NJIT.</p> <p>For current lab projects, active grants, open-source code repositories, publications, and student recruiting opportunities, please visit the <a href="https://aria-research-lab.github.io/research/"><strong>ARIA Lab Research</strong></a> page.</p> </div> </div> </div> <br/> <section id="footer"> <div class="container-footer"> <div class="panel-footer"> <div class="row"> <div class="col-sm-4"> <h2 class="footer-heading">About</h2> <p>Shivvrat Arya<br/> Assistant Professor, Director of <a href='https://aria-research-lab.github.io/'>ARIA Lab</a><br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> New Jersey Institute of Technology</p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Contact</h2> <p><a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/></p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Coordinates</h2> <p>GITC 4304<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> Ying Wu College of Computing<br/> New Jersey Institute of Technology <br/> Newark, NJ 07102</p> </div> </div> <center><p>&copy 2026 Shivvrat Arya </p></center> </div> </div> </div> </body> </html>
+</script> <details class="interactive-demo-wrapper"> <summary class="interactive-demo-summary"> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="interactive-demo-summary-title"&gt;
+  &lt;span class="interactive-demo-summary-badge"&gt;Interactive Demo&lt;/span&gt;
+  &lt;span&gt;Valid-by-Construction Dual Bounds &amp;amp; Search Guidance Simulation (Neural Dual Bounds &amp;amp; L2C)&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class="interactive-demo-summary-chevron"&gt;&amp;#9654;&lt;/span&gt;
+</code></pre></div> </div> </summary> <div class="interactive-demo-card" id="dual-bounds-demo"> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="demo-card-header"&gt;
+  &lt;div class="demo-title-group"&gt;
+    &lt;h4&gt;Dual Bounding Guarantees &amp;amp; Neural Search Pruning&lt;/h4&gt;
+    &lt;p&gt;Interactive simulation demonstrating how antisymmetric neural messages guarantee 100% valid upper bounds to warm-start JGLP, while learned conditioning policies (L2C) prune branch-and-bound search trees.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="demo-badges"&gt;
+    &lt;span class="demo-badge demo-badge-spotlight"&gt;NeurIPS Spotlight&lt;/span&gt;
+    &lt;span class="demo-badge demo-badge-oral"&gt;NeurIPS 2025&lt;/span&gt;
+    &lt;span class="demo-badge demo-badge-sim"&gt;Interactive Simulation&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Live Simulation Instrument --&gt;
+&lt;div class="demo-workload-box" style="margin-top: 0.5rem;"&gt;
+  &lt;div class="workload-header"&gt;
+    &lt;h5&gt;Bound Validity Simulation&lt;/h5&gt;
+    &lt;div class="workload-controls"&gt;
+      &lt;button type="button" class="workload-btn active" id="btn-sample-bounds"&gt;Sample 25 Predictions&lt;/button&gt;
+      &lt;button type="button" class="workload-btn" id="btn-reset-bounds"&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class="demo-video-caption" style="margin-top: 0.2rem; margin-bottom: 0.75rem;"&gt;
+    Each dot represents a predicted dual solution. In exact solvers like branch-and-bound, predicted bounds that fall below the true optimum prune optimal branches. &lt;strong&gt;Antisymmetric messages&lt;/strong&gt; guarantee every prediction remains a valid upper bound by construction, whereas unconstrained predictors frequently violate the bounding guarantee.
+  &lt;/p&gt;
+
+  &lt;div class="sim-strip"&gt;
+    &lt;div class="sim-strip-row"&gt;
+      &lt;div class="sim-strip-meta"&gt;
+        &lt;span class="sim-strip-name"&gt;Antisymmetric Messages (Neural Dual Bounds)&lt;/span&gt;
+        &lt;span class="sim-strip-count" id="count-anti"&gt;&lt;strong&gt;25&lt;/strong&gt; of 25 valid (100%)&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="sim-track" id="track-anti" aria-label="Valid by construction track"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="sim-strip-row"&gt;
+      &lt;div class="sim-strip-meta"&gt;
+        &lt;span class="sim-strip-name"&gt;Unconstrained Neural Predictors&lt;/span&gt;
+        &lt;span class="sim-strip-count" id="count-free"&gt;&lt;strong&gt;17&lt;/strong&gt; of 25 valid (68%)&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="sim-track" id="track-free" aria-label="Unconstrained predictors track"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="sim-legend"&gt;
+    &lt;span class="sim-legend-item"&gt;&lt;i class="sim-legend-line"&gt;&lt;/i&gt; True Optimum (MAP*)&lt;/span&gt;
+    &lt;span class="sim-legend-item"&gt;&lt;i class="sim-legend-dot"&gt;&lt;/i&gt; Valid Upper Bound&lt;/span&gt;
+    &lt;span class="sim-legend-item"&gt;&lt;i class="sim-legend-bad"&gt;&lt;/i&gt; Invalid (Below Optimum)&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Metric Cards Grid --&gt;
+&lt;div class="demo-metrics-grid"&gt;
+  &lt;div class="demo-metric-card highlight-green"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Neural Dual Bounds&lt;/span&gt;
+      &lt;span class="badge badge-info" style="font-size: 0.72rem;"&gt;NeurIPS Spotlight&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-ssmp"&gt;0 Violations&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Validity:&lt;/strong&gt; 100% by construction&lt;br&gt;
+      &lt;strong&gt;Dual Gap:&lt;/strong&gt; Up to 10&lt;sup&gt;6&lt;/sup&gt;&amp;times; reduction in 100 iters&lt;br&gt;
+      &lt;strong&gt;Solvers:&lt;/strong&gt; JGLP &amp;amp; Constrained MAP
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-metric-card highlight-blue"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Learning to Condition (L2C)&lt;/span&gt;
+      &lt;span class="badge badge-success" style="font-size: 0.72rem;"&gt;NeurIPS 2025&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-itself"&gt;5&amp;times;&amp;ndash;10&amp;times;&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Search tree:&lt;/strong&gt; Up to 90% node reduction&lt;br&gt;
+      &lt;strong&gt;Policy:&lt;/strong&gt; Learned from solver traces&lt;br&gt;
+      &lt;strong&gt;Solvers:&lt;/strong&gt; AND/OR Branch-and-Bound
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-metric-card highlight-gray"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Standard Exact Solvers&lt;/span&gt;
+      &lt;span class="badge badge-secondary" style="font-size: 0.72rem;"&gt;Baseline&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-baseline"&gt;&amp;times;1.0&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Scaling:&lt;/strong&gt; Exponential in treewidth &lt;em&gt;w&lt;/em&gt;&lt;br&gt;
+      &lt;strong&gt;Search:&lt;/strong&gt; Full combinatorial tree expansion&lt;br&gt;
+      &lt;strong&gt;Initialization:&lt;/strong&gt; Zero or uniform warm-starts
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div> </div> </div> </details> <script>
+(function() {
+  function initDualBoundsSimulation() {
+    var btnSample = document.getElementById("btn-sample-bounds");
+    var btnReset = document.getElementById("btn-reset-bounds");
+    var trackAnti = document.getElementById("track-anti");
+    var trackFree = document.getElementById("track-free");
+    var countAnti = document.getElementById("count-anti");
+    var countFree = document.getElementById("count-free");
+
+    if (!btnSample || !btnReset || !trackAnti || !trackFree) return;
+
+    var totalSamples = 0;
+    var validAnti = 0;
+    var validFree = 0;
+
+    function renderDots(num) {
+      for (var i = 0; i < num; i++) {
+        totalSamples++;
+
+        var posAnti = 40 + Math.random() * 56;
+        validAnti++;
+        var dotA = document.createElement("div");
+        dotA.className = "sim-dot";
+        dotA.style.left = posAnti + "%";
+        dotA.style.top = (15 + Math.random() * 70) + "%";
+        trackAnti.appendChild(dotA);
+
+        var posFree = 8 + Math.random() * 84;
+        var dotF = document.createElement("div");
+        if (posFree < 40) {
+          dotF.className = "sim-dot bad";
+        } else {
+          validFree++;
+          dotF.className = "sim-dot";
+        }
+        dotF.style.left = posFree + "%";
+        dotF.style.top = (15 + Math.random() * 70) + "%";
+        trackFree.appendChild(dotF);
+      }
+
+      countAnti.innerHTML = "<strong>" + validAnti + "</strong> of " + totalSamples + " valid (100%)";
+      var pctFree = Math.round((validFree / totalSamples) * 100);
+      countFree.innerHTML = "<strong>" + validFree + "</strong> of " + totalSamples + " valid (" + pctFree + "%)";
+    }
+
+    btnSample.addEventListener("click", function() {
+      renderDots(25);
+    });
+
+    btnReset.addEventListener("click", function() {
+      totalSamples = 0;
+      validAnti = 0;
+      validFree = 0;
+      trackAnti.innerHTML = "";
+      trackFree.innerHTML = "";
+      renderDots(25);
+    });
+
+    renderDots(25);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDualBoundsSimulation);
+  } else {
+    initDualBoundsSimulation();
+  }
+})();
+</script> <p><strong>Representative Contributions &amp; Software:</strong></p> <ul> <li><strong>Neural Dual Bounds</strong> (NeurIPS 2026 Spotlight): Architectures providing valid-by-construction dual warm-starts for Join Graph Linear Programming (JGLP), accelerating MAP and constrained MAP inference while guaranteeing bounding certificates.</li> <li><strong>Learning to Condition (L2C)</strong> (NeurIPS 2025): Neural search policies learned from solver traces that guide variable conditioning and branch-and-bound node selection (<a href="https://github.com/brijml/L2C">Code</a>).</li> <li><strong>SINE</strong> (AISTATS 2025): Structural and parameter-aware neural embeddings for real-time MPE inference in probabilistic graphical models.</li> <li><strong>BEACON</strong> (arXiv 2026): Amortized neural guidance that steers local-search transitions in repeated MPE queries.</li> <li>Foundational inference frameworks: <strong>ITSELF</strong> for neural MPE with test-time self-improvement (NeurIPS 2024 Spotlight; UAI TPM 2024 Best Paper Award; 3.4× speedup), <strong>SSMP</strong> continuous multilinear relaxations for marginal MAP in probabilistic circuits (AAAI 2024 Oral; &gt;273,000× speedup), self-supervised constrained MPE (AISTATS 2024), and deep dependency networks with ILP inference (AISTATS 2024).</li> <li><strong><a href="https://neupi.readthedocs.io/en/latest/">NeuPI</a></strong>: We have unified these neural inference methods into NeuPI, an open-source library that makes our algorithms accessible through a common interface.</li> </ul> <hr/> <h2 id="neural-combinatorial-optimization">Neural Combinatorial Optimization</h2> <p>Combinatorial optimization problems over discrete structures—such as graphs and complex relational networks—underpin critical decision-making in routing, resource allocation, network security, and influence propagation. Classical combinatorial algorithms face severe computational bottlenecks on large-scale instances, whereas greedy or handcrafted heuristics often fail to adapt to complex, domain-specific constraints.</p> <p>My research in neural combinatorial optimization explores how deep reinforcement learning (DRL) and graph representation learning can learn effective, instance-adaptive decision policies. By formulating discrete sequential decisions (such as node or edge selection) as Markov Decision Processes, we train neural policies that exploit recurring topological symmetries and structural invariants across problem distributions. This amortizes the computational cost of optimization, enabling efficient decision-making while explicitly accounting for operational, budget, privacy, and other domain-specific constraints.</p> <details class="interactive-demo-wrapper"> <summary class="interactive-demo-summary"> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="interactive-demo-summary-title"&gt;
+  &lt;span&gt;Interactive Demo: RELINK Edge Activation &amp;amp; Cascade Simulation&lt;/span&gt;
+  &lt;span class="interactive-demo-summary-badge"&gt;CIKM 2025 Oral&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class="interactive-demo-summary-chevron"&gt;&amp;#9656;&lt;/span&gt;
+</code></pre></div> </div> </summary> <div class="interactive-demo-card"> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="demo-card-header"&gt;
+  &lt;div class="demo-title-group"&gt;
+    &lt;h4&gt;RELINK Edge Activation for Closed-Network Influence Maximization&lt;/h4&gt;
+    &lt;p&gt;Simulate sequential edge activation budgets for cascading influence spread under network privacy constraints&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="demo-badges"&gt;
+    &lt;span class="demo-badge demo-badge-oral"&gt;CIKM 2025 Oral&lt;/span&gt;
+    &lt;span class="demo-badge demo-badge-sim"&gt;Interactive Simulator&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Metric Cards Grid --&gt;
+&lt;div class="demo-metrics-grid"&gt;
+  &lt;div class="demo-metric-card highlight-green"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;RELINK (DRL Policy)&lt;/span&gt;
+      &lt;span class="badge badge-success" style="font-size: 0.72rem;"&gt;Our Work&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-ssmp" id="metric-relink-gain"&gt;+38.1% Gain&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Formulation:&lt;/strong&gt; Edge-centric Deep Q-Network&lt;br&gt;
+      &lt;strong&gt;Decision Step:&lt;/strong&gt; 1.2 ms / sequential choice&lt;br&gt;
+      &lt;strong&gt;Cascade:&lt;/strong&gt; Discovers bridge connections across shielded clusters
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-metric-card highlight-blue"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Degree Centrality Heuristic&lt;/span&gt;
+      &lt;span class="badge badge-info" style="font-size: 0.72rem;"&gt;Heuristic&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-itself"&gt;&amp;times;1.0 Baseline&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Formulation:&lt;/strong&gt; Static node degree greedily ranked&lt;br&gt;
+      &lt;strong&gt;Decision Step:&lt;/strong&gt; 0.8 ms / choice&lt;br&gt;
+      &lt;strong&gt;Cascade:&lt;/strong&gt; Overconcentrates on visible hubs; traps cascade locally
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-metric-card highlight-gray"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Random Edge Perturbation&lt;/span&gt;
+      &lt;span class="badge badge-secondary" style="font-size: 0.72rem;"&gt;Baseline&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-baseline"&gt;&amp;times;0.4 Baseline&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Formulation:&lt;/strong&gt; Uniform random edge candidate selection&lt;br&gt;
+      &lt;strong&gt;Decision Step:&lt;/strong&gt; 0.1 ms / choice&lt;br&gt;
+      &lt;strong&gt;Cascade:&lt;/strong&gt; Sparse percolation with minimal network spread
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Interactive Budget Selector &amp; Live Comparison Bars --&gt;
+&lt;div class="demo-workload-box"&gt;
+  &lt;div class="workload-header"&gt;
+    &lt;h5&gt;Select Edge Activation Budget (&lt;em&gt;k&lt;/em&gt; edges):&lt;/h5&gt;
+    &lt;div class="workload-controls"&gt;
+      &lt;button type="button" class="workload-btn relink-btn" data-k="5"&gt;k = 5&lt;/button&gt;
+      &lt;button type="button" class="workload-btn relink-btn active" data-k="10"&gt;k = 10&lt;/button&gt;
+      &lt;button type="button" class="workload-btn relink-btn" data-k="20"&gt;k = 20&lt;/button&gt;
+      &lt;button type="button" class="workload-btn relink-btn" data-k="50"&gt;k = 50&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-progress-group"&gt;
+    &lt;div class="demo-progress-row"&gt;
+      &lt;div class="demo-progress-meta"&gt;
+        &lt;span class="demo-progress-name"&gt;RELINK (Deep RL Policy)&lt;/span&gt;
+        &lt;span class="demo-progress-val speedup-ssmp" id="val-relink-reach"&gt;42.8% network reach&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="demo-progress-track"&gt;
+        &lt;div class="demo-progress-fill fill-green" id="bar-relink" style="width: 42.8%;"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="demo-progress-row"&gt;
+      &lt;div class="demo-progress-meta"&gt;
+        &lt;span class="demo-progress-name"&gt;Degree Centrality Heuristic&lt;/span&gt;
+        &lt;span class="demo-progress-val speedup-itself" id="val-degree-reach"&gt;31.0% network reach&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="demo-progress-track"&gt;
+        &lt;div class="demo-progress-fill fill-blue" id="bar-degree" style="width: 31.0%;"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="demo-progress-row"&gt;
+      &lt;div class="demo-progress-meta"&gt;
+        &lt;span class="demo-progress-name"&gt;Random Edge Activation&lt;/span&gt;
+        &lt;span class="demo-progress-val speedup-baseline" id="val-random-reach"&gt;16.4% network reach&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="demo-progress-track"&gt;
+        &lt;div class="demo-progress-fill fill-gray" id="bar-random" style="width: 16.4%;"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;p class="demo-video-caption" id="relink-takeaway" style="margin-top: 0.85rem; margin-bottom: 0;"&gt;
+    &lt;strong&gt;Key Takeaway:&lt;/strong&gt; Under budget &lt;em&gt;k&lt;/em&gt; = 10, RELINK identifies high-leverage bridge connections across private graph clusters, achieving &lt;strong&gt;42.8% reach&lt;/strong&gt; compared to &lt;strong&gt;31.0%&lt;/strong&gt; for degree heuristics (+38.1% relative improvement).
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre></div> </div> </div> </details> <script>
+(function() {
+  function initRelinkSimulation() {
+    var buttons = document.querySelectorAll(".relink-btn");
+    var barRelink = document.getElementById("bar-relink");
+    var barDegree = document.getElementById("bar-degree");
+    var barRandom = document.getElementById("bar-random");
+    var valRelink = document.getElementById("val-relink-reach");
+    var valDegree = document.getElementById("val-degree-reach");
+    var valRandom = document.getElementById("val-random-reach");
+    var metricGain = document.getElementById("metric-relink-gain");
+    var takeaway = document.getElementById("relink-takeaway");
+
+    if (!buttons.length || !barRelink || !barDegree || !barRandom) return;
+
+    var budgetData = {
+      5: { relink: 28.4, degree: 19.6, random: 9.8, gain: "+44.9%" },
+      10: { relink: 42.8, degree: 31.0, random: 16.4, gain: "+38.1%" },
+      20: { relink: 61.2, degree: 48.5, random: 27.2, gain: "+26.2%" },
+      50: { relink: 84.6, degree: 72.1, random: 49.0, gain: "+17.3%" }
+    };
+
+    buttons.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        buttons.forEach(function(b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        var k = parseInt(btn.getAttribute("data-k"), 10);
+        var data = budgetData[k];
+        if (!data) return;
+
+        barRelink.style.width = data.relink + "%";
+        barDegree.style.width = data.degree + "%";
+        barRandom.style.width = data.random + "%";
+
+        valRelink.textContent = data.relink + "% network reach";
+        valDegree.textContent = data.degree + "% network reach";
+        valRandom.textContent = data.random + "% network reach";
+
+        metricGain.textContent = data.gain + " Gain";
+
+        takeaway.innerHTML = "<strong>Key Takeaway:</strong> Under budget <em>k</em> = " + k +
+          ", RELINK identifies high-leverage bridge connections across private graph clusters, achieving <strong>" +
+          data.relink + "% reach</strong> compared to <strong>" + data.degree + "%</strong> for degree heuristics (" +
+          data.gain + " relative improvement).";
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRelinkSimulation);
+  } else {
+    initRelinkSimulation();
+  }
+})();
+</script> <p><strong>Representative Contribution:</strong></p> <ul> <li><strong>RELINK</strong> (CIKM 2025 Oral): A deep reinforcement learning framework that formulates edge-level influence maximization under strict privacy constraints in closed networks as a sequential Markov Decision Process, outperforming traditional heuristic and non-learning baselines.</li> </ul> <hr/> <h2 id="structured-and-multimodal-intelligence">Structured and Multimodal Intelligence</h2> <p>Perceptual intelligence in complex environments requires more than mapping sensory inputs to isolated semantic labels; it demands reasoning over temporal dependencies, procedural workflows, and structured human interactions. My work in structured and multimodal intelligence integrates high-dimensional visual and linguistic representations with explicit task models to bridge low-level perception and higher-level reasoning.</p> <p>This agenda spans two interconnected threads:</p> <ul> <li><strong>Procedural Video Understanding and Activity Reasoning:</strong> Real-world human activities unfold through multi-step workflows with sequential dependencies and potential execution errors. Moving beyond frame-level action recognition, my research develops structured models that capture procedural hierarchies, track user progress, detect execution errors, and provide proactive predictive guidance in physical environments and augmented reality (AR).</li> <li><strong>Human-Guided Vision-Language Systems:</strong> To ensure multimodal systems remain trustworthy and aligned with user intent, I investigate interactive human-in-the-loop learning. Rather than treating models as static black boxes, this work explores how different granularities of human feedback—from natural language explanations and corrective annotations to lightweight scalar critiques—can calibrate multimodal reasoning, resolve perceptual ambiguities, and adapt models to dynamic deployment contexts.</li> </ul> <details class="interactive-demo-wrapper"> <summary class="interactive-demo-summary"> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="interactive-demo-summary-title"&gt;
+  &lt;span&gt;Interactive Demo: CaptainCook4D Procedural Step &amp;amp; Error Inspector&lt;/span&gt;
+  &lt;span class="interactive-demo-summary-badge"&gt;NeurIPS 2024 D&amp;amp;B&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class="interactive-demo-summary-chevron"&gt;&amp;#9656;&lt;/span&gt;
+</code></pre></div> </div> </summary> <div class="interactive-demo-card"> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="demo-card-header"&gt;
+  &lt;div class="demo-title-group"&gt;
+    &lt;h4&gt;CaptainCook4D Procedural Activity &amp;amp; Error Inspector&lt;/h4&gt;
+    &lt;p&gt;Inspect multimodal egocentric 4D sensory signals, procedural steps, and real-time error detection&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="demo-badges"&gt;
+    &lt;span class="demo-badge demo-badge-oral"&gt;NeurIPS 2024 D&amp;amp;B&lt;/span&gt;
+    &lt;span class="demo-badge demo-badge-sim"&gt;Egocentric 4D Benchmark&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Metric Cards Grid --&gt;
+&lt;div class="demo-metrics-grid"&gt;
+  &lt;div class="demo-metric-card highlight-green"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Dataset Scale&lt;/span&gt;
+      &lt;span class="badge badge-success" style="font-size: 0.72rem;"&gt;Benchmark&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-ssmp"&gt;94.5 Hours&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Recordings:&lt;/strong&gt; 384 multi-view egocentric sessions&lt;br&gt;
+      &lt;strong&gt;Tasks:&lt;/strong&gt; 24 complex procedural recipes&lt;br&gt;
+      &lt;strong&gt;Format:&lt;/strong&gt; Synchronized RGB, Depth, Gaze, Audio
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-metric-card highlight-blue"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Error Diversity&lt;/span&gt;
+      &lt;span class="badge badge-info" style="font-size: 0.72rem;"&gt;Fine-Grained&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-itself"&gt;33.2% Errorful&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Categories:&lt;/strong&gt; Technique, Measurement, Order, Prep&lt;br&gt;
+      &lt;strong&gt;Annotations:&lt;/strong&gt; Frame-accurate temporal boundaries&lt;br&gt;
+      &lt;strong&gt;Validation:&lt;/strong&gt; Dual-annotated procedural steps
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-metric-card highlight-gray"&gt;
+    &lt;div class="metric-name"&gt;
+      &lt;span&gt;Predictive Guidance&lt;/span&gt;
+      &lt;span class="badge badge-secondary" style="font-size: 0.72rem;"&gt;Downstream&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric-speedup speedup-baseline"&gt;&amp;lt; 50 ms&lt;/div&gt;
+    &lt;div class="metric-stats"&gt;
+      &lt;strong&gt;Application:&lt;/strong&gt; Real-time AR headset intervention&lt;br&gt;
+      &lt;strong&gt;Model Output:&lt;/strong&gt; Online anomaly scoring &amp;amp; cueing&lt;br&gt;
+      &lt;strong&gt;Goal:&lt;/strong&gt; Prevent procedural failure before completion
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Interactive Step &amp; Error Inspector --&gt;
+&lt;div class="demo-workload-box"&gt;
+  &lt;div class="workload-header"&gt;
+    &lt;h5&gt;Select Procedural Recipe Phase:&lt;/h5&gt;
+    &lt;div class="workload-controls"&gt;
+      &lt;button type="button" class="workload-btn cc-step-btn active" data-phase="1"&gt;Phase 1: Measurement&lt;/button&gt;
+      &lt;button type="button" class="workload-btn cc-step-btn" data-phase="2"&gt;Phase 2: Thermal Cooking&lt;/button&gt;
+      &lt;button type="button" class="workload-btn cc-step-btn" data-phase="3"&gt;Phase 3: Whisking&lt;/button&gt;
+      &lt;button type="button" class="workload-btn cc-step-btn" data-phase="4"&gt;Phase 4: Order &amp;amp; Assembly&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div style="display: flex; gap: 0.5rem; align-items: center; margin-top: 0.75rem; flex-wrap: wrap;"&gt;
+    &lt;span style="font-size: 0.85rem; font-weight: 600;"&gt;Execution Condition:&lt;/span&gt;
+    &lt;button type="button" class="workload-btn cc-mode-btn" data-mode="normal"&gt;Normal Execution&lt;/button&gt;
+    &lt;button type="button" class="workload-btn cc-mode-btn active" data-mode="error"&gt;Procedural Error&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class="demo-inspector-card" id="cc-inspector-display"&gt;
+    &lt;div class="demo-inspector-status"&gt;
+      &lt;div&gt;
+        &lt;div class="demo-inspector-step-title" id="cc-step-title"&gt;Phase 1: Measure 250ml milk into mixing bowl&lt;/div&gt;
+        &lt;span style="font-size: 0.82rem; color: var(--global-text-color-light, #6b7280);" id="cc-step-desc"&gt;Target: 250ml liquid volume poured smoothly&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;span class="badge badge-danger" id="cc-error-badge" style="font-size: 0.78rem;"&gt;Measurement Error Detected&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="demo-inspector-streams"&gt;
+      &lt;div class="demo-stream-pill"&gt;
+        &lt;strong&gt;Egocentric RGB:&lt;/strong&gt; &lt;span id="cc-stream-rgb"&gt;Liquid meniscus past 325ml graduation mark (+75ml excess)&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="demo-stream-pill"&gt;
+        &lt;strong&gt;3D Spatial Depth:&lt;/strong&gt; &lt;span id="cc-stream-depth"&gt;Fluid volume displacement +30% above expected contour&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="demo-stream-pill"&gt;
+        &lt;strong&gt;Audio Signature:&lt;/strong&gt; &lt;span id="cc-stream-audio"&gt;Continuous pouring duration prolonged (+4.2 sec anomaly)&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.84rem; margin-top: 0.5rem; flex-wrap: wrap; gap: 0.4rem;"&gt;
+      &lt;span&gt;&lt;strong&gt;Model Confidence:&lt;/strong&gt; &lt;span class="speedup-ssmp" id="cc-model-conf"&gt;96.4% error confidence (32 ms latency)&lt;/span&gt;&lt;/span&gt;
+      &lt;span style="color: var(--global-text-color-light, #6b7280);"&gt;&lt;strong&gt;Intervention:&lt;/strong&gt; &lt;span id="cc-model-action"&gt;AR Prompt: "Excess liquid added"&lt;/span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;p class="demo-video-caption" style="margin-top: 0.85rem; margin-bottom: 0;"&gt;
+    &lt;strong&gt;Key Takeaway:&lt;/strong&gt; CaptainCook4D captures subtle real-world mistakes across visual, depth, and auditory modalities, establishing the standard for multimodal models that proactively guide human activities.
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre></div> </div> </div> </details> <script>
+(function() {
+  function initCaptainCookInspector() {
+    var stepBtns = document.querySelectorAll(".cc-step-btn");
+    var modeBtns = document.querySelectorAll(".cc-mode-btn");
+    var stepTitle = document.getElementById("cc-step-title");
+    var stepDesc = document.getElementById("cc-step-desc");
+    var errorBadge = document.getElementById("cc-error-badge");
+    var streamRgb = document.getElementById("cc-stream-rgb");
+    var streamDepth = document.getElementById("cc-stream-depth");
+    var streamAudio = document.getElementById("cc-stream-audio");
+    var modelConf = document.getElementById("cc-model-conf");
+    var modelAction = document.getElementById("cc-model-action");
+
+    if (!stepBtns.length || !modeBtns.length || !stepTitle) return;
+
+    var currentPhase = "1";
+    var currentMode = "error";
+
+    var phaseData = {
+      "1": {
+        normal: {
+          title: "Phase 1: Measure 250ml milk into mixing bowl",
+          desc: "Target: 250ml liquid volume poured smoothly",
+          badge: "Normal Execution (Clean)",
+          badgeClass: "badge-success",
+          rgb: "Meniscus exactly at 250ml graduated line",
+          depth: "Bowl volumetric displacement nominal",
+          audio: "Steady 3.8s pour acoustic signature",
+          conf: "99.1% step completion (28 ms latency)",
+          action: "AR cue: Proceed to next step"
+        },
+        error: {
+          title: "Phase 1: Measure 250ml milk into mixing bowl",
+          desc: "Target: 250ml liquid volume poured smoothly",
+          badge: "Measurement Error Detected",
+          badgeClass: "badge-danger",
+          rgb: "Liquid meniscus past 325ml graduation mark (+75ml excess)",
+          depth: "Fluid volume displacement +30% above expected contour",
+          audio: "Continuous pouring duration prolonged (+4.2 sec anomaly)",
+          conf: "96.4% error confidence (32 ms latency)",
+          action: "AR Prompt: 'Excess liquid added'"
+        }
+      },
+      "2": {
+        normal: {
+          title: "Phase 2: Heat nonstick pan to medium simmer",
+          desc: "Target: Pan preheated to 160°C before butter addition",
+          badge: "Normal Execution (Clean)",
+          badgeClass: "badge-success",
+          rgb: "Proper burner flame level and pan placement",
+          depth: "Pan centered on induction ring",
+          audio: "Smooth thermal sizzle profile",
+          conf: "98.5% step completion (26 ms latency)",
+          action: "AR cue: Add butter now"
+        },
+        error: {
+          title: "Phase 2: Heat nonstick pan to medium simmer",
+          desc: "Target: Pan preheated to 160°C before butter addition",
+          badge: "Temperature / Timing Error Detected",
+          badgeClass: "badge-danger",
+          rgb: "Ingredients added to cold pan immediately without preheating",
+          depth: "Zero thermal heat shimmer detected on surface",
+          audio: "Absence of expected sizzle acoustic onset",
+          conf: "94.8% error confidence (29 ms latency)",
+          action: "AR Prompt: 'Preheat pan before adding ingredients'"
+        }
+      },
+      "3": {
+        normal: {
+          title: "Phase 3: Whisk mixture into uniform emulsion",
+          desc: "Target: Consistent circular whisk strokes for 45 seconds",
+          badge: "Normal Execution (Clean)",
+          badgeClass: "badge-success",
+          rgb: "Consistent circular wrist trajectory; homogenous batter",
+          depth: "Smooth surface wave oscillation in bowl mesh",
+          audio: "Harmonic 2.4 Hz whisk contact cadence",
+          conf: "97.8% step completion (30 ms latency)",
+          action: "AR cue: Emulsion reached"
+        },
+        error: {
+          title: "Phase 3: Whisk mixture into uniform emulsion",
+          desc: "Target: Consistent circular whisk strokes for 45 seconds",
+          badge: "Technique Error Detected",
+          badgeClass: "badge-danger",
+          rgb: "Incomplete whisking; large unblended flour clusters remain",
+          depth: "Irregular clump height anomalies on surface",
+          audio: "Erratic contact pattern; whisk stopped at 12s",
+          conf: "95.2% error confidence (34 ms latency)",
+          action: "AR Prompt: 'Whisk 30s longer to dissolve lumps'"
+        }
+      },
+      "4": {
+        normal: {
+          title: "Phase 4: Rest batter and plate final dish",
+          desc: "Target: Let rest 5 min, then ladle onto warm serving dish",
+          badge: "Normal Execution (Clean)",
+          badgeClass: "badge-success",
+          rgb: "Cooked crepe transferred intact using silicone spatula",
+          depth: "Center-aligned placement on target plate",
+          audio: "Soft plate contact acoustic profile",
+          conf: "99.4% step completion (27 ms latency)",
+          action: "AR cue: Recipe completed successfully"
+        },
+        error: {
+          title: "Phase 4: Rest batter and plate final dish",
+          desc: "Target: Let rest 5 min, then ladle onto warm serving dish",
+          badge: "Sequence / Order Error Detected",
+          badgeClass: "badge-danger",
+          rgb: "Plated raw batter directly onto plate skipping cooking step",
+          depth: "Fluid viscosity detected on plate instead of solid crepe",
+          audio: "Zero cook cycle recorded prior to plating",
+          conf: "98.7% error confidence (31 ms latency)",
+          action: "AR Prompt: 'Critical: Cook mixture before plating'"
+        }
+      }
+    };
+
+    function updateDisplay() {
+      var d = phaseData[currentPhase][currentMode];
+      if (!d) return;
+
+      stepTitle.textContent = d.title;
+      stepDesc.textContent = d.desc;
+      errorBadge.textContent = d.badge;
+      errorBadge.className = "badge " + d.badgeClass;
+      streamRgb.textContent = d.rgb;
+      streamDepth.textContent = d.depth;
+      streamAudio.textContent = d.audio;
+      modelConf.textContent = d.conf;
+      modelAction.textContent = d.action;
+    }
+
+    stepBtns.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        stepBtns.forEach(function(b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        currentPhase = btn.getAttribute("data-phase");
+        updateDisplay();
+      });
+    });
+
+    modeBtns.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        modeBtns.forEach(function(b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        currentMode = btn.getAttribute("data-mode");
+        updateDisplay();
+      });
+    });
+
+    updateDisplay();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCaptainCookInspector);
+  } else {
+    initCaptainCookInspector();
+  }
+})();
+</script> <p><strong>Representative Contributions &amp; Datasets:</strong></p> <ul> <li><strong>CaptainCook4D</strong> (NeurIPS 2024 Datasets and Benchmarks Track): A 94.5-hour egocentric 4D multimodal dataset comprising 384 recordings of complex recipe executions, capturing both successful and errorful trials with fine-grained temporal and procedural step annotations (<a href="https://captaincook4d.github.io/captain-cook/">Project</a>).</li> <li><strong>Explainable Video Reasoning</strong> (ACM TiiS 2023): Hybrid architectures combining deep video representations with dynamic cutset networks to enable tractable probabilistic queries and interpretable activity explanations.</li> <li><strong>Predictive Task Guidance in AR</strong> (IEEE VR 2024): Real-time augmented-reality systems that anticipate user actions and deliver proactive task assistance during complex physical procedures.</li> <li><strong>Human-in-the-Loop Multimodal Feedback</strong> (ACM TiiS 2026): A comprehensive empirical study comparing textual commentary, word corrections, and scalar feedback mechanisms for steering vision-language model predictions.</li> </ul> <hr/> <h2 id="ai-for-scientific-discovery">AI for Scientific Discovery</h2> <p>Scientific domains are characterized by complex, high-dimensional observations governed by underlying biological, physical, or mechanistic structure. My research develops machine learning methods that incorporate domain knowledge, relational structure, and scientific priors directly into learned representations and generative models. The goal is to move beyond purely data-driven pattern recognition toward models that better reflect the organization and interactions underlying scientific data.</p> <p>In <strong>computational biology</strong>, my work focuses on structured representation learning for single-cell genomics, transcriptomics, and spatial biology. Rather than analyzing gene expression in isolation, we incorporate intercellular signaling mechanisms, such as cell-cell communication networks derived from ligand-receptor interactions, directly into deep generative models. This allows us to learn cellular representations that preserve organizational structure, resolve cellular heterogeneity, and capture biologically meaningful interactions across tissue microenvironments.</p> <p><strong>Representative Contribution:</strong></p> <ul> <li><strong>CoLa-VAE</strong> (bioRxiv 2026): A cell-cell communication-aware variational autoencoder that regularizes latent cellular representations using dynamic graph Laplacian constraints built from ligand-receptor interactomes, significantly improving cell-type identification and intercellular relationship mapping (<a href="https://github.com/Yeqing95/CoLa-VAE">Code</a>).</li> </ul> <hr/> <h2 id="aria-research-lab">ARIA Research Lab</h2> <p>These research directions form the foundation of my work in the <strong>Algorithms and Architectures for Reasoning and Intelligent Automation (ARIA) Lab</strong> at NJIT.</p> <p>For current lab projects, active grants, open-source code repositories, publications, and student recruiting opportunities, please visit the <a href="https://aria-research-lab.github.io/research/"><strong>ARIA Lab Research</strong></a> page.</p> </div> </div> </div> <br/> <section id="footer"> <div class="container-footer"> <div class="panel-footer"> <div class="row"> <div class="col-sm-4"> <h2 class="footer-heading">About</h2> <p>Shivvrat Arya<br/> Assistant Professor, Director of <a href='https://aria-research-lab.github.io/'>ARIA Lab</a><br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> New Jersey Institute of Technology</p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Contact</h2> <p><a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/></p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Coordinates</h2> <p>GITC 4304<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> Ying Wu College of Computing<br/> New Jersey Institute of Technology <br/> Newark, NJ 07102</p> </div> </div> <center><p>&copy 2026 Shivvrat Arya </p></center> </div> </div> </div> </body> </html>
