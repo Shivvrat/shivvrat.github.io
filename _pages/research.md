@@ -34,7 +34,7 @@ Rather than committing to a single computational paradigm, my work develops hybr
 - **Neural Augmentation of Algorithmic Solvers:** To maintain rigorous bounding certificates and solution guarantees, we integrate neural guidance directly into classical algorithmic frameworks. Learned components predict valid-by-construction dual warm-starts for linear programming relaxations, learn branching and variable-conditioning heuristics from solver search traces, and guide stochastic local search over high-treewidth models.
 - **Optimization-Based Structured Inference & Historical Trajectory:** A foundational thread of my research explores mathematical programming and discrete optimization for structured prediction. In earlier work on multi-label classification across images and videos, I investigated how complex output correlations can be captured via deep dependency networks (DDNs) and resolved using integer linear programming (ILP) and local search. Folding label correlations into explicit dependency structures rather than assuming conditional independence established a key conceptual bridge between discriminative representation learning and combinatorial inference that continues to inform my current work.
 
-<details class="interactive-demo-wrapper">
+<details class="interactive-demo-wrapper" markdown="0">
   <summary class="interactive-demo-summary">
     <span class="interactive-demo-summary-title">
       <span class="interactive-demo-summary-badge">Interactive Demo</span>
@@ -199,7 +199,7 @@ Rather than committing to a single computational paradigm, my work develops hybr
 })();
 </script>
 
-<details class="interactive-demo-wrapper">
+<details class="interactive-demo-wrapper" markdown="0">
   <summary class="interactive-demo-summary">
     <span class="interactive-demo-summary-title">
       <span class="interactive-demo-summary-badge">Interactive Demo</span>
@@ -390,7 +390,7 @@ We develop optimization-based structured inference methods that explicitly reaso
   - Formulates multi-label prediction in images and videos by coupling deep dependency networks with local search and integer linear programming (ILP) inference, capturing complex label dependencies without sacrificing training simplicity.
 
 <!-- Interactive Demo: DDN-ILP Structured Inference vs Neural Baselines -->
-<details class="interactive-demo-wrapper">
+<details class="interactive-demo-wrapper" markdown="0">
   <summary class="interactive-demo-summary">
     <span class="interactive-demo-summary-title">
       <span>Interactive Benchmark: DDN-ILP Structured Inference vs. Neural Baselines</span>
@@ -651,7 +651,7 @@ Combinatorial optimization problems over discrete structures—such as graphs an
 My research in neural combinatorial optimization explores how deep reinforcement learning (DRL) and graph representation learning can learn effective, instance-adaptive decision policies. By formulating discrete sequential decisions (such as node or edge selection) as Markov Decision Processes, we train neural policies that exploit recurring topological symmetries and structural invariants across problem distributions. This amortizes the computational cost of optimization, enabling efficient decision-making while explicitly accounting for operational, budget, privacy, and other domain-specific constraints.
 
 <!-- Interactive Demo: RELINK Edge Activation Budget Explorer -->
-<details class="interactive-demo-wrapper">
+<details class="interactive-demo-wrapper" markdown="0">
   <summary class="interactive-demo-summary">
     <span class="interactive-demo-summary-title">
       <span>Interactive Demo: RELINK Edge Activation Budget &amp; Benchmark Explorer</span>
@@ -905,7 +905,7 @@ This agenda spans two interconnected threads:
 - **Human-Guided Vision-Language Systems:** To ensure multimodal systems remain trustworthy and aligned with user intent, I investigate interactive human-in-the-loop learning. Rather than treating models as static black boxes, this work explores how different granularities of human feedback—from natural language explanations and corrective annotations to lightweight scalar critiques—can calibrate multimodal reasoning, resolve perceptual ambiguities, and adapt models to dynamic deployment contexts.
 
 <!-- Interactive Demo: CaptainCook4D Procedural Error Taxonomy Explorer -->
-<details class="interactive-demo-wrapper">
+<details class="interactive-demo-wrapper" markdown="0">
   <summary class="interactive-demo-summary">
     <span class="interactive-demo-summary-title">
       <span>Interactive Demo: CaptainCook4D Procedural Error Taxonomy Explorer</span>
@@ -1194,7 +1194,7 @@ We study multimodal systems that integrate visual and linguistic representations
   - Studies different forms of human-in-the-loop feedback for video understanding, comparing detailed natural-language commentary, word-level corrections, and lower-cost scalar judgments for improving model reliability.
 
 <!-- Interactive Demo: VLM Accuracy Across Human Feedback Modalities -->
-<details class="interactive-demo-wrapper">
+<details class="interactive-demo-wrapper" markdown="0">
   <summary class="interactive-demo-summary">
     <span class="interactive-demo-summary-title">
       <span>Interactive Benchmark: VLM Accuracy Across Human Feedback Modalities</span>
