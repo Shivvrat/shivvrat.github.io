@@ -187,3 +187,18 @@
   - reviewer
   - journal
   - professional-service
+- section: Journal Reviewer
+  scope: profession
+  organization: ACM Transactions on Multimedia Computing, Communications and Applications
+  display: ACM Transactions on Multimedia Computing, Communications and Applications
+    <strong>(TOMM)</strong>
+  activity: Journal manuscript reviewing
+  role: Reviewer
+  start: ''
+  end: ''
+  summary: ''
+  order: 50
+  tags:
+  - reviewer
+  - journal
+  - professional-service
