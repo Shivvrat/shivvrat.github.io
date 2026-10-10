@@ -38,7 +38,34 @@
   <div class="paper-info">
     <div class="paper-authors">
       <i class="fas fa-users"></i>
-      <span>{{ entry.author | replace_first: 'Arya, S. V.', '<b>Arya, S. V.</b>' | replace_first: 'Arya, S.', '<b>Arya, S.</b>' | replace_first: 'Arya SV', '<b>Arya SV</b>' | replace_first: 'Arya S', '<b>Arya S</b>' | replace_first: 'Shivvrat', '<b>Shivvrat</b>' | replace_first: 'Arya', '<b>Arya</b>' | replace_first: 'Oral', '<b>Oral</b>' }}</span>
+      <span>
+        {%- if entry.author_array -%}
+          {%- for author in entry.author_array -%}
+            {%- capture author_name -%}
+              {%- if author.first and author.first != "" -%}
+                {{- author.first }} {% if author.prefix and author.prefix != "" %}{{ author.prefix }} {% endif %}{{- author.last -}}{% if author.suffix and author.suffix != "" %}, {{ author.suffix }}{% endif %}
+              {%- else -%}
+                {%- if author.prefix and author.prefix != "" %}{{ author.prefix }} {% endif %}{{- author.last -}}{% if author.suffix and author.suffix != "" %}, {{ author.suffix }}{% endif -%}
+              {%- endif -%}
+            {%- endcapture -%}
+            {%- assign author_name = author_name | strip -%}
+            {%- assign is_self = false -%}
+            {%- if author.last contains "Arya" -%}
+              {%- if author.first contains "Shivvrat" or author.first contains "S." or author.first == "S" -%}
+                {%- assign is_self = true -%}
+              {%- endif -%}
+            {%- endif -%}
+            {%- if is_self -%}
+              <b>{{ author_name }}</b>
+            {%- else -%}
+              {{ author_name }}
+            {%- endif -%}
+            {%- if forloop.rindex == 2 %} and {% elsif forloop.rindex > 2 %}, {% endif -%}
+          {%- endfor -%}
+        {%- else -%}
+          {{ entry.author }}
+        {%- endif -%}
+      </span>
     </div>
     {% if entry.journal or entry.booktitle %}
       <div class="paper-venue">
