@@ -16,18 +16,19 @@
   - professional-service
 - section: Conference Reviewer
   scope: profession
-  organization: NeurIPS 2024
+  organization: NeurIPS 2026
   display: 'Neural Information Processing Systems <strong>(NeurIPS: Recognized as
-    a Top Reviewer in 2024)</strong>'
+    a Top Reviewer in 2024, 2026)</strong>'
   activity: Conference paper reviewing
   role: Reviewer
-  start: '2024-12-01'
-  end: ''
-  summary: Recognized as Top Reviewer among the top 8% of reviewers for NeurIPS 2024
+  start: '2026-12-06'
+  end: '2026-12-13'
+  summary: Recognized as a Top Reviewer in 2024, 2026
   order: 10
   tags:
   - reviewer
   - neurips
+  - conference
   - professional-service
 - section: Conference Reviewer
   scope: profession
