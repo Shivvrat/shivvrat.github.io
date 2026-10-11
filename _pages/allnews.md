@@ -6,12 +6,20 @@ permalink: /allnews.html
 ---
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-<div class="jumbotron">
+<div class="news-feed">
 {% for article in site.data.news %}
-<!-- highlight the date and add calendar icon -->
-<i class="fas fa-calendar-alt"></i>
-<b>{{ article.date }}</b>
-
-{{ article.headline }}
+  {% assign is_highlight = false %}
+  {% if article.headline contains "Top Reviewer" or article.headline contains "Award" or article.headline contains "Spotlight" or article.headline contains "Oral" %}
+    {% assign is_highlight = true %}
+  {% endif %}
+  <article class="news-feed-card{% if is_highlight %} news-feed-card--highlight{% endif %}">
+    <div class="news-feed-date">
+      <i class="far fa-calendar-alt" aria-hidden="true"></i>
+      <time datetime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date }}</time>
+    </div>
+    <div class="news-feed-content">
+      {{ article.headline }}
+    </div>
+  </article>
 {% endfor %}
 </div>
