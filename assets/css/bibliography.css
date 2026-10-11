@@ -98,13 +98,18 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--primary-navy);  /* Solid color instead of gradient */
+  background: var(--secondary-blue);  /* Matches left border color */
+  transition: background 0.2s ease;
 }
 
 .bib-entry:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 24px var(--shadow-medium);
   border-left-color: var(--primary-navy);
+}
+
+.bib-entry:hover::before {
+  background: var(--primary-navy);
 }
 
 .bib-entry.award-paper::before,
@@ -117,6 +122,11 @@
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(245, 158, 11, 0.02) 100%);
   border-left-color: #d97706;
   box-shadow: 0 4px 16px rgba(245, 158, 11, 0.14);
+}
+
+.bib-entry.award-paper:hover::before,
+.bib-entry.award-paper-highlight:hover::before {
+  background: #d97706;
 }
 
 /* Academic Publication Title */
@@ -1002,6 +1012,8 @@
    ========================================================================== */
 
 .talk-entry {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--border-light);
   border-left: 4px solid var(--secondary-blue);
   border-radius: 8px;
@@ -1011,18 +1023,41 @@
   transition: all 0.2s ease;
 }
 
+.talk-entry::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--secondary-blue);
+  transition: background 0.2s ease;
+}
+
 .talk-entry:hover {
   border-left-color: var(--primary-navy);
   box-shadow: 0 4px 16px var(--shadow-light);
   transform: translateY(-1px);
 }
 
+.talk-entry:hover::before {
+  background: var(--primary-navy);
+}
+
 .talk-entry.award-talk {
   border-left-color: #f59e0b;
 }
 
+.talk-entry.award-talk::before {
+  background: #f59e0b;
+}
+
 .talk-entry.award-talk:hover {
   border-left-color: #d97706;
+}
+
+.talk-entry.award-talk:hover::before {
+  background: #d97706;
 }
 
 .talk-header {
