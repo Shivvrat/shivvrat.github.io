@@ -59,14 +59,16 @@ function Compile-Site {
 }
 
 function Serve-Site {
+    $port = if ($env:PERSONAL_SITE_PORT) { $env:PERSONAL_SITE_PORT } elseif ($env:PORT) { $env:PORT } else { '4000' }
+    $livereloadPort = if ($env:PERSONAL_SITE_LIVERELOAD_PORT) { $env:PERSONAL_SITE_LIVERELOAD_PORT } elseif ($env:LIVERELOAD_PORT) { $env:LIVERELOAD_PORT } else { '35729' }
     Invoke-Docker -Arguments @(
         'run', '--rm', '-it',
-        '-p', '4000:4000',
-        '-p', '35729:35729',
+        '-p', "${port}:4000",
+        '-p', "${livereloadPort}:35729",
         '-v', "${repoRoot}:/srv/jekyll",
         '-e', 'BUNDLE_FROZEN=1',
         $imageName,
-        'sh', '-c', 'echo "Local URL: http://localhost:4000" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling'
+        'sh', '-c', "echo `"Local URL: http://localhost:$port`" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling"
     )
 }
 

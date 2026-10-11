@@ -14,6 +14,14 @@ docker compose up --build
 The terminal will print `Local URL: http://localhost:4000`. Wait until the logs
 say `Server running`, then open <http://localhost:4000>.
 
+To run on a custom port, set `PERSONAL_SITE_PORT` (or `PORT`):
+
+```bash
+PERSONAL_SITE_PORT=4005 docker compose up --build
+```
+
+You can also customize the livereload port with `PERSONAL_SITE_LIVERELOAD_PORT` (or `LIVERELOAD_PORT`, default: `35729`).
+
 ## Other commands
 
 ```bash
