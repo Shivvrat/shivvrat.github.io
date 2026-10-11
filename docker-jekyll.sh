@@ -32,13 +32,15 @@ get_git_identity() {
 }
 
 serve_site() {
+    local port="${PERSONAL_SITE_PORT:-${PORT:-4000}}"
+    local livereload_port="${PERSONAL_SITE_LIVERELOAD_PORT:-${LIVERELOAD_PORT:-35729}}"
     docker run --rm -it \
-        -p 4000:4000 \
-        -p 35729:35729 \
+        -p "$port:4000" \
+        -p "$livereload_port:35729" \
         -v "$PWD:/srv/jekyll" \
         -e BUNDLE_FROZEN=1 \
         "$image_name" \
-        sh -c 'echo "Local URL: http://localhost:4000" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling'
+        sh -c "echo \"Local URL: http://localhost:$port\" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling"
 }
 
 compile_site() {
