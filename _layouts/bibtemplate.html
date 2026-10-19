@@ -175,14 +175,32 @@
   {% if paper_award or entry.certificate %}
     <div class="paper-highlights">
       {% if paper_award %}
-        <div class="paper-award">
-          <i class="fas fa-award"></i>
-          <span>{{paper_award}}</span>
-        </div>
+        {% assign award_items = paper_award | split: ";" %}
+        {% for a_item in award_items %}
+          {% assign a_item_clean = a_item | strip %}
+          {% if a_item_clean != "" %}
+            <div class="paper-award">
+              {% if a_item_clean contains 'Best' or a_item_clean contains 'Award' or a_item_clean contains 'award' %}
+                <i class="fas fa-trophy"></i>
+              {% elsif a_item_clean contains 'Spotlight' or a_item_clean contains 'spotlight' %}
+                <i class="fas fa-star"></i>
+              {% elsif a_item_clean contains 'Oral' or a_item_clean contains 'oral' %}
+                <i class="fas fa-bullhorn"></i>
+              {% else %}
+                <i class="fas fa-award"></i>
+              {% endif %}
+              <span>{{ a_item_clean }}</span>
+            </div>
+          {% endif %}
+        {% endfor %}
       {% endif %}
       
       {% if entry.certificate %}
-        <a href="{{ entry.certificate }}" target="_blank" class="paper-certificate">
+        {% assign cert_url = entry.certificate %}
+        {% unless cert_url contains '://' %}
+          {% assign cert_url = cert_url | relative_url %}
+        {% endunless %}
+        <a href="{{ cert_url }}" target="_blank" rel="noopener" class="paper-certificate">
           <i class="fas fa-certificate"></i>
           <span>Certificate</span>
         </a>
