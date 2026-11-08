@@ -39,6 +39,7 @@ Rather than committing to a single computational paradigm, my work develops hybr
 * **Learning to Condition (L2C)** (NeurIPS 2025): Neural search policies learned from solver traces that guide variable conditioning and branch-and-bound node selection ([Code](https://github.com/brijml/L2C)).
 * **SINE** (AISTATS 2025): Structural and parameter-aware neural embeddings for real-time MPE inference in probabilistic graphical models.
 * **BEACON** (arXiv 2026): Amortized neural guidance that steers local-search transitions in repeated MPE queries.
+* **Learning to Bound (L2B)** (arXiv 2026): Monotonic, calibrated neural upper bounds that amortize bound computation in branch-and-bound search for MPE inference.
 * Foundational inference frameworks: Neural MPE with test-time self-improvement (NeurIPS 2024 Spotlight; UAI TPM 2024 Best Paper Award), continuous multilinear relaxations for marginal MAP in probabilistic circuits (AAAI 2024 Oral), self-supervised constrained MPE (AISTATS 2024), and deep dependency networks with ILP inference (AISTATS 2024).
 * **[NeuPI](https://neupi.readthedocs.io/en/latest/)**: We have unified these neural inference methods into NeuPI, an open-source library that makes our algorithms accessible through a common interface.
 
