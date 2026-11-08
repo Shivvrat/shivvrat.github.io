@@ -515,6 +515,137 @@ async function copyToClipboard(elementId) {
       '<span class="in-parens">($1)</span>'
     );
   });
+</script> </li> <li> <link rel="stylesheet" href="/assets/css/bibliography.css"/> <div class="bib-entry"> <div class="paper-header"> <div class="paper-title"> <a href="https://arxiv.org/abs/2610.39305" target="_blank" rel="noopener"> Learning to Bound: Monotonic, Calibrated Neural Upper Bounds for MPE Inference </a> </div> </div> <div class="paper-info"> <div class="paper-authors"> <em class="fas fa-users"></em> <span>Akshay Vyas, Hailiang Dong, <strong>Shivvrat Arya</strong>, Brij Malhotra, Tahrima Rahman, Vibhav Gogate and Nicholas Ruozzi</span> </div> <div class="paper-venue"> <em class="fas fa-book"></em> <span class="journal">arXiv preprint arXiv:2610.39305, 2026</span> </div> </div> <div class="paper-resources"> <a href="/papers/L2B.pdf" target="_blank" class="btn btn-pdf"> <em class="fas fa-file-pdf"></em> <span class="btn-text">PDF</span> </a> <a href="https://arxiv.org/abs/2610.39305" target="_blank" class="btn btn-arxiv"> <em class="ai ai-arxiv"></em> <span class="btn-text">arXiv</span> </a> <button type="button" class="btn btn-bib" onclick="copyBibtex('vyas2026learning', this, event)" aria-label="Copy BibTeX citation to clipboard"> <em class="fas fa-quote-right"></em> <span class="btn-text">BibTeX</span> </button> <textarea id="bib_vyas2026learning" class="d-none" style="display:none;" aria-hidden="true" tabindex="-1">@misc{vyas2026learning,
+  author = {Vyas, Akshay and Dong, Hailiang and Arya, Shivvrat and Malhotra, Brij and Rahman, Tahrima and Gogate, Vibhav and Ruozzi, Nicholas},
+  title = {Learning to Bound: Monotonic, Calibrated Neural Upper Bounds for {MPE} Inference},
+  booktitle = {arXiv},
+  journal = {arXiv preprint arXiv:2610.39305},
+  year = {2026},
+  month = oct,
+  academic_year = {2026-2027},
+  status = {submitted},
+  type = {preprint},
+  role = {co_author},
+  url = {https://arxiv.org/abs/2610.39305},
+  eprint = {2610.39305},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.LG}
+}
+</textarea> <button class="btn btn-abstract" onclick="toggleAbstract('vyas2026learning', this)" aria-expanded="false" aria-controls="bvyas2026learning"> <em class="fas fa-align-left"></em> <span class="btn-text">Abstract</span> </button> </div> <div id="bvyas2026learning" class="bib-content abstract-content"> <div class="content-header"> <span>Abstract</span> <button class="copy-btn" onclick="copyToClipboard('bvyas2026learning')" aria-label="Copy abstract"> <em class="fas fa-copy"></em> </button> </div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Probabilistic graphical models (PGMs) compactly encode structured joint distributions, but Most Probable Explanation (MPE), which finds the highest-probability assignment to unobserved variables, remains computationally intractable in large, densely structured models. Anytime systematic search, such as branch-and-bound (B&amp;B), is a popular approach, but its efficiency depends on tight admissible upper bounds that are often prohibitively expensive to compute using classical methods like Mini-Bucket Elimination (MBE). We introduce Learning to Bound (L2B), a data-driven framework that amortizes bound computation cost by training a neural predictor. L2B targets two key properties required for effective search bounds: admissibility, which is achieved via statistical calibration techniques, and progressive tightening as evidence accumulates, which is enforced through structural architectural constraints that ensure monotonicity by construction. Across challenging benchmarks, L2B delivers tighter, monotonic bounds at orders-of-magnitude lower cost on every PGM family, and yields measurable improvements when integrated with branch-and-bound on high-treewidth instances.</code></pre></div> </div> </div> </div> <script>
+function copyBibtex(key, btn, event) {
+  if (event) {
+    if (event.preventDefault) event.preventDefault();
+    if (event.stopPropagation) event.stopPropagation();
+  }
+  const bibElement = document.getElementById('bib_' + key) || document.getElementById('a' + key);
+  if (!bibElement) return;
+  const text = (bibElement.value !== undefined ? bibElement.value : bibElement.textContent) || '';
+
+  const finish = (success) => {
+    if (!btn) return;
+    const textSpan = btn.querySelector('.btn-text');
+    const icon = btn.querySelector('i, em, .fas');
+
+    if (btn._copyTimeout) {
+      clearTimeout(btn._copyTimeout);
+    }
+
+    if (success) {
+      if (textSpan) textSpan.textContent = 'Copied!';
+      if (icon) icon.className = 'fas fa-check';
+      btn.classList.add('copied');
+    } else {
+      if (textSpan) textSpan.textContent = 'Failed';
+      if (icon) icon.className = 'fas fa-times';
+    }
+
+    btn._copyTimeout = setTimeout(() => {
+      if (textSpan) textSpan.textContent = 'BibTeX';
+      if (icon) icon.className = 'fas fa-quote-right';
+      btn.classList.remove('copied');
+      btn._copyTimeout = null;
+    }, 2000);
+  };
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => finish(true)).catch(() => {
+      fallbackCopy(text, finish);
+    });
+  } else {
+    fallbackCopy(text, finish);
+  }
+}
+
+function fallbackCopy(text, callback) {
+  try {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    textarea.setAttribute('readonly', '');
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    const successful = document.execCommand('copy');
+    document.body.removeChild(textarea);
+    callback(successful);
+  } catch (err) {
+    callback(false);
+  }
+}
+
+function toggleBibtex(key, btn, event) {
+  copyBibtex(key, btn, event);
+}
+
+function toggleAbstract(key, btn) {
+  toggleElement('b' + key, btn);
+}
+
+function toggleElement(elementId, btn) {
+  const element = document.getElementById(elementId);
+  if (!element) {
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    return;
+  }
+  const isOpen = element.classList.contains('is-open');
+  if (!isOpen) {
+    element.classList.add('is-open');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  } else {
+    element.classList.remove('is-open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+}
+
+async function copyToClipboard(elementId) {
+  const element = document.getElementById(elementId);
+  const btn = element.querySelector('.copy-btn');
+  const text = element.querySelector('pre').textContent;
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.innerHTML = '<i class="fas fa-check"></i>';
+    btn.classList.add('success');
+  } catch (err) {
+    btn.innerHTML = '<i class="fas fa-times"></i>';
+    btn.classList.add('error');
+  } finally {
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-copy"></i>';
+      btn.classList.remove('success', 'error');
+    }, 2000);
+  }
+}
+</script> <style>.bib-section-title{font-size:2.25rem;font-weight:700;color:var(--primary-navy);margin:2.5rem 0 2rem;padding-bottom:.5rem;border-bottom:2px solid var(--border-light)}.bib-subsection-title{font-size:1.75rem;font-weight:600;color:var(--text-primary);margin:2rem 0 1.5rem;padding-bottom:.25rem;border-bottom:1px solid var(--border-light)}.bib-year-title{font-size:1.25rem;font-weight:600;color:var(--text-secondary);margin:2rem 0 1.5rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-light);opacity:.9}@media(max-width:768px){.bib-section-title{font-size:1.75rem;margin:2rem 0 1.5rem}.bib-subsection-title{font-size:1.25rem;margin:1.5rem 0 1rem}.bib-year-title{font-size:1.1rem;margin:1.5rem 0 1rem}}.bib-entry{background:var(--background);border:1px solid var(--border-light);border-left:3px solid var(--secondary-blue);border-radius:8px;padding:1.5rem;margin-bottom:2rem;box-shadow:0 2px 8px var(--shadow-light);transition:all .3s ease}.bib-entry:hover{box-shadow:0 4px 12px var(--shadow-medium);transform:translateY(-2px)}.jumbotron{background:0;box-shadow:none;border:0;padding:0;margin:2rem 0}.jumbotron::before{display:none}.paper-header{margin-bottom:1.5rem}.paper-title{font-size:1.25rem;font-weight:600;color:var(--primary-navy);line-height:1.4}.paper-title a{color:inherit;text-decoration:none;transition:color .2s ease}.paper-title a:hover{color:var(--secondary-blue)}.paper-info{margin:1.25rem 0;display:flex;flex-direction:column;gap:.75rem}.paper-authors{display:flex;align-items:flex-start;gap:.75rem;color:var(--text-primary);font-size:.95rem;line-height:1.5}.paper-venue{display:flex;gap:1.5rem;margin-bottom:1rem;font-size:.95rem;color:var(--primary-navy);font-style:italic;font-family:"Georgia",serif;color:#333}.paper-venue .journal{font-style:italic}.paper-venue .in-parens{font-weight:bold}.paper-authors i{color:var(--secondary-blue);opacity:.8;margin-top:.25rem}.paper-venue i{color:var(--secondary-blue);opacity:.8;margin-top:.25rem}.paper-authors span{flex:1;white-space:normal;word-wrap:break-word}.paper-authors b{color:var(--primary-navy);font-weight:600}.paper-type{margin:1.25rem 0}.paper-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .5rem;border-radius:4px;font-size:.8rem;font-weight:500;border:1px solid var(--border-light);background:var(--background);color:var(--text-primary)}.paper-badge.journal{background:#eff6ff;color:var(--primary-navy);border-color:#bfdbfe}.paper-badge.conference{background:#f0f9ff;color:#075985;border-color:#bae6fd}.paper-badge.preprint{background:#f8fafc;color:#475569;border-color:#e2e8f0}.paper-badge.workshop{background:#f0fdf4;color:#166534;border-color:#bbf7d0}.paper-resources{margin:1.5rem 0;display:flex;flex-wrap:wrap;gap:.75rem}.paper-highlights{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light)}.paper-award{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;color:#92400e;margin-bottom:.5rem;padding:.5rem .75rem;background:#fff7ed;border:1px solid #fed7aa;border-radius:4px;transition:all .2s ease;width:fit-content}.paper-award:hover{background:#ffedd5;transform:translateX(2px)}.paper-award i{color:#d97706;font-size:1rem;flex-shrink:0}.paper-certificate{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;color:#92400e;margin-bottom:.5rem;padding:.5rem .75rem;background:#fff7ed;border:1px solid #fed7aa;border-radius:4px;transition:all .2s ease;width:fit-content;text-decoration:none}.paper-certificate:hover{background:#ffedd5;transform:translateX(2px);text-decoration:none}.paper-certificate i{color:#d97706;font-size:1rem;flex-shrink:0}.paper-award+.paper-certificate{margin-left:.75rem}@media(max-width:768px){.bib-entry{padding:1.5rem;margin-bottom:2rem}.paper-resources{gap:.5rem}}.bib-content{display:block;max-height:0;opacity:0;overflow:hidden;transition:max-height .28s ease,opacity .28s ease;border:1px solid var(--border-light);border-radius:8px;margin-top:.75rem;background:var(--background)}.bib-content.is-open{max-height:1000px;opacity:1}.bibtex-content pre,.abstract-content pre{margin:0;padding:.75rem 1rem 1rem;font-size:.9rem;line-height:1.5;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;overflow-x:hidden}.bibtex-content code{white-space:inherit}.content-header{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;border-bottom:1px solid var(--border-light)}.copy-btn.success{color:#16a34a}.copy-btn.error{color:#dc2626}.btn-bib.copied{color:#16a34a!important;border-color:#16a34a!important}.btn-bib.copied:hover{background:rgba(22,163,74,0.1)}</style> <script>
+  // Bold inner text of parentheses, leave the parentheses unbolded.
+  document.querySelectorAll('.paper-venue .journal').forEach(el => {
+    el.innerHTML = el.innerHTML.replace(
+      /\(([^()]*)\)/g,
+      '<span class="in-parens">($1)</span>'
+    );
+  });
 </script> </li> <li> <link rel="stylesheet" href="/assets/css/bibliography.css"/> <div class="bib-entry"> <div class="paper-header"> <div class="paper-title"> <a href="http://doi.org/10.1145/3816700" target="_blank" rel="noopener"> Comparison of Text-Based Inputs for Human-in-the-Loop Feedback in Vision-Language Models </a> </div> </div> <div class="paper-info"> <div class="paper-authors"> <em class="fas fa-users"></em> <span>Reza Shahriari, Amal Hashky, <strong>Shivvrat Arya</strong>, Tyler Audino, Eric D. Ragan, Vibhav Gogate and Jaime Ruiz</span> </div> <div class="paper-venue"> <em class="fas fa-book"></em> <span class="journal">ACM Transactions on Interactive Intelligent Systems, 2026</span> </div> </div> <div class="paper-resources"> <a href="http://doi.org/10.1145/3816700" target="_blank" class="btn btn-doi"> <em class="ai ai-doi"></em> <span class="btn-text">DOI</span> </a> <button type="button" class="btn btn-bib" onclick="copyBibtex('TiiS_FACOLE_HITL', this, event)" aria-label="Copy BibTeX citation to clipboard"> <em class="fas fa-quote-right"></em> <span class="btn-text">BibTeX</span> </button> <textarea id="bib_TiiS_FACOLE_HITL" class="d-none" style="display:none;" aria-hidden="true" tabindex="-1">@article{TiiS_FACOLE_HITL,
   author = {Shahriari, Reza and Hashky, Amal and Arya, Shivvrat and Audino, Tyler and Ragan, Eric D. and Gogate, Vibhav and Ruiz, Jaime},
   title = {Comparison of Text-Based Inputs for Human-in-the-Loop Feedback in Vision-Language Models},

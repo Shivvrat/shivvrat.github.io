@@ -44,6 +44,26 @@
   abstract = {Diffusion processes on networks are central to social network analysis and data mining, where influence maximization provides a canonical framework for identifying influential nodes. However, many real-world diffusion processes are competitive and reversible, making classical irreversible influence maximization models inadequate. The positional Moran process captures such dynamics by modeling stochastic competition with position-dependent fitness and motivates the fixation maximization problem: selecting an initial active set that maximizes the probability of eventual population-wide dominance. Existing methods rely on static structural heuristics or simulation-intensive greedy search. These approaches either ignore long-horizon evolutionary effects or scale poorly because they require repeated stochastic simulations. This limitation raises a fundamental question: Can we learn scalable active node selection policies that capture the evolutionary dynamics governing fixation? We answer this question with LEAP, a deep reinforcement learning framework for amortized fixation maximization under the positional Moran process. LEAP formulates active node selection as a Markov decision problem and learns fixation-aware representations that combine graph structure with mutant invasion and stability signals. Its fixation-modulated message passing mechanism models selection pressure through learned fitness contrasts, while fixation-weighted pooling constructs a global evolutionary representation. Experiments on real-world networks show that LEAP matches the solution quality of simulation-based greedy methods with approximately five orders of magnitude faster inference and outperforms all baselines in at least two-thirds of experimental settings. These results show that deep reinforcement learning can optimize long-horizon competitive diffusion when equipped with fixation-aware mechanisms that capture evolutionary dynamics.},
 }
 
+@misc{vyas2026learning,
+  author = {Vyas, Akshay and Dong, Hailiang and Arya, Shivvrat and Malhotra, Brij and Rahman, Tahrima and Gogate, Vibhav and Ruozzi, Nicholas},
+  title = {Learning to Bound: Monotonic, Calibrated Neural Upper Bounds for {MPE} Inference},
+  booktitle = {arXiv},
+  journal = {arXiv preprint arXiv:2610.39305},
+  year = {2026},
+  month = oct,
+  academic_year = {2026-2027},
+  status = {submitted},
+  type = {preprint},
+  role = {co_author},
+  url = {https://arxiv.org/abs/2610.39305},
+  preview = {L2B.png},
+  pdf = {L2B.pdf},
+  eprint = {2610.39305},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.LG},
+  abstract = {Probabilistic graphical models (PGMs) compactly encode structured joint distributions, but Most Probable Explanation (MPE), which finds the highest-probability assignment to unobserved variables, remains computationally intractable in large, densely structured models. Anytime systematic search, such as branch-and-bound (B\&B), is a popular approach, but its efficiency depends on tight admissible upper bounds that are often prohibitively expensive to compute using classical methods like Mini-Bucket Elimination (MBE). We introduce Learning to Bound (L2B), a data-driven framework that amortizes bound computation cost by training a neural predictor. L2B targets two key properties required for effective search bounds: admissibility, which is achieved via statistical calibration techniques, and progressive tightening as evidence accumulates, which is enforced through structural architectural constraints that ensure monotonicity by construction. Across challenging benchmarks, L2B delivers tighter, monotonic bounds at orders-of-magnitude lower cost on every PGM family, and yields measurable improvements when integrated with branch-and-bound on high-treewidth instances.},
+}
+
 @article{TiiS_FACOLE_HITL,
   author = {Shahriari, Reza and Hashky, Amal and Arya, Shivvrat and Audino, Tyler and Ragan, Eric D. and Gogate, Vibhav and Ruiz, Jaime},
   title = {Comparison of Text-Based Inputs for Human-in-the-Loop Feedback in Vision-Language Models},
