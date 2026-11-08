@@ -50,7 +50,8 @@ Combinatorial optimization problems over discrete structures—such as graphs an
 
 My research in neural combinatorial optimization explores how deep reinforcement learning (DRL) and graph representation learning can learn effective, instance-adaptive decision policies. By formulating discrete sequential decisions (such as node or edge selection) as Markov Decision Processes, we train neural policies that exploit recurring topological symmetries and structural invariants across problem distributions. This amortizes the computational cost of optimization, enabling efficient decision-making while explicitly accounting for operational, budget, privacy, and other domain-specific constraints.
 
-**Representative Contribution:**
+**Representative Contributions:**
+* **LEAP** (CIKM 2026): A deep reinforcement learning framework for amortized fixation maximization under the competitive, reversible positional Moran process, combining fixation-modulated graph representations with selection-pressure message passing to match simulation-based greedy quality at five orders of magnitude faster inference.
 * **RELINK** (CIKM 2025 Oral): A deep reinforcement learning framework that formulates edge-level influence maximization under strict privacy constraints in closed networks as a sequential Markov Decision Process, outperforming traditional heuristic and non-learning baselines.
 
 ---
