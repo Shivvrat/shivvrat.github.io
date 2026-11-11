@@ -7,32 +7,43 @@ layout: default
     <div id="gridid" class="col-sm-12">
       <h1>{{ page.title }}</h1>
 
+      {% comment %}
+        Offering logistics come from arya-academic-data via _data/academic_teaching.yml
+        when the page sets `teaching_id`; page front matter is the fallback (e.g. older
+        courses not in the data).
+      {% endcomment %}
+      {% assign offering = nil %}
+      {% if page.teaching_id %}
+        {% assign offering = site.data.academic_teaching | where: "id", page.teaching_id | first %}
+      {% endif %}
+      {% assign c_term = offering.term | default: page.semester %}
+      {% assign c_number = offering.course %}
+      {% if offering.section and offering.section != "" %}{% assign c_number = c_number | append: "." | append: offering.section %}{% endif %}
+      {% if page.course_number %}{% assign c_number = page.course_number %}{% endif %}
+      {% assign c_level = offering.level | default: page.level %}
+      {% assign c_role = offering.role | default: page.role %}
+      {% assign c_meeting = offering.meeting | default: page.lecture_times %}
+      {% assign c_room = offering.room | default: page.location %}
+      {% assign c_hours = offering.office_hours | default: page.office_hours %}
+      {% assign c_syllabus = offering.syllabus_url | default: page.syllabus_url %}
+
       <div class="jumbotron">
         <h2>Course Information</h2>
         <div class="row">
           <div class="col-sm-6">
-            {% if page.semester %}
-            <p><strong>Term:</strong> {{ page.semester }}</p>
-            {% endif %}
-            {% if page.course_number %}
-            <p><strong>Course Number:</strong> {{ page.course_number }}</p>
-            {% endif %}
-            {% if page.level %}
-            <p><strong>Level:</strong> {{ page.level }}</p>
-            {% endif %}
-            {% if page.role %}
-            <p><strong>Instructor Role:</strong> {{ page.role }}</p>
-            {% endif %}
+            {% if c_term %}<p><strong>Term:</strong> {{ c_term }}</p>{% endif %}
+            {% if c_number %}<p><strong>Course Number:</strong> {{ c_number }}</p>{% endif %}
+            {% if c_level %}<p><strong>Level:</strong> {{ c_level }}</p>{% endif %}
+            {% if c_role %}<p><strong>Instructor Role:</strong> {{ c_role }}</p>{% endif %}
+            {% if c_syllabus %}<p><strong>Syllabus:</strong> <a href="{{ c_syllabus | relative_url }}" target="_blank" rel="noopener">PDF</a></p>{% endif %}
           </div>
           <div class="col-sm-6">
-            {% if page.lecture_times %}
-            <p><strong>Lecture Times:</strong> {{ page.lecture_times }}</p>
-            {% endif %}
-            {% if page.location %}
-            <p><strong>Location:</strong> {{ page.location }}</p>
-            {% endif %}
-            {% if page.office_hours %}
-            <p><strong>Office Hours:</strong> {{ page.office_hours }}</p>
+            {% if c_meeting %}<p><strong>Lecture Times:</strong> {{ c_meeting }}</p>{% endif %}
+            {% if c_room %}<p><strong>Location:</strong> {{ c_room }}</p>{% endif %}
+            {% if c_hours %}<p><strong>Office Hours:</strong> {{ c_hours }}</p>{% endif %}
+            {% if offering.teaching_assistants.size > 0 %}
+            <p><strong>Teaching Assistant{% if offering.teaching_assistants.size > 1 %}s{% endif %}:</strong>
+              {% for ta in offering.teaching_assistants %}{{ ta.name }}{% if ta.email != "" %} (<a href="mailto:{{ ta.email }}">{{ ta.email }}</a>){% endif %}{% unless forloop.last %}; {% endunless %}{% endfor %}</p>
             {% endif %}
           </div>
         </div>
@@ -45,10 +56,18 @@ layout: default
       </div>
       {% endif %}
 
-      {% if page.description %}
+      {% assign c_description = page.course_description | default: page.description %}
+      {% if c_description %}
       <div class="jumbotron">
         <h2>Course Description</h2>
-        {{ page.description | markdownify }}
+        {{ c_description | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if page.outcomes %}
+      <div class="jumbotron">
+        <h2>Learning Outcomes</h2>
+        {{ page.outcomes | markdownify }}
       </div>
       {% endif %}
 

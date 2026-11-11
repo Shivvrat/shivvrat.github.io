@@ -11,6 +11,44 @@ permalink: /teaching/
 
 <p class="records-intro">Courses, teaching experience, and teaching certificates.</p>
 
+{% comment %}
+  Current-semester card: offerings whose class dates (from arya-academic-data via
+  _data/academic_teaching.yml) include the build date, padded 3 weeks before the
+  first class and 2 weeks after the last (finals). Refreshes on every site build.
+{% endcomment %}
+{% assign now_s = site.time | date: "%s" | plus: 0 %}
+{% assign current_courses = "" | split: "" %}
+{% for course in site.data.academic_teaching %}
+{% if course.first_class_date and course.first_class_date != "" and course.last_class_date != "" %}
+{% assign start_s = course.first_class_date | date: "%s" | plus: 0 | minus: 1814400 %}
+{% assign end_s = course.last_class_date | date: "%s" | plus: 0 | plus: 1209600 %}
+{% if now_s >= start_s and now_s <= end_s %}{% assign current_courses = current_courses | push: course %}{% endif %}
+{% endif %}
+{% endfor %}
+{% if current_courses.size > 0 %}
+<div class="section-card">
+
+## This Semester
+
+{% for course in current_courses %}
+<div class="subsection-card">
+
+### {% if course.page_url != "" %}<a href="{{ course.page_url | relative_url }}">{{ course.course }}{% if course.section != "" %}.{{ course.section }}{% endif %}: {{ course.title }}</a>{% else %}{{ course.course }}{% if course.section != "" %}.{{ course.section }}{% endif %}: {{ course.title }}{% endif %}
+
+<ul class="current-course">
+  <li><strong>Term:</strong> {{ course.term }}</li>
+  {% if course.meeting != "" %}<li><strong>Meets:</strong> {{ course.meeting }}{% if course.room != "" %} · {{ course.room }}{% endif %}</li>{% endif %}
+  {% if course.office_hours != "" %}<li><strong>Office hours:</strong> {{ course.office_hours }}</li>{% endif %}
+  {% if course.teaching_assistants.size > 0 %}<li><strong>Teaching assistant{% if course.teaching_assistants.size > 1 %}s{% endif %}:</strong> {% for ta in course.teaching_assistants %}{{ ta.name }}{% if ta.email != "" %} (<a href="mailto:{{ ta.email }}">{{ ta.email }}</a>){% endif %}{% unless forloop.last %}; {% endunless %}{% endfor %}</li>{% endif %}
+  {% if course.syllabus_url != "" %}<li><a href="{{ course.syllabus_url | relative_url }}" target="_blank" rel="noopener">Syllabus (PDF)</a></li>{% endif %}
+</ul>
+
+</div>
+{% endfor %}
+
+</div>
+{% endif %}
+
 <div class="section-card">
 
 ## Academic Teaching Experience

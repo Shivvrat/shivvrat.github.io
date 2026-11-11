@@ -218,9 +218,8 @@ color-scheme: auto
 
 last_updated: true # set to true if you want to display last updated in the footer
 
-# code highlighter theme
-highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-themes
-highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
+# Code highlighting: rouge emits pygments classes styled by the vendored
+# assets/css/vendor/pygments-github.css (pinned copy, see its header).
 
 # repo color theme
 repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
