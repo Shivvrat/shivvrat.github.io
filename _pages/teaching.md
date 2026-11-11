@@ -111,6 +111,8 @@ permalink: /teaching/
 </div>
 {% endfor %}
 
+<p><a href="{{ '/certifications/' | relative_url }}">All certifications and professional development &rarr;</a></p>
+
 </div>
 {% endif %}
 

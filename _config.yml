@@ -52,12 +52,16 @@ nav_pages:
   # - name: certifications
   - name: resources
   - name: gallery
-  # - name: blog
-# - name: team
 
 include:
   - .htaccess
   - _pages
+
+# Sass (Dart Sass via jekyll-sass-converter 3). The vendored Bootstrap 4.5
+# sources in _sass/ predate Dart Sass 2/3 and emit hundreds of deprecation
+# warnings; silence those categories until Bootstrap itself is upgraded.
+sass:
+  silence_deprecations: [import, global-builtin, color-functions, slash-div, if-function]
 
 # Conversion
 markdown: kramdown
@@ -216,7 +220,7 @@ scholar:
 
 color-scheme: auto
 
-last_updated: true # set to true if you want to display last updated in the footer
+last_updated: true # footer shows the site build date (site.time)
 
 # Code highlighting: rouge emits pygments classes styled by the vendored
 # assets/css/vendor/pygments-github.css (pinned copy, see its header).

@@ -19,7 +19,7 @@
 		</div>
 	  </div>
 
-      <center><p>&copy {{ "now" | date: "%Y" }} {{site.title | escape }} </p></center>
+      <center><p>&copy {{ "now" | date: "%Y" }} {{site.title | escape }}{% if site.last_updated %} &middot; Last updated: <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: "%B %-d, %Y" }}</time>{% endif %}</p></center>
 	</div>
   </div>
 </div>

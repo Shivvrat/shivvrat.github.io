@@ -1,7 +1,6 @@
 ---
 title: "Certifications"
 layout: gridlay
-sitemap: false
 permalink: /certifications/
 ---
 

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "jekyll", "4.1.1"
+gem "jekyll", "~> 4.4"
 # gem "thin"
 gem "rake"
 gem "rack", ">= 2.2.3"

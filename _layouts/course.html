@@ -92,6 +92,13 @@ layout: default
       </div>
       {% endif %}
 
+      {% if page.topics %}
+      <div class="jumbotron">
+        <h2>Tentative Course Content</h2>
+        {{ page.topics | markdownify }}
+      </div>
+      {% endif %}
+
       {% if page.schedule %}
       <div class="jumbotron">
         <h2>Course Schedule</h2>
