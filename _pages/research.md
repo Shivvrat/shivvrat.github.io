@@ -1,7 +1,6 @@
 ---
 title: "Research"
 layout: research_lay
-sitemap: false
 permalink: /research/
 ---
 

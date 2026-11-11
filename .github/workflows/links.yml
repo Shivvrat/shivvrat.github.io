@@ -1,0 +1,54 @@
+name: Check links
+
+# Internal links (files inside _site) are checked on every push/PR and fail
+# the job. External links are checked weekly and on manual runs; they never
+# fail the job, because many academic sites block non-browser requests (see
+# lychee.toml for domains excluded for that reason). Review the weekly report
+# in the job summary and fix real breakages by hand.
+
+on:
+  push:
+    branches: [source]
+  pull_request:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Build site
+        run: bash ./docker-jekyll.sh compile
+
+      - name: Internal links (blocking)
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --offline
+            --config lychee.toml
+            --root-dir ${{ github.workspace }}/_site
+            --fallback-extensions html
+            --no-progress
+            '_site/**/*.html'
+
+      - name: All links incl. external (non-blocking)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: false
+          args: >-
+            --config lychee.toml
+            --root-dir ${{ github.workspace }}/_site
+            --fallback-extensions html
+            --max-concurrency 8
+            --no-progress
+            '_site/**/*.html'

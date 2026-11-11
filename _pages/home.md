@@ -1,11 +1,9 @@
 ---
 title: "Home"
 layout: homelay
-sitemap: false
 permalink: /
-seo:
-  title: "Shivvrat Arya – Neurosymbolic AI & Probabilistic Reasoning"
-  description: "Assistant Professor of Computer Science at NJIT and Director of the ARIA Lab."
+seo_title: "Shivvrat Arya – Neurosymbolic AI & Probabilistic Reasoning"
+description: "Assistant Professor of Computer Science at NJIT and Director of the ARIA Lab."
 
 ---
 

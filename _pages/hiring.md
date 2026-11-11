@@ -1,11 +1,9 @@
 ---
 title: "Hiring"
 layout: textlay
-sitemap: false
 permalink: /hiring/
-seo:
-  title: "Hiring & Research Opportunities – ARIA Research Lab at NJIT"
-  description: "Opportunities for Ph.D., master's, and undergraduate students to conduct research in AI and machine learning at the ARIA Research Lab at NJIT."
+seo_title: "Hiring & Research Opportunities – ARIA Research Lab at NJIT"
+description: "Opportunities for Ph.D., master's, and undergraduate students to conduct research in AI and machine learning at the ARIA Research Lab at NJIT."
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">

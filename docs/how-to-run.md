@@ -54,6 +54,16 @@ No deploy key is needed for the automated workflow. If GitHub rejects the push,
 check the repository settings under **Actions > General > Workflow permissions**
 and make sure workflows have read and write permissions.
 
+`.github/workflows/links.yml` builds the site and runs lychee (`lychee.toml`).
+Internal links are checked on every push to `source` and every PR and fail the
+job; external links run weekly (Mondays) and on manual dispatch and only report.
+Run the same check locally with `./check_links.sh` (add `--offline` for internal
+links only).
+
+`_config.yml` sets the production `url` (needed for absolute canonical, sitemap,
+and robots links) and excludes repository internals (agent, Docker, and tooling
+files, `docs/`, `tools/`) from `_site`. Add any new tooling file to `exclude:`.
+
 ## Page headings
 
 The grid, text, research, home, about, and gallery layouts render one H1 from

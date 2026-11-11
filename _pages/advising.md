@@ -1,11 +1,9 @@
 ---
 title: "Advising"
 layout: gridlay
-sitemap: false
 permalink: /advising/
-seo:
-  title: "Advising & Student Mentoring – Shivvrat Arya"
-  description: "Student research mentoring, master's and undergraduate project advisement, and doctoral/thesis committee service by Shivvrat Arya at NJIT."
+seo_title: "Advising & Student Mentoring – Shivvrat Arya"
+description: "Student research mentoring, master's and undergraduate project advisement, and doctoral/thesis committee service by Shivvrat Arya at NJIT."
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">

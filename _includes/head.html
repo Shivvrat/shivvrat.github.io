@@ -9,7 +9,9 @@
        our own <title> below so the browser tab / bookmark text stays
        "Page Title - Shivvrat Arya" as before. -->
   {% seo title=false %}
-  <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <!-- seo_title (optional front matter) overrides the tab title; top-level
+       `description` is what jekyll-seo-tag reads for meta/og descriptions. -->
+  <title>{% if page.seo_title %}{{ page.seo_title | escape }}{% elsif page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>

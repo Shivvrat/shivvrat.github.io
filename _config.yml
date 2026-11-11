@@ -11,11 +11,13 @@ title                    : "Shivvrat Arya"
 title_separator          : "-"
 name                     : &name "Shivvrat Arya"
 email: shivvrat.arya@njit.edu
-description              : &description "Assistant Professor, NJIT Director of [ARIA Lab](https://aria-research-lab.github.io/)"
+description              : &description "Assistant Professor at NJIT and Director of the [ARIA Lab](https://aria-research-lab.github.io/)"
 #description: Academic webpage of Dr. Shivvrat Arya
 baseurl: ""
-url                      : ""
-#url                      : "https://shivvrat.github.io/"
+# Production URL: jekyll-seo-tag and jekyll-sitemap need it for absolute
+# canonical/og:url/sitemap/robots links. _config_docker.yml overrides it to
+# localhost for local preview.
+url                      : "https://shivvrat.github.io"
 repository               : "Shivvrat/shivvrat.github.io"
 github:
   url: "https://shivvrat.github.io/"
@@ -249,3 +251,19 @@ exclude:
   - node_modules
   - tmp
   - vendor
+  # Repository internals: never publish tooling, agent, or Docker files.
+  - AGENTS.md
+  - CLAUDE.md
+  - README.md
+  - Dockerfile
+  - docker-compose.yml
+  - docker-jekyll.sh
+  - docker-jekyll.ps1
+  - check_links.sh
+  - compile_and_publish.sh
+  - init_local_server.sh
+  - install.sh
+  - lychee.toml
+  - Google_analytics.md
+  - docs
+  - tools

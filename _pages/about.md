@@ -1,11 +1,9 @@
 ---
 title: "About"
 layout: about
-sitemap: false
 permalink: /about/
-seo:
-  title: "About – Shivvrat Arya"
-  description: "Biography, research honors, professional recognition, and educational background of Shivvrat Arya, Assistant Professor of Computer Science at NJIT."
+seo_title: "About – Shivvrat Arya"
+description: "Biography, research honors, professional recognition, and educational background of Shivvrat Arya, Assistant Professor of Computer Science at NJIT."
 ---
 
 <div class="section-card awards-section">
