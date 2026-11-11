@@ -1,0 +1,120 @@
+<!DOCTYPE html> <html> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="/assets/css/sidebar.css"> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="generator" content="Jekyll v4.1.1"/> <meta property="og:title" content="Introduction to Artificial Intelligence - Honors (CS 370)"/> <meta name="author" content="Shivvrat Arya"/> <meta property="og:locale" content="en_US"/> <meta name="description" content="CS 370 Honors at NJIT: search, constraint satisfaction, logic, probabilistic reasoning, games, and machine-learning foundations. Fall 2026 schedule, grading, and policies."/> <meta name="twitter:description" property="og:description" content="CS 370 Honors at NJIT: search, constraint satisfaction, logic, probabilistic reasoning, games, and machine-learning foundations. Fall 2026 schedule, grading, and policies."/> <link rel="canonical" href="https://shivvrat.github.io/teaching/cs370/"/> <meta property="og:url" content="https://shivvrat.github.io/teaching/cs370/"/> <meta property="og:site_name" content="Shivvrat Arya"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary"/> <meta name="twitter:title" content="Introduction to Artificial Intelligence - Honors (CS 370)"/> <meta name="twitter:site" content="@ShivvratA"/> <meta name="twitter:creator" content="@ShivvratA"/> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shivvrat Arya"},"description":"CS 370 Honors at NJIT: search, constraint satisfaction, logic, probabilistic reasoning, games, and machine-learning foundations. Fall 2026 schedule, grading, and policies.","headline":"Introduction to Artificial Intelligence - Honors (CS 370)","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shivvrat.github.io/images/teampic/Shivvrat_Arya_headshot.jpg"},"name":"Shivvrat Arya"},"url":"https://shivvrat.github.io/teaching/cs370/"}</script> <title>Introduction to Artificial Intelligence - Honors (CS 370) - Shivvrat Arya</title> <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin> <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha512-TNfdJEUUJmfj2DRlAKXBg7HroqoXYLon5XPEEWYa2+H/XSD2HAr0BwkRrAoNLAEz79x7XURTFRWDn9yhMNbbNQ==" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.js" integrity="sha384-RyE9TSx1shZZA6GS7TToIk1J7zY1mU8evbLDXYgOz4zgduwPFEtnHd1bswt8PG/u" crossorigin="anonymous"></script> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="/assets/css/vendor/pygments-github.css" id="highlight_theme_light"/> <link rel="stylesheet" href="/assets/main.css"> <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> <link rel="stylesheet" href="/assets/css/custom.css"> <link rel="stylesheet" href="/assets/css/heading_style.css"> <link rel="stylesheet" href="/assets/css/research.css"> <script>
+    // Inject accessible anchors for headings (h2–h4) after DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      const headings = document.querySelectorAll('#main-content h2, #main-content h3, #main-content h4');
+      headings.forEach(h => {
+        if (!h.id) {
+          const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+          if (slug) h.id = slug;
+        }
+        if (!h.id) return;
+        if (h.querySelector('.heading-anchor')) return;
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.className = 'heading-anchor';
+        a.setAttribute('aria-label', 'Copy link to this section');
+        a.innerHTML = '¶';
+        a.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const url = window.location.origin + window.location.pathname + '#' + h.id;
+          try { await navigator.clipboard.writeText(url); a.innerHTML = '✓'; setTimeout(() => a.innerHTML = '¶', 1200); }
+          catch { window.location.hash = h.id; }
+        });
+        h.appendChild(a);
+      });
+      // Build in-page TOC if #toc is present
+      const toc = document.getElementById('toc');
+      if (toc) {
+        const scope = document.getElementById('main-content') || document;
+        const headings = Array.from(scope.querySelectorAll('h2, h3'))
+          .filter(h => !h.closest('nav') && !h.closest('header'));
+        if (headings.length) {
+          const nav = document.createElement('nav');
+          nav.setAttribute('aria-label', 'Table of contents');
+          const ul = document.createElement('ul');
+          ul.className = 'toc-list';
+          let currentUl = ul;
+          let lastLevel = 2;
+          headings.forEach(h => {
+            const level = h.tagName === 'H2' ? 2 : 3;
+            if (!h.id) {
+              const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+              if (slug) h.id = slug;
+            }
+            if (!h.id) return;
+            if (level > lastLevel) {
+              const nested = document.createElement('ul');
+              currentUl.lastElementChild && currentUl.lastElementChild.appendChild(nested);
+              currentUl = nested;
+            } else if (level < lastLevel) {
+              currentUl = currentUl.parentElement || currentUl;
+            }
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent.replace(/¶$/,'').trim();
+            li.appendChild(a);
+            currentUl.appendChild(li);
+            lastLevel = level;
+          });
+          nav.appendChild(ul);
+          toc.innerHTML = '';
+          toc.appendChild(nav);
+        }
+      }
+
+      // Lightweight client-side search using fetch + simple substring match
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+      if (searchInput && searchResults) {
+        let idx = [];
+        fetch('/search.json').then(r => r.json()).then(data => { idx = data || []; });
+        const render = (items) => {
+          if (!items.length) { searchResults.innerHTML = '<p>No results.</p>'; return; }
+          const html = items.slice(0, 20).map(i => `<div class="subsection-card"><a href="${i.url}"><strong>${i.title}</strong></a><p>${i.content.substring(0,180)}...</p></div>`).join('');
+          searchResults.innerHTML = html;
+        };
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.trim().toLowerCase();
+          if (!q) { searchResults.innerHTML = ''; return; }
+          const results = idx.filter(i => i.title.toLowerCase().includes(q) || i.content.toLowerCase().includes(q));
+          render(results);
+        });
+      }
+    });
+  </script> <script>
+    // Outbound click tracking for analytics (arXiv/DOI/GitHub/CV)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const isOutbound = href.startsWith('http') && !href.includes(window.location.host);
+      if (!isOutbound) return;
+      if (window.gtag) {
+        gtag('event', 'click', { 'event_category': 'outbound', 'event_label': href });
+      }
+    }, { capture: true });
+  </script> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivvrat Arya",
+    "jobTitle": "Assistant Professor",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "New Jersey Institute of Technology"},
+    "url": "/",
+    "sameAs": [
+      "https://github.com/Shivvrat"
+    ]
+  }
+  </script> <link rel="preconnect" href="https://player.vimeo.com"> <link rel="preconnect" href="https://i.vimeocdn.com"> <link rel="preconnect" href="https://f.vimeocdn.com"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JMYG0Z6M7"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9JMYG0Z6M7');
+</script> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WNDXK54');</script> </head> <style>.row{padding:0}.custom-content-area{margin:0;max-width:100%}:root{font-size:16px}body{font-size:1.1rem}h1{font-size:2.2rem}h2{font-size:1.9rem}h3{font-size:1.6rem}h4{font-size:1.4rem}p,li,a{font-size:1.1rem}.social-icons i{font-size:2rem!important}@media(max-width:768px){:root{font-size:16px}}</style> <body> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNDXK54" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <style>.center{margin:auto;width:40%}@media(min-width:768px){.navbar .nav-item.dropdown:hover .dropdown-menu{display:block;margin-top:0}}</style> <a href="#main-content" class="visually-hidden-focusable skip-link">Skip to content</a> <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" aria-label="Main Navigation"> <a class="navbar-brand title" href="/"> <img src="/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt=""> Shivvrat Arya </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarColor02"> <ul class="navbar-nav mr-auto"> <li class="nav-item"> <a class="nav-link" href="/">Home</a> </li> <li class="nav-item"> <a class="nav-link" href="/about">About</a> </li> <li class="nav-item"> <a class="nav-link" href="/hiring/">Hiring</a> </li> <li class="nav-item"> <a class="nav-link" href="/grants">Grants</a> </li> <li class="nav-item"> <a class="nav-link" href="/research">Research</a> </li> <li class="nav-item"> <a class="nav-link" href="/publications">Publications</a> </li> <li class="nav-item"> <a class="nav-link" href="/advising">Advising</a> </li> <li class="nav-item"> <a class="nav-link" href="/talks">Talks</a> </li> <li class="nav-item"> <a class="nav-link" href="/software">Software</a> </li> <li class="nav-item"> <a class="nav-link" href="/teaching">Teaching</a> </li> <li class="nav-item"> <a class="nav-link" href="/service">Service</a> </li> <li class="nav-item"> <a class="nav-link" href="/gallery">Gallery</a> </li> <li class="nav-item"> <a class="nav-link" href="/resources">Resources</a> </li> </ul> </div> </nav> <div class="container-fluid" id="main-content" role="main"> <div class="row"> <div class="container-fluid"> <div class="row"> <div id="gridid" class="col-sm-12"> <h1>Introduction to Artificial Intelligence - Honors (CS 370)</h1> <div class="jumbotron"> <h2>Course Information</h2> <div class="row"> <div class="col-sm-6"> <p><strong>Term:</strong> Fall 2026</p> <p><strong>Course Number:</strong> CS 370.H01</p> <p><strong>Level:</strong> Undergraduate</p> <p><strong>Instructor Role:</strong> Course Instructor</p> <p><strong>Syllabus:</strong> <a href="/syllabus/CS-370-H01-2026-Fall-Arya.pdf" target="_blank" rel="noopener">PDF</a></p> </div> <div class="col-sm-6"> <p><strong>Lecture Times:</strong> Monday and Thursday, 2:30 PM–3:50 PM</p> <p><strong>Location:</strong> Memorial Hall, Room 403</p> <p><strong>Office Hours:</strong> Mondays and Thursdays, 1:30–2:30 PM, or by appointment</p> <p><strong>Teaching Assistant:</strong> That Khiem Ton (<a href="mailto:kt477@njit.edu">kt477@njit.edu</a>)</p> </div> </div> </div> <div class="jumbotron"> <h2>Course Description</h2> <p>This course introduces the theoretical and computational techniques that serve as a foundation for the study of artificial intelligence (AI). Topics include:</p> <ul> <li><strong>Introduction to AI and background:</strong> What is AI? Related fields.</li> <li><strong>Problem solving by search:</strong> Principles of search; uninformed (“blind”) search; informed (“heuristic”) search; local search; genetic algorithms; adversarial search.</li> <li><strong>Knowledge representation and reasoning:</strong> Knowledge bases; propositional logic; satisfiability; constraint satisfaction problems (CSPs); planning; logical and probabilistic inference.</li> <li><strong>Game theory:</strong> Games with hidden information; non-zero-sum games.</li> </ul> <p>All classes are held in person. Assignments are submitted through Canvas, and course discussion takes place on Harmonize.</p> </div> <div class="jumbotron"> <h2>Learning Outcomes</h2> <p>By the end of this course, students will be able to:</p> <ul> <li>Model and solve search problems using uninformed and heuristic algorithms, and evaluate each algorithm’s time/space complexity and optimality on a given problem formulation.</li> <li>Apply and evaluate local search algorithms to optimize objective functions, reporting solution quality and convergence behavior.</li> <li>Formulate real-world tasks as CSPs and solve CSP instances using backtracking, MRV/LCV heuristics, and arc consistency.</li> <li>Encode knowledge in propositional logic and SAT and derive conclusions by resolution; when appropriate, translate problems to SAT and validate answers with solver outputs.</li> <li>Build Bayesian networks and perform exact and approximate inference.</li> <li>Model sequential processes with HMMs and interpret results in the context of uncertainty over time.</li> <li>Design adversarial agents for perfect-information games using minimax and alpha-beta pruning and analyze branching-factor impacts on search performance.</li> <li>Reason about games with hidden information (zero-sum and non-zero-sum).</li> <li>Apply foundational machine-learning methods (supervised learning, regression/classification, and clustering) to real-world datasets, selecting metrics and reporting performance with appropriate caveats about assumptions and data.</li> </ul> </div> <div class="jumbotron"> <h2>Prerequisites</h2> <p>CS 114, MATH 337 (or MATH/EssexCC 239), and CS 241 with a grade of C or better.</p> </div> <div class="jumbotron"> <h2>Course Materials</h2> <ul> <li><strong>Textbook:</strong> Stuart Russell and Peter Norvig. <em>Artificial Intelligence: A Modern Approach</em>. 4th US ed. (R&amp;N).</li> <li>Selected papers and handouts.</li> </ul> </div> <div class="jumbotron"> <h2>Grading</h2> <table> <thead> <tr> <th>Assessment</th> <th>Weight</th> </tr> </thead> <tbody> <tr> <td>Homework Assignments</td> <td>24%</td> </tr> <tr> <td>Projects</td> <td>16%</td> </tr> <tr> <td>Exam 1</td> <td>30%</td> </tr> <tr> <td>Exam 2</td> <td>30%</td> </tr> </tbody> </table> <table> <thead> <tr> <th>Letter grade</th> <th>Percentage range</th> </tr> </thead> <tbody> <tr> <td>A</td> <td>90–100</td> </tr> <tr> <td>B+</td> <td>85–89.99</td> </tr> <tr> <td>B</td> <td>80–84.99</td> </tr> <tr> <td>C+</td> <td>75–79.99</td> </tr> <tr> <td>C</td> <td>65–74.99</td> </tr> <tr> <td>D</td> <td>60–64.99</td> </tr> <tr> <td>F</td> <td>&lt; 60</td> </tr> </tbody> </table> <p>Small class-wide adjustments may be applied at the end of the semester if an assessment proves unusually challenging or easy; any adjustment applies consistently to all students. Class participation, attendance, and periodic pop quizzes may be considered to bump a final letter grade near a boundary.</p> </div> <div class="jumbotron"> <h2>Course Schedule</h2> <div class="table-responsive"> <p>All dates, topics, assignments, and exam schedules are tentative and subject to change.</p> <table> <thead> <tr> <th>Week</th> <th>Date</th> <th>Topic</th> <th>Reading</th> <th>Homework</th> <th>Projects</th> </tr> </thead> <tbody> <tr> <td>1</td> <td>Sep 3</td> <td>Intro to Artificial Intelligence<br/>Agents and Environments (Take Home)</td> <td>Ch 1<br/>Ch 2</td> <td> </td> <td>Project 0 Released</td> </tr> <tr> <td> </td> <td>Sep 7</td> <td>Uninformed Search</td> <td>3.1–3.4</td> <td> </td> <td>Project 0 Due</td> </tr> <tr> <td>2</td> <td>Sep 10</td> <td>Uninformed Search</td> <td>3.1–3.4</td> <td>HW 1 Released</td> <td> </td> </tr> <tr> <td> </td> <td>Sep 14</td> <td>Informed Search (A* Search and Heuristics)</td> <td>3.5, 3.6</td> <td> </td> <td> </td> </tr> <tr> <td>3</td> <td>Sep 17</td> <td>Informed Search (A* Search and Heuristics)</td> <td>3.5, 3.6</td> <td>HW 1 Due<br/>HW 2 Released</td> <td>Project 1 Released</td> </tr> <tr> <td> </td> <td>Sep 21</td> <td>Search: Local Search</td> <td>4.1, 4.2</td> <td> </td> <td> </td> </tr> <tr> <td>4</td> <td>Sep 24</td> <td>Adversarial Search I</td> <td>6.3–6.5</td> <td>HW 2 Due</td> <td> </td> </tr> <tr> <td> </td> <td>Sep 28</td> <td>Adversarial Search II</td> <td>5.2–5.5</td> <td> </td> <td> </td> </tr> <tr> <td>5</td> <td>Oct 1</td> <td>CSP I</td> <td>4.1, 4.2</td> <td>HW 3 Released</td> <td>Project 1 Due<br/>Project 2 Released</td> </tr> <tr> <td> </td> <td>Oct 5</td> <td>CSP II</td> <td>6.1, 6.2</td> <td> </td> <td> </td> </tr> <tr> <td>6</td> <td>Oct 8</td> <td>Propositional Logic</td> <td>7</td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td>Oct 12</td> <td>Propositional Logic: Inference</td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td>7</td> <td>Oct 15</td> <td>SAT</td> <td> </td> <td>HW 3 Due<br/>HW 4 Released</td> <td>Project 2 Due<br/>Project 3 Released</td> </tr> <tr> <td> </td> <td>Oct 19</td> <td> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td>8</td> <td>Oct 22</td> <td>Exam 1 (Tentative)</td> <td> </td> <td>HW 4 Due</td> <td> </td> </tr> <tr> <td> </td> <td>Oct 26</td> <td> </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td>9</td> <td>Oct 29</td> <td>Probability</td> <td>16.1–16.3</td> <td> </td> <td>Project 3 Due</td> </tr> <tr> <td> </td> <td>Nov 2</td> <td>Bayes Nets I</td> <td>13.1, 13.2</td> <td> </td> <td> </td> </tr> <tr> <td>10</td> <td>Nov 5</td> <td>Bayes Nets II</td> <td>13.3</td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td>Nov 9</td> <td>Bayes Nets III</td> <td>13.4</td> <td> </td> <td> </td> </tr> <tr> <td>11</td> <td>Nov 12</td> <td>Bayes Nets IV</td> <td>13.5</td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td>Nov 16</td> <td>Hidden Markov Models</td> <td>14.2, 14.3</td> <td> </td> <td> </td> </tr> <tr> <td>12</td> <td>Nov 19</td> <td>Particle Filters</td> <td>14.4, 14.5</td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td>Nov 23</td> <td>ML: Naïve Bayes</td> <td>20.1, 20.2</td> <td> </td> <td> </td> </tr> <tr> <td>13</td> <td>Nov 26</td> <td>Thanksgiving Break</td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td>Nov 30</td> <td>ML: Perceptrons, Logit</td> <td>19.6, 19.7</td> <td> </td> <td> </td> </tr> <tr> <td>14</td> <td>Dec 3</td> <td>ML: Optimization</td> <td>18.6.3, 18.8</td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td>Dec 7</td> <td>ML: Neural Nets</td> <td>Ch 21</td> <td> </td> <td> </td> </tr> <tr> <td>15</td> <td>Dec 10</td> <td>Reading Day</td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> </td> <td>Reading Day</td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td>16</td> <td> </td> <td>Final Exams Begin</td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> </td> <td> </td> <td>Final Exam (Tentative)</td> <td> </td> <td> </td> <td> </td> </tr> </tbody> </table> </div> </div> <div class="jumbotron"> <h2>Course Policies</h2> <ul> <li><strong>Makeup exams:</strong> Considered only for documented circumstances approved by the Dean of Students.</li> <li><strong>Exams:</strong> Both exams are taken on the scheduled dates; a one-page crib sheet is allowed.</li> <li><strong>Late work:</strong> 10% penalty per day; work more than seven days late is not graded. Extensions require documentation verified by the Dean of Students.</li> <li><strong>Attendance and participation:</strong> Attendance is mandatory; arriving late or leaving early counts as half an absence. Please keep devices away unless they are used for a class activity.</li> <li><strong>Regrades:</strong> Request within one week of the work being returned.</li> <li><strong>AI tools:</strong> Allowed as a supplementary learning resource only; AI tools may not be used to generate, refine, or complete any graded work.</li> <li><strong>Collaboration:</strong> Discuss concepts and high-level approaches freely, but write and implement all submitted work independently. Do not share, view, copy, or discuss Python code; list discussion partners on your submission.</li> <li><strong>Communication:</strong> Post course questions on Harmonize; for email, begin the subject with “CS 370.H01:”. Expect replies within two business days.</li> </ul> <p>The <a href="/syllabus/CS-370-H01-2026-Fall-Arya.pdf">full syllabus</a> includes the complete course and university policies.</p> </div> <div class="jumbotron"> <h2>Additional Information</h2> </div> </div> </div> </div> <style>.table-responsive{overflow-x:auto}.table-responsive table{width:100%;margin-bottom:1rem;border-collapse:collapse}.table-responsive th,.table-responsive td{padding:.75rem;border:1px solid #dee2e6}.table-responsive thead th{background-color:#f8f9fa}.jumbotron{padding:2rem;margin-bottom:2rem;background-color:#f8f9fa;border-radius:.3rem}</style> </div> </div> <br/> <section id="footer"> <div class="container-footer"> <div class="panel-footer"> <div class="row"> <div class="col-sm-4"> <h2 class="footer-heading">About</h2> <p>Shivvrat Arya<br/> Assistant Professor, Director of <a href='https://aria-research-lab.github.io/'>ARIA Lab</a><br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> New Jersey Institute of Technology</p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Contact</h2> <p><a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/></p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Coordinates</h2> <p>GITC 4304<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> Ying Wu College of Computing<br/> New Jersey Institute of Technology <br/> Newark, NJ 07102</p> </div> </div> <center><p>&copy 2026 Shivvrat Arya </p></center> </div> </div> </div> </body> </html>

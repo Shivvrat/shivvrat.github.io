@@ -1,0 +1,120 @@
+<!DOCTYPE html> <html> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="/assets/css/sidebar.css"> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="generator" content="Jekyll v4.1.1"/> <meta property="og:title" content="NeuroSymbolic AI (CS 785)"/> <meta name="author" content="Shivvrat Arya"/> <meta property="og:locale" content="en_US"/> <meta name="description" content="CS 785 at NJIT: a Ph.D. seminar on neurosymbolic AI covering causal inference, hybrid neural-symbolic architectures, attention-based reasoning, and structured world models."/> <meta name="twitter:description" property="og:description" content="CS 785 at NJIT: a Ph.D. seminar on neurosymbolic AI covering causal inference, hybrid neural-symbolic architectures, attention-based reasoning, and structured world models."/> <link rel="canonical" href="https://shivvrat.github.io/teaching/cs785/"/> <meta property="og:url" content="https://shivvrat.github.io/teaching/cs785/"/> <meta property="og:site_name" content="Shivvrat Arya"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary"/> <meta name="twitter:title" content="NeuroSymbolic AI (CS 785)"/> <meta name="twitter:site" content="@ShivvratA"/> <meta name="twitter:creator" content="@ShivvratA"/> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shivvrat Arya"},"description":"CS 785 at NJIT: a Ph.D. seminar on neurosymbolic AI covering causal inference, hybrid neural-symbolic architectures, attention-based reasoning, and structured world models.","headline":"NeuroSymbolic AI (CS 785)","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shivvrat.github.io/images/teampic/Shivvrat_Arya_headshot.jpg"},"name":"Shivvrat Arya"},"url":"https://shivvrat.github.io/teaching/cs785/"}</script> <title>NeuroSymbolic AI (CS 785) - Shivvrat Arya</title> <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin> <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha512-TNfdJEUUJmfj2DRlAKXBg7HroqoXYLon5XPEEWYa2+H/XSD2HAr0BwkRrAoNLAEz79x7XURTFRWDn9yhMNbbNQ==" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.js" integrity="sha384-RyE9TSx1shZZA6GS7TToIk1J7zY1mU8evbLDXYgOz4zgduwPFEtnHd1bswt8PG/u" crossorigin="anonymous"></script> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="/assets/css/vendor/pygments-github.css" id="highlight_theme_light"/> <link rel="stylesheet" href="/assets/main.css"> <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> <link rel="stylesheet" href="/assets/css/custom.css"> <link rel="stylesheet" href="/assets/css/heading_style.css"> <link rel="stylesheet" href="/assets/css/research.css"> <script>
+    // Inject accessible anchors for headings (h2–h4) after DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      const headings = document.querySelectorAll('#main-content h2, #main-content h3, #main-content h4');
+      headings.forEach(h => {
+        if (!h.id) {
+          const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+          if (slug) h.id = slug;
+        }
+        if (!h.id) return;
+        if (h.querySelector('.heading-anchor')) return;
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.className = 'heading-anchor';
+        a.setAttribute('aria-label', 'Copy link to this section');
+        a.innerHTML = '¶';
+        a.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const url = window.location.origin + window.location.pathname + '#' + h.id;
+          try { await navigator.clipboard.writeText(url); a.innerHTML = '✓'; setTimeout(() => a.innerHTML = '¶', 1200); }
+          catch { window.location.hash = h.id; }
+        });
+        h.appendChild(a);
+      });
+      // Build in-page TOC if #toc is present
+      const toc = document.getElementById('toc');
+      if (toc) {
+        const scope = document.getElementById('main-content') || document;
+        const headings = Array.from(scope.querySelectorAll('h2, h3'))
+          .filter(h => !h.closest('nav') && !h.closest('header'));
+        if (headings.length) {
+          const nav = document.createElement('nav');
+          nav.setAttribute('aria-label', 'Table of contents');
+          const ul = document.createElement('ul');
+          ul.className = 'toc-list';
+          let currentUl = ul;
+          let lastLevel = 2;
+          headings.forEach(h => {
+            const level = h.tagName === 'H2' ? 2 : 3;
+            if (!h.id) {
+              const slug = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+              if (slug) h.id = slug;
+            }
+            if (!h.id) return;
+            if (level > lastLevel) {
+              const nested = document.createElement('ul');
+              currentUl.lastElementChild && currentUl.lastElementChild.appendChild(nested);
+              currentUl = nested;
+            } else if (level < lastLevel) {
+              currentUl = currentUl.parentElement || currentUl;
+            }
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent.replace(/¶$/,'').trim();
+            li.appendChild(a);
+            currentUl.appendChild(li);
+            lastLevel = level;
+          });
+          nav.appendChild(ul);
+          toc.innerHTML = '';
+          toc.appendChild(nav);
+        }
+      }
+
+      // Lightweight client-side search using fetch + simple substring match
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+      if (searchInput && searchResults) {
+        let idx = [];
+        fetch('/search.json').then(r => r.json()).then(data => { idx = data || []; });
+        const render = (items) => {
+          if (!items.length) { searchResults.innerHTML = '<p>No results.</p>'; return; }
+          const html = items.slice(0, 20).map(i => `<div class="subsection-card"><a href="${i.url}"><strong>${i.title}</strong></a><p>${i.content.substring(0,180)}...</p></div>`).join('');
+          searchResults.innerHTML = html;
+        };
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.trim().toLowerCase();
+          if (!q) { searchResults.innerHTML = ''; return; }
+          const results = idx.filter(i => i.title.toLowerCase().includes(q) || i.content.toLowerCase().includes(q));
+          render(results);
+        });
+      }
+    });
+  </script> <script>
+    // Outbound click tracking for analytics (arXiv/DOI/GitHub/CV)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const isOutbound = href.startsWith('http') && !href.includes(window.location.host);
+      if (!isOutbound) return;
+      if (window.gtag) {
+        gtag('event', 'click', { 'event_category': 'outbound', 'event_label': href });
+      }
+    }, { capture: true });
+  </script> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivvrat Arya",
+    "jobTitle": "Assistant Professor",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "New Jersey Institute of Technology"},
+    "url": "/",
+    "sameAs": [
+      "https://github.com/Shivvrat"
+    ]
+  }
+  </script> <link rel="preconnect" href="https://player.vimeo.com"> <link rel="preconnect" href="https://i.vimeocdn.com"> <link rel="preconnect" href="https://f.vimeocdn.com"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JMYG0Z6M7"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9JMYG0Z6M7');
+</script> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WNDXK54');</script> </head> <style>.row{padding:0}.custom-content-area{margin:0;max-width:100%}:root{font-size:16px}body{font-size:1.1rem}h1{font-size:2.2rem}h2{font-size:1.9rem}h3{font-size:1.6rem}h4{font-size:1.4rem}p,li,a{font-size:1.1rem}.social-icons i{font-size:2rem!important}@media(max-width:768px){:root{font-size:16px}}</style> <body> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNDXK54" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <style>.center{margin:auto;width:40%}@media(min-width:768px){.navbar .nav-item.dropdown:hover .dropdown-menu{display:block;margin-top:0}}</style> <a href="#main-content" class="visually-hidden-focusable skip-link">Skip to content</a> <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" aria-label="Main Navigation"> <a class="navbar-brand title" href="/"> <img src="/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt=""> Shivvrat Arya </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarColor02"> <ul class="navbar-nav mr-auto"> <li class="nav-item"> <a class="nav-link" href="/">Home</a> </li> <li class="nav-item"> <a class="nav-link" href="/about">About</a> </li> <li class="nav-item"> <a class="nav-link" href="/hiring/">Hiring</a> </li> <li class="nav-item"> <a class="nav-link" href="/grants">Grants</a> </li> <li class="nav-item"> <a class="nav-link" href="/research">Research</a> </li> <li class="nav-item"> <a class="nav-link" href="/publications">Publications</a> </li> <li class="nav-item"> <a class="nav-link" href="/advising">Advising</a> </li> <li class="nav-item"> <a class="nav-link" href="/talks">Talks</a> </li> <li class="nav-item"> <a class="nav-link" href="/software">Software</a> </li> <li class="nav-item"> <a class="nav-link" href="/teaching">Teaching</a> </li> <li class="nav-item"> <a class="nav-link" href="/service">Service</a> </li> <li class="nav-item"> <a class="nav-link" href="/gallery">Gallery</a> </li> <li class="nav-item"> <a class="nav-link" href="/resources">Resources</a> </li> </ul> </div> </nav> <div class="container-fluid" id="main-content" role="main"> <div class="row"> <div class="container-fluid"> <div class="row"> <div id="gridid" class="col-sm-12"> <h1>NeuroSymbolic AI (CS 785)</h1> <div class="jumbotron"> <h2>Course Information</h2> <div class="row"> <div class="col-sm-6"> <p><strong>Term:</strong> Fall 2025</p> <p><strong>Course Number:</strong> CS 785.003</p> <p><strong>Level:</strong> PhD</p> <p><strong>Instructor Role:</strong> Course Instructor</p> <p><strong>Syllabus:</strong> <a href="/syllabus/CS-785-003-2025-Fall-Arya.pdf" target="_blank" rel="noopener">PDF</a></p> </div> <div class="col-sm-6"> <p><strong>Lecture Times:</strong> Friday, 2:30–5:20 PM</p> <p><strong>Location:</strong> Central King Building, Room 219</p> <p><strong>Office Hours:</strong> Fridays, 1:00–2:30 PM, or by appointment</p> </div> </div> </div> <div class="jumbotron"> <h2>Course Description</h2> <p>Modern AI largely relies on deep learning, yet fundamental challenges—such as limited adaptability, poor generalization, reduced robustness, lack of explainability, insufficient abstraction, absence of common-sense reasoning, and weak causal reasoning—remain unresolved. Moreover, these advances often rely on massive datasets for training or pre-training. Symbolic methods offer a complementary path by enabling declarative specifications of expected behavior, embedding prior knowledge, and enriching AI systems with reasoning capabilities.</p> <p>Neurosymbolic AI integrates data-driven neural models—effective at perception—with symbolic representations grounded in logic and probabilistic reasoning. This synthesis bridges intuitive, fast learning with deliberate, structured reasoning, yielding systems that are more adaptive, explainable, and robust.</p> <p>This seminar investigates the theoretical and practical foundations of Neurosymbolic AI. Main topics include causal inference, hybrid neural-symbolic architectures, attention-based reasoning, and strategies for merging perceptual models with structured world representations.</p> </div> <div class="jumbotron"> <h2>Learning Outcomes</h2> <p>By the end of this course, students will be able to:</p> <ul> <li>Analyze the theoretical and practical foundations of Neurosymbolic AI, including causal inference, hybrid architectures, and reasoning.</li> <li>Critically analyze and present recent research papers in Neurosymbolic AI, demonstrating clear understanding of contributions, limitations, and open problems.</li> <li>Compare and evaluate strategies for integrating perceptual models with structured world representations.</li> <li>Design and conduct a research-oriented project that applies or extends Neurosymbolic AI methods.</li> </ul> </div> <div class="jumbotron"> <h2>Prerequisites</h2> <p>None.</p> </div> <div class="jumbotron"> <h2>Course Materials</h2> <p>No textbook is required. Readings are research papers from leading publishers and conferences, accessible through the NJIT library; students review them before each seminar discussion.</p> </div> <div class="jumbotron"> <h2>Grading</h2> <table> <thead> <tr> <th>Assessment</th> <th>Weight</th> </tr> </thead> <tbody> <tr> <td>Paper presentations</td> <td>40%</td> </tr> <tr> <td>Course project</td> <td>40%</td> </tr> <tr> <td>Paper discussions</td> <td>20%</td> </tr> </tbody> </table> <table> <thead> <tr> <th>Letter grade</th> <th>Percentage range</th> </tr> </thead> <tbody> <tr> <td>A</td> <td>90–100</td> </tr> <tr> <td>B+</td> <td>85–89</td> </tr> <tr> <td>B</td> <td>80–84</td> </tr> <tr> <td>C+</td> <td>75–79</td> </tr> <tr> <td>C</td> <td>65–74</td> </tr> <tr> <td>F</td> <td>&lt; 65</td> </tr> </tbody> </table> </div> <div class="jumbotron"> <h2>Assignments & Projects</h2> <h3 id="course-project">Course Project</h3> <p>Students work in pairs on a semester-long project addressing a concrete problem using neurosymbolic algorithms.</p> <ul> <li><strong>Project proposal:</strong> At most two pages covering the problem statement, data, proposed approach, and evaluation plan.</li> <li><strong>Mid-semester milestones:</strong> A 30-minute project pitch, a written progress report, and feedback consultations with the instructor.</li> <li><strong>Final report:</strong> A conference-style write-up due on Monday of the last week of classes.</li> <li><strong>Code submission:</strong> One ZIP file on Canvas with everything needed to reproduce the main results.</li> <li><strong>Final presentation:</strong> About one hour per team during the final weeks of the semester.</li> </ul> <h3 id="paper-presentations-and-discussion">Paper Presentations and Discussion</h3> <p>Presentations are individual: about 60 minutes followed by 30 minutes of questions, with two papers presented each week. Students who are not presenting read both papers in advance and come prepared with questions.</p> </div> <div class="jumbotron"> <h2>Course Policies</h2> <ul> <li><strong>Late work:</strong> 10% penalty per day; work more than seven days late is not graded. Request extensions in advance.</li> <li><strong>Attendance:</strong> Mandatory; paper discussion is a graded component, so attend and participate in every class meeting.</li> <li><strong>Regrades:</strong> Request within two weeks of the work being returned.</li> <li><strong>AI tools:</strong> Allowed as a supplementary aid to learning; using AI to generate or complete graded work is prohibited.</li> <li><strong>Collaboration:</strong> Discuss ideas freely, but write and implement all submitted work independently, and list discussion partners on your submission.</li> <li><strong>Communication:</strong> Begin email subjects with “CS 785:”. Expect replies within two business days.</li> </ul> <p>The <a href="/syllabus/CS-785-003-2025-Fall-Arya.pdf">full syllabus</a> includes the complete course and university policies.</p> </div> <div class="jumbotron"> <h2>Additional Information</h2> </div> </div> </div> </div> <style>.table-responsive{overflow-x:auto}.table-responsive table{width:100%;margin-bottom:1rem;border-collapse:collapse}.table-responsive th,.table-responsive td{padding:.75rem;border:1px solid #dee2e6}.table-responsive thead th{background-color:#f8f9fa}.jumbotron{padding:2rem;margin-bottom:2rem;background-color:#f8f9fa;border-radius:.3rem}</style> </div> </div> <br/> <section id="footer"> <div class="container-footer"> <div class="panel-footer"> <div class="row"> <div class="col-sm-4"> <h2 class="footer-heading">About</h2> <p>Shivvrat Arya<br/> Assistant Professor, Director of <a href='https://aria-research-lab.github.io/'>ARIA Lab</a><br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> New Jersey Institute of Technology</p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Contact</h2> <p><a href="mailto:shivvrat.arya@njit.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Dr. Arya via email</a> <br/></p> </div> <div class="col-sm-4"> <h2 class="footer-heading">Coordinates</h2> <p>GITC 4304<br/> <a href="https://cs.njit.edu/" target="_blank">Department of Computer Science</a><br/> Ying Wu College of Computing<br/> New Jersey Institute of Technology <br/> Newark, NJ 07102</p> </div> </div> <center><p>&copy 2026 Shivvrat Arya </p></center> </div> </div> </div> </body> </html>
