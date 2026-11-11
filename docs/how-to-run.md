@@ -47,16 +47,23 @@ The publish command expects your SSH key directory at `~/.ssh`, or set
 ## GitHub Actions Publishing
 
 Commits pushed to the `source` branch run `.github/workflows/publish.yml`. The
-workflow builds the site with Docker and publishes the generated `_site` folder
-to the `master` branch using GitHub Actions' built-in token.
+workflow builds the site with Docker, checks internal links with lychee (a
+broken internal link stops the deploy), and publishes the generated `_site`
+folder to the `master` branch using GitHub Actions' built-in token.
+
+Both workflows build through `.github/actions/build-site`, which builds only the
+Dockerfile's `deps` stage (OS packages and gems) with a GitHub Actions layer
+cache and then runs `SKIP_IMAGE_BUILD=1 ./docker-jekyll.sh compile`. The cache
+is rebuilt only when `Dockerfile`, `Gemfile`, or `Gemfile.lock` changes.
 
 No deploy key is needed for the automated workflow. If GitHub rejects the push,
 check the repository settings under **Actions > General > Workflow permissions**
 and make sure workflows have read and write permissions.
 
 `.github/workflows/links.yml` builds the site and runs lychee (`lychee.toml`).
-Internal links are checked on every push to `source` and every PR and fail the
-job; external links run weekly (Mondays) and on manual dispatch and only report.
+It checks internal links on every PR (failing the job) and does not run on push,
+since `publish.yml` already checks them; external links run weekly (Mondays) and
+on manual dispatch and only report.
 Run the same check locally with `./check_links.sh` (add `--offline` for internal
 links only).
 

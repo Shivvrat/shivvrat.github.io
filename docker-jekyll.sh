@@ -5,6 +5,10 @@ set -euo pipefail
 image_name="shivvrat-jekyll"
 
 build_image() {
+    # CI builds the image itself with a layer cache, then sets SKIP_IMAGE_BUILD=1.
+    if [ "${SKIP_IMAGE_BUILD:-}" = "1" ]; then
+        return
+    fi
     docker build -t "$image_name" .
 }
 

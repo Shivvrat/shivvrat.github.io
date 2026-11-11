@@ -1,0 +1,26 @@
+name: Build site
+description: >-
+  Build the Jekyll site into _site with Docker. The image's `deps` stage (OS
+  packages and gems) is cached in the GitHub Actions cache, so it is rebuilt
+  only when the Dockerfile, Gemfile, or Gemfile.lock changes.
+
+runs:
+  using: composite
+  steps:
+    - uses: docker/setup-buildx-action@v3
+
+    - name: Build image (cached)
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        target: deps
+        tags: shivvrat-jekyll
+        load: true
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Build site
+      shell: bash
+      env:
+        SKIP_IMAGE_BUILD: "1"
+      run: bash ./docker-jekyll.sh compile

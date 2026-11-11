@@ -1,5 +1,8 @@
 name: Publish website
 
+# One build per push: build, check internal links (blocking), then deploy.
+# A broken internal link stops the deploy.
+
 on:
   push:
     branches:
@@ -22,7 +25,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build site
-        run: bash ./docker-jekyll.sh compile
+        uses: ./.github/actions/build-site
+
+      - name: Internal links (blocking)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --offline
+            --config lychee.toml
+            --root-dir ${{ github.workspace }}/_site
+            --fallback-extensions html
+            --no-progress
+            '_site/**/*.html'
 
       - name: Publish site
         uses: JamesIves/github-pages-deploy-action@v4

@@ -1,4 +1,6 @@
-FROM ruby:3.2.3-slim-bookworm
+# `deps` holds the OS packages and gems; CI builds only this stage (with a
+# layer cache) and mounts the source, so it skips the final COPY.
+FROM ruby:3.2.3-slim-bookworm AS deps
 
 ENV BUNDLE_PATH=/usr/local/bundle \
     BUNDLE_BIN=/usr/local/bundle/bin \
@@ -28,6 +30,8 @@ COPY Gemfile ./
 COPY Gemfile.lock ./
 
 RUN bundle install
+
+FROM deps
 
 COPY . .
 
