@@ -42,7 +42,7 @@ Comprehensive details on current research openings, specific project description
 </tr>
 <tr>
 <th>M.S. &amp; Undergraduate</th>
-<td>Research credit available ({{ site.data.recruiting.research_credit_ms_courses | join: "/" }} for MS; {{ site.data.recruiting.research_credit_undergrad_courses | join: "/" }} for BS)</td>
+<td>Primarily for students enrolling in research credits ({{ site.data.recruiting.research_credit_ms_courses | join: "/" }} for MS; {{ site.data.recruiting.research_credit_undergrad_courses | join: "/" }} for BS); a limited number of exceptional applicants not enrolling in research credits may be considered</td>
 </tr>
 <tr>
 <th>Visiting Researchers</th>
@@ -59,7 +59,7 @@ Comprehensive details on current research openings, specific project description
 ### Opportunities by Level
 
 - **Ph.D. Students**: We are currently seeking up to **{{ site.data.recruiting.phd_max_funded_words }} funded Ph.D. students** ({{ site.data.recruiting.phd_funding_type }}) for {{ site.data.recruiting.start_terms_slash }}. Applicants should possess a strong foundation in machine learning, algorithms, mathematics, or optimization. Prospective students must submit their profile via the [Google Form]({{ site.data.recruiting.application_form_url }}) and formally apply through the [NJIT Graduate Admissions portal]({{ site.data.recruiting.admissions_url }}), explicitly mentioning **Dr. Shivvrat Arya** and the **ARIA Lab** in their Statement of Purpose. Self-funded applicants and fellowship holders are also welcome.
-- **M.S. and Undergraduate Students**: Motivated NJIT students can participate in mentored research projects for academic credit ({{ site.data.recruiting.research_credit_ms_courses | join: " or " }} for MS; {{ site.data.recruiting.research_credit_undergrad_courses | join: " or " }} for BS). Please consult the [ARIA Lab Undergraduate & M.S. Research Guide](https://aria-research-lab.github.io/hiring/undergraduate-ms-research) for course registration requirements and project pathways.
+- **M.S. and Undergraduate Students**: Motivated NJIT students can participate in mentored research projects for academic credit ({{ site.data.recruiting.research_credit_ms_courses | join: " or " }} for MS; {{ site.data.recruiting.research_credit_undergrad_courses | join: " or " }} for BS). We primarily seek students who enroll in research credits under my supervision, and we will also consider a limited number of exceptional applicants who are not enrolling in research credits. Please consult the [ARIA Lab Undergraduate & M.S. Research Guide](https://aria-research-lab.github.io/hiring/undergraduate-ms-research) for course registration requirements and project pathways.
 - **Visiting Scholars & Remote Collaborators**: Visiting researchers and self-funded scholars interested in collaborating on aligned research topics are invited to submit their interests through the application form.
 
 </div>
