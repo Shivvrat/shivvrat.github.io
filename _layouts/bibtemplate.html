@@ -40,12 +40,32 @@
       <i class="fas fa-users"></i>
       <span>
         {%- if entry.author_array -%}
+          {%- comment -%}
+            Equal contribution is marked with "*" on author names (e.g. "Roy*, Chiradeep"), optionally with a
+            "(*equal contribution)" note inside an author name (which BibTeX splits across prefix/last). The note
+            is stripped from the name and rendered once after the author list; markers become superscripts.
+          {%- endcomment -%}
+          {%- assign has_equal_contribution = false -%}
           {%- for author in entry.author_array -%}
+            {%- assign author_prefix = author.prefix -%}
+            {%- assign author_last = author.last -%}
+            {%- capture author_family -%}{% if author.prefix and author.prefix != "" %}{{ author.prefix }} {% endif %}{{ author.last }}{%- endcapture -%}
+            {%- capture author_raw_name -%}{{ author.first }} {{ author_family }}{%- endcapture -%}
+            {%- assign author_raw_name_lower = author_raw_name | downcase -%}
+            {%- if author_raw_name contains '*' or author_raw_name contains '∗' or author_raw_name_lower contains 'equal contribution' -%}
+              {%- assign has_equal_contribution = true -%}
+            {%- endif -%}
+            {%- assign author_family_lower = author_family | downcase -%}
+            {%- if author_family_lower contains 'equal contribution' -%}
+              {%- assign author_last = author_family | split: '(' | first | strip -%}
+              {%- assign author_prefix = '' -%}
+            {%- endif -%}
+            {%- assign author_last_html = author_last | replace: '*', '<sup>*</sup>' | replace: '∗', '<sup>∗</sup>' -%}
             {%- capture author_name -%}
               {%- if author.first and author.first != "" -%}
-                {{- author.first }} {% if author.prefix and author.prefix != "" %}{{ author.prefix }} {% endif %}{{- author.last -}}{% if author.suffix and author.suffix != "" %}, {{ author.suffix }}{% endif %}
+                {{- author.first }} {% if author_prefix and author_prefix != "" %}{{ author_prefix }} {% endif %}{{- author_last_html -}}{% if author.suffix and author.suffix != "" %}, {{ author.suffix }}{% endif %}
               {%- else -%}
-                {%- if author.prefix and author.prefix != "" %}{{ author.prefix }} {% endif %}{{- author.last -}}{% if author.suffix and author.suffix != "" %}, {{ author.suffix }}{% endif -%}
+                {%- if author_prefix and author_prefix != "" %}{{ author_prefix }} {% endif %}{{- author_last_html -}}{% if author.suffix and author.suffix != "" %}, {{ author.suffix }}{% endif -%}
               {%- endif -%}
             {%- endcapture -%}
             {%- assign author_name = author_name | strip -%}
@@ -62,6 +82,7 @@
             {%- endif -%}
             {%- if forloop.rindex == 2 %} and {% elsif forloop.rindex > 2 %}, {% endif -%}
           {%- endfor -%}
+          {%- if has_equal_contribution %} <span class="equal-contribution-note">(<sup>*</sup>equal contribution)</span>{% endif -%}
         {%- else -%}
           {{ entry.author }}
         {%- endif -%}
