@@ -5,8 +5,8 @@ phd_max_funded_words: two
 phd_funding_type: RA/TA
 phd_self_funded_welcome: true
 start_terms:
-- Fall 2026
 - Spring 2027
+- Fall 2027
 ms_research_available: true
 undergrad_research_available: true
 research_credit_available: true
@@ -20,8 +20,8 @@ visiting_students_scholars_welcome: true
 international_students_funded: true
 application_form_url: https://forms.gle/SYb5HQeXQB3ogedo9
 admissions_url: https://www.njit.edu/admissions/graduate-admissions
-start_terms_slash: Fall 2026/Spring 2027
-start_terms_and: Fall 2026 and Spring 2027
-start_terms_ampersand: Fall 2026 & Spring 2027
-start_terms_first: Fall 2026
+start_terms_slash: Spring/Fall 2027
+start_terms_and: Spring and Fall 2027
+start_terms_ampersand: Spring & Fall 2027
+start_terms_first: Spring 2027
 phd_funding_summary: RA/TA (2 fully funded positions + self-funded)
