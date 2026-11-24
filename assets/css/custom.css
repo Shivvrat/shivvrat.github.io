@@ -672,3 +672,167 @@ html::-webkit-scrollbar { width: 10px; height: 10px; }
 html::-webkit-scrollbar-track { background: var(--background); }
 html::-webkit-scrollbar-thumb { background-color: var(--border-light); border-radius: 8px; border: 2px solid var(--background); }
 html::-webkit-scrollbar-thumb:hover { background-color: var(--secondary-blue); }
+
+/* Inline Award & Recognition Badges (aligned with ARIA Lab style) */
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
+  color: #92400e;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.1);
+  vertical-align: middle;
+  margin: 0.1rem 0.15rem;
+  min-block-size: auto;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.award-badge:hover {
+  background: rgba(245, 158, 11, 0.22);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.award-badge .award-icon {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: #d97706;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.award-badge.award-badge-certificate {
+  color: #065f46;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.award-badge.award-badge-certificate:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #047857;
+  text-decoration: none;
+}
+
+.award-badge.award-badge-certificate .award-icon {
+  color: #059669;
+}
+
+@media (prefers-color-scheme: dark) {
+  .award-badge {
+    color: #fef3c7;
+    background: rgba(245, 158, 11, 0.22);
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .award-badge:hover {
+    background: rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.6);
+  }
+
+  .award-badge .award-icon {
+    color: #fbbf24;
+  }
+
+  .award-badge.award-badge-certificate {
+    color: #a7f3d0;
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+
+  .award-badge.award-badge-certificate:hover {
+    background: rgba(16, 185, 129, 0.28);
+    border-color: rgba(16, 185, 129, 0.6);
+    color: #6ee7b7;
+  }
+
+  .award-badge.award-badge-certificate .award-icon {
+    color: #34d399;
+  }
+}
+
+a.award-badge {
+  color: #92400e;
+  text-decoration: none;
+}
+
+a.award-badge:hover {
+  color: #92400e;
+  text-decoration: none;
+}
+
+.project-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.45rem;
+  margin-bottom: 0.15rem;
+}
+
+a.project-resource-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.62rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+  min-block-size: auto;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: rgba(83, 117, 226, 0.06);
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+a.project-resource-btn:hover {
+  color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+  background: rgba(83, 117, 226, 0.12);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+a.project-resource-btn i,
+a.project-resource-btn em {
+  font-size: 0.82rem;
+  font-style: normal;
+  opacity: 0.9;
+}
+
+@media (prefers-color-scheme: dark) {
+  a.award-badge,
+  a.award-badge:hover {
+    color: #fef3c7;
+  }
+
+  a.project-resource-btn {
+    color: #e5e7eb;
+    background: rgba(83, 117, 226, 0.12);
+    border-color: #233044;
+  }
+
+  a.project-resource-btn:hover {
+    color: #93c5fd;
+    border-color: #5375e2;
+    background: rgba(83, 117, 226, 0.22);
+  }
+}
