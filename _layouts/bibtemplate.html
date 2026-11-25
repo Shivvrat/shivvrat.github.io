@@ -16,7 +16,7 @@
   {% endunless %}
 {% endif %}
 
-<div class="bib-entry{% if paper_award %} award-paper award-paper-highlight{% endif %}">
+<div class="bib-entry{% if paper_award %} award-paper award-paper-highlight{% endif %}" data-venue="{{ entry.abbr | default: '' | escape }}" data-tags="{{ entry.tags | default: '' | escape }}">
   <!-- Paper Header -->
   <div class="paper-header">
     <div class="paper-title">
@@ -88,17 +88,28 @@
         {%- endif -%}
       </span>
     </div>
-    {% if entry.journal or entry.booktitle %}
+    {% if entry.journal or entry.booktitle or entry.school %}
       <div class="paper-venue">
         <i class="fas fa-book"></i>
-          {% if entry.journal %}
-            <span class="journal">{{ entry.journal }}, {{ entry.year }}</span>
-          {% elsif entry.booktitle %}
-            <span class="journal">{{ entry.booktitle }}, {{ entry.year }}</span>
-          {% endif %}
-
+        {% if entry.journal %}
+          <span class="journal">{{ entry.journal }}, {{ entry.year }}</span>
+        {% elsif entry.booktitle %}
+          <span class="journal">{{ entry.booktitle }}, {{ entry.year }}</span>
+        {% elsif entry.school %}
+          <span class="journal">{{ entry.school }}, {{ entry.year }}</span>
+        {% endif %}
       </div>
-
+    {% endif %}
+    {% if entry.abbr %}
+      <div class="pub-venue-row">
+        {% assign venue_info = site.data.venues[entry.abbr] %}
+        {% assign venue_cat = venue_info.category | default: 'conference' %}
+        {% if venue_info.url and venue_info.url != '' %}
+          <a href="{{ venue_info.url }}" target="_blank" rel="noopener noreferrer" class="pub-venue-badge venue-cat-{{ venue_cat }}" title="{{ venue_info.full_name | default: entry.abbr | escape }}">{{ entry.abbr }}</a>
+        {% else %}
+          <span class="pub-venue-badge venue-cat-{{ venue_cat }}" title="{{ venue_info.full_name | default: entry.abbr | escape }}">{{ entry.abbr }}</span>
+        {% endif %}
+      </div>
     {% endif %}
   </div>
 
@@ -226,6 +237,18 @@
           <span>Certificate</span>
         </a>
       {% endif %}
+    </div>
+  {% endif %}
+
+  {% if entry.tags %}
+    {% assign tag_list = entry.tags | split: ',' %}
+    <div class="paper-tags" aria-label="Publication topics">
+      {% for raw_tag in tag_list %}
+        {% assign clean_tag = raw_tag | strip %}
+        {% if clean_tag != '' %}
+          <button type="button" class="pub-tag-pill" data-pub-tag="{{ clean_tag | escape }}">{{ clean_tag }}</button>
+        {% endif %}
+      {% endfor %}
     </div>
   {% endif %}
 
