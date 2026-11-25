@@ -818,6 +818,56 @@ a.project-resource-btn em {
   opacity: 0.9;
 }
 
+/* Research pillar topic links and Start Here resource bar */
+.research-pillar-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.75rem 0 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--background-gray);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--primary-navy);
+  border-radius: 8px;
+}
+
+.pillar-bar-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pillar-bar-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-right: 0.15rem;
+  letter-spacing: 0.01em;
+}
+
+a.pillar-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.16rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: none;
+  background: var(--background);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+a.pillar-tag-pill:hover {
+  background: var(--background-blue);
+  border-color: var(--secondary-blue);
+  color: var(--primary-navy);
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: dark) {
   a.award-badge,
   a.award-badge:hover {
@@ -834,5 +884,27 @@ a.project-resource-btn em {
     color: #93c5fd;
     border-color: #5375e2;
     background: rgba(83, 117, 226, 0.22);
+  }
+
+  .research-pillar-bar {
+    background: #1f242c;
+    border-color: #383f49;
+    border-left-color: #56b4e9;
+  }
+
+  .pillar-bar-label {
+    color: #a3adb9;
+  }
+
+  a.pillar-tag-pill {
+    background: #252b34;
+    color: #cbd5e1;
+    border-color: #383f49;
+  }
+
+  a.pillar-tag-pill:hover {
+    background: #1d3042;
+    border-color: #56b4e9;
+    color: #90d5ff;
   }
 }

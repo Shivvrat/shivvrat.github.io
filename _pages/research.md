@@ -21,6 +21,8 @@ My research agenda is organized around four synergistic pillars:
 
 ## Neuro-Symbolic Reasoning and Probabilistic Inference
 
+{% include research_pillar_bar.html pillar="Neuro-Symbolic Reasoning and Probabilistic Inference" resources="NeuPI|https://github.com/Shivvrat/NeuPI|fa-brands fa-github;NeuPI Docs|https://neupi.readthedocs.io/en/latest/|fa-solid fa-book;L2C|https://github.com/brijml/L2C|fa-brands fa-github" %}
+
 Many exact inference tasks in structured probabilistic models, including MPE, constrained MPE, and marginal MAP, are computationally intractable in general. Traditional solvers rely on exponential-time search or relaxation heuristics that struggle to meet the latency demands of real-time intelligent systems. My research explores how learned models can transform the efficiency of probabilistic inference without abandoning mathematical rigor.
 
 Rather than committing to a single computational paradigm, my work develops hybrid architectures across the inference hierarchy:
@@ -42,6 +44,8 @@ Rather than committing to a single computational paradigm, my work develops hybr
 
 ## Neural Combinatorial Optimization
 
+{% include research_pillar_bar.html pillar="Neural Combinatorial Optimization" %}
+
 Combinatorial optimization problems over discrete structures—such as graphs and complex relational networks—underpin critical decision-making in routing, resource allocation, network security, and influence propagation. Classical combinatorial algorithms face severe computational bottlenecks on large-scale instances, whereas greedy or handcrafted heuristics often fail to adapt to complex, domain-specific constraints.
 
 My research in neural combinatorial optimization explores how deep reinforcement learning (DRL) and graph representation learning can learn effective, instance-adaptive decision policies. By formulating discrete sequential decisions (such as node or edge selection) as Markov Decision Processes, we train neural policies that exploit recurring topological symmetries and structural invariants across problem distributions. This amortizes the computational cost of optimization, enabling efficient decision-making while explicitly accounting for operational, budget, privacy, and other domain-specific constraints.
@@ -53,6 +57,8 @@ My research in neural combinatorial optimization explores how deep reinforcement
 ---
 
 ## Structured and Multimodal Intelligence
+
+{% include research_pillar_bar.html pillar="Structured and Multimodal Intelligence" resources="CaptainCook4D|https://captaincook4d.github.io/captain-cook/|fa-solid fa-globe;CaptainCook4D Code|https://github.com/CaptainCook4D/|fa-brands fa-github" %}
 
 Perceptual intelligence in complex environments requires more than mapping sensory inputs to isolated semantic labels; it demands reasoning over temporal dependencies, procedural workflows, and structured human interactions. My work in structured and multimodal intelligence integrates high-dimensional visual and linguistic representations with explicit task models to bridge low-level perception and higher-level reasoning.
 
@@ -70,6 +76,8 @@ This agenda spans two interconnected threads:
 ---
 
 ## AI for Scientific Discovery
+
+{% include research_pillar_bar.html pillar="AI for Scientific Discovery" resources="CoLa-VAE|https://github.com/Yeqing95/CoLa-VAE|fa-brands fa-github" %}
 
 Scientific domains are characterized by complex, high-dimensional observations governed by underlying biological, physical, or mechanistic structure. My research develops machine learning methods that incorporate domain knowledge, relational structure, and scientific priors directly into learned representations and generative models. The goal is to move beyond purely data-driven pattern recognition toward models that better reflect the organization and interactions underlying scientific data.
 

@@ -576,11 +576,59 @@
   border-left-color: var(--text-secondary) !important;
 }
 
+.news-item-extra[hidden] {
+  display: none !important;
+}
+
 /* News Footer Container */
 .sidebar-container .news-footer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
   margin-top: 1rem !important;
   padding-top: 1rem !important;
   text-align: center !important;
+}
+
+/* Expand/collapse inline news toggle button */
+.sidebar-container .btn-news-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.375rem !important;
+  padding: 0.45rem 0.9rem !important;
+  margin: 0 !important;
+  background: #edf3fc !important;
+  border: 1px solid #c5d6ee !important;
+  border-radius: 20px !important;
+  color: #2457a7 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+}
+
+.sidebar-container .btn-news-toggle:hover {
+  background: #dce8f9 !important;
+  border-color: #2457a7 !important;
+  color: #163b78 !important;
+  transform: translateY(-1px) !important;
+}
+
+.sidebar-container .btn-news-toggle i {
+  font-size: 0.7rem !important;
+  transition: transform 0.2s ease !important;
+}
+
+.sidebar-container .btn-news-toggle[aria-expanded="true"] i {
+  transform: rotate(180deg) !important;
+}
+
+.sidebar-container .btn-news-toggle:focus {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
 }
 
 /* Compact All News Button - Elegant inline style */
@@ -588,8 +636,8 @@
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.375rem !important;
-  padding: 0.5rem 1rem !important;
-  margin: 0.75rem auto 0 auto !important;
+  padding: 0.45rem 0.9rem !important;
+  margin: 0 !important;
   background: transparent !important;
   border: 1.5px solid var(--secondary-blue) !important;
   border-radius: 20px !important;
@@ -601,7 +649,20 @@
   transition: all 0.2s ease !important;
   box-shadow: none !important;
   width: fit-content !important;
-  max-width: 140px !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidebar-container .btn-news-toggle {
+    background: #1d3042 !important;
+    border-color: #35566e !important;
+    color: #90d5ff !important;
+  }
+
+  .sidebar-container .btn-news-toggle:hover {
+    background: #29455e !important;
+    border-color: #56b4e9 !important;
+    color: #e5f4ff !important;
+  }
 }
 
 .sidebar-container .btn-all-news:hover {

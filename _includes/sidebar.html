@@ -60,8 +60,8 @@
     <div class="sidebar-title">News</div>
     
     <div class="news-grid">
-      {% for article in site.data.news limit:3 %}
-      <div class="news-item">
+      {% for article in site.data.news %}
+      <div class="news-item{% if forloop.index > 3 %} news-item-extra{% endif %}"{% if forloop.index > 3 %} hidden{% endif %}>
         <div class="news-date">
           <i class="far fa-calendar-alt"></i>
           <time datetime="{{ article.date | date: '%Y-%m-%d' }}">
@@ -79,11 +79,33 @@
     </div>
 
     <div class="news-footer">
+      {% if site.data.news.size > 3 %}
+      <button type="button" class="btn-news-toggle" id="sidebar-news-toggle" aria-expanded="false">
+        Show More News <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      {% endif %}
       <a href="{{ site.baseurl }}/allnews.html" class="btn-all-news">
         View All News
         <i class="fas fa-arrow-right"></i>
       </a>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('sidebar-news-toggle');
+      if (!btn) return;
+      var extraItems = document.querySelectorAll('.news-container .news-item-extra');
+      if (!extraItems.length) return;
+      var expanded = false;
+      btn.addEventListener('click', function () {
+        expanded = !expanded;
+        extraItems.forEach(function (item) {
+          item.hidden = !expanded;
+        });
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        btn.innerHTML = (expanded ? 'Show Less ' : 'Show More News ') + '<i class="fas fa-chevron-down" aria-hidden="true"></i>';
+      });
+    });
+  </script>
 </div>
 

@@ -293,214 +293,80 @@
   margin-right: 0.125rem;
 }
 
-/* Academic Button Types - Minimal Transparent Style */
-.btn-pdf {
-  color: var(--error);
-  background: transparent;
-  border: 2px solid var(--error);
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
-  cursor: pointer;
+/* Academic Button Types - Harmonized Academic Blue & Neutral Slate */
+.btn-pdf,
+.btn-arxiv,
+.btn-doi,
+.btn-code,
+.btn-library,
+.btn-website,
+.btn-bib,
+.btn-abstract {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
-}
-
-.btn-pdf:hover {
-  background: rgba(220, 53, 69, 0.1);
-  color: var(--error);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
-}
-
-.btn-arxiv {
-  color: var(--secondary-blue);
-  background: transparent;
-  border: 2px solid var(--secondary-blue);
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.25;
+  min-height: 2.15rem;
   border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
+  margin: 0.2rem;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.btn-arxiv:hover {
-  background: rgba(83, 117, 226, 0.1);
-  color: var(--secondary-blue);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(83, 117, 226, 0.2);
-}
-
-.btn-doi {
-  color: #0066cc;
-  background: transparent;
-  border: 2px solid #0066cc;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
-}
-
-.btn-doi:hover {
-  background: rgba(0, 102, 204, 0.1);
-  color: #0066cc;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.2);
-}
-
-.btn-code {
-  color: var(--accent-green);
-  background: transparent;
-  border: 2px solid var(--accent-green);
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
-}
-
-.btn-code:hover {
-  background: rgba(22, 204, 92, 0.1);
-  color: var(--accent-green);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(22, 204, 92, 0.2);
-}
-
-.btn-library {
-  color: #8e44ad;
-  background: transparent;
-  border: 2px solid #8e44ad;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
-}
-
-.btn-library:hover {
-  background: rgba(142, 68, 173, 0.1);
-  color: #8e44ad;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(142, 68, 173, 0.2);
-}
-
+.btn-pdf,
+.btn-arxiv,
+.btn-doi,
+.btn-code,
+.btn-library,
 .btn-website {
-  color: #e67e22;
-  background: transparent;
-  border: 2px solid #e67e22;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
+  color: #2457a7;
+  background: #edf3fc;
+  border: 1px solid #c5d6ee;
 }
 
+.btn-pdf:hover,
+.btn-arxiv:hover,
+.btn-doi:hover,
+.btn-code:hover,
+.btn-library:hover,
 .btn-website:hover {
-  background: rgba(230, 126, 34, 0.1);
-  color: #e67e22;
+  background: #dce8f9;
+  color: #163b78;
+  border-color: #2457a7;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(230, 126, 34, 0.2);
+  box-shadow: 0 2px 6px rgba(36, 87, 167, 0.14);
 }
 
-.btn-bib {
-  color: var(--text-secondary);
-  background: transparent;
-  border: 2px solid var(--text-secondary);
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
+.btn-bib,
+.btn-abstract {
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
 }
 
-.btn-bib:hover {
-  background: rgba(85, 85, 85, 0.1);
-  color: var(--text-secondary);
+.btn-bib:hover,
+.btn-abstract:hover,
+.btn-bib[aria-expanded="true"],
+.btn-abstract[aria-expanded="true"] {
+  background: #edf3fc;
+  color: #163b78;
+  border-color: #2457a7;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(85, 85, 85, 0.2);
+  box-shadow: 0 2px 6px rgba(36, 87, 167, 0.12);
 }
 
 .btn-bib.copied {
-  color: #16a34a !important;
-  border-color: #16a34a !important;
+  color: #15803d !important;
+  background: #f0fdf4 !important;
+  border-color: #86efac !important;
 }
 
 .btn-bib.copied:hover {
-  background: rgba(22, 163, 74, 0.1);
-}
-
-.btn-abstract {
-  color: #27ae60;
-  background: transparent;
-  border: 2px solid #27ae60;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: 0.25rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.5rem;
-}
-
-.btn-abstract:hover {
-  background: rgba(39, 174, 96, 0.1);
-  color: #27ae60;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.2);
+  background: #dcfce7 !important;
 }
 
 /* Award/Honor buttons - Minimal gold style */
@@ -878,7 +744,7 @@
 
 /* Force button borders to be visible */
 .bib-actions .btn {
-  border-width: 2px !important;
+  border-width: 1px !important;
   border-style: solid !important;
 }
 
@@ -1214,19 +1080,16 @@
 }
 
 .talk-resources .btn-abstract {
-  color: #16a34a;
-  border-color: #16a34a;
-  background: transparent;
+  color: #334155;
+  border-color: #cbd5e1;
+  background: #f8fafc;
 }
 
-.talk-resources .btn-abstract:hover {
-  background: rgba(22, 163, 74, 0.08);
-  border-color: #15803d;
-}
-
+.talk-resources .btn-abstract:hover,
 .talk-resources .btn-abstract[aria-expanded="true"] {
-  background: rgba(22, 163, 74, 0.12);
-  border-color: #15803d;
+  background: #edf3fc;
+  color: #163b78;
+  border-color: #2457a7;
 }
 
 .talk-abstract-content {
@@ -1632,5 +1495,52 @@ button.pub-tag-pill.is-active {
     background-color: #1d3042;
     border-color: #56b4e9;
     color: #90d5ff;
+  }
+
+  .btn-pdf,
+  .btn-arxiv,
+  .btn-doi,
+  .btn-code,
+  .btn-library,
+  .btn-website {
+    background: #1d3042;
+    color: #90d5ff;
+    border-color: #35566e;
+  }
+
+  .btn-pdf:hover,
+  .btn-arxiv:hover,
+  .btn-doi:hover,
+  .btn-code:hover,
+  .btn-library:hover,
+  .btn-website:hover {
+    background: #29455e;
+    color: #e5f4ff;
+    border-color: #56b4e9;
+  }
+
+  .btn-bib,
+  .btn-abstract,
+  .talk-resources .btn-abstract {
+    background: #252b34;
+    color: #cbd5e1;
+    border-color: #383f49;
+  }
+
+  .btn-bib:hover,
+  .btn-abstract:hover,
+  .btn-bib[aria-expanded="true"],
+  .btn-abstract[aria-expanded="true"],
+  .talk-resources .btn-abstract:hover,
+  .talk-resources .btn-abstract[aria-expanded="true"] {
+    background: #1d3042;
+    color: #90d5ff;
+    border-color: #56b4e9;
+  }
+
+  .btn-bib.copied {
+    background: #142e20 !important;
+    color: #86efac !important;
+    border-color: #1e5638 !important;
   }
 }
