@@ -1,34 +1,52 @@
 /* Professional Academic Bibliography Styling for R1 University */
 :root {
   /* Primary Academic Blues */
-  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
-  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
-  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
-  
+  --primary-navy: #003366;
+  /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;
+  /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;
+  /* Very light blue for backgrounds */
+
   /* Professional Text Colors */
-  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
-  --text-secondary: #555555;      /* Medium gray for secondary text */
-  --text-light: #777777;          /* Light gray for captions */
-  
+  --text-primary: #2c3e50;
+  /* Dark blue-gray for main text */
+  --text-secondary: #555555;
+  /* Medium gray for secondary text */
+  --text-light: #777777;
+  /* Light gray for captions */
+
   /* Clean Backgrounds */
-  --background: #ffffff;          /* Pure white */
-  --background-gray: #f8f9fa;     /* Very light gray */
-  --background-blue: #f0f4ff;     /* Light blue tint */
-  
+  --background: #ffffff;
+  /* Pure white */
+  --background-gray: #f8f9fa;
+  /* Very light gray */
+  --background-blue: #f0f4ff;
+  /* Light blue tint */
+
   /* Professional Borders */
-  --border-light: #e9ecef;        /* Light border */
-  --border-medium: #dee2e6;       /* Medium border */
-  
+  --border-light: #e9ecef;
+  /* Light border */
+  --border-medium: #dee2e6;
+  /* Medium border */
+
   /* Academic Accent Colors */
-  --accent-gold: #c8b18b;         /* Gold accent for highlights */
-  --accent-green: #16cc5c;        /* Success green */
-  --warning: #ffc107;             /* Warning amber */
-  --error: #dc3545;               /* Error red */
-  
+  --accent-gold: #c8b18b;
+  /* Gold accent for highlights */
+  --accent-green: #16cc5c;
+  /* Success green */
+  --warning: #ffc107;
+  /* Warning amber */
+  --error: #dc3545;
+  /* Error red */
+
   /* Professional Shadows */
-  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
-  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
-  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
+  --shadow-light: rgba(0, 51, 102, 0.08);
+  /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);
+  /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);
+  /* Strong blue shadow */
 }
 
 /* Professional Bibliography Container */
@@ -36,7 +54,8 @@
   margin-bottom: 2.5rem;
   padding: 2rem;
   background: var(--background);
-  border-left: 5px solid var(--secondary-blue);  /* Blue for regular papers */
+  border-left: 5px solid var(--secondary-blue);
+  /* Blue for regular papers */
   border-radius: 0 12px 12px 0;
   box-shadow: 0 4px 24px var(--shadow-light), 0 2px 8px var(--shadow-medium);
   transition: all 0.2s ease;
@@ -106,7 +125,8 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--secondary-blue);  /* Matches left border color */
+  background: var(--secondary-blue);
+  /* Matches left border color */
   transition: background 0.2s ease;
 }
 
@@ -228,7 +248,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  
+
   /* Ensure buttons are visible */
   display: inline-flex;
   align-items: center;
@@ -241,7 +261,7 @@
   font-weight: 600;
   font-size: 0.875rem;
   transition: all 0.2s ease;
-  
+
   /* Force button visibility */
   opacity: 1 !important;
   visibility: visible !important;
@@ -269,16 +289,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.25rem 0.5rem;  /* Much smaller padding */
-  font-size: 0.75rem;  /* Smaller font */
-  font-weight: 400;  /* Lighter weight */
+  padding: 0.25rem 0.5rem;
+  /* Much smaller padding */
+  font-size: 0.75rem;
+  /* Smaller font */
+  font-weight: 400;
+  /* Lighter weight */
   text-decoration: none;
   border-radius: 3px;
   transition: all 0.2s ease;
-  margin: 0.125rem;  /* Minimal margins */
+  margin: 0.125rem;
+  /* Minimal margins */
   cursor: pointer;
-  background: transparent;  /* Completely transparent */
-  border: 1px solid;  /* Border will be set by each button type */
+  background: transparent;
+  /* Completely transparent */
+  border: 1px solid;
+  /* Border will be set by each button type */
   box-shadow: none;
 }
 
@@ -305,6 +331,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  min-block-size: auto;
   padding: 0.4rem 0.85rem;
   font-size: 0.84rem;
   font-weight: 500;
@@ -322,10 +349,12 @@
 .btn-doi,
 .btn-code,
 .btn-library,
-.btn-website {
-  color: #2457a7;
-  background: #edf3fc;
-  border: 1px solid #c5d6ee;
+.btn-website,
+.btn-bib,
+.btn-abstract {
+  color: var(--primary-navy);
+  background: #f0f4ff;
+  border: 1px solid #c7d7f8;
 }
 
 .btn-pdf:hover,
@@ -333,30 +362,16 @@
 .btn-doi:hover,
 .btn-code:hover,
 .btn-library:hover,
-.btn-website:hover {
-  background: #dce8f9;
-  color: #163b78;
-  border-color: #2457a7;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(36, 87, 167, 0.14);
-}
-
-.btn-bib,
-.btn-abstract {
-  color: #334155;
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-}
-
+.btn-website:hover,
 .btn-bib:hover,
 .btn-abstract:hover,
 .btn-bib[aria-expanded="true"],
 .btn-abstract[aria-expanded="true"] {
-  background: #edf3fc;
-  color: #163b78;
-  border-color: #2457a7;
+  background: var(--light-blue);
+  color: var(--primary-navy);
+  border-color: var(--secondary-blue);
   transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(36, 87, 167, 0.12);
+  box-shadow: 0 2px 6px rgba(83, 117, 226, 0.16);
 }
 
 .btn-bib.copied {
@@ -370,10 +385,12 @@
 }
 
 /* Award/Honor buttons - Minimal gold style */
-.btn-certificate, .btn-award {
+.btn-certificate,
+.btn-award {
   color: var(--accent-gold);
   background: transparent;
-  border-color: var(--accent-gold);  /* Gold border */
+  border-color: var(--accent-gold);
+  /* Gold border */
   border-radius: 4px;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
@@ -387,8 +404,10 @@
   font-weight: 600;
 }
 
-.btn-certificate:hover, .btn-award:hover {
-  background: rgba(200, 177, 139, 0.1);  /* Subtle gold tint */
+.btn-certificate:hover,
+.btn-award:hover {
+  background: rgba(200, 177, 139, 0.1);
+  /* Subtle gold tint */
   color: var(--accent-gold);
 }
 
@@ -408,7 +427,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: var(--background-gray);  /* Simple gray background */
+  background: var(--background-gray);
+  /* Simple gray background */
   border-bottom: 1px solid var(--border-light);
   font-weight: 600;
   color: var(--primary-navy);
@@ -447,7 +467,8 @@
 .paper-comment {
   background: var(--background-blue);
   border: 1px solid var(--border-light);
-  border-left: 4px solid var(--secondary-blue);  /* Blue for regular comments */
+  border-left: 4px solid var(--secondary-blue);
+  /* Blue for regular comments */
   border-radius: 0 8px 8px 0;
   padding: 1.25rem;
   margin: 1rem 0;
@@ -457,7 +478,8 @@
 
 /* AWARD comments get gold */
 .paper-comment.award-comment {
-  border-left-color: var(--accent-gold);  /* Gold ONLY for award comments */
+  border-left-color: var(--accent-gold);
+  /* Gold ONLY for award comments */
 }
 
 .paper-comment:hover {
@@ -472,7 +494,8 @@
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  background: var(--accent-gold);  /* Keep gold for actual awards */
+  background: var(--accent-gold);
+  /* Keep gold for actual awards */
   border-radius: 50%;
   margin-right: 1rem;
   font-size: 1.5rem;
@@ -487,7 +510,8 @@
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  background: var(--secondary-blue);  /* Blue for regular publications */
+  background: var(--secondary-blue);
+  /* Blue for regular publications */
   border-radius: 50%;
   margin-right: 1rem;
   font-size: 1.5rem;
@@ -593,17 +617,20 @@
 }
 
 .bg-primary {
-  background: var(--primary-navy);  /* Solid color instead of gradient */
+  background: var(--primary-navy);
+  /* Solid color instead of gradient */
   color: white;
 }
 
 .bg-success {
-  background: var(--accent-green);  /* Solid color instead of gradient */
+  background: var(--accent-green);
+  /* Solid color instead of gradient */
   color: white;
 }
 
 .bg-info {
-  background: var(--secondary-blue);  /* Solid color instead of gradient */
+  background: var(--secondary-blue);
+  /* Solid color instead of gradient */
   color: white;
 }
 
@@ -613,6 +640,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -620,8 +648,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .bib-content {
@@ -641,33 +674,33 @@
     padding: 1.5rem;
     margin-bottom: 2rem;
   }
-  
+
   .bib-title {
     font-size: 1.25rem;
   }
-  
+
   .bib-authors {
     font-size: 1rem;
   }
-  
+
   .bib-venue {
     font-size: 0.9rem;
   }
-  
+
   .bib-actions-container {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .bib-actions {
     justify-content: center;
   }
-  
+
   .btn {
     padding: 0.75rem 1rem;
     font-size: 0.8rem;
   }
-  
+
   .award-icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -680,11 +713,11 @@
     padding: 1rem;
     border-radius: 0 8px 8px 0;
   }
-  
+
   .bib-actions {
     flex-direction: column;
   }
-  
+
   .btn {
     text-align: center;
     justify-content: center;
@@ -699,15 +732,15 @@
     border: 1px solid var(--border-medium);
     break-inside: avoid;
   }
-  
+
   .btn {
     display: none;
   }
-  
+
   .bib-content {
     display: block !important;
   }
-  
+
   .copy-btn {
     display: none;
   }
@@ -719,7 +752,7 @@
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .bib-actions .btn {
     width: 100%;
     justify-content: center;
@@ -796,7 +829,10 @@
 }
 
 /* Ensure FontAwesome icons are properly rendered - both old and new versions */
-.fas, .far, .fab, .fa,
+.fas,
+.far,
+.fab,
+.fa,
 .bib-actions .btn .fas,
 .bib-actions .btn .far,
 .bib-actions .btn .fab,
@@ -813,11 +849,13 @@
 }
 
 /* FontAwesome 6 weights */
-.fas, .bib-actions .btn .fas {
+.fas,
+.bib-actions .btn .fas {
   font-weight: 900 !important;
 }
 
-.far, .bib-actions .btn .far {
+.far,
+.bib-actions .btn .far {
   font-weight: 400 !important;
 }
 
@@ -840,7 +878,7 @@
     transition: none !important;
     transform: none !important;
   }
-  
+
   .bib-actions .btn:hover {
     transform: none !important;
   }
@@ -848,6 +886,7 @@
 
 /* Dark mode adjustments for award paper highlighting */
 @media (prefers-color-scheme: dark) {
+
   .bib-entry.award-paper,
   .bib-entry.award-paper-highlight {
     background: linear-gradient(135deg, rgba(245, 158, 11, 0.07) 0%, rgba(245, 158, 11, 0.015) 100%);
@@ -1080,16 +1119,16 @@
 }
 
 .talk-resources .btn-abstract {
-  color: #334155;
-  border-color: #cbd5e1;
-  background: #f8fafc;
+  color: var(--primary-navy);
+  border-color: #c7d7f8;
+  background: #f0f4ff;
 }
 
 .talk-resources .btn-abstract:hover,
 .talk-resources .btn-abstract[aria-expanded="true"] {
-  background: #edf3fc;
-  color: #163b78;
-  border-color: #2457a7;
+  background: var(--light-blue);
+  color: var(--primary-navy);
+  border-color: var(--secondary-blue);
 }
 
 .talk-abstract-content {
@@ -1153,10 +1192,12 @@
   .talk-entry {
     padding: 1rem;
   }
+
   .talk-venue {
     flex-direction: column;
     gap: 0.4rem;
   }
+
   .talk-resources {
     gap: 0.4rem;
   }
@@ -1166,15 +1207,19 @@
   .talk-entry {
     background: var(--background);
   }
+
   .talk-entry.award-talk {
     border-left-color: #fbbf24;
   }
+
   .talk-abstract-content {
     background: var(--background-gray);
   }
+
   .talk-award {
     color: #fef3c7;
   }
+
   .talk-award i {
     color: #fbbf24;
   }
@@ -1199,11 +1244,16 @@
   flex: 1 1 240px;
   padding: 0.55rem 0.9rem;
   font-size: 0.95rem;
-  color: var(--text-primary);
-  background: var(--background);
-  border: 1px solid var(--border-medium);
+  color-scheme: light;
+  color: #2c3e50;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
   border-radius: 8px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pub-search-input::placeholder {
+  color: #777777;
 }
 
 .pub-search-input:focus {
@@ -1216,20 +1266,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  min-block-size: auto;
+  min-height: auto;
   padding: 0.5rem 0.85rem;
   border-radius: 8px;
   font-size: 0.86rem;
   font-weight: 600;
-  color: var(--text-secondary);
-  background: var(--background-gray);
-  border: 1px solid var(--border-medium);
+  color: var(--primary-navy);
+  background: #ffffff;
+  border: 1px solid #dee2e6;
   cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .pub-filter-toggle:hover,
 .pub-filter-toggle[aria-expanded="true"] {
-  background: var(--light-blue);
+  background: #f0f4ff;
   border-color: var(--secondary-blue);
   color: var(--primary-navy);
 }
@@ -1247,8 +1299,8 @@
 .pub-filter-bar {
   margin-top: 0.55rem;
   padding: 0.7rem 0.85rem;
-  background: var(--background-gray);
-  border: 1px solid var(--border-light);
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
   border-radius: 8px;
 }
 
@@ -1267,13 +1319,15 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  min-block-size: auto;
+  min-height: auto;
   padding: 0.22rem 0.6rem;
   border-radius: 9999px;
   font-size: 0.78rem;
   font-weight: 500;
-  background: var(--background);
-  color: var(--text-primary);
-  border: 1px solid var(--border-medium);
+  background: #ffffff;
+  color: #2c3e50;
+  border: 1px solid #dee2e6;
   cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
@@ -1304,20 +1358,22 @@
   margin-top: 0.55rem;
   padding: 0.25rem 0.65rem;
   font-size: 0.8rem;
-  color: var(--text-primary);
-  background: var(--background-blue);
-  border: 1px solid #c5d6ee;
+  color: #2c3e50;
+  background: #f0f4ff;
+  border: 1px solid #c7d7f8;
   border-radius: 9999px;
 }
 
 .pub-filter-clear {
+  min-block-size: auto;
+  min-height: auto;
   padding: 0.08rem 0.45rem;
   border-radius: 9999px;
   font-size: 0.74rem;
   font-weight: 600;
-  background: var(--background);
+  background: #ffffff;
   color: var(--primary-navy);
-  border: 1px solid #c5d6ee;
+  border: 1px solid #c7d7f8;
   cursor: pointer;
 }
 
@@ -1330,23 +1386,25 @@ a.pub-venue-badge,
 span.pub-venue-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.12rem 0.5rem;
-  border-radius: 5px;
-  font-size: 0.74rem;
+  min-block-size: auto;
+  min-height: auto;
+  padding: 0.14rem 0.52rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
   font-weight: 600;
   font-style: normal !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   line-height: 1.3;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-decoration: none;
   vertical-align: middle;
   transition: opacity 0.15s ease, background-color 0.15s ease;
 }
 
 .pub-venue-badge.venue-cat-conference {
-  background-color: #1e3a5f;
+  background-color: #003366;
   color: #ffffff;
-  border: 1px solid #1e3a5f;
+  border: 1px solid #003366;
 }
 
 .pub-venue-badge.venue-cat-journal {
@@ -1358,15 +1416,15 @@ span.pub-venue-badge {
 .pub-venue-badge.venue-cat-workshop,
 .pub-venue-badge.venue-cat-preprint,
 .pub-venue-badge.venue-cat-thesis {
-  background-color: #475569;
+  background-color: #52606d;
   color: #ffffff;
-  border: 1px solid #475569;
+  border: 1px solid #52606d;
 }
 
 a.pub-venue-badge:hover {
-  opacity: 0.9;
-  text-decoration: none;
+  opacity: 0.88;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .paper-tags {
@@ -1376,171 +1434,9 @@ a.pub-venue-badge:hover {
   margin-top: 0.75rem;
 }
 
-button.pub-tag-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.15rem 0.55rem;
-  border-radius: 9999px;
-  font-size: 0.74rem;
-  font-weight: 500;
-  line-height: 1.3;
-  background-color: var(--background-gray);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-medium);
-  cursor: pointer;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-button.pub-tag-pill:hover {
-  background-color: var(--light-blue);
-  border-color: var(--secondary-blue);
-  color: var(--primary-navy);
-}
-
-button.pub-tag-pill.is-active {
-  background-color: var(--background-blue);
-  border-color: var(--secondary-blue);
-  color: var(--primary-navy);
-  font-weight: 600;
-}
+/* Topic tag pill styles (.pub-tag-pill / .pillar-tag-pill) live in assets/css/custom.css so all pages share one rule. */
 
 .pub-filter-hidden,
 .pub-section-hidden {
   display: none !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  .pub-search-input {
-    background: #1f242c;
-    color: #e5e7eb;
-    border-color: #383f49;
-  }
-
-  .pub-filter-toggle {
-    background: #1f242c;
-    color: #cbd5e1;
-    border-color: #383f49;
-  }
-
-  .pub-filter-toggle:hover,
-  .pub-filter-toggle[aria-expanded="true"] {
-    background: #1d3042;
-    border-color: #56b4e9;
-    color: #90d5ff;
-  }
-
-  .pub-filter-bar {
-    background: #1f242c;
-    border-color: #383f49;
-  }
-
-  .pub-filter-chip {
-    background: #252b34;
-    color: #e5e7eb;
-    border-color: #383f49;
-  }
-
-  .pub-filter-chip:hover {
-    background: #1d3042;
-    border-color: #56b4e9;
-    color: #90d5ff;
-  }
-
-  .pub-filter-chip.is-active {
-    background: #56b4e9;
-    border-color: #56b4e9;
-    color: #17191c;
-  }
-
-  .pub-filter-status {
-    background: #1d3042;
-    border-color: #35566e;
-    color: #e5e7eb;
-  }
-
-  .pub-filter-clear {
-    background: #252b34;
-    color: #90d5ff;
-    border-color: #35566e;
-  }
-
-  .pub-venue-badge.venue-cat-conference {
-    background-color: #1d3550;
-    color: #93c5fd;
-    border-color: #35566e;
-  }
-
-  .pub-venue-badge.venue-cat-journal {
-    background-color: #183642;
-    color: #7dd3fc;
-    border-color: #2c5264;
-  }
-
-  .pub-venue-badge.venue-cat-workshop,
-  .pub-venue-badge.venue-cat-preprint,
-  .pub-venue-badge.venue-cat-thesis {
-    background-color: #2c333d;
-    color: #cbd5e1;
-    border-color: #475569;
-  }
-
-  button.pub-tag-pill {
-    background-color: #252b34;
-    color: #cbd5e1;
-    border-color: #383f49;
-  }
-
-  button.pub-tag-pill:hover,
-  button.pub-tag-pill.is-active {
-    background-color: #1d3042;
-    border-color: #56b4e9;
-    color: #90d5ff;
-  }
-
-  .btn-pdf,
-  .btn-arxiv,
-  .btn-doi,
-  .btn-code,
-  .btn-library,
-  .btn-website {
-    background: #1d3042;
-    color: #90d5ff;
-    border-color: #35566e;
-  }
-
-  .btn-pdf:hover,
-  .btn-arxiv:hover,
-  .btn-doi:hover,
-  .btn-code:hover,
-  .btn-library:hover,
-  .btn-website:hover {
-    background: #29455e;
-    color: #e5f4ff;
-    border-color: #56b4e9;
-  }
-
-  .btn-bib,
-  .btn-abstract,
-  .talk-resources .btn-abstract {
-    background: #252b34;
-    color: #cbd5e1;
-    border-color: #383f49;
-  }
-
-  .btn-bib:hover,
-  .btn-abstract:hover,
-  .btn-bib[aria-expanded="true"],
-  .btn-abstract[aria-expanded="true"],
-  .talk-resources .btn-abstract:hover,
-  .talk-resources .btn-abstract[aria-expanded="true"] {
-    background: #1d3042;
-    color: #90d5ff;
-    border-color: #56b4e9;
-  }
-
-  .btn-bib.copied {
-    background: #142e20 !important;
-    color: #86efac !important;
-    border-color: #1e5638 !important;
-  }
 }

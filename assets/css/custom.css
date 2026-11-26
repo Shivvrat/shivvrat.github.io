@@ -3,48 +3,66 @@
 /* Import Professional Academic Color Palette */
 :root {
   /* Primary Academic Blues */
-  --primary-navy: #003366;        /* Deep blue for headers and primary elements */
-  --secondary-blue: #5375e2;      /* Royal blue for interactive elements */
-  --light-blue: #e6f0ff;          /* Very light blue for backgrounds */
-  
+  --primary-navy: #003366;
+  /* Deep blue for headers and primary elements */
+  --secondary-blue: #5375e2;
+  /* Royal blue for interactive elements */
+  --light-blue: #e6f0ff;
+  /* Very light blue for backgrounds */
+
   /* Professional Text Colors */
-  --text-primary: #2c3e50;        /* Dark blue-gray for main text */
-  --text-secondary: #555555;      /* Medium gray for secondary text */
-  --text-light: #777777;          /* Light gray for captions */
-  
+  --text-primary: #2c3e50;
+  /* Dark blue-gray for main text */
+  --text-secondary: #555555;
+  /* Medium gray for secondary text */
+  --text-light: #777777;
+  /* Light gray for captions */
+
   /* Clean Backgrounds */
-  --background: #ffffff;          /* Pure white */
-  --background-gray: #f8f9fa;     /* Very light gray */
-  --background-blue: #f0f4ff;     /* Light blue tint */
-  
+  --background: #ffffff;
+  /* Pure white */
+  --background-gray: #f8f9fa;
+  /* Very light gray */
+  --background-blue: #f0f4ff;
+  /* Light blue tint */
+
   /* Professional Borders */
-  --border-light: #e9ecef;        /* Light border */
-  --border-medium: #dee2e6;       /* Medium border */
-  
+  --border-light: #e9ecef;
+  /* Light border */
+  --border-medium: #dee2e6;
+  /* Medium border */
+
   /* Academic Accent Colors */
-  --accent-gold: #c8b18b;         /* Gold accent for highlights */
-  --accent-green: #16cc5c;        /* Success green */
-  --warning: #ffc107;             /* Warning amber */
-  --error: #dc3545;               /* Error red */
-  
+  --accent-gold: #c8b18b;
+  /* Gold accent for highlights */
+  --accent-green: #16cc5c;
+  /* Success green */
+  --warning: #ffc107;
+  /* Warning amber */
+  --error: #dc3545;
+  /* Error red */
+
   /* Professional Shadows */
-  --shadow-light: rgba(0, 51, 102, 0.08);     /* Light blue shadow */
-  --shadow-medium: rgba(0, 51, 102, 0.12);    /* Medium blue shadow */
-  --shadow-strong: rgba(0, 51, 102, 0.16);    /* Strong blue shadow */
+  --shadow-light: rgba(0, 51, 102, 0.08);
+  /* Light blue shadow */
+  --shadow-medium: rgba(0, 51, 102, 0.12);
+  /* Medium blue shadow */
+  --shadow-strong: rgba(0, 51, 102, 0.16);
+  /* Strong blue shadow */
 }
 
 /* Professional Responsive Layout */
 @media only screen and (max-width: 767px) {
   .container-fluid {
-    max-width: 100%; 
-    padding: 1rem; 
+    max-width: 100%;
+    padding: 1rem;
   }
 }
 
 @media (min-width: 992px) {
   .container-fluid {
-    max-width: 75%; 
-    padding: 2rem 3rem; 
+    max-width: 75%;
+    padding: 2rem 3rem;
   }
 }
 
@@ -70,9 +88,7 @@ ol.bibliography {
 }
 
 /* Enhanced News Container & Feed - Core Palette Only */
-.news-container {
-
-}
+.news-container {}
 
 .news-feed {
   max-width: 900px;
@@ -188,13 +204,15 @@ ol.bibliography {
   font-weight: 700;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 3px solid var(--primary-navy);  /* Navy instead of teal */
+  border-bottom: 3px solid var(--primary-navy);
+  /* Navy instead of teal */
 }
 
 /* Professional News Items - Simplified */
 .news-item {
   background: var(--background);
-  border-left: 4px solid var(--secondary-blue);  /* Blue for regular news */
+  border-left: 4px solid var(--secondary-blue);
+  /* Blue for regular news */
   border-radius: 0 8px 8px 0;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -203,17 +221,21 @@ ol.bibliography {
 }
 
 .news-item:hover {
-  background: var(--background-blue);  /* Simple blue tint */
-  transform: translateX(2px);  /* Minimal movement */
+  background: var(--background-blue);
+  /* Simple blue tint */
+  transform: translateX(2px);
+  /* Minimal movement */
 }
 
 /* News Categories - Clear Hierarchy with Core Palette */
 .news-award {
-  border-left-color: var(--accent-gold);  /* Gold ONLY for awards */
+  border-left-color: var(--accent-gold);
+  /* Gold ONLY for awards */
 }
 
 .news-general {
-  border-left-color: var(--text-secondary);  /* Gray for general news */
+  border-left-color: var(--text-secondary);
+  /* Gray for general news */
 }
 
 /* Enhanced News Date - Simplified */
@@ -278,7 +300,8 @@ table tr:hover {
 
 /* Clean Professional Cards */
 .card {
-  background: var(--background);  /* Solid white background */
+  background: var(--background);
+  /* Solid white background */
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 20px var(--shadow-light);
@@ -287,7 +310,8 @@ table tr:hover {
 }
 
 .card:hover {
-  background: var(--background-gray);  /* Simple gray on hover */
+  background: var(--background-gray);
+  /* Simple gray on hover */
   transform: translateY(-2px);
   box-shadow: 0 8px 32px var(--shadow-medium);
 }
@@ -333,21 +357,21 @@ table tr:hover {
     padding: 1.5rem;
     margin: 1.5rem 0;
   }
-  
+
   .news-header {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .news-item {
     padding: 1.25rem;
   }
-  
+
   .news-headline {
     font-size: 1rem;
   }
-  
-  
+
+
   table th,
   table td {
     padding: 0.75rem;
@@ -358,19 +382,19 @@ table tr:hover {
   .container-fluid {
     padding: 0.75rem;
   }
-  
+
   .news-container {
     padding: 1rem;
   }
-  
+
   .news-header {
     font-size: 1.5rem;
   }
-  
+
   .news-item {
     padding: 1rem;
   }
-  
+
   table {
     font-size: 0.875rem;
   }
@@ -391,13 +415,15 @@ table tr:hover {
 
 /* Professional Button Hover Effects - More Subtle */
 .btn:hover {
-  transform: translateY(-1px);  /* Reduced movement */
+  transform: translateY(-1px);
+  /* Reduced movement */
   box-shadow: 0 4px 12px var(--shadow-medium);
   text-decoration: none;
 }
 
 .btn-primary:hover {
-  background: #1e40af;  /* Darker blue for subtle hover */
+  background: #1e40af;
+  /* Darker blue for subtle hover */
   color: white;
 }
 
@@ -408,19 +434,23 @@ table tr:hover {
 }
 
 .btn-success:hover {
-  background: #14b34d;  /* Darker green for subtle hover */
+  background: #14b34d;
+  /* Darker green for subtle hover */
   color: white;
 }
 
 /* Award/Honor Elements - Gold Only */
-.btn-award, .award-button {
+.btn-award,
+.award-button {
   background: var(--accent-gold);
   color: var(--primary-navy);
   font-weight: 700;
 }
 
-.btn-award:hover, .award-button:hover {
-  background: #b8a67a;  /* Darker gold for subtle hover */
+.btn-award:hover,
+.award-button:hover {
+  background: #b8a67a;
+  /* Darker gold for subtle hover */
   color: var(--primary-navy);
 }
 
@@ -458,12 +488,14 @@ table tr:hover {
   margin: 2rem 0;
   box-shadow: 0 4px 20px var(--shadow-light);
   border: 1px solid var(--border-light);
-  border-left: 6px solid var(--secondary-blue);  /* Blue for regular sections */
+  border-left: 6px solid var(--secondary-blue);
+  /* Blue for regular sections */
 }
 
 /* Awards section gets gold */
 .section.awards {
-  border-left-color: var(--accent-gold);  /* Gold ONLY for awards sections */
+  border-left-color: var(--accent-gold);
+  /* Gold ONLY for awards sections */
 }
 
 /* Feature boxes - Blue for regular features */
@@ -472,13 +504,15 @@ table tr:hover {
   border-radius: 12px;
   padding: 2rem;
   margin: 1.5rem 0;
-  border-left: 5px solid var(--secondary-blue);  /* Blue for regular features */
+  border-left: 5px solid var(--secondary-blue);
+  /* Blue for regular features */
   box-shadow: 0 4px 16px var(--shadow-light);
 }
 
 /* Achievement features get gold */
 .feature-box.achievement {
-  border-left-color: var(--accent-gold);  /* Gold ONLY for achievements */
+  border-left-color: var(--accent-gold);
+  /* Gold ONLY for achievements */
 }
 
 /* Content headers - Blue for regular content */
@@ -486,7 +520,8 @@ table tr:hover {
   background: transparent;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  border-left: 4px solid var(--secondary-blue);  /* Blue for regular headers */
+  border-left: 4px solid var(--secondary-blue);
+  /* Blue for regular headers */
   margin-bottom: 1rem;
   color: var(--primary-navy);
   font-weight: 700;
@@ -520,8 +555,15 @@ table tr:hover {
 }
 
 /* Keyboard focus-visible accent for hierarchy */
-.section-card:focus-within { outline: 0; border-left: 3px solid var(--secondary-blue); }
-.subsection-card:focus-within { outline: 0; border-left: 3px solid var(--primary-navy); }
+.section-card:focus-within {
+  outline: 0;
+  border-left: 3px solid var(--secondary-blue);
+}
+
+.subsection-card:focus-within {
+  outline: 0;
+  border-left: 3px solid var(--primary-navy);
+}
 
 /* Subsection card: lighter, nested look distinct from section-card */
 .subsection-card {
@@ -566,8 +608,10 @@ table tr:hover {
 }
 
 /* Headings at top of cards shouldn't push down content */
-.section-card > h2, .section-card > h3,
-.subsection-card > h3, .subsection-card > h4 {
+.section-card>h2,
+.section-card>h3,
+.subsection-card>h3,
+.subsection-card>h4 {
   margin-top: 0.1rem;
 }
 
@@ -582,36 +626,88 @@ table tr:hover {
   box-shadow: 0 1px 6px var(--shadow-light);
   margin: 1rem 0;
 }
-#toc .toc-list { list-style: none; margin: 0; padding-left: 0; }
-#toc .toc-list > li { margin: 0.25rem 0; }
-#toc .toc-list li ul { margin-left: 1rem; padding-left: 0.5rem; border-left: 2px solid var(--border-light); }
-#toc a { text-decoration: none; color: var(--text-primary); }
-#toc a:hover { color: var(--secondary-blue); }
+
+#toc .toc-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+#toc .toc-list>li {
+  margin: 0.25rem 0;
+}
+
+#toc .toc-list li ul {
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--border-light);
+}
+
+#toc a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+#toc a:hover {
+  color: var(--secondary-blue);
+}
 
 /* Print cleanup: flatten cards and reveal link targets */
 @media print {
-  .section-card, .subsection-card, .content-card { box-shadow: none !important; border: 1px solid #aaa !important; }
-  a[href]:after { content: " (" attr(href) ")"; font-size: 90%; }
+
+  .section-card,
+  .subsection-card,
+  .content-card {
+    box-shadow: none !important;
+    border: 1px solid #aaa !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
 }
 
 /* Awards section typography (about page) - keep compact and inline */
-.awards-section .award-item { font-size: 0.95rem; line-height: 1.5; }
-.awards-section .award-title { font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; }
+.awards-section .award-item {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.awards-section .award-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .awards-section .award-icon {
   display: inline;
-  width: auto; height: auto;
-  background: transparent; border-radius: 0; box-shadow: none; border: none;
-  font-size: 1rem; margin-right: 0.25rem; color: inherit;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  font-size: 1rem;
+  margin-right: 0.25rem;
+  color: inherit;
 }
+
 .awards-section .award-event,
 .awards-section .award-description {
   font-size: 0.875rem;
   color: var(--text-secondary);
-  margin: 0.25rem 0 0.25rem 1.5rem; /* slight indent to align under title */
+  margin: 0.25rem 0 0.25rem 1.5rem;
+  /* slight indent to align under title */
 }
 
 /* Optional thin variant */
-.content-card.thin { padding: 1rem 1.25rem; border-radius: 8px; }
+.content-card.thin {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+}
 
 /* Optional muted variant */
 .content-card.muted,
@@ -624,15 +720,23 @@ table tr:hover {
 /* Optional award variant matching gold accent */
 .content-card.award,
 .jumbotron.award,
-.research-area.award { border-left-color: var(--accent-gold); }
+.research-area.award {
+  border-left-color: var(--accent-gold);
+}
 
 /* Header spacing inside cards */
-.content-card h2, .content-card h3,
-.jumbotron h2, .jumbotron h3,
-.research-area h2, .research-area h3 { margin-top: 0.25rem; }
+.content-card h2,
+.content-card h3,
+.jumbotron h2,
+.jumbotron h3,
+.research-area h2,
+.research-area h3 {
+  margin-top: 0.25rem;
+}
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
+
   .content-card,
   .jumbotron:not(.no-card),
   .research-area {
@@ -651,6 +755,7 @@ table tr:hover {
   height: 1px;
   overflow: hidden;
 }
+
 .skip-link:focus {
   position: absolute;
   left: 1rem;
@@ -667,11 +772,29 @@ table tr:hover {
 }
 
 /* Global scrollbar styling (fallback if scroll context is not sidebar-specific) */
-html { scrollbar-width: thin; scrollbar-color: var(--border-light) var(--background); }
-html::-webkit-scrollbar { width: 10px; height: 10px; }
-html::-webkit-scrollbar-track { background: var(--background); }
-html::-webkit-scrollbar-thumb { background-color: var(--border-light); border-radius: 8px; border: 2px solid var(--background); }
-html::-webkit-scrollbar-thumb:hover { background-color: var(--secondary-blue); }
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-light) var(--background);
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--border-light);
+  border-radius: 8px;
+  border: 2px solid var(--background);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-blue);
+}
 
 /* Inline Award & Recognition Badges (aligned with ARIA Lab style) */
 .award-badge {
@@ -790,23 +913,24 @@ a.project-resource-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.18rem 0.62rem;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  line-height: 1.3;
   min-block-size: auto;
+  min-height: auto;
+  padding: 0.28rem 0.72rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.25;
   text-decoration: none;
-  color: var(--text-primary);
-  background: rgba(83, 117, 226, 0.06);
-  border: 1px solid var(--border-light);
+  color: var(--primary-navy);
+  background: #f0f4ff;
+  border: 1px solid #c7d7f8;
   transition: all 0.2s ease;
 }
 
 a.project-resource-btn:hover {
-  color: var(--secondary-blue);
+  color: var(--primary-navy);
   border-color: var(--secondary-blue);
-  background: rgba(83, 117, 226, 0.12);
+  background: var(--light-blue);
   transform: translateY(-1px);
   text-decoration: none;
 }
@@ -822,11 +946,11 @@ a.project-resource-btn em {
 .research-pillar-bar {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.5rem;
   margin: 0.75rem 0 1.25rem;
   padding: 0.75rem 1rem;
-  background: var(--background-gray);
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1px solid #e9ecef;
   border-left: 3px solid var(--primary-navy);
   border-radius: 8px;
 }
@@ -841,70 +965,50 @@ a.project-resource-btn em {
 .pillar-bar-label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: #555555;
   margin-right: 0.15rem;
   letter-spacing: 0.01em;
 }
 
+/* Shared Topic Tag Pills across /publications/ (.pub-tag-pill) and /research/ (.pillar-tag-pill) */
+button.pub-tag-pill,
 a.pillar-tag-pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.16rem 0.6rem;
+  min-block-size: auto;
+  min-height: auto;
+  padding: 0.16rem 0.62rem;
   border-radius: 9999px;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 500;
   line-height: 1.3;
   text-decoration: none;
-  background: var(--background);
-  color: var(--text-primary);
-  border: 1px solid var(--border-medium);
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
+button.pub-tag-pill:hover,
 a.pillar-tag-pill:hover {
-  background: var(--background-blue);
-  border-color: var(--secondary-blue);
+  background-color: #e6f0ff;
+  border-color: #bfd3f8;
   color: var(--primary-navy);
   text-decoration: none;
 }
 
+button.pub-tag-pill.is-active {
+  background-color: #e6f0ff;
+  border-color: var(--secondary-blue);
+  color: var(--primary-navy);
+  font-weight: 600;
+}
+
 @media (prefers-color-scheme: dark) {
+
   a.award-badge,
   a.award-badge:hover {
     color: #fef3c7;
-  }
-
-  a.project-resource-btn {
-    color: #e5e7eb;
-    background: rgba(83, 117, 226, 0.12);
-    border-color: #233044;
-  }
-
-  a.project-resource-btn:hover {
-    color: #93c5fd;
-    border-color: #5375e2;
-    background: rgba(83, 117, 226, 0.22);
-  }
-
-  .research-pillar-bar {
-    background: #1f242c;
-    border-color: #383f49;
-    border-left-color: #56b4e9;
-  }
-
-  .pillar-bar-label {
-    color: #a3adb9;
-  }
-
-  a.pillar-tag-pill {
-    background: #252b34;
-    color: #cbd5e1;
-    border-color: #383f49;
-  }
-
-  a.pillar-tag-pill:hover {
-    background: #1d3042;
-    border-color: #56b4e9;
-    color: #90d5ff;
   }
 }
