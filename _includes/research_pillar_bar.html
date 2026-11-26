@@ -1,40 +1,38 @@
-{% assign pillar_name = include.pillar %}
-{% assign matching_tags = '' | split: '' %}
-{% for pair in site.data.publication_tags %}
-  {% assign t_name = pair[0] %}
-  {% assign t_meta = pair[1] %}
-  {% if t_meta.research_pillar == pillar_name %}
-    {% assign matching_tags = matching_tags | push: t_name %}
-  {% endif %}
-{% endfor %}
-{% assign raw_resources = include.resources | default: '' | strip %}
-{% if matching_tags.size > 0 or raw_resources != '' %}
-  <div class="research-pillar-bar">
-    {% if matching_tags.size > 0 %}
-      <div class="pillar-bar-group">
-        <span class="pillar-bar-label">Publications:</span>
-        {% for tag_name in matching_tags %}
-          {% assign tag_slug = tag_name | replace: '&', 'and' | slugify %}
-          <a href="{{ '/publications/?tag=' | append: tag_slug | relative_url }}" class="pillar-tag-pill" title="Filter publications by {{ tag_name | escape }}">{{ tag_name }}</a>
-        {% endfor %}
-      </div>
-    {% endif %}
-    {% if raw_resources != '' %}
-      {% assign resource_items = raw_resources | split: ';' %}
-      <div class="pillar-bar-group">
-        <span class="pillar-bar-label">Start Here:</span>
-        {% for item in resource_items %}
-          {% assign parts = item | split: '|' %}
-          {% assign res_label = parts[0] | strip %}
-          {% assign res_url = parts[1] | strip %}
-          {% assign res_icon = parts[2] | strip %}
-          {% if res_label != '' and res_url != '' %}
-            <a href="{{ res_url }}" target="_blank" rel="noopener noreferrer" class="project-resource-btn">
-              {% if res_icon != '' %}<i class="{{ res_icon }}" aria-hidden="true"></i> {% endif %}{{ res_label }}
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    {% endif %}
-  </div>
-{% endif %}
+{%- assign pillar_name = include.pillar -%}
+{%- assign matching_tags = '' | split: '' -%}
+{%- for pair in site.data.publication_tags -%}
+{%- assign t_name = pair[0] -%}
+{%- assign t_meta = pair[1] -%}
+{%- if t_meta.research_pillar == pillar_name -%}
+{%- assign matching_tags = matching_tags | push: t_name -%}
+{%- endif -%}
+{%- endfor -%}
+{%- assign raw_resources = include.resources | default: '' | strip -%}
+{%- if matching_tags.size > 0 or raw_resources != '' -%}
+<div class="research-pillar-bar" markdown="0">
+{%- if matching_tags.size > 0 %}
+<div class="pillar-bar-group">
+  <span class="pillar-bar-label">Publications:</span>
+{%- for tag_name in matching_tags -%}
+{%- assign tag_slug = tag_name | replace: '&', 'and' | slugify %}
+  <a href="{{ '/publications/?tag=' | append: tag_slug | relative_url }}" class="pillar-tag-pill" title="Filter publications by {{ tag_name | escape }}">{{ tag_name }}</a>
+{%- endfor %}
+</div>
+{%- endif -%}
+{%- if raw_resources != '' -%}
+{%- assign resource_items = raw_resources | split: ';' %}
+<div class="pillar-bar-group">
+  <span class="pillar-bar-label">Start Here:</span>
+{%- for item in resource_items -%}
+{%- assign parts = item | split: '|' -%}
+{%- assign res_label = parts[0] | strip -%}
+{%- assign res_url = parts[1] | strip -%}
+{%- assign res_icon = parts[2] | strip -%}
+{%- if res_label != '' and res_url != '' %}
+  <a href="{{ res_url }}" target="_blank" rel="noopener noreferrer" class="project-resource-btn">{%- if res_icon != '' -%}<i class="{{ res_icon }}" aria-hidden="true"></i> {% endif -%}{{ res_label }}</a>
+{%- endif -%}
+{%- endfor %}
+</div>
+{%- endif %}
+</div>
+{%- endif -%}
