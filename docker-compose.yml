@@ -4,7 +4,7 @@ services:
     image: shivvrat-jekyll
     ports:
       - "${PERSONAL_SITE_PORT:-${PORT:-4000}}:4000"
-      - "${PERSONAL_SITE_LIVERELOAD_PORT:-${LIVERELOAD_PORT:-35729}}:35729"
+      - "${PERSONAL_SITE_LIVERELOAD_PORT:-${LIVERELOAD_PORT:-35729}}:${PERSONAL_SITE_LIVERELOAD_PORT:-${LIVERELOAD_PORT:-35729}}"
     volumes:
       - .:/srv/jekyll
     environment:
@@ -14,4 +14,4 @@ services:
       - -c
       - |
         echo "Local URL: http://localhost:${PERSONAL_SITE_PORT:-${PORT:-4000}}"
-        bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling
+        bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --livereload-port "${PERSONAL_SITE_LIVERELOAD_PORT:-${LIVERELOAD_PORT:-35729}}" --trace --force_polling

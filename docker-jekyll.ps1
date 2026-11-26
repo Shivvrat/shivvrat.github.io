@@ -64,11 +64,11 @@ function Serve-Site {
     Invoke-Docker -Arguments @(
         'run', '--rm', '-it',
         '-p', "${port}:4000",
-        '-p', "${livereloadPort}:35729",
+        '-p', "${livereloadPort}:${livereloadPort}",
         '-v', "${repoRoot}:/srv/jekyll",
         '-e', 'BUNDLE_FROZEN=1',
         $imageName,
-        'sh', '-c', "echo `"Local URL: http://localhost:$port`" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling"
+        'sh', '-c', "echo `"Local URL: http://localhost:$port`" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --livereload-port $livereloadPort --trace --force_polling"
     )
 }
 

@@ -3,13 +3,14 @@
 set -euo pipefail
 
 image_name="shivvrat-jekyll"
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 build_image() {
     # CI builds the image itself with a layer cache, then sets SKIP_IMAGE_BUILD=1.
     if [ "${SKIP_IMAGE_BUILD:-}" = "1" ]; then
         return
     fi
-    docker build -t "$image_name" .
+    docker build -t "$image_name" "$repo_root"
 }
 
 get_git_identity() {
@@ -18,8 +19,8 @@ get_git_identity() {
     local git_name
     local git_email
 
-    git_name="$(git config --get user.name 2>/dev/null || true)"
-    git_email="$(git config --get user.email 2>/dev/null || true)"
+    git_name="$(git -C "$repo_root" config --get user.name 2>/dev/null || true)"
+    git_email="$(git -C "$repo_root" config --get user.email 2>/dev/null || true)"
 
     if [ -z "${git_name:-}" ]; then
         git_name="$default_name"
@@ -40,16 +41,16 @@ serve_site() {
     local livereload_port="${PERSONAL_SITE_LIVERELOAD_PORT:-${LIVERELOAD_PORT:-35729}}"
     docker run --rm -it \
         -p "$port:4000" \
-        -p "$livereload_port:35729" \
-        -v "$PWD:/srv/jekyll" \
+        -p "$livereload_port:$livereload_port" \
+        -v "$repo_root:/srv/jekyll" \
         -e BUNDLE_FROZEN=1 \
         "$image_name" \
-        sh -c "echo \"Local URL: http://localhost:$port\" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --trace --force_polling"
+        sh -c "echo \"Local URL: http://localhost:$port\" && bundle exec jekyll serve --config _config.yml,_config_docker.yml --livereload --livereload-port \"$livereload_port\" --trace --force_polling"
 }
 
 compile_site() {
     docker run --rm \
-        -v "$PWD:/srv/jekyll" \
+        -v "$repo_root:/srv/jekyll" \
         -e BUNDLE_FROZEN=1 \
         -e JEKYLL_ENV=production \
         "$image_name" \
@@ -69,7 +70,7 @@ publish_site() {
 
     get_git_identity
     docker run --rm \
-        -v "$PWD:/srv/jekyll" \
+        -v "$repo_root:/srv/jekyll" \
         "${ssh_mount[@]}" \
         -e BUNDLE_FROZEN=1 \
         -e GIT_AUTHOR_NAME \
@@ -83,7 +84,7 @@ publish_site() {
 
 open_shell() {
     docker run --rm -it \
-        -v "$PWD:/srv/jekyll" \
+        -v "$repo_root:/srv/jekyll" \
         -e BUNDLE_FROZEN=1 \
         "$image_name" \
         /bin/bash
